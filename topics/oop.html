@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Object-Oriented Programming (OOP) in Python</title>
+</head>
+<body>
+
+  <h1>🧱 Chapter 8: Object-Oriented Programming (OOP) in Python</h1>
+
+  <h2>🤔 Why OOP?</h2>
+  <p>“Programming without OOP is like trying to build a house without bricks.”</p>
+  <ul>
+    <li>More organized</li>
+    <li>Reusable (Write once, use many times)</li>
+    <li>Scalable (Great for large applications)</li>
+    <li>Based on real-world objects</li>
+  </ul>
+
+  <h2>🏗️ OOP Basics: Key Pillars</h2>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Pillar</th>
+        <th>Meaning</th>
+        <th>Real-Life Analogy</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Class</td><td>Blueprint or design</td><td>Blueprint of a Car 🏗️</td></tr>
+      <tr><td>Object</td><td>Actual item created using class</td><td>Your personal car 🚗</td></tr>
+      <tr><td>Encapsulation</td><td>Hides complex logic, protects data</td><td>Car engine hidden inside body 🔧</td></tr>
+      <tr><td>Inheritance</td><td>Child class inherits properties of parent class</td><td>Bike inherits from Vehicle 🛵</td></tr>
+      <tr><td>Polymorphism</td><td>Same method name, different behavior</td><td>Accelerator on bike vs car</td></tr>
+      <tr><td>Abstraction</td><td>Shows only essential features</td><td>ATM – hides internal banking logic 💳</td></tr>
+    </tbody>
+  </table>
+
+  <h2>🧱 Step 1: Creating a Class</h2>
+  <pre><code>class Student:
+    def __init__(self, name, grade):
+        self.name = name
+        self.grade = grade
+
+    def show(self):
+        print(f"{self.name} scored {self.grade}")
+  </code></pre>
+
+  <h2>🔧 Step 2: Creating an Object</h2>
+  <pre><code>s1 = Student("Aman", 95)
+s1.show()  # Output: Aman scored 95
+  </code></pre>
+
+  <h2>🛠️ __init__() Method</h2>
+  <ul>
+    <li>Called automatically when object is created</li>
+    <li>Used to initialize values (like a constructor)</li>
+  </ul>
+  <pre><code>def __init__(self, name, grade):
+    self.name = name
+    self.grade = grade
+  </code></pre>
+
+  <h2>🧑‍👩‍👦 Inheritance</h2>
+  <p>Let’s reuse code using inheritance!</p>
+  <pre><code>class Person:
+    def __init__(self, name):
+        self.name = name
+
+    def say_hello(self):
+        print("Hi, I’m", self.name)
+
+class Student(Person):  # Student inherits Person
+    def study(self):
+        print(self.name, "is studying.")
+
+s2 = Student("Riya")
+s2.say_hello()
+s2.study()
+  </code></pre>
+
+  <h2>🎭 Polymorphism Example</h2>
+  <pre><code>class Animal:
+    def speak(self):
+        print("Animal speaks")
+
+class Dog(Animal):
+    def speak(self):
+        print("Dog barks")
+
+a = Animal()
+d = Dog()
+
+a.speak()  # Animal speaks
+d.speak()  # Dog barks
+  </code></pre>
+
+  <h2>🎒 Encapsulation</h2>
+  <pre><code>class BankAccount:
+    def __init__(self, balance):
+        self.__balance = balance  # Private attribute
+
+    def show_balance(self):
+        print("Balance:", self.__balance)
+
+acc = BankAccount(1000)
+acc.show_balance()
+# acc.__balance  ❌ Error (private)
+  </code></pre>
+
+  <h2>🔍 Abstraction</h2>
+  <p>Hide complex parts, only show essentials!</p>
+  <pre><code>from abc import ABC, abstractmethod
+
+class Vehicle(ABC):
+    @abstractmethod
+    def start(self):
+        pass
+
+class Bike(Vehicle):
+    def start(self):
+        print("Bike started!")
+
+b = Bike()
+b.start()
+  </code></pre>
+
+  <h2>🤪 Funny Analogy:</h2>
+  <p>If class is a blueprint of a pizza 🍕,<br>
+  then an object is the actual pizza you eat. 😋<br>
+  Python helps you bake unlimited pizzas from one blueprint!</p>
+  <div class="quiz">
+  <h2>🧠 Quiz Time!</h2>
+  <div class="quiz-question">
+    <p>1. What is a class?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) A real-world object</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) A function</li>
+      <li onclick="checkAnswer(this, 'correct')">c) A blueprint</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>2. What keyword is used to inherit a class?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) import</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) extends</li>
+      <li onclick="checkAnswer(this, 'correct')">c) class Child(Parent)</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>3. What method is automatically called when an object is created?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) __start__()</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) init()</li>
+      <li onclick="checkAnswer(this, 'correct')">c) __init__()</li>
+    </ul>
+  </div>
+    </div>
+
+  <h2>🎯 Challenge Task:</h2>
+  <ul>
+    <li>Create a class <code>Car</code> with brand and model.</li>
+    <li>Add a method to display info.</li>
+    <li>Create another class <code>ElectricCar</code> that inherits from <code>Car</code> and adds battery info.</li>
+  </ul>
+
+  <h2>🧾 Summary Table</h2>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Concept</th>
+        <th>What It Does</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>class</td><td>Defines a blueprint</td></tr>
+      <tr><td>object</td><td>Instance of a class</td></tr>
+      <tr><td>__init__()</td><td>Initializes object properties</td></tr>
+      <tr><td>Inheritance</td><td>Reuse code from parent classes</td></tr>
+      <tr><td>Polymorphism</td><td>Same method name, different behavior</td></tr>
+      <tr><td>Encapsulation</td><td>Protect data using private attributes</td></tr>
+      <tr><td>Abstraction</td><td>Hide internal details</td></tr>
+    </tbody>
+  </table>
+
+</body>
+</html>

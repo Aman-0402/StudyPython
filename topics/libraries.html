@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chapter 9: Working with Libraries (NumPy, pandas)</title>
+</head>
+<body>
+
+  <h1>📚 Chapter 9: Working with Libraries (NumPy, pandas)</h1>
+
+  <div class="section">
+    <h2>🧠 Why Use Libraries?</h2>
+    <p><em>“Don’t reinvent the wheel... when you can import it!”</em></p>
+    <p>Python has thousands of libraries built by awesome developers to:</p>
+    <ul>
+      <li> Save time ⏰</li>
+      <li> Reduce code complexity 🧩</li>
+      <li> Provide powerful tools for:</li>
+      <ul>
+        <li> Math & stats 🧮</li>
+        <li> Data analysis 📊</li>
+        <li> Machine learning 🤖</li>
+        <li> Web scraping 🌐</li>
+      </ul>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>🧾 What Are NumPy and pandas?</h2>
+    <table>
+      <tr><th>Library</th><th>Purpose</th><th>Think of it as...</th></tr>
+      <tr><td>NumPy</td><td>Fast math with arrays & matrices</td><td>Super calculator for arrays 🧠</td></tr>
+      <tr><td>pandas</td><td>Data analysis & manipulation</td><td>Excel in Python 📊</td></tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>📦 Step 1: Installing Libraries</h2>
+    <p>Before using them, install via terminal:</p>
+    <pre><code>pip install numpy pandas</code></pre>
+  </div>
+
+  <div class="section">
+    <h2>🔢 NumPy Basics</h2>
+
+    <h3>🛠️ Importing and Creating Arrays</h3>
+    <pre><code>import numpy as np
+arr = np.array([1, 2, 3, 4])
+print(arr)  # [1 2 3 4]</code></pre>
+
+    <h3>🧮 Array Operations</h3>
+    <pre><code>print(arr + 5)        # [6 7 8 9]
+print(arr * 2)        # [2 4 6 8]
+print(np.mean(arr))   # Average: 2.5
+print(np.sqrt(arr))   # Square roots</code></pre>
+
+    <h3>📏 2D Arrays (Matrix)</h3>
+    <pre><code>matrix = np.array([[1, 2], [3, 4]])
+print(matrix)</code></pre>
+  </div>
+
+  <div class="section">
+    <h2>🐼 pandas Basics</h2>
+
+    <h3>📥 Importing pandas and Creating DataFrames</h3>
+    <pre><code>import pandas as pd
+data = {
+  "Name": ["Aman", "Riya", "John"],
+  "Marks": [90, 85, 88]
+}
+df = pd.DataFrame(data)
+print(df)</code></pre>
+
+    <h3>🔍 Accessing Data</h3>
+    <pre><code>print(df["Name"])     # Column
+print(df.loc[0])      # First row
+print(df.iloc[1])     # Second row (by index)</code></pre>
+
+    <h3>📈 Descriptive Stats</h3>
+    <pre><code>print(df.describe())      # Summary stats
+print(df.mean(numeric_only=True))   # Average of marks</code></pre>
+
+    <h3>📤 Reading from CSV</h3>
+    <pre><code>df = pd.read_csv("students.csv")
+print(df.head())</code></pre>
+  </div>
+
+  <div class="joke">
+    🤪 Funny Analogy:<br>
+    NumPy is like your math nerd friend 🤓 who calculates fast.<br>
+    pandas is your organized Excel-using friend who loves neat rows and columns 🧾
+  </div>
+
+  <div class="section">
+    <h2>🔎 Real-Life Example: Analyzing Class Marks</h2>
+    <pre><code>import pandas as pd
+data = {
+  "Student": ["Aman", "Riya", "Rahul"],
+  "Math": [95, 85, 75],
+  "Science": [88, 92, 80]
+}
+df = pd.DataFrame(data)
+print("Average Marks:")
+print(df.mean(numeric_only=True))</code></pre>
+  </div>
+
+  <div class="quiz">
+    <h2>🧠 Quiz Time!</h2>
+    <div class="quiz-question">
+        <p>1. Which library is best for numerical computations?</p>
+        <ul>
+          <li onclick="checkAnswer(this, 'wrong')">a) pandas</li>
+          <li onclick="checkAnswer(this, 'correct')">b) NumPy</li>
+          <li onclick="checkAnswer(this, 'wrong')">c) Matplotlib</li>
+        </ul>
+      </div>
+      
+      <div class="quiz-question">
+        <p>2. What is a DataFrame in pandas?</p>
+        <ul>
+          <li onclick="checkAnswer(this, 'wrong')">a) List</li>
+          <li onclick="checkAnswer(this, 'wrong')">b) Excel file</li>
+          <li onclick="checkAnswer(this, 'correct')">c) Table of rows and columns</li>
+        </ul>
+      </div>
+      
+      <div class="quiz-question">
+        <p>3. How to install pandas?</p>
+        <ul>
+          <li onclick="checkAnswer(this, 'wrong')">a) install pandas</li>
+          <li onclick="checkAnswer(this, 'correct')">b) pip install pandas</li>
+          <li onclick="checkAnswer(this, 'wrong')">c) python install pandas</li>
+        </ul>
+      </div>
+  </div>
+
+  <div class="challenge">
+    <h2>🎯 Challenge Task</h2>
+    <ol>
+      <li>Create a NumPy array of 10 even numbers.</li>
+      <li>Create a pandas DataFrame of students with names and grades.</li>
+      <li>Find the average grade using pandas.</li>
+    </ol>
+  </div>
+
+  <div class="section">
+    <h2>🧾 Summary</h2>
+    <table>
+      <tr><th>Feature</th><th>NumPy</th><th>pandas</th></tr>
+      <tr><td>Arrays</td><td>✅</td><td>❌</td></tr>
+      <tr><td>Tables</td><td>❌</td><td>✅</td></tr>
+      <tr><td>Speed</td><td>✅</td><td>✅</td></tr>
+      <tr><td>Math Ops</td><td>✅</td><td>Partial</td></tr>
+      <tr><td>File I/O</td><td>❌</td><td>✅ (CSV, Excel)</td></tr>
+    </table>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chapter 4: Functions & Modules</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <div class="chapter">
+    <h1>🧠 Chapter 4: Functions & Modules in Python</h1>
+
+    <p>Imagine writing a recipe. You write the steps once and reuse them every time you cook the dish.<br/>
+    ✅ That’s exactly what <strong>functions</strong> do in Python!</p>
+
+    <h2>🍳 1. What is a Function?</h2>
+    <p>A function is a block of reusable code that performs a specific task.</p>
+
+    <h3>📌 Why Use Functions?</h3>
+    <ul>
+      <li>Avoid writing the same code again & again</li>
+      <li>Make your code clean, organized, and modular</li>
+      <li>Easy to debug and test</li>
+    </ul>
+
+    <h2>🧾 Defining a Function</h2>
+    <pre><code>def greet():
+    print("Hello, Python Learner! 👋")
+
+greet()  # calling the function</code></pre>
+    <p><strong>Output:</strong> Hello, Python Learner! 👋</p>
+
+    <h2>🧃 2. Functions with Parameters</h2>
+    <p>Functions can accept inputs (called parameters) and act on them.</p>
+    <pre><code>def greet(name):
+    print("Hello,", name)
+
+greet("Aman")</code></pre>
+    <p><strong>Output:</strong> Hello, Aman</p>
+
+    <h2>🔙 3. Return Statement</h2>
+    <p>A function can also return a value using the <code>return</code> keyword.</p>
+    <pre><code>def add(a, b):
+    return a + b
+
+result = add(3, 5)
+print("Sum is:", result)</code></pre>
+
+    <h3>😄 Funny Example:</h3>
+    <pre><code>def coffee_machine(name):
+    print(name, "your coffee is ready ☕️")
+
+coffee_machine("Aman")</code></pre>
+
+    <h2>⚙️ 4. Types of Functions</h2>
+    <table>
+      <thead>
+        <tr><th>Type</th><th>Description</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Built-in Functions</td><td>Already available in Python (<code>len()</code>, <code>print()</code>, etc.)</td></tr>
+        <tr><td>User-defined Functions</td><td>Functions you define using <code>def</code></td></tr>
+        <tr><td>Lambda Functions</td><td>Anonymous one-liner functions</td></tr>
+      </tbody>
+    </table>
+
+    <h2>⚡ 5. Lambda (Anonymous) Functions</h2>
+    <p>Used for short and simple functions.</p>
+    <pre><code>square = lambda x: x * x
+print(square(5))</code></pre>
+    <p><strong>Output:</strong> 25</p>
+
+    <h2>📦 6. What is a Module?</h2>
+    <p>A <strong>module</strong> is a Python file (.py) that contains functions, classes, or variables — basically, reusable code.<br/>
+    You can import a module in your project and use its features.</p>
+
+    <h3>🔌 Importing a Module</h3>
+    <pre><code>import math
+print(math.sqrt(16))</code></pre>
+    <p><strong>Output:</strong> 4.0</p>
+
+    <h3>🌟 Common Python Modules</h3>
+    <table>
+      <thead>
+        <tr><th>Module</th><th>Purpose</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>math</td><td>Math functions like sqrt, pow</td></tr>
+        <tr><td>random</td><td>Random numbers and choices</td></tr>
+        <tr><td>datetime</td><td>Date and time</td></tr>
+        <tr><td>os</td><td>File and directory operations</td></tr>
+        <tr><td>sys</td><td>System-specific parameters</td></tr>
+      </tbody>
+    </table>
+
+    <h3>🎲 Example: Using random Module</h3>
+    <pre><code>import random
+number = random.randint(1, 10)
+print("Random number:", number)</code></pre>
+
+    <h2>🧠 Built-in Functions You Should Know</h2>
+    <table>
+      <thead>
+        <tr><th>Function</th><th>Description</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>print()</td><td>Print to console</td></tr>
+        <tr><td>input()</td><td>Take user input</td></tr>
+        <tr><td>len()</td><td>Length of a string/list</td></tr>
+        <tr><td>type()</td><td>Type of variable</td></tr>
+        <tr><td>range()</td><td>Generate a sequence</td></tr>
+        <tr><td>int(), str(), float()</td><td>Type conversion</td></tr>
+      </tbody>
+    </table>
+
+    <blockquote>😆 <strong>Joke Time!</strong><br/>
+    Why do Python devs love functions?<br/>
+    Because they like to reuse their charm, not retype it! 😎</blockquote>
+
+    <h2>🧪 Practice Task 1: Calculator Function</h2>
+    <pre><code>def calculator(a, b, operation):
+    if operation == 'add':
+        return a + b
+    elif operation == 'sub':
+        return a - b
+    elif operation == 'mul':
+        return a * b
+    elif operation == 'div':
+        return a / b
+    else:
+        return "Invalid Operation"
+
+print(calculator(10, 5, 'add'))  # Output: 15</code></pre>
+
+<div class="quiz">
+    <h2>✅ Quick Quiz</h2>
+    <div class="quiz-question">
+        <p>1. What keyword is used to define a function in Python?</p>
+        <ul>
+          <li onclick="checkAnswer(this, 'wrong')">a) define</li>
+          <li onclick="checkAnswer(this, 'wrong')">b) function</li>
+          <li onclick="checkAnswer(this, 'correct')">c) def</li>
+          <li onclick="checkAnswer(this, 'wrong')">d) fun</li>
+        </ul>
+      </div>
+      
+      <div class="quiz-question">
+        <p>2. Which of these is a built-in module?</p>
+        <ul>
+          <li onclick="checkAnswer(this, 'wrong')">a) superpower</li>
+          <li onclick="checkAnswer(this, 'correct')">b) random</li>
+          <li onclick="checkAnswer(this, 'wrong')">c) magic</li>
+          <li onclick="checkAnswer(this, 'wrong')">d) matrix</li>
+        </ul>
+      </div>
+      
+      <div class="quiz-question">
+        <p>3. What does a return statement do?</p>
+        <ul>
+          <li onclick="checkAnswer(this, 'wrong')">a) Prints a result</li>
+          <li onclick="checkAnswer(this, 'wrong')">b) Loops a value</li>
+          <li onclick="checkAnswer(this, 'wrong')">c) Exits the program</li>
+          <li onclick="checkAnswer(this, 'correct')">d) Sends a value back</li>
+        </ul>
+      </div>
+</div>
+
+    <h2>🎯 Challenge Task</h2>
+    <p>Create a program with 3 functions:</p>
+    <ul>
+      <li><code>get_marks()</code> – asks user for 3 subject marks</li>
+      <li><code>calculate_avg()</code> – takes marks, returns average</li>
+      <li><code>display_result()</code> – prints final result and grade</li>
+    </ul>
+
+    <h2>📌 Summary:</h2>
+    <table>
+      <thead>
+        <tr><th>Concept</th><th>Description</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Function</td><td>Block of reusable code (<code>def</code>)</td></tr>
+        <tr><td>Parameters</td><td>Inputs for a function</td></tr>
+        <tr><td>Return</td><td>Send value back from a function</td></tr>
+        <tr><td>Lambda</td><td>Small anonymous function</td></tr>
+        <tr><td>Module</td><td>Python file containing functions etc.</td></tr>
+        <tr><td>Import</td><td>Use external module with <code>import</code></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>

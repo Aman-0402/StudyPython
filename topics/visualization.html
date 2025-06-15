@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chapter 10: Data Visualization with matplotlib</title>
+</head>
+<body>
+
+  <h1>📊 Chapter 10: Data Visualization with matplotlib</h1>
+
+  <h2>🎯 Why Learn Data Visualization?</h2>
+  <p><em>“A graph is worth a thousand numbers.”</em></p>
+  <p>Data is everywhere — but reading tables is boring!</p>
+  <ul>
+    <li>• Understand patterns quickly 👁️‍🗨️</li>
+    <li>• Share insights with others 📢</li>
+    <li>• Make decisions based on trends 📉📈</li>
+  </ul>
+
+  <h2>🖼️ What is matplotlib?</h2>
+  <p><code>matplotlib</code> is a powerful plotting library in Python that turns raw data into beautiful charts.</p>
+  <p>It’s like the artist in your Python toolkit 🎨</p>
+
+  <h2>🧰 Installing matplotlib</h2>
+  <p>Run this in terminal:</p>
+  <pre><code>pip install matplotlib</code></pre>
+
+  <h2>✍️ Basic Usage</h2>
+  <pre><code>import matplotlib.pyplot as plt
+x = [1, 2, 3, 4]
+y = [10, 20, 25, 30]
+plt.plot(x, y)
+plt.title("Basic Line Chart")
+plt.xlabel("X Axis")
+plt.ylabel("Y Axis")
+plt.show()</code></pre>
+  <p><strong>Output:</strong> 🟢 A simple line chart with labeled axes and title.</p>
+
+  <h2>🧱 Types of Charts You Can Make</h2>
+  <table border="1" cellpadding="8">
+    <tr>
+      <th>Chart Type</th>
+      <th>Function</th>
+      <th>Use Case</th>
+    </tr>
+    <tr>
+      <td>Line Chart</td>
+      <td>plot()</td>
+      <td>Track change over time</td>
+    </tr>
+    <tr>
+      <td>Bar Chart</td>
+      <td>bar()</td>
+      <td>Compare categories</td>
+    </tr>
+    <tr>
+      <td>Pie Chart</td>
+      <td>pie()</td>
+      <td>Show parts of a whole</td>
+    </tr>
+    <tr>
+      <td>Histogram</td>
+      <td>hist()</td>
+      <td>Frequency of values</td>
+    </tr>
+    <tr>
+      <td>Scatter Plot</td>
+      <td>scatter()</td>
+      <td>Show relationships</td>
+    </tr>
+  </table>
+
+  <h2>📊 Bar Chart Example</h2>
+  <pre><code>import matplotlib.pyplot as plt
+students = ["Aman", "Riya", "John"]
+marks = [85, 90, 75]
+plt.bar(students, marks, color='skyblue')
+plt.title("Student Marks")
+plt.xlabel("Names")
+plt.ylabel("Marks")
+plt.show()</code></pre>
+
+  <h2>🥧 Pie Chart Example</h2>
+  <pre><code>subjects = ["Math", "Science", "English"]
+time_spent = [5, 3, 2]
+plt.pie(time_spent, labels=subjects, autopct='%1.1f%%')
+plt.title("Time Spent per Subject")
+plt.show()</code></pre>
+
+  <h2>📉 Scatter Plot Example</h2>
+  <pre><code>x = [1, 2, 3, 4, 5]
+y = [2, 4, 1, 8, 7]
+plt.scatter(x, y, color='red')
+plt.title("Scatter Plot")
+plt.xlabel("X values")
+plt.ylabel("Y values")
+plt.show()</code></pre>
+<div class="quiz">
+  <h2>🤪 Funny Analogy</h2>
+  <p>If pandas is your Excel nerd 📊 and NumPy is your math geek 🤓,<br>
+  then matplotlib is your friend who makes PowerPoint slides with cool charts ✨</p>
+
+  <h2>🧠 Quiz Time!</h2>
+  <div class="quiz-question">
+    <p>1. Which library is used for data visualization in Python?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) NumPy</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) pandas</li>
+      <li onclick="checkAnswer(this, 'correct')">c) matplotlib</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>2. What does plt.plot() create?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) Bar chart</li>
+      <li onclick="checkAnswer(this, 'correct')">b) Line chart</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) Pie chart</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>3. Which function is used to display the chart on screen?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) plt.make()</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) plt.view()</li>
+      <li onclick="checkAnswer(this, 'correct')">c) plt.show()</li>
+    </ul>
+  </div>
+</div>
+
+  <h2>🎯 Challenge Task:</h2>
+  <ol>
+    <li>Create a bar chart of 5 subjects and marks.</li>
+    <li>Make a pie chart showing your weekly activity (study, play, sleep, mobile).</li>
+    <li>Try a line chart showing temperature over 7 days.</li>
+  </ol>
+
+  <h2>🧾 Summary Table</h2>
+  <table border="1" cellpadding="8">
+    <tr>
+      <th>Chart</th>
+      <th>Function</th>
+      <th>Visual Style</th>
+    </tr>
+    <tr>
+      <td>Line</td>
+      <td>plot()</td>
+      <td>Trendline</td>
+    </tr>
+    <tr>
+      <td>Bar</td>
+      <td>bar()</td>
+      <td>Comparison</td>
+    </tr>
+    <tr>
+      <td>Pie</td>
+      <td>pie()</td>
+      <td>Proportions</td>
+    </tr>
+    <tr>
+      <td>Scatter</td>
+      <td>scatter()</td>
+      <td>Correlation</td>
+    </tr>
+    <tr>
+      <td>Histogram</td>
+      <td>hist()</td>
+      <td>Distribution</td>
+    </tr>
+  </table>
+
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chapter 7: Exception Handling and Debugging</title>
+</head>
+<body>
+
+  <h1>🛠️ Chapter 7: Exception Handling and Debugging in Python</h1>
+
+  <div class="section">
+    <h2>🚨 Why This Matters?</h2>
+    <p><em>“To err is human… but to handle it smartly is Pythonic!”</em> 🧠🐍</p>
+    <p>Even great programs crash if you don’t handle unexpected situations like:</p>
+    <ul>
+      <li>• File not found</li>
+      <li>• User entering wrong input</li>
+      <li>• Dividing by zero</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>⚡ What is an Exception?</h2>
+    <p>An exception is a runtime error that interrupts your program's normal flow.</p>
+    <pre><code>print(10 / 0)       # ZeroDivisionError
+int("abc")          # ValueError
+open("nope.txt")    # FileNotFoundError</code></pre>
+
+    <div class="joke">
+      😅 You: “What’s your age?”<br>
+      User: “Two cats and a banana.” 🐱🍌<br>
+      Your code: 💀 dies with ValueError
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>🛡️ Python to the Rescue: try...except</h2>
+    <pre><code>try:
+    x = int(input("Enter a number: "))
+    print(100 / x)
+except ZeroDivisionError:
+    print("Oops! Can't divide by 0.")
+except ValueError:
+    print("That was not a number!")</code></pre>
+
+    <h3>🧪 Output:</h3>
+    <pre><code>Enter a number: 0
+Oops! Can't divide by 0.</code></pre>
+  </div>
+
+  <div class="section">
+    <h2>🔁 Multiple except Blocks</h2>
+    <pre><code>try:
+    num = int(input("Enter number: "))
+    result = 10 / num
+except ValueError:
+    print("Only numbers allowed!")
+except ZeroDivisionError:
+    print("Don't divide by 0, please.")</code></pre>
+  </div>
+
+  <div class="section">
+    <h2>🧼 finally: Always Executes</h2>
+    <pre><code>try:
+    f = open("file.txt", "r")
+    data = f.read()
+except FileNotFoundError:
+    print("File missing!")
+finally:
+    print("Closing program.")</code></pre>
+    <p>Even if there’s an error, <code>finally</code> block runs — like brushing your teeth before bed 😄</p>
+  </div>
+
+  <div class="section">
+    <h2>🛠️ else: Runs only if no exception</h2>
+    <pre><code>try:
+    x = 5
+    y = 2
+    result = x / y
+except:
+    print("Something went wrong.")
+else:
+    print("Everything worked fine!")</code></pre>
+  </div>
+
+  <div class="section">
+    <h2>🔧 Real-World Scenario: Login System</h2>
+    <pre><code>try:
+    username = input("Username: ")
+    if username == "":
+        raise ValueError("Username can't be blank")
+    print("Welcome,", username)
+except ValueError as e:
+    print("Error:", e)</code></pre>
+  </div>
+
+  <div class="section">
+    <h2>🐞 Part 2: Debugging Tips 🕵️</h2>
+    <h3>🔎 What is Debugging?</h3>
+    <p>Debugging means finding and fixing bugs (errors) in your code.</p>
+
+    <h3>🧰 Common Tools for Debugging</h3>
+    <ul>
+      <li>1. <code>print()</code> debugging – Old but gold 😎</li>
+      <li>2. Using IDE Debugger – Step-by-step execution</li>
+      <li>3. <code>pdb</code> module – Built-in debugger</li>
+    </ul>
+
+    <h3>✅ Example: Using print() to find bugs</h3>
+    <pre><code>def calculate_area(length, width):
+    print("Length:", length)
+    print("Width:", width)
+    return length * width
+
+print("Area:", calculate_area(5, 2))</code></pre>
+
+    <h3>🐍 Pro Tip: Use assert for quick checks</h3>
+    <pre><code>def divide(a, b):
+    assert b != 0, "b should not be zero!"
+    return a / b</code></pre>
+  </div>
+
+  <div class="quiz">
+    <h2>🎯 Quiz Time!</h2>
+    <div class="quiz-question">
+        <p>1. What is an exception?</p>
+        <ul>
+          <li onclick="checkAnswer(this, 'wrong')">a) A virus</li>
+          <li onclick="checkAnswer(this, 'correct')">b) A runtime error</li>
+          <li onclick="checkAnswer(this, 'wrong')">c) A Python command</li>
+        </ul>
+      </div>
+      
+      <div class="quiz-question">
+        <p>2. Which block is always executed?</p>
+        <ul>
+          <li onclick="checkAnswer(this, 'wrong')">a) try</li>
+          <li onclick="checkAnswer(this, 'wrong')">b) except</li>
+          <li onclick="checkAnswer(this, 'correct')">c) finally</li>
+        </ul>
+      </div>
+      
+      <div class="quiz-question">
+        <p>3. What does this code print?</p>
+        <pre>try:
+          print(1 / 0)
+      except:
+          print("Error!")
+      finally:
+          print("Done.")</pre>
+        <ul>
+          <li onclick="checkAnswer(this, 'correct')">a) Error!</li>
+          <li onclick="checkAnswer(this, 'wrong')">c) 0</li>
+        </ul>
+      </div>
+  </div>
+
+  <div class="challenge">
+    <h2>🧠 Challenge Task</h2>
+    <p>Write a program that:</p>
+    <ol>
+      <li>Takes two numbers from the user</li>
+      <li>Divides them</li>
+      <li>Catches <code>ZeroDivisionError</code> and <code>ValueError</code></li>
+      <li>Prints result only if no error</li>
+    </ol>
+  </div>
+
+  <div class="section">
+    <h2>🧾 Summary Table</h2>
+    <table>
+      <tr><th>Keyword</th><th>Purpose</th></tr>
+      <tr><td>try</td><td>Wrap code that might error</td></tr>
+      <tr><td>except</td><td>Handle specific error</td></tr>
+      <tr><td>else</td><td>Runs only if no error occurs</td></tr>
+      <tr><td>finally</td><td>Always runs (cleanup, closing files etc.)</td></tr>
+      <tr><td>raise</td><td>Throw custom error manually</td></tr>
+      <tr><td>assert</td><td>Check conditions and raise error if false</td></tr>
+    </table>
+  </div>
+
+</body>
+</html>

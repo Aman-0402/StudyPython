@@ -1,0 +1,1801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chapter 1: Python Quiz</title>
+</head>
+<body>
+
+  <h1>🧠 Chapter 1: Introduction to Python (10 Questions)</h1>
+
+  <div class="quiz-question">
+    <p>1. Who developed Python programming language?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) Dennis Ritchie</li>
+      <li onclick="checkAnswer(this, 'correct')">b) Guido van Rossum</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) James Gosling</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) Bjarne Stroustrup</li>
+    </ul>
+
+  </div>
+  
+  <div class="quiz-question">
+    <p>2. In which year was Python first released?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) 1995</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) 2000</li>
+      <li onclick="checkAnswer(this, 'correct')">c) 1991</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) 1989</li>
+    </ul>
+
+  </div>
+  
+  <div class="quiz-question">
+    <p>3. Python is a ______ typed language.</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) Strongly</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) Weakly</li>
+      <li onclick="checkAnswer(this, 'correct')">c) Dynamically</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) Statistically</li>
+    </ul>
+
+  </div>
+  
+  <div class="quiz-question">
+    <p>4. Which one is not a feature of Python?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) Easy syntax</li>
+      <li onclick="checkAnswer(this, 'correct')">b) Compiled language</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) Interpreted language</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) High-level</li>
+    </ul>
+
+  </div>
+  
+  <div class="quiz-question">
+    <p>5. What does print(type("hello")) return?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'correct')">a) &lt;class 'str'&gt;</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) &lt;type 'str'&gt;</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) str</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) "str"</li>
+    </ul>
+
+  </div>
+  
+  <div class="quiz-question">
+    <p>6. What is the extension of a Python file?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) .pt</li>
+      <li onclick="checkAnswer(this, 'correct')">b) .py</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) .pyt</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) .pyn</li>
+    </ul>
+
+  </div>
+  
+  <div class="quiz-question">
+    <p>7. What does the Python interpreter do?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'correct')">a) Converts code into bytecode</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) Translates directly into machine code</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) Runs compiled files only</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) Converts Python to Java</li>
+    </ul>
+>
+  </div>
+  
+  <div class="quiz-question">
+    <p>8. Which of these companies use Python?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) Google</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) Instagram</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) Netflix</li>
+      <li onclick="checkAnswer(this, 'correct')">d) All of the above</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>9. What is the correct way to start a comment in Python?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) -- comment</li>
+      <li onclick="checkAnswer(this, 'correct')">b) # comment</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) /* comment */</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) // comment</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>10. True or False: Python supports both procedural and object-oriented programming.</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'correct')">a) True</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) False</li>
+    </ul>
+  </div>
+
+
+  <h2>🧮 Chapter 2: Variables, Data Types, and Operators (15 Questions)</h2>
+
+  <div class="quiz-question">
+    <p>11. Which of the following is a valid variable name in Python?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) 2value</li>
+      <li onclick="checkAnswer(this, 'correct')">b) _value</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) value-2</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) class</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>12. What is the output of type(5.0)?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) int</li>
+      <li onclick="checkAnswer(this, 'correct')">b) float</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) double</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) decimal</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>13. What will be the output of x = 5 // 2?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) 2.5</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) 3</li>
+      <li onclick="checkAnswer(this, 'correct')">c) 2</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) Error</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>14. What is the default value of a variable declared but not assigned in Python?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) 0</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) None</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) undefined</li>
+      <li onclick="checkAnswer(this, 'correct')">d) Error</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>15. Which data type is used to store True or False values?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) int</li>
+      <li onclick="checkAnswer(this, 'correct')">b) bool</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) str</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) float</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>16. Which operator is used for exponentiation in Python?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) ^</li>
+      <li onclick="checkAnswer(this, 'correct')">b) **</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) ^^</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) exp()</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>17. Which keyword is used to define a constant in Python?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) const</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) define</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) final</li>
+      <li onclick="checkAnswer(this, 'correct')">d) None of the above</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>18. What is the result of "10" + "20"?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) 30</li>
+      <li onclick="checkAnswer(this, 'correct')">b) 1020</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) Error</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) 10 20</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>19. What type is the result of 5 + 2.0?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) int</li>
+      <li onclick="checkAnswer(this, 'correct')">b) float</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) double</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) str</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>20. Which of these is not a valid data type in Python?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) list</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) tuple</li>
+      <li onclick="checkAnswer(this, 'correct')">c) enum</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) set</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>21. What will 5 % 2 return?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) 2.5</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) 2</li>
+      <li onclick="checkAnswer(this, 'correct')">c) 1</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) 0</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>22. Which of the following is mutable?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) tuple</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) int</li>
+      <li onclick="checkAnswer(this, 'correct')">c) list</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) str</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>23. What is the output of bool(0)?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) True</li>
+      <li onclick="checkAnswer(this, 'correct')">b) False</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) 0</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) Error</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>24. What is the output of 10 == 10.0?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'correct')">a) True</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) False</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) Error</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) None</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>25. What is the result of not (True and False)?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'correct')">a) True</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) False</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) None</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) Error</li>
+    </ul>
+  </div>
+
+
+  <h2>🔁 Chapter 3: Control Flow Statements (15 Questions)</h2>
+
+  <div class="quiz-question">
+    <p>26. Which keyword is used for decision-making in Python?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) switch</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) for</li>
+      <li onclick="checkAnswer(this, 'correct')">c) if</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) choose</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>27. What is the output of if True: print("Yes") else: print("No")?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'correct')">a) Yes</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) No</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) Error</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) None</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>28. What is the correct syntax for an else if condition in Python?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) elseif</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) else if</li>
+      <li onclick="checkAnswer(this, 'correct')">c) elif</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) ifelse</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>29. What is the output of for i in range(2): print(i)?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) 1 2</li>
+      <li onclick="checkAnswer(this, 'correct')">b) 0 1</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) 0 1 2</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) 2</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>30. How many times will this loop run? for i in range(3,6): print(i)</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) 2</li>
+      <li onclick="checkAnswer(this, 'correct')">b) 3</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) 4</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) 5</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>31. Which keyword is used to exit a loop prematurely?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) exit</li>
+      <li onclick="checkAnswer(this, 'correct')">b) break</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) stop</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) return</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>32. What does continue do in a loop?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) Exits the loop</li>
+      <li onclick="checkAnswer(this, 'correct')">b) Skips to the next iteration</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) Stops the program</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) Restarts the loop</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>33. Which loop will execute at least once even if the condition is False?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) for loop</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) while loop</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) do-while loop</li>
+      <li onclick="checkAnswer(this, 'correct')">d) None</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>34. What is the output of while False: print("Hi")?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) Hi</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) Infinite Hi</li>
+      <li onclick="checkAnswer(this, 'correct')">c) Nothing</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) Error</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>35. What will this code output?<br>
+    <code>x = 10<br>if x &gt; 5:<br>&nbsp;&nbsp;&nbsp;&nbsp;print("Big")<br>else:<br>&nbsp;&nbsp;&nbsp;&nbsp;print("Small")</code></p>
+    <ul>
+      <li onclick="checkAnswer(this, 'correct')">a) Big</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) Small</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) Error</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) 10</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>36. What will be printed?<br>
+    <code>for i in range(3):<br>&nbsp;&nbsp;&nbsp;&nbsp;if i == 1:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue<br>&nbsp;&nbsp;&nbsp;&nbsp;print(i)</code></p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) 0 1 2</li>
+      <li onclick="checkAnswer(this, 'correct')">b) 0 2</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) 1</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) 0 1</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>37. Which is correct syntax?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) if x = 5:</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) if (x == 5)</li>
+      <li onclick="checkAnswer(this, 'correct')">c) if x == 5:</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) if x === 5:</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>38. Which keyword is used to create an infinite loop?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) while true:</li>
+      <li onclick="checkAnswer(this, 'correct')">b) while True:</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) for i in range():</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) loop forever:</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>39. The <code>pass</code> keyword is used for?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) Skip iteration</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) Stop loop</li>
+      <li onclick="checkAnswer(this, 'correct')">c) Do nothing</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) Comment</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>40. What is printed?<br>
+    <code>x = 4<br>if x % 2 == 0:<br>&nbsp;&nbsp;&nbsp;&nbsp;print("Even")<br>else:<br>&nbsp;&nbsp;&nbsp;&nbsp;print("Odd")</code></p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) Odd</li>
+      <li onclick="checkAnswer(this, 'correct')">b) Even</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) None</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) Error</li>
+    </ul>
+  </div>
+
+  <h2>🧩 Chapter 4: Functions and Modules (15 Questions)</h2>
+
+  <div class="quiz-question">
+    <p>41. How do you define a function in Python?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) function myFunc():</li>
+      <li onclick="checkAnswer(this, 'correct')">b) def myFunc():</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) func myFunc():</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) define myFunc():</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>42. What is the default return value of a function that doesn't return anything?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) 0</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) undefined</li>
+      <li onclick="checkAnswer(this, 'correct')">c) None</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) False</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>43. Which keyword is used to exit a function and return a value?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) break</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) exit</li>
+      <li onclick="checkAnswer(this, 'correct')">c) return</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) stop</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>44. What is the output of:<br>
+    <code>def f():<br>&nbsp;&nbsp;&nbsp;&nbsp;pass<br>print(f())</code></p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) Error</li>
+      <li onclick="checkAnswer(this, 'correct')">b) None</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) 0</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) f</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>45. What is the correct way to import a module in Python?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'correct')">a) import math</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) using math</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) include math</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) load math</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>46. What is the result of <code>len("Python")</code>?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'correct')">a) 6</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) 5</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) 7</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) 0</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>47. What does the <code>dir()</code> function do?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) Lists directory files</li>
+      <li onclick="checkAnswer(this, 'correct')">b) Lists available attributes/methods</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) Deletes a variable</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) None</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>48. Which of the following is a built-in module?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) numpy</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) pandas</li>
+      <li onclick="checkAnswer(this, 'correct')">c) math</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) flask</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>49. Which of the following can be used to create a function with optional parameters?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'correct')">a) def func(a, b=10)</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) def func(a=10, b)</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) def func(a+b)</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) def func{a, b}</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>50. Which built-in function returns the sum of an iterable?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) add()</li>
+      <li onclick="checkAnswer(this, 'correct')">b) sum()</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) total()</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) reduce()</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>51. What will this print?<br>
+    <code>def greet(name):<br>&nbsp;&nbsp;&nbsp;&nbsp;print("Hello", name)<br>greet("Aman")</code></p>
+    <ul>
+      <li onclick="checkAnswer(this, 'correct')">a) Hello Aman</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) Aman Hello</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) greet</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) Error</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>52. What is a recursive function?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) A function that returns a function</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) A function that modifies itself</li>
+      <li onclick="checkAnswer(this, 'correct')">c) A function that calls itself</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) A loop in a function</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>53. What is the scope of a variable defined inside a function?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) Global</li>
+      <li onclick="checkAnswer(this, 'correct')">b) Local</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) Static</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) Universal</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>54. How can you access a function from another file?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) export</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) include</li>
+      <li onclick="checkAnswer(this, 'correct')">c) import</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) use</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>55. What will this print?<br>
+    <code>def add(a, b):<br>&nbsp;&nbsp;&nbsp;&nbsp;return a + b<br>print(add(2, 3))</code></p>
+    <ul>
+      <li onclick="checkAnswer(this, 'correct')">a) 5</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) 23</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) Error</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) 2+3</li>
+    </ul>
+  </div>
+
+  <h2>🧺 Chapter 5: Data Structures – List, Tuple, Set, Dictionary (15 Questions)</h2>
+
+  <div class="quiz-question">
+    <p>56. Which data structure allows duplicate values?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) set</li>
+      <li onclick="checkAnswer(this, 'correct')">b) list</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) dictionary</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) None</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>57. What is the output of len([1, 2, 3])?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) 2</li>
+      <li onclick="checkAnswer(this, 'correct')">b) 3</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) 4</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) Error</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>58. Which data structure is immutable?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) list</li>
+      <li onclick="checkAnswer(this, 'correct')">b) tuple</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) set</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) dict</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>59. What does my_list.append(10) do?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) Adds 10 to the beginning</li>
+      <li onclick="checkAnswer(this, 'correct')">b) Adds 10 to the end</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) Replaces all values with 10</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) Sorts the list</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>60. What is the output of set([1, 2, 2, 3])?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) [1, 2, 2, 3]</li>
+      <li onclick="checkAnswer(this, 'correct')">b) {1, 2, 3}</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) {1, 2, 2, 3}</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) Error</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>61. Which key type is allowed in a dictionary?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) list</li>
+      <li onclick="checkAnswer(this, 'correct')">b) tuple</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) dict</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) set</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>62. How do you access a value from a dictionary using key "name"?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'correct')">a) dict["name"]</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) dict.name</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) dict-&gt;name</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) dict::name</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>63. Which method removes the last item from a list?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) del()</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) remove()</li>
+      <li onclick="checkAnswer(this, 'correct')">c) pop()</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) cut()</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>64. What is the output of type({})?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) set</li>
+      <li onclick="checkAnswer(this, 'correct')">b) dict</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) list</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) tuple</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>65. Which method can be used to add multiple items to a list?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) add()</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) appendall()</li>
+      <li onclick="checkAnswer(this, 'correct')">c) extend()</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) push()</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>66. Which of the following data structures is unordered?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) list</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) tuple</li>
+      <li onclick="checkAnswer(this, 'correct')">c) set</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) string</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>67. What will my_dict.get('age') return if 'age' is not in the dictionary?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) Error</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) 0</li>
+      <li onclick="checkAnswer(this, 'correct')">c) None</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) False</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>68. What is the result of len((1,))?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) 0</li>
+      <li onclick="checkAnswer(this, 'correct')">b) 1</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) 2</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) Error</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>69. How to remove a specific item from a set?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) del</li>
+      <li onclick="checkAnswer(this, 'correct')">b) remove()</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) pop()</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) discard()</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>70. Which of the following is a valid way to create an empty tuple?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) []</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) {}</li>
+      <li onclick="checkAnswer(this, 'correct')">c) ()</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) set()</li>
+    </ul>
+  </div>
+
+  <h2>📝 Chapter 6: String Handling and File I/O (15 Questions)</h2>
+
+  <div class="quiz-question">
+    <p>71. What is the output of "Python".upper()?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) python</li>
+      <li onclick="checkAnswer(this, 'correct')">b) PYTHON</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) Python</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) error</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>72. Which function returns the number of characters in a string?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) count()</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) size()</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) length()</li>
+      <li onclick="checkAnswer(this, 'correct')">d) len()</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>73. What does "hello".replace("l", "r") return?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'correct')">a) herro</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) herro!</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) herro</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) herro</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>74. Which operator is used to concatenate strings?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) &amp;</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) ,</li>
+      <li onclick="checkAnswer(this, 'correct')">c) +</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) *</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>75. What is the output of "Python"[1:4]?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) Pyt</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) ytho</li>
+      <li onclick="checkAnswer(this, 'correct')">c) yth</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) ythn</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>76. What is the result of "Hello".lower()?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) HELLO</li>
+      <li onclick="checkAnswer(this, 'correct')">b) hello</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) Hello</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) error</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>77. What does strip() do in strings?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) Removes all characters</li>
+      <li onclick="checkAnswer(this, 'correct')">b) Removes leading/trailing whitespace</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) Removes vowels</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) Adds space</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>78. Which file mode opens a file for reading only?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) w</li>
+      <li onclick="checkAnswer(this, 'correct')">b) r</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) a</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) x</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>79. What does the read() method do in file handling?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) Reads one line</li>
+      <li onclick="checkAnswer(this, 'correct')">b) Reads the whole file</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) Reads next character</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) Reads header</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>80. How do you open a file named data.txt in write mode?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'correct')">a) open("data.txt", "w")</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) file("data.txt", "w")</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) read("data.txt")</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) write("data.txt")</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>81. Which keyword is used to ensure a file is properly closed after usage?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) use</li>
+      <li onclick="checkAnswer(this, 'correct')">b) with</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) try</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) ensure</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>82. What will file.readline() return?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) List of all lines</li>
+      <li onclick="checkAnswer(this, 'correct')">b) Next line in the file</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) Last line</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) Entire file</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>83. What mode should you use to append to an existing file?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) r</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) w</li>
+      <li onclick="checkAnswer(this, 'correct')">c) a</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) x</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>84. What will happen if the file doesn't exist in "r" mode?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) Creates a new file</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) Returns None</li>
+      <li onclick="checkAnswer(this, 'correct')">c) Raises FileNotFoundError</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) Opens in empty mode</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>85. Which method is used to write content to a file?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) add()</li>
+      <li onclick="checkAnswer(this, 'correct')">b) write()</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) print()</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) writeln()</li>
+    </ul>
+  </div>
+
+  <div class="quiz-question">
+  <p>86. What is an exception in Python?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">a) A function</li>
+    <li onclick="checkAnswer(this, 'wrong')">b) A syntax error</li>
+    <li onclick="checkAnswer(this, 'correct')">c) A runtime error</li>
+    <li onclick="checkAnswer(this, 'wrong')">d) A variable</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>87. Which keyword is used to handle exceptions?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">a) try</li>
+    <li onclick="checkAnswer(this, 'wrong')">b) handle</li>
+    <li onclick="checkAnswer(this, 'wrong')">c) check</li>
+    <li onclick="checkAnswer(this, 'correct')">d) except</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>88. What happens if an exception is not handled?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">a) Program continues</li>
+    <li onclick="checkAnswer(this, 'wrong')">b) Program hangs</li>
+    <li onclick="checkAnswer(this, 'correct')">c) Program crashes</li>
+    <li onclick="checkAnswer(this, 'wrong')">d) Nothing</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>89. What is the output?</p>
+  <pre><code>try:
+    x = 10 / 0
+except ZeroDivisionError:
+    print("Can't divide by zero!")</code></pre>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">a) 0</li>
+    <li onclick="checkAnswer(this, 'wrong')">b) Error</li>
+    <li onclick="checkAnswer(this, 'correct')">c) Can't divide by zero!</li>
+    <li onclick="checkAnswer(this, 'wrong')">d) None</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>90. What does the <code>finally</code> block do?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">a) Runs only if no error</li>
+    <li onclick="checkAnswer(this, 'wrong')">b) Runs only if error</li>
+    <li onclick="checkAnswer(this, 'correct')">c) Always runs</li>
+    <li onclick="checkAnswer(this, 'wrong')">d) Never runs</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>91. What is the purpose of <code>raise</code>?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">a) Stop loop</li>
+    <li onclick="checkAnswer(this, 'wrong')">b) Call function</li>
+    <li onclick="checkAnswer(this, 'correct')">c) Manually throw an exception</li>
+    <li onclick="checkAnswer(this, 'wrong')">d) Restart program</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>92. What type of error is <code>IndexError</code>?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">a) Compile time</li>
+    <li onclick="checkAnswer(this, 'wrong')">b) Syntax</li>
+    <li onclick="checkAnswer(this, 'correct')">c) Runtime</li>
+    <li onclick="checkAnswer(this, 'wrong')">d) Logical</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>93. Which of the following can catch all exceptions?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'correct')">a) except:</li>
+    <li onclick="checkAnswer(this, 'wrong')">b) catch:</li>
+    <li onclick="checkAnswer(this, 'wrong')">c) try:</li>
+    <li onclick="checkAnswer(this, 'wrong')">d) error:</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>94. Which keyword is used to test a block of code for errors?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">a) test</li>
+    <li onclick="checkAnswer(this, 'wrong')">b) throw</li>
+    <li onclick="checkAnswer(this, 'correct')">c) try</li>
+    <li onclick="checkAnswer(this, 'wrong')">d) handle</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>95. How do you catch multiple exceptions?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">a) Separate try blocks</li>
+    <li onclick="checkAnswer(this, 'correct')">b) Multiple except blocks</li>
+    <li onclick="checkAnswer(this, 'wrong')">c) use finally</li>
+    <li onclick="checkAnswer(this, 'wrong')">d) It's not allowed</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>96. What will this print?</p>
+  <pre><code>try:
+    int("abc")
+except ValueError:
+    print("Error!")</code></pre>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">a) abc</li>
+    <li onclick="checkAnswer(this, 'correct')">b) Error!</li>
+    <li onclick="checkAnswer(this, 'wrong')">c) ValueError</li>
+    <li onclick="checkAnswer(this, 'wrong')">d) None</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>97. Which module is used for debugging in Python?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">a) debug</li>
+    <li onclick="checkAnswer(this, 'correct')">b) logging</li>
+    <li onclick="checkAnswer(this, 'wrong')">c) error</li>
+    <li onclick="checkAnswer(this, 'wrong')">d) inspect</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>98. What does <code>assert</code> do?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">a) Raises exception if condition is True</li>
+    <li onclick="checkAnswer(this, 'correct')">b) Raises exception if condition is False</li>
+    <li onclick="checkAnswer(this, 'wrong')">c) Ignores condition</li>
+    <li onclick="checkAnswer(this, 'wrong')">d) Used in loops</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>99. What exception type is raised by <code>open("file.txt")</code> if file not found?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">a) IOError</li>
+    <li onclick="checkAnswer(this, 'correct')">b) FileNotFoundError</li>
+    <li onclick="checkAnswer(this, 'wrong')">c) KeyError</li>
+    <li onclick="checkAnswer(this, 'wrong')">d) ValueError</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>100. Which keyword ensures execution regardless of exception?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'correct')">a) finally</li>
+    <li onclick="checkAnswer(this, 'wrong')">b) return</li>
+    <li onclick="checkAnswer(this, 'wrong')">c) exit</li>
+    <li onclick="checkAnswer(this, 'wrong')">d) done</li>
+  </ul>
+</div>
+
+<h2>🧱 Chapter 8: Object-Oriented Programming (OOP) in Python (15 Questions)</h2>
+<div class="quiz-question">
+    <p>101. What is a class in Python?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) A function</li>
+      <li onclick="checkAnswer(this, 'correct')">b) A blueprint for objects</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) An object</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) A loop</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>102. What is an object?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) A function</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) A class</li>
+      <li onclick="checkAnswer(this, 'correct')">c) An instance of a class</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) A module</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>103. What does <code>__init__()</code> do?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'correct')">a) Initializes a class</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) Deletes object</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) Prints object</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) None</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>104. How do you define a class in Python?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) function MyClass:</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) def MyClass:</li>
+      <li onclick="checkAnswer(this, 'correct')">c) class MyClass:</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) object MyClass:</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>105. What is inheritance?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) Copying variables</li>
+      <li onclick="checkAnswer(this, 'correct')">b) One class getting properties of another</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) A type of loop</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) Creating files</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>106. What is encapsulation?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'correct')">a) Wrapping data and methods</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) Breaking code</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) Sorting lists</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) Looping through class</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>107. What keyword is used for inheritance?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) inherit</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) extends</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) :</li>
+      <li onclick="checkAnswer(this, 'correct')">d) class Child(Parent)</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>108. What is polymorphism?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) Many variables</li>
+      <li onclick="checkAnswer(this, 'correct')">b) One name, many forms</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) Multiple loops</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) All functions same</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>109. What is abstraction?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'correct')">a) Hiding irrelevant data</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) Showing all code</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) Adding comments</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) Data duplication</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>110. How to make an attribute private?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) Use _ before name</li>
+      <li onclick="checkAnswer(this, 'correct')">b) Use __ before name</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) Use private keyword</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) Use @hidden</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>111. Which method is called when an object is deleted?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) __init__()</li>
+      <li onclick="checkAnswer(this, 'correct')">b) __del__()</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) __remove__()</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) delete()</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>112. What is the correct way to create an object of class Car?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) Car = object()</li>
+      <li onclick="checkAnswer(this, 'correct')">b) car = Car()</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) object = Car{}</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) Car.create()</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>113. How many <code>__init__()</code> methods can a class have?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'correct')">a) One</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) Unlimited</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) Two</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) None</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>114. What does <code>super()</code> do?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) Deletes a class</li>
+      <li onclick="checkAnswer(this, 'correct')">b) Calls parent class methods</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) Creates object</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) Inherits class</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>115. Which of the following enables abstraction in Python?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'correct')">a) ABC module</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) math module</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) random module</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) io module</li>
+    </ul>
+  </div>
+
+  <h2>📚 Chapter 9: Working with Libraries (NumPy, pandas) — 15 Questions</h2>
+
+  <div class="quiz-question">
+    <p>116. What is NumPy used for?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) File handling</li>
+      <li onclick="checkAnswer(this, 'correct')">b) Numerical computations</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) GUI design</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) Game development</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>117. How do you import NumPy?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'correct')">a) import numpy</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) include numpy</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) open numpy</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) start numpy</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>118. What does <code>np.array([1, 2, 3])</code> return?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) A list</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) A dictionary</li>
+      <li onclick="checkAnswer(this, 'correct')">c) A NumPy array</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) A tuple</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>119. What is the output of <code>np.zeros((2,3))</code>?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) 2x3 array of 1s</li>
+      <li onclick="checkAnswer(this, 'correct')">b) 2x3 array of 0s</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) Error</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) 3x2 array of 0s</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>120. Which function is used to generate a range of numbers in NumPy?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) np.range()</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) np.linspace()</li>
+      <li onclick="checkAnswer(this, 'correct')">c) np.arange()</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) np.gen()</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>121. What does <code>np.mean()</code> do?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) Finds median</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) Finds minimum</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) Finds mode</li>
+      <li onclick="checkAnswer(this, 'correct')">d) Finds average</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>122. Which library is best for working with tabular data?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) NumPy</li>
+      <li onclick="checkAnswer(this, 'correct')">b) pandas</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) math</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) csv</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>123. How do you import pandas?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) import pd</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) import panda</li>
+      <li onclick="checkAnswer(this, 'correct')">c) import pandas as pd</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) load pandas</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>124. What is a DataFrame in pandas?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) 2D array</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) Dictionary</li>
+      <li onclick="checkAnswer(this, 'correct')">c) Table-like structure</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) Series</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>125. What does <code>pd.read_csv("file.csv")</code> do?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) Reads a PDF</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) Reads a text file</li>
+      <li onclick="checkAnswer(this, 'correct')">c) Reads a CSV file into DataFrame</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) Creates a file</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>126. How do you view first 5 rows of a DataFrame <code>df</code>?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) df.top()</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) df.first()</li>
+      <li onclick="checkAnswer(this, 'correct')">c) df.head()</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) df.view()</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>127. What does <code>df.describe()</code> return?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) Graph</li>
+      <li onclick="checkAnswer(this, 'correct')">b) Summary statistics</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) Data types</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) Column names</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>128. How do you access a column named "age" in a DataFrame?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) df.age()</li>
+      <li onclick="checkAnswer(this, 'correct')">b) df.age</li>
+      <li onclick="checkAnswer(this, 'correct')">c) df["age"]</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) Both b and c</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>129. Which method removes missing data?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) drop_null()</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) fillna()</li>
+      <li onclick="checkAnswer(this, 'correct')">c) dropna()</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) remove()</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>130. How do you get data types of each column in a DataFrame?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) df.info()</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) df.describe()</li>
+      <li onclick="checkAnswer(this, 'correct')">c) df.dtypes</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) df.types()</li>
+    </ul>
+  </div>
+
+  <h2>📊 Chapter 10: Data Visualization with matplotlib — 15 Questions</h2>
+
+  <div class="quiz-question">
+    <p>131. What is matplotlib used for?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) Math operations</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) File reading</li>
+      <li onclick="checkAnswer(this, 'correct')">c) Data visualization</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) Web scraping</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>132. How do you import matplotlib.pyplot?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) import matplotlib</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) import plt</li>
+      <li onclick="checkAnswer(this, 'correct')">c) import matplotlib.pyplot as plt</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) import py.plot</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>133. What does <code>plt.plot([1, 2, 3])</code> create?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) A bar graph</li>
+      <li onclick="checkAnswer(this, 'correct')">b) A line graph</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) A scatter plot</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) Nothing</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>134. Which function displays the graph?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) plt.view()</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) plt.start()</li>
+      <li onclick="checkAnswer(this, 'correct')">c) plt.show()</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) plt.print()</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>135. How to add a title to the plot?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) plt.name("Title")</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) plt.heading("Title")</li>
+      <li onclick="checkAnswer(this, 'correct')">c) plt.title("Title")</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) plt.text("Title")</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>136. Which function is used to label the x-axis?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) plt.labelx()</li>
+      <li onclick="checkAnswer(this, 'correct')">b) plt.xlabel()</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) plt.x()</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) plt.label()</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>137. Which plot shows bars?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'correct')">a) plt.bar()</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) plt.plot()</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) plt.graph()</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) plt.pie()</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>138. What type of chart is created using <code>plt.pie()</code>?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) Line</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) Bar</li>
+      <li onclick="checkAnswer(this, 'correct')">c) Pie</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) Scatter</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>139. How do you create a scatter plot?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) plt.plot()</li>
+      <li onclick="checkAnswer(this, 'correct')">b) plt.scatter()</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) plt.dot()</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) plt.circle()</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>140. What parameter changes line color in <code>plt.plot()</code>?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'correct')">a) color=</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) col=</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) c=</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) line_color=</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>141. Which function adds a legend to the plot?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) plt.name()</li>
+      <li onclick="checkAnswer(this, 'correct')">b) plt.legend()</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) plt.key()</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) plt.note()</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>142. What does <code>plt.grid(True)</code> do?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) Adds border</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) Adds background</li>
+      <li onclick="checkAnswer(this, 'correct')">c) Adds grid lines</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) Removes axis</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>143. What type of data does <code>plt.hist()</code> visualize?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) Time</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) Categories</li>
+      <li onclick="checkAnswer(this, 'correct')">c) Frequency distribution</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) Text</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>144. What is the output of <code>plt.plot([1,2,3],[4,5,6])</code>?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) A bar chart</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) A histogram</li>
+      <li onclick="checkAnswer(this, 'correct')">c) A line from (1,4) to (3,6)</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) Error</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>145. What does <code>plt.savefig("plot.png")</code> do?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) Displays the plot</li>
+      <li onclick="checkAnswer(this, 'correct')">b) Exports plot as image</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) Deletes the plot</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) Opens plot file</li>
+    </ul>
+  </div>
+
+  <h2>🌐 Chapter 11: Introduction to Web APIs and JSON — 15 Questions</h2>
+
+  <div class="quiz-question">
+    <p>146. What does API stand for?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'correct')">a) Application Programming Interface</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) Advanced Python Interpreter</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) Applied Program Instruction</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) Application Program Internet</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>147. What is the primary use of an API?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) To create graphics</li>
+      <li onclick="checkAnswer(this, 'correct')">b) To connect programs and services</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) To build databases</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) To debug code</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>148. What format is most commonly used in APIs?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) XML</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) HTML</li>
+      <li onclick="checkAnswer(this, 'correct')">c) JSON</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) TXT</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>149. What does JSON stand for?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) JavaScript Online Notation</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) Java System Object Network</li>
+      <li onclick="checkAnswer(this, 'correct')">c) JavaScript Object Notation</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) Joint Script Object Network</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>150. What is the correct way to import the requests library in Python?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) import request</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) from python import requests</li>
+      <li onclick="checkAnswer(this, 'correct')">c) import requests</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) use requests</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>151. What does requests.get("url") do?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) Sends data to a server</li>
+      <li onclick="checkAnswer(this, 'correct')">b) Gets data from a server</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) Creates a file</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) Parses JSON</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>152. What does response.json() return?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'correct')">a) A dictionary</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) A list</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) A text file</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) A class</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>153. What status code means "OK" in HTTP?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) 404</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) 500</li>
+      <li onclick="checkAnswer(this, 'correct')">c) 200</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) 302</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>154. What status code means "Not Found"?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) 200</li>
+      <li onclick="checkAnswer(this, 'correct')">b) 404</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) 403</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) 301</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>155. How can you parse JSON in Python?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) import json; json.parse()</li>
+      <li onclick="checkAnswer(this, 'correct')">b) import json; json.loads()</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) import json; json.stringify()</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) import json; json.decode()</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>156. Which method sends data to an API?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) GET</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) SEND</li>
+      <li onclick="checkAnswer(this, 'correct')">c) POST</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) SHOW</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>157. What is the output type of json.dumps()?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) Dictionary</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) JSON object</li>
+      <li onclick="checkAnswer(this, 'correct')">c) String</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) List</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>158. What Python library is commonly used for API calls?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) matplotlib</li>
+      <li onclick="checkAnswer(this, 'correct')">b) requests</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) pandas</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) flask</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>159. In an API response, where is the actual content stored?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) response.status</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) response.text</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) response.content</li>
+      <li onclick="checkAnswer(this, 'correct')">d) response.json()</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>160. What Python keyword handles API errors safely?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) if-else</li>
+      <li onclick="checkAnswer(this, 'correct')">b) try-except</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) import</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) define</li>
+    </ul>
+  </div>
+
+  <h2>🗃️ Chapter 12: Introduction to Database Connectivity — 15 Questions</h2>
+
+  <div class="quiz-question">
+    <p>161. What is a database?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) A programming language</li>
+      <li onclick="checkAnswer(this, 'correct')">b) A place to store and manage data</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) A frontend tool</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) A data algorithm</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>162. Which database is commonly used with Python for beginners?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) Oracle</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) MongoDB</li>
+      <li onclick="checkAnswer(this, 'correct')">c) SQLite</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) MS Access</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>163. What Python library is used for SQLite database interaction?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) pymongo</li>
+      <li onclick="checkAnswer(this, 'correct')">b) sqlite3</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) mysql.connector</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) pandas</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>164. What does sqlite3.connect("db.sqlite") do?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'correct')">a) Creates a new database</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) Opens an Excel file</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) Closes the database</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) Formats the drive</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>165. What is a cursor in database?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) A mouse pointer</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) An index</li>
+      <li onclick="checkAnswer(this, 'correct')">c) A control structure to execute SQL commands</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) A loop</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>166. Which command is used to create a table in SQL?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) MAKE TABLE</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) TABLE NEW</li>
+      <li onclick="checkAnswer(this, 'correct')">c) CREATE TABLE</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) NEW TABLE</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>167. What does cursor.execute("SELECT * FROM students") do?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) Deletes a table</li>
+      <li onclick="checkAnswer(this, 'correct')">b) Shows all rows in the table</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) Updates all rows</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) Creates a new table</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>168. Which SQL keyword is used to insert data?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) ADD</li>
+      <li onclick="checkAnswer(this, 'correct')">b) INSERT</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) PUT</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) NEW</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>169. What function commits changes to the database?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) conn.close()</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) cursor.run()</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) conn.save()</li>
+      <li onclick="checkAnswer(this, 'correct')">d) conn.commit()</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>170. What does fetchall() return?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) One row</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) Column names</li>
+      <li onclick="checkAnswer(this, 'correct')">c) All rows from the query result</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) Only numeric data</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>171. Which SQL keyword updates data?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) CHANGE</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) MODIFY</li>
+      <li onclick="checkAnswer(this, 'correct')">c) UPDATE</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) SET</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>172. Which clause is used to filter results?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) CHECK</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) FIND</li>
+      <li onclick="checkAnswer(this, 'correct')">c) WHERE</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) FILTER</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>173. What does conn.close() do?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) Deletes the database</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) Shuts down Python</li>
+      <li onclick="checkAnswer(this, 'correct')">c) Closes the database connection</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) Hides the table</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>174. What type of language is SQL?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) Object-oriented</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) Scripting</li>
+      <li onclick="checkAnswer(this, 'correct')">c) Declarative</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) Functional</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>175. Which command deletes a table permanently?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) DELETE *</li>
+      <li onclick="checkAnswer(this, 'correct')">b) DROP TABLE</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) REMOVE TABLE</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) ERASE</li>
+    </ul>
+  </div>
+</body>
+</html>

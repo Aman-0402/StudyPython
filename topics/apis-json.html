@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chapter 11: Web APIs and JSON</title>
+</head>
+<body>
+
+  <h1>🌐 Chapter 11: Introduction to Web APIs and JSON</h1>
+
+  <h2>🤔 Why Learn APIs?</h2>
+  <p><em>“APIs are like waiters in a restaurant — they take your order to the kitchen and bring back the food!”</em></p>
+  <ul>
+    <li>Get live weather, news, sports scores 📰</li>
+    <li>Access data from platforms like YouTube, Twitter, or Google 🌍</li>
+    <li>Control smart devices, chatbots, and more 💬</li>
+  </ul>
+
+  <h2>📦 What is an API?</h2>
+  <p>API stands for <strong>Application Programming Interface</strong>. It lets two programs talk to each other.</p>
+
+  <h3>🍔 Real-Life Analogy:</h3>
+  <ul>
+    <li>You 🧑: “I want a pizza!”</li>
+    <li>Waiter 🧑‍🍳 (API): Takes your order to the kitchen.</li>
+    <li>Kitchen 🔥 (Server): Makes the pizza (data).</li>
+    <li>Waiter brings it back to your table.</li>
+  </ul>
+  <p>Same way: <br>
+  🧑 (Your Python app) → 🌐 API → 💾 Server → 🌐 API → 🧑 (Your app gets data!)</p>
+
+  <h2>🔢 What is JSON?</h2>
+  <p><strong>JSON</strong> = JavaScript Object Notation</p>
+  <p>It's the language of data used by most APIs. It's just a text format to send structured data.</p>
+
+  <h3>👇 Example JSON:</h3>
+  <pre><code>{
+  "name": "Aman",
+  "age": 20,
+  "subjects": ["Math", "Python", "AI"]
+}</code></pre>
+  <p>Looks like a Python dictionary, right? Exactly!</p>
+
+  <h2>🛠️ How to Work with APIs in Python</h2>
+  <p>You’ll use a module called <code>requests</code>:</p>
+  <pre><code>pip install requests</code></pre>
+
+  <h3>🔗 Example: Fetching Data from a Free API</h3>
+  <pre><code>import requests
+response = requests.get("https://api.agify.io/?name=aman")
+data = response.json()
+print(data)
+print("Predicted Age:", data["age"])</code></pre>
+  <p><strong>Output:</strong><br>
+  {'name': 'aman', 'age': 25, 'count': 100}<br>
+  Predicted Age: 25</p>
+
+  <h2>🧰 Useful API Terms</h2>
+  <table border="1" cellpadding="8">
+    <tr>
+      <th>Term</th>
+      <th>Meaning</th>
+    </tr>
+    <tr>
+      <td>URL</td>
+      <td>Web address of the API</td>
+    </tr>
+    <tr>
+      <td>GET</td>
+      <td>Request to fetch data</td>
+    </tr>
+    <tr>
+      <td>POST</td>
+      <td>Request to send data</td>
+    </tr>
+    <tr>
+      <td>JSON</td>
+      <td>Format used for request/response</td>
+    </tr>
+  </table>
+
+  <h2>🤪 Funny Analogy</h2>
+  <p>JSON is like your friend who texts you everything in perfect grammar and bullet points 😎</p>
+  <p>API is the delivery boy between your app and a powerful data warehouse 📦</p>
+
+  <h2>🌦 Real-World Example: Get Weather Info</h2>
+  <pre><code>import requests
+city = "London"
+url = f"http://api.weatherapi.com/v1/current.json?key=your_api_key&q={city}"
+response = requests.get(url)
+data = response.json()
+print("Temperature:", data['current']['temp_c'], "°C")</code></pre>
+  <p><em>(Note: You need an API key 🔑 — sign up free on weatherapi.com)</em></p>
+
+  <div class="quiz">
+  <h2>🧠 Quiz Time!</h2>
+  <div class="quiz-question">
+    <p>1. What is an API?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) A type of loop</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) A way to store data</li>
+      <li onclick="checkAnswer(this, 'correct')">c) A bridge between programs</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>2. What does JSON stand for?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'correct')">a) JavaScript Object Notation</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) Java Static Object Naming</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) Just Some Other Numbers</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>3. Which Python module is used to work with APIs?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) json</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) api</li>
+      <li onclick="checkAnswer(this, 'correct')">c) requests</li>
+    </ul>
+  </div>
+    </div>
+
+  <h2>🎯 Challenge Task:</h2>
+  <ol>
+    <li>Use the Agify API to predict ages for 3 different names.</li>
+    <li>Use a free Joke API (<a href="https://official-joke-api.appspot.com/random_joke">https://official-joke-api.appspot.com/random_joke</a>) to print a random joke.</li>
+    <li>Find an API of your interest (e.g. Pokémon, News, COVID) and try fetching data!</li>
+  </ol>
+
+  <h2>🧾 Summary Table</h2>
+  <table border="1" cellpadding="8">
+    <tr>
+      <th>Concept</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>API</td>
+      <td>Lets Python talk to web services</td>
+    </tr>
+    <tr>
+      <td>requests</td>
+      <td>Python module to make API calls</td>
+    </tr>
+    <tr>
+      <td>JSON</td>
+      <td>Lightweight format to share data</td>
+    </tr>
+    <tr>
+      <td>GET</td>
+      <td>Request method to get data</td>
+    </tr>
+    <tr>
+      <td>.json()</td>
+      <td>Convert API response to dictionary</td>
+    </tr>
+  </table>
+
+</body>
+</html>

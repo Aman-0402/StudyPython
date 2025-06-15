@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chapter 12: Database Connectivity in Python</title>
+</head>
+<body>
+
+  <h1>🗃️ Chapter 12: Introduction to Database Connectivity in Python</h1>
+
+  <h2>🤔 Why Learn Database?</h2>
+  <p><em>“A program without a database is like a library without books.”</em></p>
+  <ul>
+    <li>Store user data permanently 📝</li>
+    <li>Build login/signup systems 🔐</li>
+    <li>Create powerful apps like student dashboards, e-commerce sites, chat apps 🛒💬</li>
+  </ul>
+
+  <h2>🧱 What is a Database?</h2>
+  <p>A Database is an organized collection of data. Think of it like a super-smart Excel sheet.</p>
+
+  <h3>🎯 Real-Life Analogy:</h3>
+  <ul>
+    <li>Your phone contact list = a database of people</li>
+    <li>Google Maps = a database of locations</li>
+    <li>Netflix = a database of shows 🍿</li>
+  </ul>
+
+  <h2>🗂️ Types of Databases</h2>
+  <table border="1" cellpadding="8">
+    <tr>
+      <th>Type</th>
+      <th>Example</th>
+      <th>Structure</th>
+    </tr>
+    <tr>
+      <td>Relational</td>
+      <td>MySQL, SQLite</td>
+      <td>Tables 📊</td>
+    </tr>
+    <tr>
+      <td>Non-relational</td>
+      <td>MongoDB</td>
+      <td>JSON-like 📄</td>
+    </tr>
+  </table>
+  <p>We'll use <strong>SQLite</strong> — lightweight, fast, and built-in with Python!</p>
+
+  <h2>🧰 What is SQLite?</h2>
+  <ul>
+    <li>Built-in relational database in Python</li>
+    <li>Stores data in <code>.db</code> files</li>
+    <li>Perfect for learning and small projects</li>
+  </ul>
+
+  <h2>🔌 Step-by-Step: Connecting Python with SQLite</h2>
+  <ol>
+    <li><strong>Import sqlite3 module</strong><br>
+      <code>import sqlite3</code>
+    </li>
+    <li><strong>Connect to a database (or create it)</strong><br>
+      <code>conn = sqlite3.connect('students.db')</code>
+    </li>
+    <li><strong>Create a cursor object</strong><br>
+      <code>cur = conn.cursor()</code>
+    </li>
+    <li><strong>Create a table</strong>
+      <pre><code>cur.execute('''
+CREATE TABLE IF NOT EXISTS students (
+    id INTEGER PRIMARY KEY,
+    name TEXT,
+    marks INTEGER
+)
+''')</code></pre>
+    </li>
+    <li><strong>Insert data</strong><br>
+      <code>cur.execute("INSERT INTO students (name, marks) VALUES (?, ?)", ("Aman", 95))<br>
+conn.commit()</code>
+    </li>
+    <li><strong>Read data</strong><br>
+      <pre><code>cur.execute("SELECT * FROM students")
+rows = cur.fetchall()
+for row in rows:
+    print(row)</code></pre>
+    </li>
+    <li><strong>Close the connection</strong><br>
+      <code>conn.close()</code>
+    </li>
+  </ol>
+
+  <h2>📦 Full Example</h2>
+  <pre><code>import sqlite3
+conn = sqlite3.connect('school.db')
+cur = conn.cursor()
+cur.execute('CREATE TABLE IF NOT EXISTS student (id INTEGER PRIMARY KEY, name TEXT, grade INTEGER)')
+cur.execute('INSERT INTO student (name, grade) VALUES (?, ?)', ('Riya', 88))
+conn.commit()
+cur.execute('SELECT * FROM student')
+print(cur.fetchall())
+conn.close()</code></pre>
+
+  <h2>🤪 Funny Analogy</h2>
+  <p>SQLite is like a tiny notebook your app carries everywhere 🧳📓.<br>
+  It writes and reads whatever you tell it — quietly and efficiently.</p>
+
+  <div class="quiz">
+  <h2>🧠 Quiz Time!</h2>
+  <div class="quiz-question">
+    <p>1. Which module is used in Python for SQLite?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) pymysql</li>
+      <li onclick="checkAnswer(this, 'correct')">b) sqlite3</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) pandaSQL</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>2. What does conn.commit() do?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) Starts a loop</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) Cancels connection</li>
+      <li onclick="checkAnswer(this, 'correct')">c) Saves changes to database</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>3. What function is used to read all rows from a query?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) .read()</li>
+      <li onclick="checkAnswer(this, 'correct')">b) .fetchall()</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) .select()</li>
+    </ul>
+  </div>
+    </div>
+
+  <h2>🎯 Challenge Task</h2>
+  <ol>
+    <li>Create a table <code>books</code> with columns: title, author, year.</li>
+    <li>Insert at least 3 book records.</li>
+    <li>Display all book entries using Python.</li>
+  </ol>
+
+  <h2>🧾 Summary Table</h2>
+  <table border="1" cellpadding="8">
+    <tr>
+      <th>Step</th>
+      <th>What It Does</th>
+    </tr>
+    <tr>
+      <td>sqlite3.connect()</td>
+      <td>Connect to DB file</td>
+    </tr>
+    <tr>
+      <td>cursor()</td>
+      <td>Control the database</td>
+    </tr>
+    <tr>
+      <td>execute()</td>
+      <td>Run SQL commands</td>
+    </tr>
+    <tr>
+      <td>commit()</td>
+      <td>Save changes</td>
+    </tr>
+    <tr>
+      <td>fetchall()</td>
+      <td>Get all results</td>
+    </tr>
+    <tr>
+      <td>close()</td>
+      <td>End connection</td>
+    </tr>
+  </table>
+
+</body>
+</html>

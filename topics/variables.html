@@ -1,0 +1,196 @@
+<h2>🧠 Chapter 2: Variables, Data Types & Operators in Python</h2>
+
+<p>Let’s dive deeper into how Python stores, understands, and plays with data using variables, data types, and operators. This chapter is your foundation for becoming a Python pro 🧑‍💻.</p>
+
+<h3>📦 1. What are Variables?</h3>
+<p>A variable is a named container that holds a value. You can think of it as a label on a box.</p>
+
+<h4>🧠 Syntax:</h4>
+<pre><code>variable_name = value</code></pre>
+<p>✅ Python uses <code>=</code> to assign a value.</p>
+
+<h4>🧪 Example:</h4>
+<pre><code>name = "Aman"
+age = 22</code></pre>
+<p>Now Python knows you're "Aman" and you're 22 years old. It stores this information just like a notebook stores your notes.</p>
+
+<h4>⚠️ Rules for Naming Variables</h4>
+<ul>
+  <li>Must begin with a letter or underscore: <code>_name</code>, <code>age</code></li>
+  <li>Cannot begin with a number: ❌ <code>1name</code></li>
+  <li>Can contain letters, numbers, and underscores: <code>name_1</code></li>
+  <li>Case sensitive: <code>Name</code>, <code>NAME</code>, and <code>name</code> are different</li>
+</ul>
+
+<h3>🎨 2. Python Data Types</h3>
+<p>Python can handle many types of data. These are the basic ones:</p>
+<table border="1" cellpadding="8">
+  <thead>
+    <tr><th>Data Type</th><th>Description</th><th>Example</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>int</td><td>Whole numbers</td><td>10, -1, 0</td></tr>
+    <tr><td>float</td><td>Decimal numbers</td><td>3.14, 0.5, -2.1</td></tr>
+    <tr><td>str</td><td>Strings (text)</td><td>"Hello", 'Aman'</td></tr>
+    <tr><td>bool</td><td>Boolean values (True/False)</td><td>True, False</td></tr>
+    <tr><td>list</td><td>Ordered collection (arrays)</td><td>[1, 2, 3]</td></tr>
+    <tr><td>tuple</td><td>Immutable list</td><td>(1, 2, 3)</td></tr>
+    <tr><td>dict</td><td>Key-value pairs (like a glossary)</td><td>{"name": "Aman"}</td></tr>
+    <tr><td>set</td><td>Unordered unique values</td><td>{1, 2, 3}</td></tr>
+  </tbody>
+</table>
+
+<h4>🧪 Real-Life Data Type Examples</h4>
+<pre><code>name = "Aman"           # str
+age = 22                # int
+height = 5.9            # float
+is_student = True       # bool
+skills = ["Python", "JavaScript", "Java"]  # list
+profile = {"name": "Aman", "age": 22}      # dict</code></pre>
+
+<h4>🧠 Type Checking in Python</h4>
+<pre><code>print(type(name))    # &lt;class 'str'&gt;
+print(type(age))     # &lt;class 'int'&gt;</code></pre>
+
+<h3>🔧 3. Operators in Python</h3>
+<p>Python uses operators to perform operations like math, comparison, logic, etc.</p>
+
+<h4>🧮 A. Arithmetic Operators</h4>
+<table border="1" cellpadding="8">
+  <thead>
+    <tr><th>Operator</th><th>Description</th><th>Example</th><th>Result</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>+</td><td>Addition</td><td>2 + 3</td><td>5</td></tr>
+    <tr><td>-</td><td>Subtraction</td><td>5 - 2</td><td>3</td></tr>
+    <tr><td>*</td><td>Multiplication</td><td>4 * 3</td><td>12</td></tr>
+    <tr><td>/</td><td>Division</td><td>10 / 2</td><td>5.0</td></tr>
+    <tr><td>//</td><td>Floor Division</td><td>7 // 2</td><td>3</td></tr>
+    <tr><td>%</td><td>Modulus (remainder)</td><td>7 % 3</td><td>1</td></tr>
+    <tr><td>**</td><td>Exponent (power)</td><td>2 ** 3</td><td>8</td></tr>
+  </tbody>
+</table>
+
+<h4>💡 Real Example: Chocolate Buyer Bot</h4>
+<pre><code>money = 30
+price = 7
+chocolates = money // price
+change = money % price
+print("Chocolates:", chocolates)
+print("Change left: ₹", change)</code></pre>
+
+<h4>🧪 B. Comparison Operators</h4>
+<table border="1" cellpadding="8">
+  <thead>
+    <tr><th>Operator</th><th>Meaning</th><th>Example</th><th>Result</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>==</td><td>Equal to</td><td>5 == 5</td><td>True</td></tr>
+    <tr><td>!=</td><td>Not equal to</td><td>5 != 3</td><td>True</td></tr>
+    <tr><td>&gt;</td><td>Greater than</td><td>7 &gt; 2</td><td>True</td></tr>
+    <tr><td>&lt;</td><td>Less than</td><td>2 &lt; 5</td><td>True</td></tr>
+    <tr><td>&gt;=</td><td>Greater or equal</td><td>5 &gt;= 5</td><td>True</td></tr>
+    <tr><td>&lt;=</td><td>Less or equal</td><td>4 &lt;= 6</td><td>True</td></tr>
+  </tbody>
+</table>
+
+<h4>🔗 C. Logical Operators</h4>
+<table border="1" cellpadding="8">
+  <thead>
+    <tr><th>Operator</th><th>Meaning</th><th>Example</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>and</td><td>Both True</td><td>True and True → True</td></tr>
+    <tr><td>or</td><td>At least one True</td><td>True or False → True</td></tr>
+    <tr><td>not</td><td>Reverse condition</td><td>not True → False</td></tr>
+  </tbody>
+</table>
+
+<h4>🧪 D. Assignment Operators</h4>
+<table border="1" cellpadding="8">
+  <thead>
+    <tr><th>Operator</th><th>Example</th><th>Meaning</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>=</td><td>x = 5</td><td>Assign value</td></tr>
+    <tr><td>+=</td><td>x += 2</td><td>x = x + 2</td></tr>
+    <tr><td>-=</td><td>x -= 3</td><td>x = x - 3</td></tr>
+    <tr><td>*=</td><td>x *= 2</td><td>x = x * 2</td></tr>
+    <tr><td>/=</td><td>x /= 2</td><td>x = x / 2</td></tr>
+  </tbody>
+</table>
+
+<h3>😄 Funny Joke</h3>
+<blockquote>
+  Why did the Python variable get dumped?<br>
+  Because it kept changing its type!
+</blockquote>
+
+<h3>📚 Practice Time!</h3>
+<pre><code>name = "Aman"
+age = 22
+height = 5.9
+is_coder = True
+print("Name:", name)
+print("Age:", age)
+print("Height:", height)
+print("Is a coder?", is_coder)</code></pre>
+<div class="quiz">
+<h3>🎮 Mini Quiz Time!</h3>
+
+<div class="quiz-question">
+  <p>1. What is the correct way to create a variable in Python?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">a) int x = 5</li>
+    <li onclick="checkAnswer(this, 'wrong')">b) x := 5</li>
+    <li onclick="checkAnswer(this, 'correct')">c) x = 5</li>
+    <li onclick="checkAnswer(this, 'wrong')">d) let x = 5</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>2. What is the data type of 3.14?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">a) int</li>
+    <li onclick="checkAnswer(this, 'correct')">b) float</li>
+    <li onclick="checkAnswer(this, 'wrong')">c) str</li>
+    <li onclick="checkAnswer(this, 'wrong')">d) bool</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>3. Which operator is used for exponentiation?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">a) ^</li>
+    <li onclick="checkAnswer(this, 'correct')">b) **</li>
+    <li onclick="checkAnswer(this, 'wrong')">c) //</li>
+    <li onclick="checkAnswer(this, 'wrong')">d) %</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>4. What will 7 % 3 return?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'correct')">a) 1</li>
+    <li onclick="checkAnswer(this, 'wrong')">b) 2</li>
+    <li onclick="checkAnswer(this, 'wrong')">c) 3</li>
+    <li onclick="checkAnswer(this, 'wrong')">d) 4</li>
+  </ul>
+</div>
+</div>
+
+<h3>🧪 Challenge For You</h3>
+<p><strong>Write a program to:</strong></p>
+<ol>
+  <li>Store your name, age, and marks in 3 subjects.</li>
+  <li>Calculate total marks and average.</li>
+  <li>Print a sentence:<br><code>My name is Aman. I scored 250 out of 300. Average: 83.3</code></li>
+</ol>
+
+<h3>✍️ Summary</h3>
+<ul>
+  <li>Variables are containers for storing data.</li>
+  <li>Python has different data types: int, float, str, bool, etc.</li>
+  <li>Operators help in performing calculations and comparisons.</li>
+  <li>Python makes it easy to manipulate and play with data.</li>
+</ul>

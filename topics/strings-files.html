@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chapter 6: Strings & File I/O in Python</title>
+</head>
+<body>
+
+  <h1>🧠 Chapter 6: String Handling & File I/O in Python</h1>
+
+  <div class="section">
+    <h2>📘 Part 1: String Handling</h2>
+    <p>Everything in the digital world involves text — from chatting on WhatsApp to writing passwords.</p>
+
+    <h3>🔤 What is a String?</h3>
+    <p>A string is a sequence of characters:</p>
+    <pre><code>name = "Aman"
+quote = "Python is fun!"</code></pre>
+    <p>Strings are <strong>immutable</strong>.</p>
+
+    <h3>🧪 String Indexing & Slicing</h3>
+    <pre><code>text = "Python"
+print(text[0])      # P
+print(text[-1])     # n
+print(text[1:4])    # yth
+print(text[::-1])   # nohtyP</code></pre>
+
+    <h3>🔧 Common String Methods</h3>
+    <table>
+      <tr><th>Method</th><th>Description</th><th>Example</th></tr>
+      <tr><td>.lower()</td><td>Lowercase</td><td>"PY".lower() → 'py'</td></tr>
+      <tr><td>.upper()</td><td>Uppercase</td><td>"hi".upper() → 'HI'</td></tr>
+      <tr><td>.strip()</td><td>Remove spaces</td><td>" Hello ".strip() → 'Hello'</td></tr>
+      <tr><td>.replace()</td><td>Replace text</td><td>"apple".replace("p", "b")</td></tr>
+      <tr><td>.find()</td><td>Find index</td><td>"hello".find("e") → 1</td></tr>
+      <tr><td>.split()</td><td>Split string</td><td>"a,b,c".split(",")</td></tr>
+      <tr><td>.join()</td><td>Join list</td><td>",".join(['a','b']) → 'a,b'</td></tr>
+      <tr><td>.isdigit()</td><td>Check digits</td><td>"123".isdigit() → True</td></tr>
+    </table>
+
+    <h3>✂️ Example – Remove Spaces and Capitalize</h3>
+    <pre><code>user_input = "  python is awesome "
+cleaned = user_input.strip().title()
+print(cleaned)  # Python Is Awesome</code></pre>
+
+    <h3>🔐 Real-Life Use Case</h3>
+    <pre><code>password = input("Enter password: ")
+if password.strip() == "OpenSesame":
+    print("Access Granted ✅")
+else:
+    print("Access Denied 🚫")</code></pre>
+
+    <div class="joke">
+      😂 Why did the string break up with the number? Because it just couldn’t count on them anymore!
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>📘 Part 2: File I/O (Input/Output)</h2>
+
+    <h3>📝 Opening a File</h3>
+    <pre><code>file = open("notes.txt", "r")
+content = file.read()
+print(content)
+file.close()</code></pre>
+
+    <h3>🔓 File Modes</h3>
+    <table>
+      <tr><th>Mode</th><th>Meaning</th></tr>
+      <tr><td>r</td><td>Read (default)</td></tr>
+      <tr><td>w</td><td>Write (overwrites)</td></tr>
+      <tr><td>a</td><td>Append</td></tr>
+      <tr><td>r+</td><td>Read & Write</td></tr>
+    </table>
+
+    <h3>🖊️ Writing & Appending</h3>
+    <pre><code># Write
+file = open("notes.txt", "w")
+file.write("Learning Python is fun!\n")
+file.close()
+
+# Append
+file = open("notes.txt", "a")
+file.write("Let's master file handling.\n")
+file.close()</code></pre>
+
+    <h3>📖 Reading Line-by-Line</h3>
+    <pre><code>file = open("notes.txt", "r")
+for line in file:
+    print(line.strip())
+file.close()</code></pre>
+
+    <h3>✅ Using with (Best Practice)</h3>
+    <pre><code>with open("notes.txt", "r") as f:
+    content = f.read()
+    print(content)</code></pre>
+
+    <h3>📂 Student Data File</h3>
+    <pre><code># Write
+with open("student.txt", "w") as f:
+    f.write("Name: Aman\n")
+    f.write("Course: Python\n")
+    f.write("Marks: 88\n")
+
+# Read
+with open("student.txt", "r") as f:
+    print(f.read())</code></pre>
+
+    <h3>🔄 User Input to File</h3>
+    <pre><code>data = input("Enter something to save: ")
+with open("mydata.txt", "w") as file:
+    file.write(data)</code></pre>
+  </div>
+
+  <div class="quiz">
+    <h3>🧠 Quiz Time</h3>
+    <div class="quiz-question">
+        <p>1. What method reads a whole file at once?</p>
+        <ul>
+          <li onclick="checkAnswer(this, 'wrong')">a) .open()</li>
+          <li onclick="checkAnswer(this, 'correct')">b) .read()</li>
+          <li onclick="checkAnswer(this, 'wrong')">c) .scan()</li>
+        </ul>
+      </div>
+      
+      <div class="quiz-question">
+        <p>2. What is the output of "Python".upper()?</p>
+        <ul>
+          <li onclick="checkAnswer(this, 'correct')">a) PYTHON</li>
+          <li onclick="checkAnswer(this, 'wrong')">b) python</li>
+          <li onclick="checkAnswer(this, 'wrong')">c) Python</li>
+        </ul>
+      </div>
+      
+      <div class="quiz-question">
+        <p>3. What does file.close() do?</p>
+        <ul>
+          <li onclick="checkAnswer(this, 'wrong')">a) Deletes file</li>
+          <li onclick="checkAnswer(this, 'correct')">b) Closes it</li>
+          <li onclick="checkAnswer(this, 'wrong')">c) Locks the file</li>
+        </ul>
+      </div>
+  </div>
+
+  <div class="challenge">
+    <h3>🎯 Challenge Task</h3>
+    <ol>
+      <li>Ask the user for name, course, and marks.</li>
+      <li>Save the data in a file <code>record.txt</code>.</li>
+      <li>Read and print the data from the file.</li>
+    </ol>
+  </div>
+
+  <div class="section">
+    <h2>🧾 Summary</h2>
+    <table>
+      <tr><th>Feature</th><th>Purpose</th></tr>
+      <tr><td>String Handling</td><td>Manage and format text</td></tr>
+      <tr><td>Indexing/Slicing</td><td>Access parts of strings</td></tr>
+      <tr><td>File Read/Write</td><td>Store & retrieve data from files</td></tr>
+      <tr><td>Modes (r, w)</td><td>Control how files are opened</td></tr>
+      <tr><td>with open()</td><td>Automatically manage file resources</td></tr>
+    </table>
+  </div>
+
+</body>
+</html>

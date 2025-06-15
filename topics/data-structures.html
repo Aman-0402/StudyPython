@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chapter 5: Data Structures in Python</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <div class="chapter">
+    <h1>🧠 Chapter 5: Data Structures in Python – List, Tuple, Set, Dictionary</h1>
+
+    <p>Imagine your brain having separate compartments for different types of memory — like playlists, favorite emojis, fridge items, and contacts.<br/>
+    That’s what data structures in Python help you do — store and organize data efficiently! 📦📚</p>
+
+    <h2>📦 What are Data Structures?</h2>
+    <p>They’re ways of storing and organizing data so you can access, modify, and manage it easily.</p>
+
+    <h3>Four Main Built-in Data Structures:</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th><th>Ordered</th><th>Mutable</th><th>Duplicate Items</th><th>Syntax Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>List</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td><td>[1, 2, 3]</td></tr>
+        <tr><td>Tuple</td><td>✅ Yes</td><td>❌ No</td><td>✅ Yes</td><td>(1, 2, 3)</td></tr>
+        <tr><td>Set</td><td>❌ No</td><td>✅ Yes</td><td>❌ No</td><td>{1, 2, 3}</td></tr>
+        <tr><td>Dictionary</td><td>❌ No</td><td>✅ Yes</td><td>❌ Keys Unique</td><td>{"name": "Aman"}</td></tr>
+      </tbody>
+    </table>
+
+    <h2>🧃 1. List – A Basket of Items 🧺</h2>
+    <p>A <strong>List</strong> is a mutable, ordered collection of items.</p>
+    <pre><code>fruits = ["apple", "banana", "mango"]
+print(fruits[1])  # Output: banana</code></pre>
+
+    <h3>🎯 Useful List Methods:</h3>
+    <pre><code>fruits.append("orange")  # Add item
+fruits.remove("apple")   # Remove item
+fruits.sort()            # Sort list
+len(fruits)              # Count items</code></pre>
+
+    <blockquote>😄 <strong>Funny Analogy:</strong><br/>
+    A list is like your shopping bag 🛍️—you can add more stuff, remove old stuff, and even sort it!</blockquote>
+
+    <h4>🎯 Quiz Time:</h4>
+    <p>What does <code>fruits.append("grape")</code> do?</p>
+    <ul>
+      <li>a) Deletes “grape”</li>
+      <li><strong>b) Adds grape at the end ✅</strong></li>
+      <li>c) Inserts at the beginning</li>
+    </ul>
+
+    <h2>🪑 2. Tuple – The Unchangeable Chair Set</h2>
+    <p>A <strong>Tuple</strong> is a fixed (immutable), ordered collection.</p>
+    <pre><code>colors = ("red", "green", "blue")
+print(colors[0])  # Output: red</code></pre>
+    <p>You can’t change a tuple once it's created — no <code>.append()</code> or <code>.remove()</code>.</p>
+
+    <h4>✅ Use When:</h4>
+    <ul>
+      <li>You want a constant set of values</li>
+      <li>Data should not be changed</li>
+    </ul>
+
+    <p><strong>🤓 Real Example:</strong></p>
+    <pre><code>days = ("Monday", "Tuesday", "Wednesday")</code></pre>
+
+    <blockquote>🧠 <strong>Joke:</strong><br/>
+    A tuple is like your school time-table 📅—you can't change it once it's printed!</blockquote>
+
+    <h2>🔁 3. Set – A Unique Collection 🌟</h2>
+    <p>A <strong>Set</strong> is an unordered collection of unique items.</p>
+    <pre><code>numbers = {1, 2, 2, 3, 4}
+print(numbers)  # Output: {1, 2, 3, 4}</code></pre>
+
+    <h4>📌 Key Points:</h4>
+    <ul>
+      <li>No duplicates allowed</li>
+      <li>Order is not guaranteed</li>
+      <li>Very fast for searching</li>
+    </ul>
+
+    <p><strong>🎮 Example:</strong></p>
+    <pre><code>set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+print(set1.union(set2))        # {1, 2, 3, 4, 5}
+print(set1.intersection(set2)) # {3}</code></pre>
+
+    <h2>🤖 4. Dictionary – Your Phone Contacts 📱</h2>
+    <p>A <strong>Dictionary</strong> is an unordered collection of key-value pairs.</p>
+    <pre><code>student = {
+    "name": "Aman",
+    "age": 21,
+    "marks": 88
+}
+print(student["name"])  # Output: Aman</code></pre>
+
+    <h4>🎯 Useful Dictionary Methods:</h4>
+    <pre><code>student["course"] = "Python"     # Add new key
+student.pop("age")               # Remove key
+print(student.keys())            # Get all keys
+print(student.values())          # Get all values</code></pre>
+
+    <blockquote>😆 <strong>Funny Analogy:</strong><br/>
+    Dictionary is like your contact list — Name = Key, Phone Number = Value</blockquote>
+
+    <h4>💡 Real Example: Store Student Info</h4>
+    <pre><code>students = {
+    "Aman": {"age": 21, "course": "Python"},
+    "Riya": {"age": 20, "course": "Java"}
+}</code></pre>
+<div class="quiz">
+    <h2>✅ Quiz Time!</h2>
+    <div class="quiz-question">
+        <p>1. Which data structure does not allow duplicates?</p>
+        <ul>
+          <li onclick="checkAnswer(this, 'wrong')">a) List</li>
+          <li onclick="checkAnswer(this, 'wrong')">b) Tuple</li>
+          <li onclick="checkAnswer(this, 'correct')">c) Set</li>
+          <li onclick="checkAnswer(this, 'wrong')">d) Dictionary</li>
+        </ul>
+      </div>
+      
+      <div class="quiz-question">
+        <p>2. What is the output of len((1, 2, 3))?</p>
+        <ul>
+          <li onclick="checkAnswer(this, 'wrong')">a) 2</li>
+          <li onclick="checkAnswer(this, 'correct')">b) 3</li>
+          <li onclick="checkAnswer(this, 'wrong')">c) 1</li>
+        </ul>
+      </div>
+      
+      <div class="quiz-question">
+        <p>3. What will my_dict["name"] return?</p>
+        <ul>
+          <li onclick="checkAnswer(this, 'wrong')">a) KeyError</li>
+          <li onclick="checkAnswer(this, 'correct')">b) Value of "name"</li>
+          <li onclick="checkAnswer(this, 'wrong')">c) "name"</li>
+        </ul>
+      </div>
+      
+      <div class="quiz-question">
+        <p>4. Can we sort a set?</p>
+        <ul>
+          <li onclick="checkAnswer(this, 'correct')">a) Yes (using sorted(set))</li>
+          <li onclick="checkAnswer(this, 'wrong')">b) No</li>
+        </ul>
+      </div>
+</div>
+    <h2>🎯 Challenge Task:</h2>
+    <ul>
+      <li>Create a list of 5 numbers.</li>
+      <li>Convert it into a set to remove duplicates.</li>
+      <li>Store names & marks of 3 students using a dictionary.</li>
+      <li>Access one student’s mark and print it.</li>
+    </ul>
+
+    <h2>🧾 Summary Table:</h2>
+    <table>
+      <thead>
+        <tr><th>Type</th><th>Ordered</th><th>Mutable</th><th>Allows Duplicate</th><th>Ideal For</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>List</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td><td>Dynamic collections</td></tr>
+        <tr><td>Tuple</td><td>✅ Yes</td><td>❌ No</td><td>✅ Yes</td><td>Fixed groups (coordinates, etc.)</td></tr>
+        <tr><td>Set</td><td>❌ No</td><td>✅ Yes</td><td>❌ No</td><td>Unique items, fast search</td></tr>
+        <tr><td>Dictionary</td><td>❌ No</td><td>✅ Yes</td><td>❌ No (keys)</td><td>Key-value pairs like real-world data</td></tr>
+      </tbody>
+    </table>
+
+    <h3>🧠 Bonus Tip:</h3>
+    <p>Want to convert between structures?<br/>
+    ✅ Yes, you can!</p>
+    <pre><code>list1 = [1, 2, 2, 3]
+set1 = set(list1)          # Remove duplicates
+tuple1 = tuple(list1)      # Make immutable</code></pre>
+  </div>
+
+</body>
+</html>

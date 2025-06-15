@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chapter 3: Control Flow Statements</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <div class="chapter">
+    <h1>🧠 Chapter 3: Control Flow Statements in Python</h1>
+    <p>Python is like a smart robot 🦾 — but to make decisions, it needs your instructions.<br/>
+    That’s where <strong>Control Flow Statements</strong> come in — they let you tell Python what to do, when to do it, and how many times.</p>
+
+    <h2>🎯 What are Control Flow Statements?</h2>
+    <ul>
+      <li>Make decisions (<code>if</code>, <code>else</code>, <code>elif</code>)</li>
+      <li>Repeat actions (<code>while</code>, <code>for</code>)</li>
+      <li>Jump over code (<code>break</code>, <code>continue</code>, <code>pass</code>)</li>
+    </ul>
+
+    <h2>🤖 1. Conditional Statements – Making Decisions</h2>
+    <p><strong>📌 Syntax:</strong></p>
+    <pre><code>if condition:
+    # run this block
+elif another_condition:
+    # run this if above fails
+else:
+    # fallback code</code></pre>
+
+    <p><strong>🎮 Real-Life Example:</strong></p>
+    <pre><code>age = 18
+if age >= 18:
+    print("You can vote! 🗳️")
+else:
+    print("Sorry, you are too young 😢")</code></pre>
+
+    <p><strong>🧪 Another Example:</strong></p>
+    <pre><code>marks = 85
+if marks >= 90:
+    print("Grade: A+ 🏆")
+elif marks >= 75:
+    print("Grade: A 🎉")
+elif marks >= 60:
+    print("Grade: B 🙂")
+else:
+    print("Grade: Needs Improvement 😐")</code></pre>
+
+    <blockquote>😂 <strong>Funny Analogy:</strong><br/>
+    If your mom is home, you eat good food.<br/>
+    Else if your dad is home, you order pizza.<br/>
+    Else, you starve and eat Maggi. 🍜</blockquote>
+
+    <h2>🔁 2. Loops – Doing Things Repeatedly</h2>
+
+    <h3>🌀 A. while Loop</h3>
+    <p>Repeats a block as long as a condition is true.</p>
+    <pre><code>count = 1
+while count <= 5:
+    print("Count:", count)
+    count += 1</code></pre>
+
+    <p><strong>Output:</strong><br/>
+    Count: 1<br/>Count: 2<br/>Count: 3<br/>Count: 4<br/>Count: 5</p>
+
+    <blockquote><strong>🧠 Real-Life Analogy:</strong><br/>
+    Imagine eating Laddus until the box is empty.<br/>
+    As long as the box has Laddus, you keep eating! 😋</blockquote>
+
+    <h3>🔂 B. for Loop</h3>
+    <p>Used to iterate over a sequence (like a list, string, range).</p>
+    <pre><code>for i in range(1, 6):
+    print("This is line", i)</code></pre>
+
+    <p><strong>Output:</strong><br/>
+    This is line 1<br/>This is line 2<br/>This is line 3<br/>This is line 4<br/>This is line 5</p>
+
+    <p><strong>📚 Looping Through a List:</strong></p>
+    <pre><code>fruits = ["apple", "banana", "mango"]
+for fruit in fruits:
+    print("I like", fruit)</code></pre>
+
+    <h2>🛑 3. Loop Control Statements</h2>
+
+    <h3>⛔ break – Exit the loop immediately</h3>
+    <pre><code>for i in range(1, 10):
+    if i == 5:
+        break
+    print(i)</code></pre>
+    <p><strong>Output:</strong> 1 2 3 4</p>
+
+    <h3>⏩ continue – Skip to next iteration</h3>
+    <pre><code>for i in range(1, 6):
+    if i == 3:
+        continue
+    print(i)</code></pre>
+    <p><strong>Output:</strong> 1 2 4 5</p>
+
+    <h3>😶 pass – Do nothing (a placeholder)</h3>
+    <pre><code>for i in range(3):
+    pass  # do nothing for now</code></pre>
+
+    <p>Used when you write code but want to fill it later.</p>
+
+    <h2>🧪 Practice Example: Guess the Number 🎲</h2>
+    <pre><code>secret = 7
+guess = int(input("Guess a number between 1 and 10: "))
+if guess == secret:
+    print("🎉 You guessed it right!")
+elif guess < secret:
+    print("Too low! Try again.")
+else:
+    print("Too high! Try again.")</code></pre>
+
+    <div class="quiz">
+    <h2>🧠 Quick Quiz:</h2>
+    
+<div class="quiz-question">
+    <p>1. Which loop is better when the number of iterations is unknown?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) for loop</li>
+      <li onclick="checkAnswer(this, 'correct')">b) while loop</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) loop</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>2. What will range(3) return?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) [0, 1, 2, 3]</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) [1, 2, 3]</li>
+      <li onclick="checkAnswer(this, 'correct')">c) [0, 1, 2]</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>3. Which keyword exits a loop early?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) exit</li>
+      <li onclick="checkAnswer(this, 'correct')">b) break</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) stop</li>
+    </ul>
+  </div>
+  
+  <div class="quiz-question">
+    <p>4. What does pass do in Python?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) Skips the loop</li>
+      <li onclick="checkAnswer(this, 'correct')">b) Does nothing</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) Ends the loop</li>
+    </ul>
+  </div>
+  </div>
+
+    <h2>🎯 Challenge Task</h2>
+    <p>🔥 Create a mini login system:</p>
+    <ol>
+      <li>Set a predefined password.</li>
+      <li>Let user enter password 3 times.</li>
+      <li>If correct → print “Welcome!”</li>
+      <li>Else → print “Access Denied”</li>
+    </ol>
+    <p><strong>Hint:</strong> Use <code>while</code> and <code>break</code></p>
+
+    <blockquote>😄 <strong>Bonus Joke:</strong><br/>
+    Why did the Python loop apply for a job?<br/>
+    Because it wanted a break! 😆</blockquote>
+
+    <h2>🧾 Summary:</h2>
+    <table>
+      <thead>
+        <tr><th>Control Flow</th><th>Description</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>if / elif / else</code></td><td>Makes decisions</td></tr>
+        <tr><td><code>while</code></td><td>Loops while condition is true</td></tr>
+        <tr><td><code>for</code></td><td>Loops over sequences</td></tr>
+        <tr><td><code>break</code></td><td>Exits loop early</td></tr>
+        <tr><td><code>continue</code></td><td>Skips to next iteration</td></tr>
+        <tr><td><code>pass</code></td><td>Does nothing, used as placeholder</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>
