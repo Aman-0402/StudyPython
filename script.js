@@ -4,7 +4,7 @@ const sidebar = document.getElementById('sidebar');
 const links = document.querySelectorAll('.topic-link');
 const content = document.getElementById('content');
 const toggleTheme = document.getElementById('toggleTheme');
-
+//
 menuBtn.addEventListener('click', () => {
   sidebar.classList.toggle('closed');
 
