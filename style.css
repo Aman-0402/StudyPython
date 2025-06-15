@@ -103,6 +103,10 @@ body.dark .sidebar ul li a:hover {
 .sidebar.closed {
   transform: translateX(-100%);
 }
+body.sidebar-collapsed .content {
+  margin-left: 0;
+}
+
 
 /* Content */
 .content {
