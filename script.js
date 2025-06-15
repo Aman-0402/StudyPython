@@ -7,6 +7,13 @@ const toggleTheme = document.getElementById('toggleTheme');
 
 menuBtn.addEventListener('click', () => {
   sidebar.classList.toggle('closed');
+
+  // ✅ Correct logic: add 'sidebar-collapsed' when sidebar is closed
+  if (sidebar.classList.contains('closed')) {
+    document.body.classList.add('sidebar-collapsed');
+  } else {
+    document.body.classList.remove('sidebar-collapsed');
+  }
 });
 
 // Auto-close sidebar and load topic content
@@ -15,22 +22,22 @@ links.forEach(link => {
     e.preventDefault();
     const file = link.getAttribute('data-file');
 
-    // If a data-file attribute exists, load external content
     if (file) {
       fetch(`topics/${file}`)
         .then(res => res.text())
         .then(data => {
           content.innerHTML = data;
-          sidebar.classList.add('closed'); // Auto-close sidebar on topic click
+          sidebar.classList.add('closed');
+          document.body.classList.add('sidebar-collapsed'); // ✅ Keep this
         })
         .catch(() => {
           content.innerHTML = `<h2>Error</h2><p>Sorry, the topic "${file}" could not be loaded.</p>`;
         });
     } else {
-      // Fallback if data-file is missing
       const topicTitle = link.textContent;
       content.innerHTML = `<h2>${topicTitle}</h2><p>Content for "${topicTitle}" will be added here...</p>`;
       sidebar.classList.add('closed');
+      document.body.classList.add('sidebar-collapsed');
     }
   });
 });
@@ -48,12 +55,12 @@ window.addEventListener('DOMContentLoaded', () => {
     document.body.classList.add('dark');
   }
 });
+
 function checkAnswer(element, status) {
   const questionDiv = element.closest('.quiz-question');
   const questionText = questionDiv.querySelector('p').textContent;
   const cleanQuestionText = questionText.replace(/^\d+\.\s*/, '');
-  
-  // Find the correct answer in the question's options
+
   const correctOption = questionDiv.querySelector('li[onclick*="correct"]').textContent;
   const correctAnswerText = correctOption.replace(/^[a-z]\)\s*/i, '');
 
@@ -79,7 +86,6 @@ function checkAnswer(element, status) {
     });
   }
 
-  // Visual feedback
   element.style.backgroundColor = status === 'correct' ? '#d4edda' : '#f8d7da';
   setTimeout(() => {
     element.style.backgroundColor = '';
