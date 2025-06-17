@@ -1,189 +1,1884 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Object-Oriented Programming (OOP) in Python</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Object-Oriented Programming (OOP) in Python</title>
+  </head>
+  <body>
+    <h1>🧱 Chapter 8: Object-Oriented Programming (OOP) in Python</h1>
 
-  <h1>🧱 Chapter 8: Object-Oriented Programming (OOP) in Python</h1>
+    <p>
+      Object-Oriented Programming (OOP) is a programming paradigm that uses
+      "objects" and "classes" to model real-world entities and manage code
+      structure effectively.
+    </p>
 
-  <h2>🤔 Why OOP?</h2>
-  <p>“Programming without OOP is like trying to build a house without bricks.”</p>
-  <ul>
-    <li>More organized</li>
-    <li>Reusable (Write once, use many times)</li>
-    <li>Scalable (Great for large applications)</li>
-    <li>Based on real-world objects</li>
-  </ul>
+    <h2>🤔 Why OOP?</h2>
+    <p>
+      “Programming without OOP is like trying to build a house without bricks.”
+    </p>
+    <ul>
+      <li>More organized</li>
+      <li>Reusable (Write once, use many times)</li>
+      <li>Scalable (Great for large applications)</li>
+      <li>Based on real-world objects</li>
+    </ul>
 
-  <h2>🏗️ OOP Basics: Key Pillars</h2>
-  <table border="1">
-    <thead>
-      <tr>
-        <th>Pillar</th>
-        <th>Meaning</th>
-        <th>Real-Life Analogy</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>Class</td><td>Blueprint or design</td><td>Blueprint of a Car 🏗️</td></tr>
-      <tr><td>Object</td><td>Actual item created using class</td><td>Your personal car 🚗</td></tr>
-      <tr><td>Encapsulation</td><td>Hides complex logic, protects data</td><td>Car engine hidden inside body 🔧</td></tr>
-      <tr><td>Inheritance</td><td>Child class inherits properties of parent class</td><td>Bike inherits from Vehicle 🛵</td></tr>
-      <tr><td>Polymorphism</td><td>Same method name, different behavior</td><td>Accelerator on bike vs car</td></tr>
-      <tr><td>Abstraction</td><td>Shows only essential features</td><td>ATM – hides internal banking logic 💳</td></tr>
-    </tbody>
-  </table>
+    <h2>🏗️ OOP Basics: Key Pillars</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Pillar</th>
+          <th>Meaning</th>
+          <th>Real-Life Analogy</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Class</td>
+          <td>Blueprint or design</td>
+          <td>Blueprint of a Car 🏗️</td>
+        </tr>
+        <tr>
+          <td>Object</td>
+          <td>Actual item created using class</td>
+          <td>Your personal car 🚗</td>
+        </tr>
+        <tr>
+          <td>Encapsulation</td>
+          <td>Hides complex logic, protects data</td>
+          <td>Car engine hidden inside body 🔧</td>
+        </tr>
+        <tr>
+          <td>Inheritance</td>
+          <td>Child class inherits properties of parent class</td>
+          <td>Bike inherits from Vehicle 🛵</td>
+        </tr>
+        <tr>
+          <td>Polymorphism</td>
+          <td>Same method name, different behavior</td>
+          <td>Accelerator on bike vs car</td>
+        </tr>
+        <tr>
+          <td>Abstraction</td>
+          <td>Shows only essential features</td>
+          <td>ATM – hides internal banking logic 💳</td>
+        </tr>
+      </tbody>
+    </table>
 
-  <h2>🧱 Step 1: Creating a Class</h2>
-  <pre><code>class Student:
-    def __init__(self, name, grade):
+    <h3>📦 Real-Life Example:</h3>
+    <p>
+      <strong>Think of a Car:</strong> It has properties like <em>color</em>,
+      <em>brand</em>, <em>speed</em>, and behaviors like <em>drive</em>,
+      <em>brake</em>, and <em>honk</em>.
+    </p>
+    <p>
+      In <strong>OOP</strong>, you create a <code>Car</code> class to define the
+      structure, and then create individual Car objects (like <code>car1</code>,
+      <code>car2</code>).
+    </p>
+
+
+    <h3>🧠 OOP Concepts Covered in Python:</h3>
+    <ul>
+      <li><strong>Class</strong></li>
+      <li><strong>Object</strong></li>
+      <li><strong>Constructor</strong></li>
+      <li><strong>self</strong></li>
+      <li><strong>Encapsulation</strong></li>
+      <li><strong>Inheritance</strong></li>
+      <li><strong>Polymorphism</strong></li>
+      <li><strong>Abstraction</strong></li>
+    </ul>
+
+    <h1>Class and Object</h1>
+<p><strong>✅ Explanation:</strong><br>
+Class is a blueprint for creating objects.<br>
+Object is an instance of a class.
+</p>
+
+<h4>🧪 Practical Example:</h4>
+<pre><code># Define a class
+class Car:
+    def __init__(self, brand, color):
+        self.brand = brand
+        self.color = color
+
+    def drive(self):
+        print(f"The {self.color} {self.brand} is driving.")
+
+# Create objects
+car1 = Car("Toyota", "Red")
+car2 = Car("Honda", "Blue")
+
+# Call methods
+car1.drive()
+car2.drive()
+</code></pre>
+
+<h4>🖨️ Output:</h4>
+<pre><code>The Red Toyota is driving.
+The Blue Honda is driving.</code></pre>
+
+<h4>💡 Real-Life Analogy:</h4>
+<p><strong>Class</strong> = Blueprint of a House</p>
+<p><strong>Object</strong> = Actual House built using the blueprint</p>
+
+
+<div class="section">
+  <h2>🧠 Practical Questions:</h2>
+
+  <div class="question">
+    <h3>🔸 Q1. Create a class Student with attributes name and roll_number, and a method to display the student's info.</h3>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+    <pre><code>class Student:
+    def __init__(self, name, roll_number):
         self.name = name
-        self.grade = grade
+        self.roll_number = roll_number
 
-    def show(self):
-        print(f"{self.name} scored {self.grade}")
-  </code></pre>
+    def display_info(self):
+        print(f"Name: {self.name}")
+        print(f"Roll Number: {self.roll_number}")
 
-  <h2>🔧 Step 2: Creating an Object</h2>
-  <pre><code>s1 = Student("Aman", 95)
-s1.show()  # Output: Aman scored 95
-  </code></pre>
+# Example usage:
+student1 = Student("Aman", 101)
+student1.display_info()</code></pre>
 
-  <h2>🛠️ __init__() Method</h2>
-  <ul>
-    <li>Called automatically when object is created</li>
-    <li>Used to initialize values (like a constructor)</li>
-  </ul>
-  <pre><code>def __init__(self, name, grade):
-    self.name = name
-    self.grade = grade
-  </code></pre>
+      <h4>✅ Output:</h4>
+      <pre>Name: Aman
+Roll Number: 101</pre>
+    </div>
+  </div>
 
-  <h2>🧑‍👩‍👦 Inheritance</h2>
-  <p>Let’s reuse code using inheritance!</p>
-  <pre><code>class Person:
+  <div class="question">
+    <h3>🔸 Q2. Create a class Book with title and author. Print book details.</h3>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+    <pre><code>class Book:
+    def __init__(self, title, author):
+        self.title = title
+        self.author = author
+
+    def show_details(self):
+        print(f"Title: {self.title}")
+        print(f"Author: {self.author}")
+
+# Example usage:
+book1 = Book("Python Programming", "John Doe")
+book1.show_details()</code></pre>
+
+      <h4>✅ Output:</h4>
+      <pre>Title: Python Programming
+Author: John Doe</pre>
+    </div>
+  </div>
+
+  <div class="question">
+    <h3>🔸 Q3. Modify the Car class to include year and display all car details.</h3>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+    <pre><code>class Car:
+    def __init__(self, brand, model, year):
+        self.brand = brand
+        self.model = model
+        self.year = year
+
+    def display_details(self):
+        print(f"Brand: {self.brand}")
+        print(f"Model: {self.model}")
+        print(f"Year: {self.year}")
+
+# Example usage:
+car1 = Car("Toyota", "Innova", 2022)
+car1.display_details()</code></pre>
+
+      <h4>✅ Output:</h4>
+      <pre>Brand: Toyota
+Model: Innova
+Year: 2022</pre>
+    </div>
+  </div>
+
+  <div class="question">
+    <h3>🔸 Q4. Create a Laptop class with a method to print its specifications.</h3>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+    <pre><code>class Laptop:
+    def __init__(self, brand, processor, ram, storage):
+        self.brand = brand
+        self.processor = processor
+        self.ram = ram
+        self.storage = storage
+
+    def print_specs(self):
+        print(f"Brand: {self.brand}")
+        print(f"Processor: {self.processor}")
+        print(f"RAM: {self.ram} GB")
+        print(f"Storage: {self.storage} GB")
+
+# Example usage:
+laptop1 = Laptop("HP", "Intel i5", 8, 512)
+laptop1.print_specs()</code></pre>
+
+      <h4>✅ Output:</h4>
+      <pre>Brand: HP
+Processor: Intel i5
+RAM: 8 GB
+Storage: 512 GB</pre>
+    </div>
+  </div>
+
+  <div class="question">
+    <h3>🔸 Q5. Build a class BankAccount with deposit and withdraw methods.</h3>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+    <pre><code>class BankAccount:
+    def __init__(self, owner, balance=0):
+        self.owner = owner
+        self.balance = balance
+
+    def deposit(self, amount):
+        self.balance += amount
+        print(f"Deposited ₹{amount}. New balance is ₹{self.balance}.")
+
+    def withdraw(self, amount):
+        if amount <= self.balance:
+            self.balance -= amount
+            print(f"Withdrew ₹{amount}. Remaining balance is ₹{self.balance}.")
+        else:
+            print("Insufficient balance.")
+
+# Example usage:
+account1 = BankAccount("Aman", 1000)
+account1.deposit(500)
+account1.withdraw(800)
+account1.withdraw(1000)</code></pre>
+
+      <h4>✅ Output:</h4>
+      <pre>Deposited ₹500. New balance is ₹1500.
+Withdrew ₹800. Remaining balance is ₹700.
+Insufficient balance.</pre>
+    </div>
+  </div>
+</div>
+
+<div class="quiz-section">
+  <h2>📝 MCQs: Class and Object</h2>
+
+  <div class="quiz-question">
+    <p>Q1. What is a class in Python?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) A data type</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) A function</li>
+      <li onclick="checkAnswer(this, 'correct')">c) A blueprint for objects</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) A loop</li>
+    </ul>
+    </div>
+  </div>
+
+  <div class="quiz-question">
+    <p>Q2. What is an object?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) An operator</li>
+      <li onclick="checkAnswer(this, 'correct')">b) An instance of a class</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) A method</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) A module</li>
+    </ul>
+    </div>
+  </div>
+
+  <div class="quiz-question">
+    <p>Q3. Which method is used to initialize object attributes?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) __start__</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) initialize()</li>
+      <li onclick="checkAnswer(this, 'correct')">c) __init__()</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) begin()</li>
+    </ul>
+    </div>
+  </div>
+
+  <div class="quiz-question">
+    <p>Q4. What does self refer to in a class method?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) A copy of object</li>
+      <li onclick="checkAnswer(this, 'correct')">b) The instance itself</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) The class itself</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) Nothing</li>
+    </ul>
+    </div>
+  </div>
+
+  <div class="quiz-question">
+    <p>Q5. Which of the following creates an object in Python?</p>
+    <pre><code>class Dog:
+    pass</code></pre>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) Dog.create()</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) new Dog()</li>
+      <li onclick="checkAnswer(this, 'correct')">c) d = Dog()</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) object Dog</li>
+    </ul>
+    </div>
+  </div>
+</div>
+
+<h1>Constructor and self Keyword in Python</h1>
+
+<h3>🎯 What is a Constructor?</h3>
+<p>A constructor is a special method in Python classes named <code>__init__()</code>. It is automatically called when an object is created.</p>
+
+<h4>🔑 Purpose of Constructor:</h4>
+<ul>
+  <li>To initialize the object’s attributes</li>
+  <li>Automatically sets up initial values</li>
+</ul>
+
+<h3>🧍 What is self?</h3>
+<ul>
+  <li>self refers to the current instance of the class.</li>
+  <li>It allows access to the class attributes and methods from within the class.</li>
+  <li>You must include self as the first parameter in every instance method, including __init__.</li>
+</ul>
+
+<h3>🧪 Practical Example:</h3>
+<pre><code>class Student:
+    def __init__(self, name, roll):
+        self.name = name
+        self.roll = roll
+
+    def display(self):
+        print(f"Name: {self.name}, Roll: {self.roll}")
+
+s1 = Student("Aman", 101)
+s2 = Student("Ram", 102)
+
+s1.display()
+s2.display()</code></pre>
+
+<h4>🖨️ Output:</h4>
+<pre><code>Name: Aman, Roll: 101
+Name: Ram, Roll: 102</code></pre>
+
+<h3>🧍 Real-Life Analogy:</h3>
+<p>Think of filling a registration form.</p>
+<p>The constructor is like the initial registration, where you input name, age, etc., when creating a student.</p>
+
+<h2>🛠️ Practical Use Case: User Login System</h2>
+
+<p>You're designing a user login system where each user has a <strong>username</strong> and <strong>email</strong>.</p>
+
+<h3>💻 Python Code:</h3>
+<pre><code>class User:
+    def __init__(self, username, email):
+        self.username = username
+        self.email = email
+
+    def show_profile(self):
+        print(f"Username: {self.username}, Email: {self.email}")
+
+user1 = User("coder123", "coder@example.com")
+user1.show_profile()</code></pre>
+
+<h3>🖨️ Output:</h3>
+<pre><code>Username: coder123, Email: coder@example.com</code></pre>
+<div class="section">
+  <h2>🧠 Practical Questions:</h2>
+
+  <div class="question">
+    <h3>🔹 Q1. Create a Laptop class with brand, model, and price. Initialize with constructor and print details.</h3>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+    <pre><code>class Laptop:
+    def __init__(self, brand, model, price):
+        self.brand = brand
+        self.model = model
+        self.price = price
+
+    def show_details(self):
+        print(f"Brand: {self.brand}")
+        print(f"Model: {self.model}")
+        print(f"Price: ₹{self.price}")
+
+# Example usage
+laptop1 = Laptop("Dell", "Inspiron 15", 55000)
+laptop1.show_details()</code></pre>
+      <h4>✅ Output:</h4>
+      <pre>Brand: Dell
+Model: Inspiron 15
+Price: ₹55000</pre>
+    </div>
+  </div>
+
+  <div class="question">
+    <h3>🔹 Q2. Build a Movie class that stores name, genre, and rating.</h3>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+    <pre><code>class Movie:
+    def __init__(self, name, genre, rating):
+        self.name = name
+        self.genre = genre
+        self.rating = rating
+
+    def display(self):
+        print(f"Movie: {self.name}")
+        print(f"Genre: {self.genre}")
+        print(f"Rating: {self.rating}/10")
+
+# Example usage
+movie1 = Movie("Inception", "Sci-Fi", 8.8)
+movie1.display()</code></pre>
+      <h4>✅ Output:</h4>
+      <pre>Movie: Inception
+Genre: Sci-Fi
+Rating: 8.8/10</pre>
+    </div>
+  </div>
+
+  <div class="question">
+    <h3>🔹 Q3. Modify Student class to include a subject list and print it.</h3>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+    <pre><code>class Student:
+    def __init__(self, name, roll_number, subjects):
+        self.name = name
+        self.roll_number = roll_number
+        self.subjects = subjects  # list of subjects
+
+    def show_subjects(self):
+        print(f"Student Name: {self.name}")
+        print("Subjects Enrolled:")
+        for subject in self.subjects:
+            print(f"- {subject}")
+
+# Example usage
+student1 = Student("Riya", 102, ["Math", "Science", "English"])
+student1.show_subjects()</code></pre>
+      <h4>✅ Output:</h4>
+      <pre>Student Name: Riya
+Subjects Enrolled:
+- Math
+- Science
+- English</pre>
+    </div>
+  </div>
+
+  <div class="question">
+    <h3>🔹 Q4. Create a Product class with discount logic in the constructor.</h3>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+    <pre><code>class Product:
+    def __init__(self, name, price, discount_percent):
+        self.name = name
+        self.original_price = price
+        self.discount_percent = discount_percent
+        self.final_price = price - (price * discount_percent / 100)
+
+    def show_price(self):
+        print(f"Product: {self.name}")
+        print(f"Original Price: ₹{self.original_price}")
+        print(f"Discount: {self.discount_percent}%")
+        print(f"Final Price: ₹{self.final_price}")
+
+# Example usage
+product1 = Product("Smartphone", 20000, 10)
+product1.show_price()</code></pre>
+      <h4>✅ Output:</h4>
+      <pre>Product: Smartphone
+Original Price: ₹20000
+Discount: 10%
+Final Price: ₹18000.0</pre>
+    </div>
+  </div>
+
+  <div class="question">
+    <h3>🔹 Q5. Create a Rectangle class and calculate area inside a method using constructor values.</h3>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+    <pre><code>class Rectangle:
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+
+    def calculate_area(self):
+        area = self.length * self.width
+        print(f"Rectangle Area: {area} square units")
+
+# Example usage
+rect1 = Rectangle(10, 5)
+rect1.calculate_area()</code></pre>
+      <h4>✅ Output:</h4>
+      <pre>Rectangle Area: 50 square units</pre>
+    </div>
+  </div>
+</div>
+
+<div class="quiz-section">
+  <h2>📝 MCQs: Constructor and self</h2>
+
+  <div class="quiz-question">
+    <p>Q1. What is the purpose of the __init__ method?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) To destroy objects</li>
+      <li onclick="checkAnswer(this, 'correct')">b) To initialize object attributes</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) To copy object</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) To inherit properties</li>
+    </ul>>
+  </div>
+
+  <div class="quiz-question">
+    <p>Q2. What does the self keyword represent in Python?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) The class itself</li>
+      <li onclick="checkAnswer(this, 'correct')">b) The current instance</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) A random object</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) None of the above</li>
+    </ul>
+  </div>
+
+  <div class="quiz-question">
+    <p>Q3. Which of the following is not true about constructors in Python?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) It is named __init__()</li>
+      <li onclick="checkAnswer(this, 'correct')">b) It must return a value</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) It can accept parameters</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) It runs when an object is created</li>
+    </ul>
+  </div>
+
+  <div class="quiz-question">
+    <p>Q4. Which of these is a correct way to define a constructor?</p>
+    <pre><code>class Person:
+    def __init__(self, name):
+        self.name = name</code></pre>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) Correct</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) Incorrect</li>
+      <li onclick="checkAnswer(this, 'correct')">c) Correct</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) Invalid syntax</li>
+    </ul>
+  </div>
+
+  <div class="quiz-question">
+    <p>Q5. Which line would correctly create an object using a constructor?</p>
+    <pre><code>class A:
+    def __init__(self, x):
+        self.x = x</code></pre>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) obj = A[]</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) obj = A{x}</li>
+      <li onclick="checkAnswer(this, 'correct')">c) obj = A(5)</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) obj = A.new()</li>
+    </ul>
+  </div>
+</div>
+
+<h1>🧱 Encapsulation in Python</h1>
+
+<h3>🎯 What is Encapsulation?</h3>
+<p>Encapsulation is the process of hiding internal details of a class and only exposing what is necessary.</p>
+<ul>
+  <li>Protects data from unauthorized access and modification</li>
+  <li>Makes code more modular and easier to maintain</li>
+</ul>
+
+<h3>🔐 Real-Life Analogy:</h3>
+<p><strong>Think of a bank ATM:</strong><br>
+You can withdraw or check your balance through buttons.<br>
+But you can’t directly access internal systems or vaults.<br>
+This is encapsulation — exposing only safe methods, and hiding sensitive data.</p>
+
+<h3>🧪 Syntax in Python:</h3>
+<p>Python doesn’t have true "private" variables, but uses convention:</p>
+<table border="1" cellpadding="8">
+  <thead>
+    <tr>
+      <th>Modifier</th>
+      <th>Syntax</th>
+      <th>Access Level</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Public</td>
+      <td>self.name</td>
+      <td>Accessible everywhere</td>
+    </tr>
+    <tr>
+      <td>Protected</td>
+      <td>self._name</td>
+      <td>Convention: internal use</td>
+    </tr>
+    <tr>
+      <td>Private</td>
+      <td>self.__name</td>
+      <td>Name mangling prevents outside access</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>🔧 Practical Example:</h3>
+<pre><code>class Account:
+    def __init__(self, balance):
+        self.__balance = balance  # private variable
+
+    def deposit(self, amount):
+        if amount &gt; 0:
+            self.__balance += amount
+
+    def withdraw(self, amount):
+        if 0 &lt; amount &lt;= self.__balance:
+            self.__balance -= amount
+        else:
+            print("Insufficient balance!")
+
+    def get_balance(self):
+        return self.__balance
+
+acc = Account(1000)
+acc.deposit(500)
+acc.withdraw(300)
+print("Balance:", acc.get_balance())  # Correct way to access
+
+# print(acc.__balance)  ❌ Error: private attribute</code></pre>
+
+<h3>👨‍💻 Output:</h3>
+<pre><code>Balance: 1200</code></pre>
+
+<h3>🛠️ Practical Use Case:</h3>
+<p>Encapsulation is useful for <strong>bank systems, user credentials, game data</strong>, etc., where direct modification from outside could break logic or cause misuse.</p>
+
+<div class="section">
+  <h2>🧠 Practical Questions:</h2>
+
+  <div class="question">
+    <h3>🔐 Q1. Create a User class with private __password and methods to change/check it.</h3>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+    <pre><code>class User:
+    def __init__(self, username, password):
+        self.username = username
+        self.__password = password  # private
+
+    def check_password(self, password):
+        return self.__password == password
+
+    def change_password(self, old_pass, new_pass):
+        if self.__password == old_pass:
+            self.__password = new_pass
+            print("Password changed successfully.")
+        else:
+            print("Incorrect current password.")
+
+# Example usage
+user1 = User("aman123", "secret123")
+print(user1.check_password("secret123"))  # True
+user1.change_password("secret123", "newpass456")
+print(user1.check_password("newpass456"))  # True</code></pre>
+
+      <h4>✅ Output:</h4>
+      <pre>True
+Password changed successfully.
+True</pre>
+      <p>Demonstrates private attribute (__password) and encapsulation with controlled access methods.</p>
+    </div>
+  </div>
+
+  <div class="question">
+    <h3>💼 Q2. Build an Employee class that hides salary and provides a get_salary() method.</h3>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+    <pre><code>class Employee:
+    def __init__(self, name, salary):
+        self.name = name
+        self.__salary = salary  # private
+
+    def get_salary(self):
+        return self.__salary
+
+# Example usage
+emp = Employee("Ravi", 50000)
+print(f"{emp.name}'s Salary: ₹{emp.get_salary()}")</code></pre>
+      <h4>✅ Output:</h4>
+      <pre>Ravi's Salary: ₹50000</pre>
+      <p>Shows encapsulation by making salary private and providing controlled access.</p>
+    </div>
+  </div>
+
+  <div class="question">
+    <h3>🏦 Q3. Modify the Account class to add a private transaction_history list.</h3>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+    <pre><code>class Account:
+    def __init__(self, owner):
+        self.owner = owner
+        self.__balance = 0
+        self.__transaction_history = []
+
+    def deposit(self, amount):
+        self.__balance += amount
+        self.__transaction_history.append(f"Deposited ₹{amount}")
+
+    def withdraw(self, amount):
+        if amount <= self.__balance:
+            self.__balance -= amount
+            self.__transaction_history.append(f"Withdrew ₹{amount}")
+        else:
+            self.__transaction_history.append("Failed Withdrawal: Insufficient balance")
+
+    def get_history(self):
+        return self.__transaction_history
+
+# Example usage
+acc = Account("Aman")
+acc.deposit(1000)
+acc.withdraw(400)
+acc.withdraw(1000)
+print(acc.get_history())</code></pre>
+      <h4>✅ Output:</h4>
+      <pre>['Deposited ₹1000', 'Withdrew ₹400', 'Failed Withdrawal: Insufficient balance']</pre>
+      <p>Demonstrates encapsulation with private attributes and transaction history tracking.</p>
+    </div>
+  </div>
+
+  <div class="question">
+    <h3>🎓 Q4. Add validation logic in a Student class that hides marks and only allows values between 0–100.</h3>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+    <pre><code>class Student:
+    def __init__(self, name):
+        self.name = name
+        self.__marks = 0  # private
+
+    def set_marks(self, marks):
+        if 0 <= marks <= 100:
+            self.__marks = marks
+        else:
+            print("Marks must be between 0 and 100.")
+
+    def get_marks(self):
+        return self.__marks
+
+# Example usage
+stu = Student("Neha")
+stu.set_marks(95)
+print(f"{stu.name}'s Marks: {stu.get_marks()}")
+stu.set_marks(120)  # Invalid</code></pre>
+
+      <h4>✅ Output:</h4>
+      <pre>Neha's Marks: 95
+Marks must be between 0 and 100.</pre>
+      <p>Shows encapsulation with validation logic for private marks attribute.</p>
+    </div>
+  </div>
+
+  <div class="question">
+    <h3>🗳️ Q5. Implement a VotingSystem where age is a protected field, only changeable through a method.</h3>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+    <pre><code>class VotingSystem:
+    def __init__(self, name, age):
+        self.name = name
+        self._age = age  # protected
+
+    def update_age(self, new_age):
+        if new_age >= 0:
+            self._age = new_age
+        else:
+            print("Invalid age.")
+
+    def can_vote(self):
+        return self._age >= 18
+
+# Example usage
+voter = VotingSystem("Sita", 16)
+print(f"Can vote? {voter.can_vote()}")
+voter.update_age(20)
+print(f"Can vote? {voter.can_vote()}")</code></pre>
+      <h4>✅ Output:</h4>
+      <pre>Can vote? False
+Can vote? True</pre>
+      <p>Demonstrates protected attribute (_age) with controlled modification and voting check.</p>
+    </div>
+  </div>
+</div>
+
+<div class="quiz-section">
+  <h2>📝 MCQs: Encapsulation</h2>
+
+  <div class="quiz-question">
+    <p>Q1. What does encapsulation help with?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) Faster execution</li>
+      <li onclick="checkAnswer(this, 'correct')">b) Data protection and security</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) More libraries</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) GUI design</li>
+    </ul>
+  </div>
+
+  <div class="quiz-question">
+    <p>Q2. How do you define a private variable in Python?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) private balance</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) var balance</li>
+      <li onclick="checkAnswer(this, 'correct')">c) self.__balance</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) balance.private</li>
+    </ul>
+  </div>
+
+  <div class="quiz-question">
+    <p>Q3. What is the output of this?</p>
+    <pre><code>class A:
+    def __init__(self):
+        self.__x = 5
+
+a = A()
+print(a.__x)</code></pre>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) 5</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) 0</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) Error</li>
+      <li onclick="checkAnswer(this, 'correct')">d) AttributeError</li>
+    </ul>
+  </div>
+
+  <div class="quiz-question">
+    <p>Q4. How can you access a private variable from outside?</p>
+    <pre><code>class A:
+    def __init__(self):
+        self.__val = 10</code></pre>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) A.__val</li>
+      <li onclick="checkAnswer(this, 'correct')">b) A._A__val</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) A.val</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) Not possible at all</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+  </div>
+
+  <div class="quiz-question">
+    <p>Q5. Why use a getter method in encapsulation?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) To print variables</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) To reduce lines</li>
+      <li onclick="checkAnswer(this, 'correct')">c) To access private/protected variables safely</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) To debug faster</li>
+    </ul>
+  </div>
+</div>
+
+<h1>🧱 Inheritance in Python</h1>
+
+<h3>🎯 What is Inheritance?</h3>
+<p>Inheritance allows a class (called <strong>child</strong> or <strong>subclass</strong>) to inherit attributes and methods from another class (called <strong>parent</strong> or <strong>superclass</strong>).</p>
+<ul>
+  <li>This promotes code reuse</li>
+  <li>Enables a clear hierarchical structure</li>
+</ul>
+
+<h3>🏠 Real-Life Analogy:</h3>
+<p>
+Imagine:<br>
+<b>Parent class:</b> Human (has eat(),sleep())<br>
+<b>Child class:</b> Student (inherits from Human, adds study())<br>
+The student automatically inherits the eating and sleeping behavior.
+</p>
+
+<h3>🔧 Syntax Example:</h3>
+<pre><code>class Parent:
+    def speak(self):
+        print("I am speaking!")
+
+class Child(Parent):
+    def play(self):
+        print("I am playing!")
+
+c = Child()
+c.speak()   # Inherited method
+c.play()    # Own method
+</code></pre>
+
+<h4>🖨️ Output:</h4>
+<pre><code>I am speaking!
+I am playing!</code></pre>
+
+<h3>🧪 Practical Example with __init__ and super():</h3>
+<pre><code>class Animal:
     def __init__(self, name):
         self.name = name
 
-    def say_hello(self):
-        print("Hi, I’m", self.name)
-
-class Student(Person):  # Student inherits Person
-    def study(self):
-        print(self.name, "is studying.")
-
-s2 = Student("Riya")
-s2.say_hello()
-s2.study()
-  </code></pre>
-
-  <h2>🎭 Polymorphism Example</h2>
-  <pre><code>class Animal:
-    def speak(self):
-        print("Animal speaks")
+    def sound(self):
+        print(f"{self.name} makes a sound.")
 
 class Dog(Animal):
-    def speak(self):
+    def __init__(self, name, breed):
+        super().__init__(name)  # Call parent constructor
+        self.breed = breed
+
+    def bark(self):
+        print(f"{self.name} the {self.breed} barks!")
+
+d = Dog("Bruno", "Labrador")
+d.sound()
+d.bark()
+</code></pre>
+
+<h4>🖨️ Output:</h4>
+<pre><code>Bruno makes a sound.
+Bruno the Labrador barks!</code></pre>
+
+<h3>👨‍💻 Types of Inheritance in Python:</h3>
+<table border="1" cellpadding="8">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Single</td>
+      <td>One child inherits from one parent</td>
+    </tr>
+    <tr>
+      <td>Multiple</td>
+      <td>One child inherits from many parents</td>
+    </tr>
+    <tr>
+      <td>Multilevel</td>
+      <td>Class inherits from a derived class</td>
+    </tr>
+    <tr>
+      <td>Hierarchical</td>
+      <td>Multiple children from one parent</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>🛠️ Real-World Use Case:</h3>
+<p>
+In a <strong>school management system</strong>:<br>
+<b>Person</b> → name, age<br>
+<b>Teacher(Person)</b> → subject, salary<br>
+<b>Student(Person)</b> → roll, marks
+</p>
+
+<div class="section">
+  <h2>🧠 Practical Questions:</h2>
+
+  <div class="question">
+    <h3>🚗 Q1. Create a class Vehicle, and let Car and Bike inherit from it with their own methods.</h3>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+    <pre><code>class Vehicle:
+    def __init__(self, brand):
+        self.brand = brand
+
+    def start(self):
+        print(f"{self.brand} vehicle is starting...")
+
+class Car(Vehicle):
+    def drive(self):
+        print(f"{self.brand} Car is driving...")
+
+class Bike(Vehicle):
+    def ride(self):
+        print(f"{self.brand} Bike is riding...")
+
+# Example usage
+c = Car("Toyota")
+c.start()
+c.drive()
+
+b = Bike("Yamaha")
+b.start()
+b.ride()</code></pre>
+
+      <h4>✅ Output:</h4>
+      <pre>Toyota vehicle is starting...
+Toyota Car is driving...
+Yamaha vehicle is starting...
+Yamaha Bike is riding...</pre>
+      <p>Demonstrates simple inheritance where Car and Bike inherit common behavior from Vehicle.</p>
+    </div>
+  </div>
+
+  <div class="question">
+    <h3>🔷 Q2. Create a Shape class and let Rectangle and Circle inherit and implement area().</h3>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+    <pre><code>import math
+
+class Shape:
+    def area(self):
+        pass  # Abstract-like method
+
+class Rectangle(Shape):
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+
+    def area(self):
+        return self.length * self.width
+
+class Circle(Shape):
+    def __init__(self, radius):
+        self.radius = radius
+
+    def area(self):
+        return math.pi * self.radius ** 2
+
+# Example usage
+rect = Rectangle(5, 4)
+print("Rectangle Area:", rect.area())
+
+circle = Circle(3)
+print("Circle Area:", round(circle.area(), 2))</code></pre>
+
+      <h4>✅ Output:</h4>
+      <pre>Rectangle Area: 20
+Circle Area: 28.27</pre>
+      <p>Shows polymorphism through method overriding of the area() method.</p>
+    </div>
+  </div>
+
+  <div class="question">
+    <h3>🏦 Q3. Implement Account → SavingAccount, CurrentAccount with different interest() logic.</h3>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+    <pre><code>class Account:
+    def __init__(self, balance):
+        self.balance = balance
+
+    def interest(self):
+        pass
+
+class SavingAccount(Account):
+    def interest(self):
+        return self.balance * 0.05  # 5% interest
+
+class CurrentAccount(Account):
+    def interest(self):
+        return self.balance * 0.02  # 2% interest
+
+# Example usage
+s = SavingAccount(10000)
+print("Saving Interest:", s.interest())
+
+c = CurrentAccount(10000)
+print("Current Interest:", c.interest())</code></pre>
+      <h4>✅ Output:</h4>
+      <pre>Saving Interest: 500.0
+Current Interest: 200.0</pre>
+      <p>Demonstrates how child classes can implement different behavior for the same method.</p>
+    </div>
+  </div>
+
+  <div class="question">
+    <h3>🔁 Q4. Add super() in a child class to initialize parent attributes.</h3>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+    <pre><code>class Person:
+    def __init__(self, name):
+        self.name = name
+
+class Employee(Person):
+    def __init__(self, name, emp_id):
+        super().__init__(name)  # Call parent constructor
+        self.emp_id = emp_id
+
+    def show(self):
+        print(f"Name: {self.name}, Employee ID: {self.emp_id}")
+
+# Example usage
+e = Employee("Aman", "E123")
+e.show()</code></pre>
+
+      <h4>✅ Output:</h4>
+      <pre>Name: Aman, Employee ID: E123</pre>
+      <p>Shows how to properly initialize parent class attributes using super().</p>
+    </div>
+  </div>
+
+  <div class="question">
+    <h3>🧬 Q5. Create a multilevel inheritance: Organism → Animal → Bird.</h3>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+    <pre><code>class Organism:
+    def live(self):
+        print("Living...")
+
+class Animal(Organism):
+    def move(self):
+        print("Animal is moving...")
+
+class Bird(Animal):
+    def fly(self):
+        print("Bird is flying...")
+
+# Example usage
+b = Bird()
+b.live()
+b.move()
+b.fly()</code></pre>
+      <h4>✅ Output:</h4>
+      <pre>Living...
+Animal is moving...
+Bird is flying...</pre>
+      <p>Demonstrates multilevel inheritance where Bird inherits from Animal which inherits from Organism.</p>
+    </div>
+  </div>
+</div>
+
+
+<h1>🧱 Polymorphism in Python</h1>
+
+<h3>🎯 What is Polymorphism?</h3>
+<p>
+Polymorphism means “many forms.” In OOP, it refers to the ability of different objects to respond to the same method in different ways.
+</p>
+
+<h3>🔄 Real-Life Analogy:</h3>
+<p>
+Imagine a function <code>make_sound()</code>:<br>
+If you give it a dog, it barks<br>
+If you give it a cat, it meows<br>
+<b>Same function → different behavior depending on the object. That’s polymorphism!</b>
+</p>
+
+<h3>💡 Key Types in Python:</h3>
+<table border="1" cellpadding="8">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Method Overriding</td>
+      <td>Redefining a parent class method in the child class</td>
+    </tr>
+    <tr>
+      <td>Duck Typing</td>
+      <td>“If it walks like a duck and quacks like a duck...”</td>
+    </tr>
+    <tr>
+      <td>Operator Overloading</td>
+      <td>Using the same operator for different meanings (optional)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>🔧 Practical Example 1: Method Overriding</h3>
+<pre><code>class Animal:
+    def sound(self):
+        print("Animal makes a sound")
+
+class Dog(Animal):
+    def sound(self):
         print("Dog barks")
 
-a = Animal()
-d = Dog()
+class Cat(Animal):
+    def sound(self):
+        print("Cat meows")
 
-a.speak()  # Animal speaks
-d.speak()  # Dog barks
-  </code></pre>
+# Polymorphism
+animals = [Dog(), Cat()]
+for animal in animals:
+    animal.sound()
+</code></pre>
 
-  <h2>🎒 Encapsulation</h2>
-  <pre><code>class BankAccount:
-    def __init__(self, balance):
-        self.__balance = balance  # Private attribute
+<h4>🖨️ Output:</h4>
+<pre><code>Dog barks
+Cat meows</code></pre>
 
-    def show_balance(self):
-        print("Balance:", self.__balance)
+<h3>🔧 Practical Example 2: Duck Typing</h3>
+<pre><code>class Bird:
+    def fly(self):
+        print("Bird is flying")
 
-acc = BankAccount(1000)
-acc.show_balance()
-# acc.__balance  ❌ Error (private)
-  </code></pre>
+class Plane:
+    def fly(self):
+        print("Plane is flying")
 
-  <h2>🔍 Abstraction</h2>
-  <p>Hide complex parts, only show essentials!</p>
-  <pre><code>from abc import ABC, abstractmethod
+def lets_fly(flying_thing):
+    flying_thing.fly()
+
+lets_fly(Bird())
+lets_fly(Plane())
+</code></pre>
+
+<h4>🖨️ Output:</h4>
+<pre><code>Bird is flying
+Plane is flying</code></pre>
+
+<h3>🛠️ Real-World Use Case:</h3>
+<ul>
+  <li><strong>UI Components:</strong> A button, link, and icon may all respond to <code>click()</code>, but act differently.</li>
+  <li><strong>Game Characters:</strong> Different player types override <code>attack()</code>.</li>
+</ul>
+<div class="section">
+  <h2>🧠 Practical Questions:</h2>
+
+  <div class="question">
+    <h3>🚘 Q1. Create a Vehicle class and override the start() method in Car, Bike.</h3>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+    <pre><code>class Vehicle:
+    def start(self):
+        print("Vehicle is starting...")
+
+class Car(Vehicle):
+    def start(self):
+        print("Car engine started. Vroom!")
+
+class Bike(Vehicle):
+    def start(self):
+        print("Bike engine started. Zoom!")
+
+# Example usage
+v1 = Car()
+v2 = Bike()
+v1.start()
+v2.start()</code></pre>
+      <h4>✅ Output:</h4>
+      <pre>Car engine started. Vroom!
+Bike engine started. Zoom!</pre>
+      <p>Demonstrates method overriding where child classes provide their own implementation of the start() method.</p>
+    </div>
+  </div>
+
+  <div class="question">
+    <h3>📐 Q2. Build a polymorphic function calculate_area() for Circle, Rectangle, and Triangle.</h3>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+    <pre><code>import math
+
+class Circle:
+    def __init__(self, radius):
+        self.radius = radius
+
+    def area(self):
+        return math.pi * self.radius ** 2
+
+class Rectangle:
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+
+    def area(self):
+        return self.length * self.width
+
+class Triangle:
+    def __init__(self, base, height):
+        self.base = base
+        self.height = height
+
+    def area(self):
+        return 0.5 * self.base * self.height
+
+# Polymorphic function
+def calculate_area(shape):
+    print("Area:", round(shape.area(), 2))
+
+# Example usage
+calculate_area(Circle(5))
+calculate_area(Rectangle(4, 6))
+calculate_area(Triangle(3, 7))</code></pre>
+      <h4>✅ Output:</h4>
+      <pre>Area: 78.54
+Area: 24
+Area: 10.5</pre>
+      <p>Shows polymorphism where different shape objects can be used interchangeably with the calculate_area() function.</p>
+    
+    </div>
+  </div>
+
+  <div class="question">
+    <h3>📚 Q3. Override __str__() in a custom Book class to return book details.</h3>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+    <pre><code>class Book:
+    def __init__(self, title, author):
+        self.title = title
+        self.author = author
+
+    def __str__(self):
+        return f"📘 Title: {self.title}, ✍️ Author: {self.author}"
+
+# Example usage
+book1 = Book("Python Essentials", "John Smith")
+print(book1)</code></pre>
+
+      <h4>✅ Output:</h4>
+      <pre>📘 Title: Python Essentials, ✍️ Author: John Smith</pre>
+      <p>Demonstrates overriding the special __str__() method to provide a custom string representation.</p>
+    </div>
+  </div>
+
+  <div class="question">
+    <h3>🦆 Q4. Use duck typing to allow Robot, Human to both have walk() behavior.</h3>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+    <pre><code>class Human:
+    def walk(self):
+        print("Human is walking on two legs.")
+
+class Robot:
+    def walk(self):
+        print("Robot is walking using wheels.")
+
+# Duck typing in action
+def start_walking(entity):
+    entity.walk()
+
+# Example usage
+start_walking(Human())
+start_walking(Robot())</code></pre>">
+      <h4>✅ Output:</h4>
+      <pre>Human is walking on two legs.
+Robot is walking using wheels.</pre>
+      <p>Illustrates duck typing where objects are used based on their behavior (having a walk() method) rather than their type.</p>
+    </div>
+  </div>
+
+  <div class="question">
+    <h3>🎵 Q5. Create a MediaPlayer class and override play() in MP3Player, VideoPlayer.</h3>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+    <pre><code>class MediaPlayer:
+    def play(self):
+        print("Playing media...")
+
+class MP3Player(MediaPlayer):
+    def play(self):
+        print("Playing audio track 🎧")
+
+class VideoPlayer(MediaPlayer):
+    def play(self):
+        print("Playing video 🎬")
+
+# Example usage
+mp3 = MP3Player()
+video = VideoPlayer()
+
+mp3.play()
+video.play()</code></pre>
+      <h4>✅ Output:</h4>
+      <pre>Playing audio track 🎧
+Playing video 🎬</pre>
+      <p>Shows polymorphism through method overriding in media player implementations.</p>
+    </div>
+  </div>
+</div>
+
+<div class="quiz-section">
+  <h2>📝 MCQs: Polymorphism</h2>
+
+  <div class="quiz-question">
+    <p>Q1. What is polymorphism?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) Changing variable names</li>
+      <li onclick="checkAnswer(this, 'correct')">b) Same method acting differently for different objects</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) Multiple inheritance</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) Data hiding</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <p>✅ b) Same method acting differently for different objects</p>
+      <p>Polymorphism allows objects of different classes to be treated as objects of a common superclass.</p>
+    </div>
+  </div>
+
+  <div class="quiz-question">
+    <p>Q2. Which of these is an example of method overriding?</p>
+    <pre><code>class A:
+    def show(self):
+        print("A")
+
+class B(A):
+    def show(self):
+        print("B")</code></pre>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) No polymorphism</li>
+      <li onclick="checkAnswer(this, 'correct')">b) Method Overriding</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) Constructor overloading</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) Inheritance only</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <p>✅ b) Method Overriding</p>
+      <p>Class B overrides the show() method from class A, providing its own implementation.</p>
+    </div>
+  </div>
+
+  <div class="quiz-question">
+    <p>Q3. What is duck typing in Python?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) Making classes that extend ducks</li>
+      <li onclick="checkAnswer(this, 'correct')">b) Object behavior is more important than actual class</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) Using duck() method</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) None of the above</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <p>✅ b) Object behavior is more important than actual class</p>
+      <p>Duck typing focuses on what methods/attributes an object has rather than its actual type.</p>
+    </div>
+  </div>
+
+  <div class="quiz-question">
+    <p>Q4. What will this code print?</p>
+    <pre><code>class A:
+    def action(self): print("A")
+
+class B:
+    def action(self): print("B")
+
+for obj in [A(), B()]:
+    obj.action()</code></pre>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) A B</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) Error</li>
+      <li onclick="checkAnswer(this, 'correct')">c) A B</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) B A</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <p>✅ c) A B</p>
+      <p>Demonstrates polymorphism through duck typing - different objects responding to the same method call.</p>
+    </div>
+  </div>
+
+  <div class="quiz-question">
+    <p>Q5. Why use polymorphism?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) To reduce code size only</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) For making all methods global</li>
+      <li onclick="checkAnswer(this, 'correct')">c) For flexibility and extensibility</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) To hide data</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <p>✅ c) For flexibility and extensibility</p>
+      <p>Polymorphism makes code more flexible and easier to extend with new functionality.</p>
+    </div>
+  </div>
+</div>
+
+<h1>🧱 Abstraction in Python</h1>
+
+<h3>🎯 What is Abstraction?</h3>
+<p>
+Abstraction means hiding internal implementation and showing only the necessary details.<br>
+It helps to reduce complexity and increase security by exposing only essential methods and hiding background logic.
+</p>
+
+<h3>🧠 Real-Life Analogy:</h3>
+<p>
+Using a mobile phone:<br>
+You press buttons to make calls<br>
+You don’t know the internal code or electronics<br>
+<b>That’s abstraction — you only interact with the essential features.</b>
+</p>
+
+<h3>🔧 Abstraction in Python:</h3>
+<p>Python uses abstract base classes (ABCs) to implement abstraction. We use the <code>abc</code> module:</p>
+
+<pre><code>from abc import ABC, abstractmethod
 
 class Vehicle(ABC):
     @abstractmethod
     def start(self):
         pass
 
+class Car(Vehicle):
+    def start(self):
+        print("Car started!")
+
 class Bike(Vehicle):
     def start(self):
         print("Bike started!")
 
-b = Bike()
-b.start()
-  </code></pre>
+v1 = Car()
+v2 = Bike()
+v1.start()
+v2.start()
+</code></pre>
 
-  <h2>🤪 Funny Analogy:</h2>
-  <p>If class is a blueprint of a pizza 🍕,<br>
-  then an object is the actual pizza you eat. 😋<br>
-  Python helps you bake unlimited pizzas from one blueprint!</p>
-  <div class="quiz">
-  <h2>🧠 Quiz Time!</h2>
-  <div class="quiz-question">
-    <p>1. What is a class?</p>
-    <ul>
-      <li onclick="checkAnswer(this, 'wrong')">a) A real-world object</li>
-      <li onclick="checkAnswer(this, 'wrong')">b) A function</li>
-      <li onclick="checkAnswer(this, 'correct')">c) A blueprint</li>
-    </ul>
+<h4>🖨️ Output:</h4>
+<pre><code>Car started!
+Bike started!</code></pre>
+
+<h3>🔍 Rules of Abstraction:</h3>
+<ul>
+  <li>Use <code>ABC</code> (Abstract Base Class) from <code>abc</code> module</li>
+  <li>Use <code>@abstractmethod</code> decorator</li>
+  <li>Cannot instantiate abstract classes directly</li>
+  <li>All subclasses must implement abstract methods</li>
+</ul>
+
+<h3>🛠️ Real-World Use Case:</h3>
+<p>
+In a payment system, you may define:
+</p>
+
+<pre><code>class Payment(ABC):
+    @abstractmethod
+    def pay(self, amount):
+        pass
+
+class PayPal(Payment):
+    def pay(self, amount):
+        print(f"Paid ₹{amount} using PayPal")
+
+class CreditCard(Payment):
+    def pay(self, amount):
+        print(f"Paid ₹{amount} using Credit Card")
+</code></pre>
+
+<p>
+Then you can safely handle all payments through Payment without worrying about how each works internally.
+</p>
+
+<div class="section">
+  <h2>🧠 Practical Questions:</h2>
+
+  <div class="question">
+    <h3>🔷 Q1. Create an abstract class Shape with area() and implement it in Circle, Square.</h3>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+    <pre><code>from abc import ABC, abstractmethod
+import math
+
+class Shape(ABC):
+    @abstractmethod
+    def area(self):
+        pass
+
+class Circle(Shape):
+    def __init__(self, radius):
+        self.radius = radius
+
+    def area(self):
+        return math.pi * self.radius ** 2
+
+class Square(Shape):
+    def __init__(self, side):
+        self.side = side
+
+    def area(self):
+        return self.side * self.side
+
+# Example usage
+shapes = [Circle(3), Square(4)]
+for s in shapes:
+    print("Area:", round(s.area(), 2))</code></pre>
+      <h4>✅ Output:</h4>
+      <pre>Area: 28.27
+Area: 16</pre>
+      <p>Demonstrates abstract base class (ABC) with concrete implementations for different shapes.</p>
+    </div>
   </div>
-  
-  <div class="quiz-question">
-    <p>2. What keyword is used to inherit a class?</p>
-    <ul>
-      <li onclick="checkAnswer(this, 'wrong')">a) import</li>
-      <li onclick="checkAnswer(this, 'wrong')">b) extends</li>
-      <li onclick="checkAnswer(this, 'correct')">c) class Child(Parent)</li>
-    </ul>
+
+  <div class="question">
+    <h3>📺 Q2. Design an abstract class Appliance with method turn_on() for TV, WashingMachine.</h3>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+    <pre><code>from abc import ABC, abstractmethod
+
+class Appliance(ABC):
+    @abstractmethod
+    def turn_on(self):
+        pass
+
+class TV(Appliance):
+    def turn_on(self):
+        print("Turning on the TV 📺")
+
+class WashingMachine(Appliance):
+    def turn_on(self):
+        print("Starting the Washing Machine 🧺")
+
+# Example usage
+a1 = TV()
+a2 = WashingMachine()
+a1.turn_on()
+a2.turn_on()</code></pre>
+
+      <h4>✅ Output:</h4>
+      <pre>Turning on the TV 📺
+Starting the Washing Machine 🧺</pre>
+      <p>Shows how different appliances implement the abstract turn_on() method differently.</p>
+    </div>
   </div>
-  
-  <div class="quiz-question">
-    <p>3. What method is automatically called when an object is created?</p>
-    <ul>
-      <li onclick="checkAnswer(this, 'wrong')">a) __start__()</li>
-      <li onclick="checkAnswer(this, 'wrong')">b) init()</li>
-      <li onclick="checkAnswer(this, 'correct')">c) __init__()</li>
-    </ul>
+
+  <div class="question">
+    <h3>👨‍💼 Q3. Implement Employee class with abstract calculate_salary() in FullTimeEmployee, PartTimeEmployee.</h3>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+    <pre><code>from abc import ABC, abstractmethod
+
+class Employee(ABC):
+    @abstractmethod
+    def calculate_salary(self):
+        pass
+
+class FullTimeEmployee(Employee):
+    def __init__(self, monthly_salary):
+        self.salary = monthly_salary
+
+    def calculate_salary(self):
+        return self.salary
+
+class PartTimeEmployee(Employee):
+    def __init__(self, hours, rate):
+        self.hours = hours
+        self.rate = rate
+
+    def calculate_salary(self):
+        return self.hours * self.rate
+
+# Example usage
+emp1 = FullTimeEmployee(50000)
+emp2 = PartTimeEmployee(120, 200)
+print("Full-Time Salary: ₹", emp1.calculate_salary())
+print("Part-Time Salary: ₹", emp2.calculate_salary())</code></pre>
+
+      <h4>✅ Output:</h4>
+      <pre>Full-Time Salary: ₹ 50000
+Part-Time Salary: ₹ 24000</pre>
+      <p>Illustrates different salary calculation implementations while enforcing the abstract method.</p>
+    </div>
   </div>
+
+  <div class="question">
+    <h3>📄 Q4. Create a Document base class with open() method; inherit PDF, Word.</h3>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+    <pre><code>from abc import ABC, abstractmethod
+
+class Document(ABC):
+    @abstractmethod
+    def open(self):
+        pass
+
+class PDF(Document):
+    def open(self):
+        print("Opening PDF document 📑")
+
+class Word(Document):
+    def open(self):
+        print("Opening Word document 📝")
+
+# Example usage
+d1 = PDF()
+d2 = Word()
+d1.open()
+d2.open()</code></pre>
+
+      <h4>✅ Output:</h4>
+      <pre>Opening PDF document 📑
+Opening Word document 📝</pre>
+      <p>Shows document-specific implementations of the abstract open() method.</p>
+    </div>
+  </div>
+
+  <div class="question">
+    <h3>📡 Q5. Build a Sensor abstract class with read_data() method and implement TempSensor, MotionSensor.</h3>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+    <pre><code>from abc import ABC, abstractmethod
+
+class Sensor(ABC):
+    @abstractmethod
+    def read_data(self):
+        pass
+
+class TempSensor(Sensor):
+    def read_data(self):
+        print("Reading temperature: 25°C 🌡️")
+
+class MotionSensor(Sensor):
+    def read_data(self):
+        print("Motion detected at 3:45 PM 🚶‍♂️")
+
+# Example usage
+sensors = [TempSensor(), MotionSensor()]
+for sensor in sensors:
+    sensor.read_data()</code></pre>
+      <h4>✅ Output:</h4>
+      <pre>Reading temperature: 25°C 🌡️
+Motion detected at 3:45 PM 🚶‍♂️</pre>
+      <p>Demonstrates sensor-specific implementations of the abstract read_data() method.</p>
+    </div>
+  </div>
+</div>
+
+<div class="quiz-section">
+  <h2>📝 MCQs: Abstraction</h2>
+
+  <div class="quiz-question">
+    <p>Q1. What does abstraction help with?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) Code duplication</li>
+      <li onclick="checkAnswer(this, 'correct')">b) Hiding internal implementation</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) Adding UI features</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) File compression</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <p>✅ b) Hiding internal implementation</p>
+      <p>Abstraction focuses on exposing only essential features while hiding implementation details.</p>
+    </div>
+  </div>
+
+  <div class="quiz-question">
+    <p>Q2. Which module in Python is used for abstraction?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) math</li>
+      <li onclick="checkAnswer(this, 'wrong')">b) oop</li>
+      <li onclick="checkAnswer(this, 'correct')">c) abc</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) abstract</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <p>✅ c) abc</p>
+      <p>The 'abc' module (Abstract Base Classes) provides the infrastructure for defining abstract classes.</p>
+    </div>
+  </div>
+
+  <div class="quiz-question">
+    <p>Q3. What happens if you try to create an object from an abstract class?</p>
+    <pre><code>class A(ABC):
+    @abstractmethod
+    def method(self): pass</code></pre>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) Runs successfully</li>
+      <li onclick="checkAnswer(this, 'correct')">b) TypeError</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) ValueError</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) No Output</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <p>✅ b) TypeError</p>
+      <p>Python raises TypeError when trying to instantiate an abstract class with unimplemented abstract methods.</p>
+    </div>
+  </div>
+
+  <div class="quiz-question">
+    <p>Q4. Which decorator is used to declare an abstract method?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) @override</li>
+      <li onclick="checkAnswer(this, 'correct')">b) @abstractmethod</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) @private</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) @hidden</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <p>✅ b) @abstractmethod</p>
+      <p>The @abstractmethod decorator marks a method as abstract, requiring implementation in child classes.</p>
+    </div>
+  </div>
+
+  <div class="quiz-question">
+    <p>Q5. What is true about abstract methods?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) Must be private</li>
+      <li onclick="checkAnswer(this, 'correct')">b) Must be implemented in child class</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) Can be used as-is</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) Don't need to be defined</li>
+    </ul>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+      <p>✅ b) Must be implemented in child class</p>
+      <p>Abstract methods serve as templates that must be implemented by concrete (non-abstract) child classes.</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+    <div class="quiz">
+      <h2>🧠 Quiz Time! BEST EASY ONE</h2>
+      <div class="quiz-question">
+        <p>1. What is a class?</p>
+        <ul>
+          <li onclick="checkAnswer(this, 'wrong')">a) A real-world object</li>
+          <li onclick="checkAnswer(this, 'wrong')">b) A function</li>
+          <li onclick="checkAnswer(this, 'correct')">c) A blueprint</li>
+        </ul>
+      </div>
+
+      <div class="quiz-question">
+        <p>2. What keyword is used to inherit a class?</p>
+        <ul>
+          <li onclick="checkAnswer(this, 'wrong')">a) import</li>
+          <li onclick="checkAnswer(this, 'wrong')">b) extends</li>
+          <li onclick="checkAnswer(this, 'correct')">c) class Child(Parent)</li>
+        </ul>
+      </div>
+
+      <div class="quiz-question">
+        <p>3. What method is automatically called when an object is created?</p>
+        <ul>
+          <li onclick="checkAnswer(this, 'wrong')">a) __start__()</li>
+          <li onclick="checkAnswer(this, 'wrong')">b) init()</li>
+          <li onclick="checkAnswer(this, 'correct')">c) __init__()</li>
+        </ul>
+      </div>
     </div>
 
-  <h2>🎯 Challenge Task:</h2>
-  <ul>
-    <li>Create a class <code>Car</code> with brand and model.</li>
-    <li>Add a method to display info.</li>
-    <li>Create another class <code>ElectricCar</code> that inherits from <code>Car</code> and adds battery info.</li>
-  </ul>
 
-  <h2>🧾 Summary Table</h2>
-  <table border="1">
-    <thead>
-      <tr>
-        <th>Concept</th>
-        <th>What It Does</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>class</td><td>Defines a blueprint</td></tr>
-      <tr><td>object</td><td>Instance of a class</td></tr>
-      <tr><td>__init__()</td><td>Initializes object properties</td></tr>
-      <tr><td>Inheritance</td><td>Reuse code from parent classes</td></tr>
-      <tr><td>Polymorphism</td><td>Same method name, different behavior</td></tr>
-      <tr><td>Encapsulation</td><td>Protect data using private attributes</td></tr>
-      <tr><td>Abstraction</td><td>Hide internal details</td></tr>
-    </tbody>
-  </table>
-
-</body>
+    <h2>🧾 Summary Table</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Concept</th>
+          <th>What It Does</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>class</td>
+          <td>Defines a blueprint</td>
+        </tr>
+        <tr>
+          <td>object</td>
+          <td>Instance of a class</td>
+        </tr>
+        <tr>
+          <td>__init__()</td>
+          <td>Initializes object properties</td>
+        </tr>
+        <tr>
+          <td>Inheritance</td>
+          <td>Reuse code from parent classes</td>
+        </tr>
+        <tr>
+          <td>Polymorphism</td>
+          <td>Same method name, different behavior</td>
+        </tr>
+        <tr>
+          <td>Encapsulation</td>
+          <td>Protect data using private attributes</td>
+        </tr>
+        <tr>
+          <td>Abstraction</td>
+          <td>Hide internal details</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
 </html>
