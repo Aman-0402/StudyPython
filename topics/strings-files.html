@@ -21,23 +21,145 @@ quote = "Python is fun!"</code></pre>
 
     <h3>🧪 String Indexing & Slicing</h3>
     <pre><code>text = "Python"
-print(text[0])      # P
-print(text[-1])     # n
-print(text[1:4])    # yth
-print(text[::-1])   # nohtyP</code></pre>
+print(text[0])      # P   (first character)
+print(text[-1])     # n  (last character)
+print(text[1:4])    # yth (2nd to 4th character)
+print(text[::-1])   # nohtyP (reversed)</code></pre>
 
-    <h3>🔧 Common String Methods</h3>
-    <table>
-      <tr><th>Method</th><th>Description</th><th>Example</th></tr>
-      <tr><td>.lower()</td><td>Lowercase</td><td>"PY".lower() → 'py'</td></tr>
-      <tr><td>.upper()</td><td>Uppercase</td><td>"hi".upper() → 'HI'</td></tr>
-      <tr><td>.strip()</td><td>Remove spaces</td><td>" Hello ".strip() → 'Hello'</td></tr>
-      <tr><td>.replace()</td><td>Replace text</td><td>"apple".replace("p", "b")</td></tr>
-      <tr><td>.find()</td><td>Find index</td><td>"hello".find("e") → 1</td></tr>
-      <tr><td>.split()</td><td>Split string</td><td>"a,b,c".split(",")</td></tr>
-      <tr><td>.join()</td><td>Join list</td><td>",".join(['a','b']) → 'a,b'</td></tr>
-      <tr><td>.isdigit()</td><td>Check digits</td><td>"123".isdigit() → True</td></tr>
-    </table>
+<h3>💡 Indexing Recap</h3>
+<div class="index-recap">
+  <table>
+    <tr>
+      <th>Index</th>
+      <td>P</td>
+      <td>y</td>
+      <td>t</td>
+      <td>h</td>
+      <td>o</td>
+      <td>n</td>
+    </tr>
+    <tr>
+      <th>Positive</th>
+      <td>0</td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>Negative</th>
+      <td>-6</td>
+      <td>-5</td>
+      <td>-4</td>
+      <td>-3</td>
+      <td>-2</td>
+      <td>-1</td>
+    </tr>
+  </table>
+</div>
+
+<h3>🔧 String Slicing Syntax</h3>
+<pre><code>string[start:end:step]</code></pre>
+<table>
+  <tr>
+    <th>Parameter</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>start</td>
+    <td>index to begin from (inclusive)</td>
+  </tr>
+  <tr>
+    <td>end</td>
+    <td>index to stop before (exclusive)</td>
+  </tr>
+  <tr>
+    <td>step</td>
+    <td>how many steps to skip (default 1)</td>
+  </tr>
+</table>
+
+<div class="quiz">
+  <h3>❓ Quiz Time</h3>
+  <div class="quiz-question">
+    <p>Q. What will be the output of this code?</p>
+    <pre><code>word = "Programming"
+print(word[3:8])</code></pre>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">a) gram</li>
+      <li onclick="checkAnswer(this, 'correct')">b) gramm</li>
+      <li onclick="checkAnswer(this, 'wrong')">c) gr</li>
+      <li onclick="checkAnswer(this, 'wrong')">d) ogram</li>
+    </ul>
+  </div>
+</div>
+<div class="section">
+  <h3>🔧 Common String Methods</h3>
+  <p>Python gives you powerful tools to manipulate strings 🛠️ — from formatting names to validating passwords.</p>
+  <p>Here's a handy reference with examples:</p>
+
+  <table class="string-methods">
+    <thead>
+      <tr>
+        <th>Method</th>
+        <th>Description</th>
+        <th>Example</th>
+        <th>Output</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>.lower()</code></td>
+        <td>Convert to lowercase</td>
+        <td><code>"PY".lower()</code></td>
+        <td><code>'py'</code></td>
+      </tr>
+      <tr>
+        <td><code>.upper()</code></td>
+        <td>Convert to uppercase</td>
+        <td><code>"hi".upper()</code></td>
+        <td><code>'HI'</code></td>
+      </tr>
+      <tr>
+        <td><code>.strip()</code></td>
+        <td>Remove leading/trailing spaces</td>
+        <td><code>" Hello ".strip()</code></td>
+        <td><code>'Hello'</code></td>
+      </tr>
+      <tr>
+        <td><code>.replace()</code></td>
+        <td>Replace text</td>
+        <td><code>"apple".replace("p", "b")</code></td>
+        <td><code>'abble'</code></td>
+      </tr>
+      <tr>
+        <td><code>.find()</code></td>
+        <td>Find index of char</td>
+        <td><code>"hello".find("e")</code></td>
+        <td><code>1</code></td>
+      </tr>
+      <tr>
+        <td><code>.split()</code></td>
+        <td>Split into list</td>
+        <td><code>"a,b,c".split(",")</code></td>
+        <td><code>['a', 'b', 'c']</code></td>
+      </tr>
+      <tr>
+        <td><code>.join()</code></td>
+        <td>Join list to string</td>
+        <td><code>",".join(['a','b'])</code></td>
+        <td><code>'a,b'</code></td>
+      </tr>
+      <tr>
+        <td><code>.isdigit()</code></td>
+        <td>Check if all chars are digits</td>
+        <td><code>"123".isdigit()</code></td>
+        <td><code>True</code></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
     <h3>✂️ Example – Remove Spaces and Capitalize</h3>
     <pre><code>user_input = "  python is awesome "
@@ -51,66 +173,317 @@ if password.strip() == "OpenSesame":
 else:
     print("Access Denied 🚫")</code></pre>
 
+    <div class="string-methods-section">
+      <h2>🔧 <strong>Common String Methods – Explained with Examples</strong></h2>
+    
+      <div class="method">
+        <h3>1. <code>.lower()</code> – Convert to lowercase</h3>
+        <p>✅ Converts <strong>all characters</strong> in a string to <strong>lowercase</strong>.</p>
+        <pre><code>text = "PYTHON"
+    print(text.lower())  # Output: python</code></pre>
+        <div class="divider"></div>
+      </div>
+    
+      <div class="method">
+        <h3>2. <code>.upper()</code> – Convert to uppercase</h3>
+        <p>✅ Converts all characters to <strong>uppercase</strong>.</p>
+        <pre><code>greeting = "hello"
+    print(greeting.upper())  # Output: HELLO</code></pre>
+        <div class="divider"></div>
+      </div>
+    
+      <div class="method">
+        <h3>3. <code>.strip()</code> – Remove leading & trailing spaces</h3>
+        <p>✅ Removes unwanted <strong>spaces</strong> from both ends.</p>
+        <pre><code>name = "   Aman   "
+    print(name.strip())  # Output: 'Aman'</code></pre>
+        <div class="divider"></div>
+      </div>
+    
+      <div class="method">
+        <h3>4. <code>.replace()</code> – Replace characters/substrings</h3>
+        <p>✅ Replaces parts of the string with something else.</p>
+        <pre><code>fruit = "apple"
+    print(fruit.replace("p", "b"))  # Output: abble</code></pre>
+        <div class="divider"></div>
+      </div>
+    
+      <div class="method">
+        <h3>5. <code>.find()</code> – Find the index of a substring</h3>
+        <p>✅ Returns the <strong>first index</strong> of a substring, or -1 if not found.</p>
+        <pre><code>msg = "hello"
+    print(msg.find("e"))  # Output: 1</code></pre>
+        <div class="divider"></div>
+      </div>
+    
+      <div class="method">
+        <h3>6. <code>.split()</code> – Split string into a list</h3>
+        <p>✅ Splits the string by the <strong>given delimiter</strong>.</p>
+        <pre><code>items = "a,b,c"
+    print(items.split(","))  # Output: ['a', 'b', 'c']</code></pre>
+        <div class="divider"></div>
+      </div>
+    
+      <div class="method">
+        <h3>7. <code>.join()</code> – Join list into a string</h3>
+        <p>✅ Joins elements of a list into a <strong>single string</strong> using a separator.</p>
+        <pre><code>letters = ['a', 'b', 'c']
+    print("-".join(letters))  # Output: a-b-c</code></pre>
+        <div class="divider"></div>
+      </div>
+    
+      <div class="method">
+        <h3>8. <code>.isdigit()</code> – Check if string is numeric</h3>
+        <p>✅ Returns <code>True</code> if <strong>all characters</strong> in the string are <strong>digits</strong>.</p>
+        <pre><code>num = "12345"
+    print(num.isdigit())  # Output: True
+    
+    word = "abc123"
+    print(word.isdigit())  # Output: False</code></pre>
+        <div class="divider"></div>
+      </div>
+    
+      <div class="bonus-example">
+        <h3>🔁 Bonus Practical Example:</h3>
+        <pre><code>email = "   Hello@Python.com   "
+    cleaned = email.strip().lower().replace("@", "[at]")
+    print(cleaned)
+    # Output: hello[at]python.com</code></pre>
+      </div>
+    </div>
+
     <div class="joke">
       😂 Why did the string break up with the number? Because it just couldn’t count on them anymore!
     </div>
   </div>
 
+  <div class="quiz-section">
+    <h2>🧠 Quiz Time: String Methods</h2>
+  
+    <div class="quiz-question">
+      <p>Q1. What is the output of this code?</p>
+      <pre><code>text = "HELLO"
+  print(text.lower())</code></pre>
+      <ul>
+        <li onclick="checkAnswer(this, 'correct')">a) hello</li>
+        <li onclick="checkAnswer(this, 'wrong')">b) HELLO</li>
+        <li onclick="checkAnswer(this, 'wrong')">c) Hello</li>
+        <li onclick="checkAnswer(this, 'wrong')">d) error</li>
+      </ul>
+    </div>
+  
+    <div class="quiz-question">
+      <p>Q2. What does " Python ".strip() return?</p>
+      <ul>
+        <li onclick="checkAnswer(this, 'correct')">a) "Python"</li>
+        <li onclick="checkAnswer(this, 'wrong')">b) " Python"</li>
+        <li onclick="checkAnswer(this, 'wrong')">c) "Python "</li>
+        <li onclick="checkAnswer(this, 'wrong')">d) " Python "</li>
+      </ul>
+    </div>
+  
+    <div class="quiz-question">
+      <p>Q3. What is the output?</p>
+      <pre><code>"banana".replace("a", "o")</code></pre>
+      <ul>
+        <li onclick="checkAnswer(this, 'correct')">a) bonono</li>
+        <li onclick="checkAnswer(this, 'wrong')">b) banana</li>
+        <li onclick="checkAnswer(this, 'wrong')">c) bOnAnA</li>
+        <li onclick="checkAnswer(this, 'wrong')">d) bnonno</li>
+      </ul>
+    </div>
+  
+    <div class="quiz-question">
+      <p>Q4. What is the result of this?</p>
+      <pre><code>"apple".find("p")</code></pre>
+      <ul>
+        <li onclick="checkAnswer(this, 'wrong')">a) 0</li>
+        <li onclick="checkAnswer(this, 'correct')">b) 1</li>
+        <li onclick="checkAnswer(this, 'wrong')">c) 2</li>
+        <li onclick="checkAnswer(this, 'wrong')">d) -1</li>
+      </ul>
+    </div>
+  
+    <div class="quiz-question">
+      <p>Q5. What will this print?</p>
+      <pre><code>",".join(["one", "two", "three"])</code></pre>
+      <ul>
+        <li onclick="checkAnswer(this, 'wrong')">a) one, two, three</li>
+        <li onclick="checkAnswer(this, 'wrong')">b) one-two-three</li>
+        <li onclick="checkAnswer(this, 'correct')">c) one,two,three</li>
+        <li onclick="checkAnswer(this, 'wrong')">d) ['one','two','three']</li>
+      </ul>
+    </div>
+  
+    <div class="quiz-question">
+      <p>Q6. Which of the following returns True?</p>
+      <ul>
+        <li onclick="checkAnswer(this, 'wrong')">a) "abc123".isdigit()</li>
+        <li onclick="checkAnswer(this, 'wrong')">b) "123abc".isdigit()</li>
+        <li onclick="checkAnswer(this, 'correct')">c) "123".isdigit()</li>
+        <li onclick="checkAnswer(this, 'wrong')">d) "12 3".isdigit()</li>
+      </ul>
+    </div>
+  </div>
+
   <div class="section">
     <h2>📘 Part 2: File I/O (Input/Output)</h2>
+    <p>File handling lets your Python program read from or write to external files like .txt, .csv, .json, etc.</p>
+  
+    <div class="subsection">
+      <h3>📝 1. Opening a File</h3>
+      <p>Use the <code>open()</code> function to access a file.</p>
+      
+      <pre><code>file = open("notes.txt", "r")  # Open in read mode
+  content = file.read()          # Read content
+  print(content)
+  file.close()                   # Close file</code></pre>
+      
+      <div class="explanation">
+        <p><code>"notes.txt"</code> is the file name.</p>
+        <p><code>"r"</code> means "read mode".</p>
+      </div>
+    </div>
+  </div>
 
-    <h3>📝 Opening a File</h3>
-    <pre><code>file = open("notes.txt", "r")
-content = file.read()
-print(content)
-file.close()</code></pre>
-
-    <h3>🔓 File Modes</h3>
-    <table>
-      <tr><th>Mode</th><th>Meaning</th></tr>
-      <tr><td>r</td><td>Read (default)</td></tr>
-      <tr><td>w</td><td>Write (overwrites)</td></tr>
-      <tr><td>a</td><td>Append</td></tr>
-      <tr><td>r+</td><td>Read & Write</td></tr>
+  <div class="section">
+    <h3>🔓 2. File Modes</h3>
+    <table class="file-modes">
+      <thead>
+        <tr>
+          <th>Mode</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>r</code></td>
+          <td>Read (default)</td>
+        </tr>
+        <tr>
+          <td><code>w</code></td>
+          <td>Write (overwrites existing file)</td>
+        </tr>
+        <tr>
+          <td><code>a</code></td>
+          <td>Append (adds to file)</td>
+        </tr>
+        <tr>
+          <td><code>r+</code></td>
+          <td>Read and write</td>
+        </tr>
+      </tbody>
     </table>
+  </div>
+  <div class="section">
+    <h3>🖊️ 3. Writing to a File</h3>
+    <pre><code>file = open("notes.txt", "w")  # Open in write mode
+  file.write("Learning Python is fun!\n")
+  file.close()</code></pre>
+    <p>This creates a new file or overwrites it if it already exists.</p>
+  </div>
 
-    <h3>🖊️ Writing & Appending</h3>
-    <pre><code># Write
-file = open("notes.txt", "w")
-file.write("Learning Python is fun!\n")
-file.close()
-
-# Append
-file = open("notes.txt", "a")
-file.write("Let's master file handling.\n")
-file.close()</code></pre>
-
-    <h3>📖 Reading Line-by-Line</h3>
+  <div class="section">
+    <h3>➕ Appending to a File</h3>
+    <pre><code>file = open("notes.txt", "a")  # Open in append mode
+  file.write("Let's master file handling.\n")
+  file.close()</code></pre>
+    <p>Appends content to the end of the file without deleting existing data.</p>
+  </div>
+  
+  <div class="section">
+    <h3>📖 4. Reading Line-by-Line</h3>
     <pre><code>file = open("notes.txt", "r")
-for line in file:
-    print(line.strip())
-file.close()</code></pre>
-
-    <h3>✅ Using with (Best Practice)</h3>
+  for line in file:
+      print(line.strip())
+  file.close()</code></pre>
+    <p><code>.strip()</code> removes <code>\n</code> from each line when printed.</p>
+  </div>
+  
+  <div class="section">
+    <h3>✅ 5. Using with (Best Practice)</h3>
     <pre><code>with open("notes.txt", "r") as f:
-    content = f.read()
-    print(content)</code></pre>
-
-    <h3>📂 Student Data File</h3>
-    <pre><code># Write
-with open("student.txt", "w") as f:
-    f.write("Name: Aman\n")
-    f.write("Course: Python\n")
-    f.write("Marks: 88\n")
-
-# Read
-with open("student.txt", "r") as f:
-    print(f.read())</code></pre>
-
-    <h3>🔄 User Input to File</h3>
+      content = f.read()
+      print(content)</code></pre>
+    <p>Automatically closes the file.</p>
+    <p>Preferred for safety and cleaner syntax.</p>
+  </div>
+  
+  <div class="section">
+    <h3>📂 6. Student Data Example</h3>
+    <pre><code>with open("student.txt", "w") as f:
+      f.write("Name: Aman\n")
+      f.write("Course: Python\n")
+      f.write("Marks: 88\n")</code></pre>
+    <p>To read it:</p>
+    <pre><code>with open("student.txt", "r") as f:
+      print(f.read())</code></pre>
+  </div>
+  
+  <div class="section">
+    <h3>🔄 7. User Input to File</h3>
     <pre><code>data = input("Enter something to save: ")
-with open("mydata.txt", "w") as file:
-    file.write(data)</code></pre>
+  with open("mydata.txt", "w") as file:
+      file.write(data)</code></pre>
+    <p>This program lets the user type text, and saves it to a file.</p>
+  </div>
+
+  <div class="quiz-section">
+    <h2>🧠 Quiz Time: File I/O</h2>
+  
+    <div class="quiz-question">
+      <p>Q1. What does the mode "w" do when opening a file?</p>
+      <ul>
+        <li onclick="checkAnswer(this, 'wrong')">a) Reads a file</li>
+        <li onclick="checkAnswer(this, 'wrong')">b) Appends to a file</li>
+        <li onclick="checkAnswer(this, 'correct')">c) Writes to a file (and overwrites)</li>
+        <li onclick="checkAnswer(this, 'wrong')">d) Opens file in binary</li>
+      </ul>
+
+    </div>
+  
+    <div class="quiz-question">
+      <p>Q2. Which method reads the entire content of a file?</p>
+      <ul>
+        <li onclick="checkAnswer(this, 'wrong')">a) file.readall()</li>
+        <li onclick="checkAnswer(this, 'correct')">b) file.read()</li>
+        <li onclick="checkAnswer(this, 'wrong')">c) file.line()</li>
+        <li onclick="checkAnswer(this, 'wrong')">d) file.scan()</li>
+      </ul>
+    </div>
+  
+    <div class="quiz-question">
+      <p>Q3. What is the advantage of using with open(...) over open(...).close()?</p>
+      <ul>
+        <li onclick="checkAnswer(this, 'wrong')">a) It types faster</li>
+        <li onclick="checkAnswer(this, 'correct')">b) It automatically closes the file</li>
+        <li onclick="checkAnswer(this, 'wrong')">c) It opens multiple files at once</li>
+        <li onclick="checkAnswer(this, 'wrong')">d) No difference</li>
+      </ul>
+    </div>
+  
+    <div class="quiz-question">
+      <p>Q4. What will this code do?</p>
+      <pre><code>with open("data.txt", "a") as f:
+      f.write("Hello\n")</code></pre>
+      <ul>
+        <li onclick="checkAnswer(this, 'wrong')">a) Delete old data and write "Hello"</li>
+        <li onclick="checkAnswer(this, 'wrong')">b) Raise an error</li>
+        <li onclick="checkAnswer(this, 'correct')">c) Add "Hello" at the end of file</li>
+        <li onclick="checkAnswer(this, 'wrong')">d) Create a new file only if it doesn't exist</li>
+      </ul>
+
+    </div>
+  
+    <div class="quiz-question">
+      <p>Q5. What happens if you try to read a non-existent file using "r" mode?</p>
+      <ul>
+        <li onclick="checkAnswer(this, 'wrong')">a) It creates the file</li>
+        <li onclick="checkAnswer(this, 'wrong')">b) It prints nothing</li>
+        <li onclick="checkAnswer(this, 'correct')">c) It throws a FileNotFoundError</li>
+        <li onclick="checkAnswer(this, 'wrong')">d) It skips the file</li>
+      </ul>
+    </div>
   </div>
 
   <div class="quiz">
