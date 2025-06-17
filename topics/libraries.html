@@ -36,73 +36,287 @@
   </div>
 
   <div class="section">
-    <h2>📦 Step 1: Installing Libraries</h2>
-    <p>Before using them, install via terminal:</p>
-    <pre><code>pip install numpy pandas</code></pre>
+    <h2>🛠️ Step-by-Step: How to Start with NumPy</h2>
+  
+    <div class="step">
+      <h3>✅ Step 1: Install NumPy (if not installed)</h3>
+      <pre><code>pip install numpy</code></pre>
+    </div>
+  
+    <div class="step">
+      <h3>✅ Step 2: Import NumPy</h3>
+      <pre><code>import numpy as np</code></pre>
+      <p>We use <code>np</code> as a common alias to shorten code.</p>
+    </div>
+  
+    <div class="subsection">
+      <h3>📦 1. Creating Arrays</h3>
+      
+      <h4>➤ 1D Array</h4>
+      <pre><code>arr = np.array([1, 2, 3, 4])
+  print(arr)  # Output: [1 2 3 4]</code></pre>
+      
+      <h4>➤ 2D Array (Matrix)</h4>
+      <pre><code>matrix = np.array([[1, 2], [3, 4]])
+  print(matrix)</code></pre>
+      <h4>📦 Output:</h4>
+      <pre>[[1 2]
+  [3 4]]</pre>
+    </div>
+  
+    <div class="subsection">
+      <h3>⚙️ 2. Useful Array Operations</h3>
+      <pre><code>arr = np.array([1, 2, 3, 4])
+  print(arr + 5)          # ➤ [6 7 8 9]
+  print(arr * 2)          # ➤ [2 4 6 8]
+  print(np.mean(arr))     # ➤ Average = 2.5
+  print(np.sqrt(arr))     # ➤ Square roots</code></pre>
+      <div class="explanation">
+        <p>🧠 <strong>Explanation:</strong></p>
+        <p>NumPy applies operations element-wise (called vectorized operations).</p>
+        <p>You don't need loops!</p>
+      </div>
+    </div>
+  
+    <div class="subsection">
+      <h3>🧪 3. More Array Functions</h3>
+      <pre><code>print(np.max(arr))      # ➤ 4
+  print(np.min(arr))      # ➤ 1
+  print(np.sum(arr))      # ➤ 10
+  print(np.std(arr))      # ➤ Standard deviation</code></pre>
+    </div>
+  
+    <div class="subsection">
+      <h3>📏 4. Array Shapes and Dimensions</h3>
+      <pre><code>print(arr.shape)        # (4,) → 1D with 4 elements
+  print(matrix.shape)     # (2, 2) → 2x2 matrix
+  print(arr.ndim)         # ➤ 1 (1D array)
+  print(matrix.ndim)      # ➤ 2 (2D array)</code></pre>
+    </div>
+  
+    <div class="subsection">
+      <h3>🔁 5. Creating Special Arrays</h3>
+      <pre><code>np.zeros((2, 3))     # 2x3 array of zeros
+  np.ones((3, 2))      # 3x2 array of ones
+  np.arange(0, 10, 2)  # [0 2 4 6 8]
+  np.linspace(1, 5, 4) # 4 numbers from 1 to 5</code></pre>
+    </div>
+  
+    <div class="subsection">
+      <h3>🔄 6. Reshaping Arrays</h3>
+      <pre><code>arr = np.array([1, 2, 3, 4, 5, 6])
+  reshaped = arr.reshape((2, 3))
+  print(reshaped)</code></pre>
+      <h4>Output:</h4>
+      <pre>[[1 2 3]
+  [4 5 6]]</pre>
+    </div>
+  
+    <div class="subsection">
+      <h3>🔎 7. Indexing & Slicing</h3>
+      <pre><code>arr = np.array([10, 20, 30, 40])
+  print(arr[1])       # ➤ 20
+  print(arr[1:3])     # ➤ [20 30]</code></pre>
+      <h4>2D Example:</h4>
+      <pre><code>matrix = np.array([[5, 6], [7, 8]])
+  print(matrix[1][0])  # ➤ 7</code></pre>
+    </div>
+  
+    <div class="challenge">
+      <h3>🎮 Challenge Example</h3>
+      <pre><code>import numpy as np
+  
+  marks = np.array([80, 90, 70, 85])
+  bonus = marks + 5
+  print("After bonus:", bonus)
+  
+  print("Average:", np.mean(marks))
+  print("Max Marks:", np.max(marks))</code></pre>
+    </div>
+  </div>
+  <div class="quiz-section">
+    <h2>📘 Mini Quiz</h2>
+  
+    <div class="quiz-question">
+      <p>Q1. What is the result of <code>np.array([1, 2]) * 3</code>?</p>
+      <ul>
+        <li onclick="checkAnswer(this, 'wrong')">a) [1, 2, 1, 2, 1, 2]</li>
+        <li onclick="checkAnswer(this, 'correct')">b) [3, 6]</li>
+        <li onclick="checkAnswer(this, 'wrong')">c) [3, 6, 9]</li>
+        <li onclick="checkAnswer(this, 'wrong')">d) [3, 6, 9, 12]</li>
+      </ul>
+    </div>
+  
+    <div class="quiz-question">
+      <p>Q2. What does <code>np.mean(np.array([1, 2, 3]))</code> return?</p>
+      <ul>
+        <li onclick="checkAnswer(this, 'wrong')">a) 1</li>
+        <li onclick="checkAnswer(this, 'correct')">b) 2</li>
+        <li onclick="checkAnswer(this, 'wrong')">c) 3</li>
+        <li onclick="checkAnswer(this, 'wrong')">d) 4</li>
+      </ul>
+    </div>
+  
+    <div class="quiz-question">
+      <p>Q3. How to create a 3x2 array of ones?</p>
+      <ul>
+        <li onclick="checkAnswer(this, 'wrong')">a) np.ones(3, 2)</li>
+        <li onclick="checkAnswer(this, 'correct')">b) np.ones((3, 2))</li>
+        <li onclick="checkAnswer(this, 'wrong')">c) np.ones([3][2])</li>
+        <li onclick="checkAnswer(this, 'wrong')">d) np.ones{3,2}</li>
+      </ul>
+    </div>
   </div>
 
   <div class="section">
-    <h2>🔢 NumPy Basics</h2>
-
-    <h3>🛠️ Importing and Creating Arrays</h3>
-    <pre><code>import numpy as np
-arr = np.array([1, 2, 3, 4])
-print(arr)  # [1 2 3 4]</code></pre>
-
-    <h3>🧮 Array Operations</h3>
-    <pre><code>print(arr + 5)        # [6 7 8 9]
-print(arr * 2)        # [2 4 6 8]
-print(np.mean(arr))   # Average: 2.5
-print(np.sqrt(arr))   # Square roots</code></pre>
-
-    <h3>📏 2D Arrays (Matrix)</h3>
-    <pre><code>matrix = np.array([[1, 2], [3, 4]])
-print(matrix)</code></pre>
+    <h2>🐼 What is pandas?</h2>
+    <p>pandas (short for "Panel Data") is a fast, powerful, flexible tool for:</p>
+    <ul>
+      <li>✅ Data cleaning</li>
+      <li>✅ Data analysis</li>
+      <li>✅ Reading/writing data (CSV, Excel, SQL, JSON, etc.)</li>
+    </ul>
   </div>
-
+  
   <div class="section">
-    <h2>🐼 pandas Basics</h2>
-
-    <h3>📥 Importing pandas and Creating DataFrames</h3>
+    <h2>📥 1. Importing pandas & Creating DataFrames</h2>
     <pre><code>import pandas as pd
-data = {
-  "Name": ["Aman", "Riya", "John"],
-  "Marks": [90, 85, 88]
-}
-df = pd.DataFrame(data)
-print(df)</code></pre>
-
-    <h3>🔍 Accessing Data</h3>
-    <pre><code>print(df["Name"])     # Column
-print(df.loc[0])      # First row
-print(df.iloc[1])     # Second row (by index)</code></pre>
-
-    <h3>📈 Descriptive Stats</h3>
-    <pre><code>print(df.describe())      # Summary stats
-print(df.mean(numeric_only=True))   # Average of marks</code></pre>
-
-    <h3>📤 Reading from CSV</h3>
+  
+  data = {
+      "Name": ["Aman", "Riya", "John"],
+      "Marks": [90, 85, 88]
+  }
+  
+  df = pd.DataFrame(data)
+  print(df)</code></pre>
+    <h3>📦 Output:</h3>
+    <pre>   Name  Marks
+  0  Aman     90
+  1  Riya     85
+  2  John     88</pre>
+    <p>🔎 <strong>DataFrame</strong> is like a table (rows & columns), and each column is a <strong>Series</strong> (like a list with labels).</p>
+  </div>
+  
+  <div class="section">
+    <h2>🔍 2. Accessing Data in DataFrame</h2>
+    
+    <h3>📌 Access a Column (like Excel header)</h3>
+    <pre><code>print(df["Name"])</code></pre>
+    <h4>Output:</h4>
+    <pre>0    Aman
+  1    Riya
+  2    John
+  Name: Name, dtype: object</pre>
+    
+    <h3>📌 Access a Row by Label (using .loc[])</h3>
+    <pre><code>print(df.loc[0])</code></pre>
+    <h4>Output:</h4>
+    <pre>Name     Aman
+  Marks      90
+  Name: 0, dtype: object</pre>
+    
+    <h3>📌 Access by Index Position (using .iloc[])</h3>
+    <pre><code>print(df.iloc[1])</code></pre>
+    <h4>Output:</h4>
+    <pre>Name     Riya
+  Marks      85
+  Name: 1, dtype: object</pre>
+  </div>
+  
+  <div class="section">
+    <h2>📈 3. Descriptive Statistics</h2>
+    
+    <h3>🔢 Basic Summary</h3>
+    <pre><code>print(df.describe())</code></pre>
+    <h4>Output:</h4>
+    <pre>          Marks
+  count   3.000000
+  mean   87.666667
+  std     2.516611
+  min    85.000000
+  25%    86.500000
+  50%    88.000000
+  75%    89.000000
+  max    90.000000</pre>
+    
+    <h3>📊 Mean of Marks</h3>
+    <pre><code>print(df.mean(numeric_only=True))</code></pre>
+    <h4>Output:</h4>
+    <pre>Marks    87.666667
+  dtype: float64</pre>
+  </div>
+  
+  <div class="section">
+    <h2>📤 4. Reading from a CSV File</h2>
+    <p>Suppose you have a file called students.csv:</p>
     <pre><code>df = pd.read_csv("students.csv")
-print(df.head())</code></pre>
+  print(df.head())</code></pre>
+    <p><code>read_csv()</code> → loads data from a CSV file</p>
+    <p><code>head()</code> → shows first 5 rows (default)</p>
+    <p>You can also use:</p>
+    <pre><code>df.tail()      # Last 5 rows
+  df.columns     # Column names
+  df.shape       # (rows, columns)</code></pre>
   </div>
 
-  <div class="joke">
-    🤪 Funny Analogy:<br>
-    NumPy is like your math nerd friend 🤓 who calculates fast.<br>
-    pandas is your organized Excel-using friend who loves neat rows and columns 🧾
-  </div>
-
-  <div class="section">
-    <h2>🔎 Real-Life Example: Analyzing Class Marks</h2>
-    <pre><code>import pandas as pd
-data = {
-  "Student": ["Aman", "Riya", "Rahul"],
-  "Math": [95, 85, 75],
-  "Science": [88, 92, 80]
-}
-df = pd.DataFrame(data)
-print("Average Marks:")
-print(df.mean(numeric_only=True))</code></pre>
+  <div class="quiz-section">
+    <h2>📘 Mini Quiz Time!</h2>
+  
+    <div class="quiz-question">
+      <p>Q1. What does <code>df["Name"]</code> return?</p>
+      <ul>
+        <li onclick="checkAnswer(this, 'wrong')">a) A row</li>
+        <li onclick="checkAnswer(this, 'wrong')">b) A cell</li>
+        <li onclick="checkAnswer(this, 'correct')">c) A column (Series)</li>
+        <li onclick="checkAnswer(this, 'wrong')">d) A number</li>
+      </ul>
+      <div class="answer" style="display: none;">
+        <p>✅ c) A column (Series)</p>
+      </div>
+      <button onclick="toggleAnswer(this)">Show Answer</button>
+    </div>
+  
+    <div class="quiz-question">
+      <p>Q2. Which method gives summary stats like mean, std, etc.?</p>
+      <ul>
+        <li onclick="checkAnswer(this, 'wrong')">a) df.stats()</li>
+        <li onclick="checkAnswer(this, 'correct')">b) df.describe()</li>
+        <li onclick="checkAnswer(this, 'wrong')">c) df.analyze()</li>
+        <li onclick="checkAnswer(this, 'wrong')">d) df.sum()</li>
+      </ul>
+      <div class="answer" style="display: none;">
+        <p>✅ b) df.describe()</p>
+      </div>
+      <button onclick="toggleAnswer(this)">Show Answer</button>
+    </div>
+  
+    <div class="quiz-question">
+      <p>Q3. What does <code>df.loc[0]</code> return?</p>
+      <ul>
+        <li onclick="checkAnswer(this, 'correct')">a) The first row</li>
+        <li onclick="checkAnswer(this, 'wrong')">b) The first column</li>
+        <li onclick="checkAnswer(this, 'wrong')">c) The last row</li>
+        <li onclick="checkAnswer(this, 'wrong')">d) A specific cell</li>
+      </ul>
+      <div class="answer" style="display: none;">
+        <p>✅ a) The first row</p>
+      </div>
+      <button onclick="toggleAnswer(this)">Show Answer</button>
+    </div>
+  
+    <div class="quiz-question">
+      <p>Q4. To load a CSV file, use:</p>
+      <ul>
+        <li onclick="checkAnswer(this, 'wrong')">a) pd.load_file("data.csv")</li>
+        <li onclick="checkAnswer(this, 'correct')">b) pd.read_csv("data.csv")</li>
+        <li onclick="checkAnswer(this, 'wrong')">c) pd.open("data.csv")</li>
+        <li onclick="checkAnswer(this, 'wrong')">d) csv.read("data.csv")</li>
+      </ul>
+      <div class="answer" style="display: none;">
+        <p>✅ b) pd.read_csv("data.csv")</p>
+      </div>
+      <button onclick="toggleAnswer(this)">Show Answer</button>
+    </div>
   </div>
 
   <div class="quiz">
