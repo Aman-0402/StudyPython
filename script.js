@@ -91,3 +91,14 @@ function checkAnswer(element, status) {
     element.style.backgroundColor = '';
   }, 1000);
 }
+
+function toggleSolution(button) {
+  const solutionDiv = button.previousElementSibling;
+  if (solutionDiv.style.display === "none") {
+    solutionDiv.style.display = "block";
+    button.textContent = "Hide Solution";
+  } else {
+    solutionDiv.style.display = "none";
+    button.textContent = "Show Solution";
+  }
+}
