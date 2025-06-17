@@ -26,7 +26,6 @@ body.dark {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -63,7 +62,6 @@ body.dark {
   padding: 1.5rem 1rem;
   overflow-y: auto;
   transition: transform 0.3s ease, background-color 0.3s ease;
-  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
 }
 
 body.dark .sidebar {
@@ -316,4 +314,44 @@ body.dark .quiz-question ul li {
 
 body.dark .quiz-question ul li:hover {
   background: #444;
+}
+
+.section {
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.question {
+  margin-bottom: 25px;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.answer {
+  margin-top: 15px;
+  padding: 10px;
+
+  border-radius: 5px;
+}
+
+.answer pre {
+  background-color: #e8f4fc;
+  border-left: none;
+  padding: 5px;
+}
+
+.show-answer {
+  margin-top: 10px;
+  padding: 8px 15px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.show-answer:hover {
+  background-color: #2980b9;
 }
