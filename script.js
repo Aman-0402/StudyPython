@@ -102,3 +102,14 @@ function toggleSolution(button) {
     button.textContent = "Show Solution";
   }
 }
+
+function toggleAnswer(button) {
+  const answerDiv = button.nextElementSibling;
+  if (answerDiv.style.display === "none") {
+    answerDiv.style.display = "block";
+    button.textContent = "Hide Answer";
+  } else {
+    answerDiv.style.display = "none";
+    button.textContent = "Show Answer";
+  }
+}
