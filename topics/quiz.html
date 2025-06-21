@@ -1797,5 +1797,459 @@ except ValueError:
       <li onclick="checkAnswer(this, 'wrong')">d) ERASE</li>
     </ul>
   </div>
+
+    <h2>📚 Chapter 9: Working with Libraries (NumPy, pandas) — 15 Questions</h2>
+
+<div class="quiz-question">
+  <p>1. Which function is used to create an array in NumPy?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'correct')">A) array()</li>
+    <li onclick="checkAnswer(this, 'wrong')">B) list()</li>
+    <li onclick="checkAnswer(this, 'wrong')">C) tuple()</li>
+    <li onclick="checkAnswer(this, 'wrong')">D) dict()</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>2. What will <code>np.zeros((2,3))</code> return?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">A) 2x3 array of 1s</li>
+    <li onclick="checkAnswer(this, 'correct')">B) 2x3 array of 0s</li>
+    <li onclick="checkAnswer(this, 'wrong')">C) 3x2 array of 0s</li>
+    <li onclick="checkAnswer(this, 'wrong')">D) Error</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>3. What is the shape of the array <code>np.array([[1, 2], [3, 4], [5, 6]])</code>?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">A) (2, 3)</li>
+    <li onclick="checkAnswer(this, 'correct')">B) (3, 2)</li>
+    <li onclick="checkAnswer(this, 'wrong')">C) (6,)</li>
+    <li onclick="checkAnswer(this, 'wrong')">D) (1, 6)</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>4. Which function returns the maximum value in a NumPy array?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">A) max()</li>
+    <li onclick="checkAnswer(this, 'correct')">B) np.max()</li>
+    <li onclick="checkAnswer(this, 'wrong')">C) maximum()</li>
+    <li onclick="checkAnswer(this, 'wrong')">D) np.maximum()</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>5. How can we generate an array of 10 evenly spaced values from 1 to 5?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'correct')">A) np.linspace(1, 5, 10)</li>
+    <li onclick="checkAnswer(this, 'wrong')">B) np.arange(1, 5, 10)</li>
+    <li onclick="checkAnswer(this, 'wrong')">C) np.linspace(1, 10, 5)</li>
+    <li onclick="checkAnswer(this, 'wrong')">D) np.linspace(10, 1, 5)</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>6. Which of these reshapes an array of 6 elements into a 2x3 matrix?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'correct')">A) arr.reshape(2, 3)</li>
+    <li onclick="checkAnswer(this, 'wrong')">B) arr.resize(2, 3)</li>
+    <li onclick="checkAnswer(this, 'wrong')">C) arr.shape(2, 3)</li>
+    <li onclick="checkAnswer(this, 'wrong')">D) arr.setshape(2, 3)</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>7. What is the output of <code>np.arange(2, 10, 2)</code>?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'correct')">A) [2, 4, 6, 8]</li>
+    <li onclick="checkAnswer(this, 'wrong')">B) [2, 3, 4, 5, 6, 7, 8, 9]</li>
+    <li onclick="checkAnswer(this, 'wrong')">C) [2, 6, 10]</li>
+    <li onclick="checkAnswer(this, 'wrong')">D) Error</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>8. What does <code>np.eye(3)</code> create?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">A) 3x3 array of zeros</li>
+    <li onclick="checkAnswer(this, 'correct')">B) 3x3 identity matrix</li>
+    <li onclick="checkAnswer(this, 'wrong')">C) 3x3 matrix of ones</li>
+    <li onclick="checkAnswer(this, 'wrong')">D) None of the above</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>9. What will be the result of <code>np.array([1, 2, 3]) + 5</code>?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">A) Error</li>
+    <li onclick="checkAnswer(this, 'correct')">B) [6, 7, 8]</li>
+    <li onclick="checkAnswer(this, 'wrong')">C) [1, 2, 3, 5]</li>
+    <li onclick="checkAnswer(this, 'wrong')">D) [1, 2, 3, 5, 6, 7, 8]</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>10. Which function is used to get the data type of NumPy array elements?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">A) arr.dtype()</li>
+    <li onclick="checkAnswer(this, 'wrong')">B) arr.type()</li>
+    <li onclick="checkAnswer(this, 'correct')">C) arr.dtype</li>
+    <li onclick="checkAnswer(this, 'wrong')">D) type(arr)</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>11. How do you get the number of dimensions of a NumPy array?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">A) arr.len</li>
+    <li onclick="checkAnswer(this, 'correct')">B) arr.ndim</li>
+    <li onclick="checkAnswer(this, 'wrong')">C) arr.dim()</li>
+    <li onclick="checkAnswer(this, 'wrong')">D) arr.shape()</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>12. What does <code>np.random.rand(2,2)</code> return?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">A) 2D array with random integers</li>
+    <li onclick="checkAnswer(this, 'correct')">B) 2x2 array with random floats [0,1)</li>
+    <li onclick="checkAnswer(this, 'wrong')">C) Error</li>
+    <li onclick="checkAnswer(this, 'wrong')">D) 1D array</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>13. How to flatten a NumPy array?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'correct')">A) arr.flatten()</li>
+    <li onclick="checkAnswer(this, 'wrong')">B) arr.flat()</li>
+    <li onclick="checkAnswer(this, 'wrong')">C) arr.reshape(1,-1)</li>
+    <li onclick="checkAnswer(this, 'wrong')">D) All of the above</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>14. Which of the following is not a valid NumPy function?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">A) np.sort()</li>
+    <li onclick="checkAnswer(this, 'wrong')">B) np.unique()</li>
+    <li onclick="checkAnswer(this, 'correct')">C) np.remove()</li>
+    <li onclick="checkAnswer(this, 'wrong')">D) np.concatenate()</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>15. What is broadcasting in NumPy?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">A) Sending arrays to servers</li>
+    <li onclick="checkAnswer(this, 'wrong')">B) Copying arrays</li>
+    <li onclick="checkAnswer(this, 'correct')">C) Performing arithmetic between arrays of different shapes</li>
+    <li onclick="checkAnswer(this, 'wrong')">D) Saving arrays to file</li>
+  </ul>
+</div>
+<h2>🐼 Pandas – 15 MCQs</h2>
+
+<div class="quiz-question">
+  <p>1. Which function is used to read a CSV file in Pandas?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">A) read.csv()</li>
+    <li onclick="checkAnswer(this, 'wrong')">B) load_csv()</li>
+    <li onclick="checkAnswer(this, 'correct')">C) read_csv()</li>
+    <li onclick="checkAnswer(this, 'wrong')">D) import_csv()</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>2. What does df.head() return?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">A) Last 5 rows</li>
+    <li onclick="checkAnswer(this, 'wrong')">B) First 5 columns</li>
+    <li onclick="checkAnswer(this, 'correct')">C) First 5 rows</li>
+    <li onclick="checkAnswer(this, 'wrong')">D) Entire DataFrame</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>3. Which method returns summary statistics of a DataFrame?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">A) df.summary()</li>
+    <li onclick="checkAnswer(this, 'wrong')">B) df.info()</li>
+    <li onclick="checkAnswer(this, 'correct')">C) df.describe()</li>
+    <li onclick="checkAnswer(this, 'wrong')">D) df.statistics()</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>4. How to select a column 'A' from a DataFrame df?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">A) df['A']</li>
+    <li onclick="checkAnswer(this, 'wrong')">B) df.A</li>
+    <li onclick="checkAnswer(this, 'correct')">C) Both A and B</li>
+    <li onclick="checkAnswer(this, 'wrong')">D) None</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>5. Which method is used to drop rows with NaN values?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">A) drop_na()</li>
+    <li onclick="checkAnswer(this, 'wrong')">B) remove_na()</li>
+    <li onclick="checkAnswer(this, 'correct')">C) dropna()</li>
+    <li onclick="checkAnswer(this, 'wrong')">D) clean()</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>6. What is the output of df.shape?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">A) Number of rows</li>
+    <li onclick="checkAnswer(this, 'wrong')">B) Number of columns</li>
+    <li onclick="checkAnswer(this, 'correct')">C) Tuple of (rows, columns)</li>
+    <li onclick="checkAnswer(this, 'wrong')">D) Data types</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>7. Which function is used to merge two DataFrames?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">A) df.append()</li>
+    <li onclick="checkAnswer(this, 'wrong')">B) df.concat()</li>
+    <li onclick="checkAnswer(this, 'correct')">C) pd.merge()</li>
+    <li onclick="checkAnswer(this, 'wrong')">D) df.add()</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>8. What is the default axis for df.drop() when dropping rows?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">A) axis=1</li>
+    <li onclick="checkAnswer(this, 'correct')">B) axis=0</li>
+    <li onclick="checkAnswer(this, 'wrong')">C) axis=None</li>
+    <li onclick="checkAnswer(this, 'wrong')">D) axis=2</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>9. Which method is used to fill missing values?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'correct')">A) df.fillna()</li>
+    <li onclick="checkAnswer(this, 'wrong')">B) df.missing()</li>
+    <li onclick="checkAnswer(this, 'wrong')">C) df.replace()</li>
+    <li onclick="checkAnswer(this, 'wrong')">D) df.na_fill()</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>10. What does df.loc[2] do?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">A) Returns the 2nd column</li>
+    <li onclick="checkAnswer(this, 'correct')">B) Returns the row with label 2</li>
+    <li onclick="checkAnswer(this, 'wrong')">C) Returns the 2nd row (index-based)</li>
+    <li onclick="checkAnswer(this, 'wrong')">D) Error</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>11. To reset the index of a DataFrame, we use:</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">A) df.index.reset()</li>
+    <li onclick="checkAnswer(this, 'wrong')">B) df.reset()</li>
+    <li onclick="checkAnswer(this, 'correct')">C) df.reset_index()</li>
+    <li onclick="checkAnswer(this, 'wrong')">D) df.reindex()</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>12. How to get column names of a DataFrame df?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">A) df.columns()</li>
+    <li onclick="checkAnswer(this, 'wrong')">B) df.colnames</li>
+    <li onclick="checkAnswer(this, 'correct')">C) df.columns</li>
+    <li onclick="checkAnswer(this, 'wrong')">D) df.get_columns()</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>13. Which method is used to sort a DataFrame by column values?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'correct')">A) df.sort_values()</li>
+    <li onclick="checkAnswer(this, 'wrong')">B) df.arrange()</li>
+    <li onclick="checkAnswer(this, 'wrong')">C) df.sort()</li>
+    <li onclick="checkAnswer(this, 'wrong')">D) df.orderby()</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>14. What will df.isnull().sum() show?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">A) Count of nulls per row</li>
+    <li onclick="checkAnswer(this, 'wrong')">B) Count of non-nulls</li>
+    <li onclick="checkAnswer(this, 'correct')">C) Count of nulls per column</li>
+    <li onclick="checkAnswer(this, 'wrong')">D) Total NaN in dataset</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>15. Which Pandas method allows filtering with conditions?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">A) filter()</li>
+    <li onclick="checkAnswer(this, 'correct')">B) query()</li>
+    <li onclick="checkAnswer(this, 'wrong')">C) condition()</li>
+    <li onclick="checkAnswer(this, 'wrong')">D) check()</li>
+  </ul>
+</div>
+<h2>📊 Matplotlib – 15 MCQs</h2>
+
+<div class="quiz-question">
+  <p>1. Which function is used to plot a line graph in Matplotlib?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">A) plot.line()</li>
+    <li onclick="checkAnswer(this, 'wrong')">B) plt.graph()</li>
+    <li onclick="checkAnswer(this, 'correct')">C) plt.plot()</li>
+    <li onclick="checkAnswer(this, 'wrong')">D) line.plot()</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>2. Which command displays the plot window?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">A) plt.display()</li>
+    <li onclick="checkAnswer(this, 'wrong')">B) plt.plot()</li>
+    <li onclick="checkAnswer(this, 'correct')">C) plt.show()</li>
+    <li onclick="checkAnswer(this, 'wrong')">D) plt.graph()</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>3. Which function creates a histogram?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'correct')">A) plt.hist()</li>
+    <li onclick="checkAnswer(this, 'wrong')">B) plt.bar()</li>
+    <li onclick="checkAnswer(this, 'wrong')">C) plt.pie()</li>
+    <li onclick="checkAnswer(this, 'wrong')">D) plt.histogram()</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>4. What does plt.xlabel('X') do?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'correct')">A) Labels x-axis as ‘X’</li>
+    <li onclick="checkAnswer(this, 'wrong')">B) Labels y-axis as ‘X’</li>
+    <li onclick="checkAnswer(this, 'wrong')">C) Labels title</li>
+    <li onclick="checkAnswer(this, 'wrong')">D) Nothing</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>5. What function creates a bar chart?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'correct')">A) plt.bar()</li>
+    <li onclick="checkAnswer(this, 'wrong')">B) plt.plotbar()</li>
+    <li onclick="checkAnswer(this, 'wrong')">C) plt.barchart()</li>
+    <li onclick="checkAnswer(this, 'wrong')">D) plt.column()</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>6. Which parameter changes line color in plt.plot()?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">A) clr</li>
+    <li onclick="checkAnswer(this, 'correct')">B) color</li>
+    <li onclick="checkAnswer(this, 'wrong')">C) c</li>
+    <li onclick="checkAnswer(this, 'wrong')">D) linecolor</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>7. To plot multiple lines on the same graph, use:</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">A) plt.line()</li>
+    <li onclick="checkAnswer(this, 'wrong')">B) plt.multiplot()</li>
+    <li onclick="checkAnswer(this, 'correct')">C) plt.plot() multiple times</li>
+    <li onclick="checkAnswer(this, 'wrong')">D) plt.lines()</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>8. Which function is used for scatter plots?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">A) plt.scatterplot()</li>
+    <li onclick="checkAnswer(this, 'wrong')">B) plt.dot()</li>
+    <li onclick="checkAnswer(this, 'correct')">C) plt.scatter()</li>
+    <li onclick="checkAnswer(this, 'wrong')">D) plt.point()</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>9. To save a plot to an image file:</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">A) plt.save()</li>
+    <li onclick="checkAnswer(this, 'wrong')">B) plt.savefile()</li>
+    <li onclick="checkAnswer(this, 'correct')">C) plt.savefig()</li>
+    <li onclick="checkAnswer(this, 'wrong')">D) plt.img()</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>10. What does plt.title("Graph") do?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">A) Adds axis label</li>
+    <li onclick="checkAnswer(this, 'wrong')">B) Adds legend</li>
+    <li onclick="checkAnswer(this, 'correct')">C) Adds title</li>
+    <li onclick="checkAnswer(this, 'wrong')">D) Nothing</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>11. Which function adds a legend to the plot?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">A) plt.label()</li>
+    <li onclick="checkAnswer(this, 'correct')">B) plt.legend()</li>
+    <li onclick="checkAnswer(this, 'wrong')">C) plt.text()</li>
+    <li onclick="checkAnswer(this, 'wrong')">D) plt.caption()</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>12. How to plot a pie chart?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'correct')">A) plt.pie()</li>
+    <li onclick="checkAnswer(this, 'wrong')">B) plt.chart()</li>
+    <li onclick="checkAnswer(this, 'wrong')">C) plt.circle()</li>
+    <li onclick="checkAnswer(this, 'wrong')">D) plt.piechart()</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>13. What is the use of autopct in plt.pie()?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">A) Adds text labels</li>
+    <li onclick="checkAnswer(this, 'correct')">B) Adds percent values</li>
+    <li onclick="checkAnswer(this, 'wrong')">C) Adds axis</li>
+    <li onclick="checkAnswer(this, 'wrong')">D) Adds background</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>14. Which library is commonly used with matplotlib for numerical operations?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">A) Pandas</li>
+    <li onclick="checkAnswer(this, 'correct')">B) NumPy</li>
+    <li onclick="checkAnswer(this, 'wrong')">C) SciPy</li>
+    <li onclick="checkAnswer(this, 'wrong')">D) OpenCV</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>15. To add a grid in the plot, use:</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'correct')">A) plt.grid(True)</li>
+    <li onclick="checkAnswer(this, 'wrong')">B) plt.show(grid=True)</li>
+    <li onclick="checkAnswer(this, 'wrong')">C) plt.add_grid()</li>
+    <li onclick="checkAnswer(this, 'wrong')">D) plt.axis_grid()</li>
+  </ul>
+</div>
 </body>
 </html>
