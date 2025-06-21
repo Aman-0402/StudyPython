@@ -1,0 +1,158 @@
+<h2>🔢 Project Name: Python Calculator</h2>
+
+<h3>✅ Project Overview:</h3>
+<p>
+A Calculator Program performs basic arithmetic operations like:
+</p>
+<ul>
+  <li>Addition (+)</li>
+  <li>Subtraction (-)</li>
+  <li>Multiplication (*)</li>
+  <li>Division (/)</li>
+</ul>
+
+<h3>🧠 Features:</h3>
+<ul>
+  <li>User-friendly menu</li>
+  <li>Takes user input for numbers and operator</li>
+  <li>Performs the calculation</li>
+  <li>Handles division by zero</li>
+  <li>Runs in a loop until the user exits</li>
+</ul>
+
+<h3>💻 Code:</h3>
+<pre><code>def add(x, y):
+    return x + y
+
+def subtract(x, y):
+    return x - y
+
+def multiply(x, y):
+    return x * y
+
+def divide(x, y):
+    if y != 0:
+        return x / y
+    else:
+        return "Error! Division by zero."
+
+while True:
+    print("\nSimple Calculator")
+    print("1. Add")
+    print("2. Subtract")
+    print("3. Multiply")
+    print("4. Divide")
+    print("5. Exit")
+
+    choice = input("Enter choice (1-5): ")
+
+    if choice == '5':
+        print("Exiting the calculator. Goodbye!")
+        break
+
+    num1 = float(input("Enter first number: "))
+    num2 = float(input("Enter second number: "))
+
+    if choice == '1':
+        print("Result:", add(num1, num2))
+    elif choice == '2':
+        print("Result:", subtract(num1, num2))
+    elif choice == '3':
+        print("Result:", multiply(num1, num2))
+    elif choice == '4':
+        print("Result:", divide(num1, num2))
+    else:
+        print("Invalid input. Please try again.")
+</code></pre>
+
+<h3>🔍 Code Explanation:</h3>
+<ul>
+  <li><strong>Functions add, subtract, multiply, divide:</strong> Separate logic for clarity and reusability.</li>
+  <li><strong>while True: loop:</strong> Runs until user chooses to exit.</li>
+  <li><strong>input() function:</strong> Accepts user’s choice and numbers.</li>
+  <li><strong>if/elif/else:</strong> Matches the operation and calls the correct function.</li>
+  <li><strong>Error Handling:</strong> Division by zero is safely handled.</li>
+</ul>
+
+<br>
+<br>
+<br>
+
+<h2>⚖️ Project Name: Weight Converter</h2>
+
+<h3>✅ Project Overview:</h3>
+<p>This program will convert weight between:</p>
+<ul>
+  <li>Kilograms ↔ Pounds</li>
+  <li>Kilograms ↔ Grams</li>
+  <li>Kilograms ↔ Ounces</li>
+</ul>
+<p>You can expand it to include more units later.</p>
+
+<h3>🧠 Features:</h3>
+<ul>
+  <li>Menu to choose conversion type</li>
+  <li>Takes weight input from the user</li>
+  <li>Uses correct conversion formulas</li>
+  <li>Runs in a loop until the user exits</li>
+</ul>
+
+<h3>💻 Code:</h3>
+<pre><code>def kg_to_pounds(kg):
+    return kg * 2.20462
+
+def kg_to_grams(kg):
+    return kg * 1000
+
+def kg_to_ounces(kg):
+    return kg * 35.274
+
+def pounds_to_kg(lb):
+    return lb / 2.20462
+
+def grams_to_kg(g):
+    return g / 1000
+
+def ounces_to_kg(oz):
+    return oz / 35.274
+
+while True:
+    print("\nWeight Conversion Menu")
+    print("1. Kilograms to Pounds")
+    print("2. Kilograms to Grams")
+    print("3. Kilograms to Ounces")
+    print("4. Pounds to Kilograms")
+    print("5. Grams to Kilograms")
+    print("6. Ounces to Kilograms")
+    print("7. Exit")
+
+    choice = input("Enter choice (1-7): ")
+
+    if choice == '7':
+        print("Exiting the converter. Goodbye!")
+        break
+
+    weight = float(input("Enter the weight: "))
+
+    if choice == '1':
+        print(f"{weight} kg = {kg_to_pounds(weight):.2f} lb")
+    elif choice == '2':
+        print(f"{weight} kg = {kg_to_grams(weight)} g")
+    elif choice == '3':
+        print(f"{weight} kg = {kg_to_ounces(weight):.2f} oz")
+    elif choice == '4':
+        print(f"{weight} lb = {pounds_to_kg(weight):.2f} kg")
+    elif choice == '5':
+        print(f"{weight} g = {grams_to_kg(weight):.3f} kg")
+    elif choice == '6':
+        print(f"{weight} oz = {ounces_to_kg(weight):.3f} kg")
+    else:
+        print("Invalid choice. Please try again.")
+</code></pre>
+
+<h3>🔍 Explanation:</h3>
+<ul>
+  <li>We define conversion functions like <code>kg_to_pounds</code>, <code>pounds_to_kg</code>, etc.</li>
+  <li><code>while True</code> keeps the program running until the user selects "Exit".</li>
+  <li>Formatted output is shown with 2 or 3 decimal places for neat display.</li>
+</ul>
