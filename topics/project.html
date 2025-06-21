@@ -1368,3 +1368,153 @@ else:
     </ul>
   </div>
 </div>
+
+<h1>🏦 Python Banking System with SQLite With delete Acccount</h1>
+  <p>This program simulates a basic banking system using Python and SQLite for persistent data storage.</p>
+
+  <h3>📄 Full Python Code</h3>
+  <pre><code>import sqlite3
+
+    import sqlite3
+
+    # Connect to SQLite database (creates file if not exists)
+    conn = sqlite3.connect("bank.db")
+    cur = conn.cursor()
+    
+    # Create the accounts table if it doesn't exist
+    cur.execute('''
+    CREATE TABLE IF NOT EXISTS accounts (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT NOT NULL,
+        pin TEXT NOT NULL,
+        balance REAL DEFAULT 0
+    )
+    ''')
+    conn.commit()
+    
+    # Function to create a new account
+    def create_account():
+        name = input("Enter your name: ").strip().title()
+        pin = input("Set a 4-digit PIN: ")
+        cur.execute("INSERT INTO accounts (name, pin, balance) VALUES (?, ?, ?)", (name, pin, 0))
+        conn.commit()
+        print(f"✅ Account created for {name}!")
+    
+    # Function to login
+    def login():
+        name = input("Enter your name: ").strip().title()
+        pin = input("Enter your PIN: ")
+        cur.execute("SELECT * FROM accounts WHERE name=? AND pin=?", (name, pin))
+        account = cur.fetchone()
+        if account:
+            print(f"✅ Welcome back, {name}!")
+            return account
+        else:
+            print("❌ Invalid name or PIN.")
+            return None
+    
+    # Function to deposit money
+    def deposit(user_id):
+        amount = float(input("Enter amount to deposit: ₹"))
+        if amount <= 0:
+            print("❌ Invalid amount.")
+            return
+        cur.execute("UPDATE accounts SET balance = balance + ? WHERE id = ?", (amount, user_id))
+        conn.commit()
+        print(f"✅ ₹{amount:.2f} deposited.")
+    
+    # Function to withdraw money
+    def withdraw(user_id):
+        amount = float(input("Enter amount to withdraw: ₹"))
+        cur.execute("SELECT balance FROM accounts WHERE id=?", (user_id,))
+        balance = cur.fetchone()[0]
+        if amount <= 0:
+            print("❌ Invalid amount.")
+        elif amount > balance:
+            print("❌ Insufficient funds.")
+        else:
+            cur.execute("UPDATE accounts SET balance = balance - ? WHERE id = ?", (amount, user_id))
+            conn.commit()
+            print(f"✅ ₹{amount:.2f} withdrawn.")
+    
+    # Function to check balance
+    def check_balance(user_id):
+        cur.execute("SELECT balance FROM accounts WHERE id=?", (user_id,))
+        balance = cur.fetchone()[0]
+        print(f"💰 Your current balance is ₹{balance:.2f}")
+    
+    # Function to delete an account
+    def delete_account(user_id):
+        confirm = input("⚠️ Are you sure you want to delete your account? This action is irreversible! (yes/no): ").strip().lower()
+        if confirm == "yes":
+            pin = input("🔐 Re-enter your PIN to confirm: ")
+            cur.execute("SELECT * FROM accounts WHERE id=? AND pin=?", (user_id, pin))
+            account = cur.fetchone()
+            if account:
+                cur.execute("DELETE FROM accounts WHERE id=?", (user_id,))
+                conn.commit()
+                print("🗑️ Your account has been deleted successfully.")
+                return True
+            else:
+                print("❌ PIN incorrect. Account deletion cancelled.")
+                return False
+        else:
+            print("❌ Account deletion cancelled.")
+            return False
+    
+    # Main menu loop
+    def main():
+        while True:
+            print("\n🏦 Welcome to Python Bank")
+            print("1. Create Account")
+            print("2. Login")
+            print("3. Exit")
+    
+            choice = input("Enter your choice (1-3): ")
+    
+            if choice == '1':
+                create_account()
+    
+            elif choice == '2':
+                user = login()
+                if user:
+                    user_id = user[0]
+                    while True:
+                        print("\n🔐 Logged In Menu")
+                        print("1. Deposit")
+                        print("2. Withdraw")
+                        print("3. Check Balance")
+                        print("4. Delete Account")
+                        print("5. Logout")
+    
+                        option = input("Choose an option (1-5): ")
+    
+                        if option == '1':
+                            deposit(user_id)
+                        elif option == '2':
+                            withdraw(user_id)
+                        elif option == '3':
+                            check_balance(user_id)
+                        elif option == '4':
+                            deleted = delete_account(user_id)
+                            if deleted:
+                                break  # Exit to main menu after deletion
+                        elif option == '5':
+                            print("🔓 Logged out.")
+                            break
+                        else:
+                            print("❌ Invalid option. Try again.")
+    
+            elif choice == '3':
+                print("👋 Thank you for using Python Bank. Goodbye!")
+                break
+    
+            else:
+                print("❌ Invalid input. Please choose 1-3.")
+    
+    # Run the program
+    main()
+    
+    # Close the DB connection when done
+    conn.close()
+    </code></pre>
