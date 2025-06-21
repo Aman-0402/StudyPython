@@ -156,3 +156,1215 @@ while True:
   <li><code>while True</code> keeps the program running until the user selects "Exit".</li>
   <li>Formatted output is shown with 2 or 3 decimal places for neat display.</li>
 </ul>
+<br>
+<br>
+<br>
+
+<h2>🌡️ Project Name: Temperature Converter</h2>
+
+<h3>✅ Project Overview:</h3>
+<p>This program converts temperature between:</p>
+<ul>
+  <li>Celsius ↔ Fahrenheit</li>
+  <li>Celsius ↔ Kelvin</li>
+  <li>Fahrenheit ↔ Kelvin</li>
+</ul>
+
+<h3>🔁 Conversion Formulas:</h3>
+<table border="1" cellpadding="6">
+  <thead>
+    <tr><th>From → To</th><th>Formula</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Celsius → Fahrenheit</td><td>F = (C × 9/5) + 32</td></tr>
+    <tr><td>Fahrenheit → Celsius</td><td>C = (F − 32) × 5/9</td></tr>
+    <tr><td>Celsius → Kelvin</td><td>K = C + 273.15</td></tr>
+    <tr><td>Kelvin → Celsius</td><td>C = K − 273.15</td></tr>
+    <tr><td>Fahrenheit → Kelvin</td><td>K = (F − 32) × 5/9 + 273.15</td></tr>
+    <tr><td>Kelvin → Fahrenheit</td><td>F = (K − 273.15) × 9/5 + 32</td></tr>
+  </tbody>
+</table>
+
+<h3>🧠 Python Code:</h3>
+<pre><code>def celsius_to_fahrenheit(c):
+    return (c * 9/5) + 32
+
+def fahrenheit_to_celsius(f):
+    return (f - 32) * 5/9
+
+def celsius_to_kelvin(c):
+    return c + 273.15
+
+def kelvin_to_celsius(k):
+    return k - 273.15
+
+def fahrenheit_to_kelvin(f):
+    return (f - 32) * 5/9 + 273.15
+
+def kelvin_to_fahrenheit(k):
+    return (k - 273.15) * 9/5 + 32
+
+while True:
+    print("\nTemperature Conversion Menu")
+    print("1. Celsius to Fahrenheit")
+    print("2. Fahrenheit to Celsius")
+    print("3. Celsius to Kelvin")
+    print("4. Kelvin to Celsius")
+    print("5. Fahrenheit to Kelvin")
+    print("6. Kelvin to Fahrenheit")
+    print("7. Exit")
+
+    choice = input("Enter choice (1-7): ")
+
+    if choice == '7':
+        print("Exiting the converter. Goodbye!")
+        break
+
+    temp = float(input("Enter the temperature: "))
+
+    if choice == '1':
+        print(f"{temp}°C = {celsius_to_fahrenheit(temp):.2f}°F")
+    elif choice == '2':
+        print(f"{temp}°F = {fahrenheit_to_celsius(temp):.2f}°C")
+    elif choice == '3':
+        print(f"{temp}°C = {celsius_to_kelvin(temp):.2f}K")
+    elif choice == '4':
+        print(f"{temp}K = {kelvin_to_celsius(temp):.2f}°C")
+    elif choice == '5':
+        print(f"{temp}°F = {fahrenheit_to_kelvin(temp):.2f}K")
+    elif choice == '6':
+        print(f"{temp}K = {kelvin_to_fahrenheit(temp):.2f}°F")
+    else:
+        print("Invalid input. Please try again.")
+</code></pre>
+
+<h3>⚙️ Explanation:</h3>
+<ul>
+  <li>Each conversion is handled by a separate function.</li>
+  <li>User selects the conversion type and enters the temperature.</li>
+  <li>The program uses <code>if-elif</code> to call the correct formula.</li>
+  <li>Formatted output with 2 decimal precision for clarity.</li>
+</ul>
+<br>
+<br>
+<br>
+
+<h2>💰 Project Name: Compound Interest Calculator</h2>
+
+<h3>✅ Project Overview:</h3>
+<p>This program will calculate Compound Interest using the standard formula:</p>
+<pre><code>A = P(1 + r/n)^(nt)</code></pre>
+<p>Where:</p>
+<ul>
+  <li><strong>A</strong> = Final amount</li>
+  <li><strong>P</strong> = Principal amount</li>
+  <li><strong>r</strong> = Annual interest rate (in decimal)</li>
+  <li><strong>n</strong> = Number of times interest is compounded per year</li>
+  <li><strong>t</strong> = Time (in years)</li>
+</ul>
+<p><strong>Compound Interest = A - P</strong></p>
+
+<h3>🔁 Python Code:</h3>
+<pre><code>def calculate_compound_interest(principal, rate, time, n):
+    # Convert percentage rate to decimal
+    r = rate / 100
+    amount = principal * (1 + r / n) ** (n * time)
+    ci = amount - principal
+    return amount, ci
+
+while True:
+    print("\nCompound Interest Calculator")
+    print("1. Calculate Compound Interest")
+    print("2. Exit")
+
+    choice = input("Enter your choice (1-2): ")
+
+    if choice == '2':
+        print("Thank you for using the calculator. Goodbye!")
+        break
+
+    principal = float(input("Enter the principal amount (P): ₹"))
+    rate = float(input("Enter the annual interest rate (in %): "))
+    time = float(input("Enter the time in years (T): "))
+    n = int(input("Enter number of times interest is compounded per year (n): "))
+
+    total_amount, compound_interest = calculate_compound_interest(principal, rate, time, n)
+
+    print(f"\nTotal Amount (A) after {time} years = ₹{total_amount:.2f}")
+    print(f"Compound Interest earned = ₹{compound_interest:.2f}")
+</code></pre>
+
+<h3>🔍 Code Explanation:</h3>
+<ul>
+  <li><code>calculate_compound_interest(...)</code>: Performs the math using the compound interest formula.</li>
+  <li><strong>User Inputs:</strong> Principal, Rate, Time, and Frequency (n).</li>
+  <li><strong>Formatted Output:</strong> Displays both total amount and interest earned.</li>
+  <li><strong>Loop:</strong> The program continues to run until the user chooses to exit.</li>
+</ul>
+<br>
+<br>
+<br>
+
+<h2>🕒 Project Name: Countdown Timer</h2>
+
+<h3>✅ Project Overview:</h3>
+<p>This program will:</p>
+<ul>
+  <li>Take time input (in seconds or minutes + seconds)</li>
+  <li>Count down to zero</li>
+  <li>Display time left every second</li>
+  <li>Notify the user when time is up</li>
+</ul>
+
+<h3>🛠 Modules Used:</h3>
+<ul>
+  <li><strong>time</strong>: to pause for 1 second between countdown steps</li>
+  <li><strong>os</strong> or <strong>sys</strong> (optional): to clear the screen or beep (platform dependent)</li>
+</ul>
+
+<h3>🧠 Python Code:</h3>
+<pre><code>import time
+
+def countdown_timer(seconds):
+    while seconds:
+        mins, secs = divmod(seconds, 60)
+        timer = f'{mins:02d}:{secs:02d}'
+        print(f"\rTime Left: {timer}", end="")
+        time.sleep(1)
+        seconds -= 1
+    print("\rTime's up!           ")
+
+while True:
+    print("\n⏳ Countdown Timer")
+    print("1. Start Timer")
+    print("2. Exit")
+
+    choice = input("Enter your choice (1-2): ")
+
+    if choice == '2':
+        print("Goodbye!")
+        break
+
+    total_seconds = int(input("Enter time in seconds: "))
+    countdown_timer(total_seconds)
+</code></pre>
+
+<h3>🔍 Code Explanation:</h3>
+<ul>
+  <li><code>divmod(seconds, 60)</code>: Splits seconds into minutes and seconds</li>
+  <li><code>\r</code>: Returns cursor to the beginning of the line (for live countdown)</li>
+  <li><code>end=""</code>: Prevents printing on a new line each time</li>
+  <li><code>time.sleep(1)</code>: Waits for 1 second between countdown steps</li>
+  <li>After countdown, it prints <code>"Time's up!"</code></li>
+</ul>
+<br>
+<br>
+<br>
+
+<h2>🛍️ Project Name: Shopping Cart System</h2>
+
+<h3>✅ Project Overview:</h3>
+<p>This program will:</p>
+<ul>
+  <li>Let users add, view, update, and remove items from the cart</li>
+  <li>Show the total price of items in the cart</li>
+  <li>Store items in a dictionary or list with quantity and price</li>
+</ul>
+
+<h3>🧠 Features:</h3>
+<ul>
+  <li>Add item (name, quantity, price)</li>
+  <li>Remove item</li>
+  <li>Update quantity</li>
+  <li>View cart with total</li>
+  <li>Exit the program</li>
+</ul>
+
+<h3>🛠 Python Code:</h3>
+<pre><code>cart = {}
+
+def add_item(name, price, quantity):
+    if name in cart:
+        cart[name]['quantity'] += quantity
+    else:
+        cart[name] = {'price': price, 'quantity': quantity}
+    print(f"{quantity} x {name} added to cart.")
+
+def remove_item(name):
+    if name in cart:
+        del cart[name]
+        print(f"{name} removed from cart.")
+    else:
+        print("Item not found in cart.")
+
+def update_quantity(name, quantity):
+    if name in cart:
+        cart[name]['quantity'] = quantity
+        print(f"{name} quantity updated to {quantity}.")
+    else:
+        print("Item not found in cart.")
+
+def view_cart():
+    if not cart:
+        print("Your cart is empty.")
+        return
+    total = 0
+    print("\nYour Shopping Cart:")
+    print("{:<15} {:<10} {:<10} {:<10}".format("Item", "Qty", "Price", "Total"))
+    print("-" * 50)
+    for name, details in cart.items():
+        item_total = details['price'] * details['quantity']
+        total += item_total
+        print(f"{name:<15} {details['quantity']:<10} ₹{details['price']:<9.2f} ₹{item_total:.2f}")
+    print("-" * 50)
+    print(f"Total Amount: ₹{total:.2f}")
+
+while True:
+    print("\n🛒 Shopping Cart Menu")
+    print("1. Add item")
+    print("2. Remove item")
+    print("3. Update quantity")
+    print("4. View cart")
+    print("5. Exit")
+
+    choice = input("Enter your choice (1-5): ")
+
+    if choice == '1':
+        name = input("Enter item name: ").capitalize()
+        price = float(input("Enter price per unit (₹): "))
+        quantity = int(input("Enter quantity: "))
+        add_item(name, price, quantity)
+
+    elif choice == '2':
+        name = input("Enter item name to remove: ").capitalize()
+        remove_item(name)
+
+    elif choice == '3':
+        name = input("Enter item name to update: ").capitalize()
+        quantity = int(input("Enter new quantity: "))
+        update_quantity(name, quantity)
+
+    elif choice == '4':
+        view_cart()
+
+    elif choice == '5':
+        print("Exiting the cart. Thank you for shopping!")
+        break
+
+    else:
+        print("Invalid choice. Please try again.")
+</code></pre>
+
+<h3>🔍 Code Breakdown:</h3>
+<ul>
+  <li><strong>Cart is a dictionary:</strong> <code>{ 'Apple': {'price': 30, 'quantity': 2}, ... }</code></li>
+  <li>Each menu option triggers a function:</li>
+  <ul>
+    <li><code>add_item()</code>: Adds or updates an item</li>
+    <li><code>remove_item()</code>: Deletes item from cart</li>
+    <li><code>update_quantity()</code>: Changes the number of units</li>
+    <li><code>view_cart()</code>: Displays items with total</li>
+  </ul>
+</ul>
+<br>
+<br>
+<br>
+
+<h2>🧠 Project Name: Python Quiz Game</h2>
+
+<h3>✅ Project Overview:</h3>
+<p>This program will:</p>
+<ul>
+  <li>Ask the user multiple-choice or true/false questions</li>
+  <li>Take user input for answers</li>
+  <li>Keep score and show the final result</li>
+  <li>Give feedback for each question</li>
+</ul>
+
+<h3>🔢 Features:</h3>
+<ul>
+  <li>Multiple questions</li>
+  <li>Score tracking</li>
+  <li>Instant feedback (Correct/Incorrect)</li>
+  <li>Option to replay the quiz</li>
+</ul>
+
+<h3>🧠 Step-by-Step Python Code:</h3>
+<pre><code>def run_quiz(questions):
+    score = 0
+    for q in questions:
+        print("\n" + q["question"])
+        for option in q["options"]:
+            print(option)
+        answer = input("Your answer (A/B/C/D): ").strip().upper()
+        if answer == q["answer"]:
+            print("✅ Correct!")
+            score += 1
+        else:
+            print(f"❌ Incorrect. The correct answer is {q['answer']}.")
+    print(f"\nYour final score: {score}/{len(questions)}")
+
+questions = [
+    {
+        "question": "What is the capital of France?",
+        "options": ["A. Paris", "B. London", "C. Berlin", "D. Madrid"],
+        "answer": "A"
+    },
+    {
+        "question": "Which planet is known as the Red Planet?",
+        "options": ["A. Earth", "B. Mars", "C. Venus", "D. Jupiter"],
+        "answer": "B"
+    },
+    {
+        "question": "What is the output of 3 * 1 ** 3?",
+        "options": ["A. 27", "B. 9", "C. 3", "D. 1"],
+        "answer": "C"
+    },
+    {
+        "question": "Which language is used for web apps?",
+        "options": ["A. Python", "B. JavaScript", "C. HTML", "D. All of these"],
+        "answer": "D"
+    }
+]
+
+while True:
+    print("\n🎮 Welcome to the Quiz Game!")
+    run_quiz(questions)
+    play_again = input("\nDo you want to play again? (yes/no): ").strip().lower()
+    if play_again != 'yes':
+        print("Thanks for playing! Goodbye!")
+        break
+</code></pre>
+
+<h3>🔍 Code Explanation:</h3>
+<ul>
+  <li><code>questions</code> is a list of dictionaries, each containing:
+    <ul>
+      <li><code>question</code>,</li>
+      <li><code>options</code>, and</li>
+      <li><code>correct answer</code></li>
+    </ul>
+  </li>
+  <li><code>run_quiz()</code>:
+    <ul>
+      <li>Loops through questions</li>
+      <li>Displays options</li>
+      <li>Compares user input with the correct answer</li>
+      <li>Tracks and displays score</li>
+    </ul>
+  </li>
+  <li>The loop continues if the user wants to play again.</li>
+</ul>
+<br>
+<br>
+<br>
+
+<h2>🍿 Project Name: Concession Stand Simulator</h2>
+
+<h3>✅ Project Overview:</h3>
+<p>This Python program will:</p>
+<ul>
+  <li>Show a menu of available food items</li>
+  <li>Let users order items by name or number</li>
+  <li>Track quantity and calculate the total cost</li>
+  <li>Show a bill/receipt</li>
+  <li>Allow removing or updating an item before checkout</li>
+</ul>
+
+<h3>🛠 Step-by-Step Python Code:</h3>
+<pre><code># Menu (item name: price)
+menu = {
+    "Popcorn": 80,
+    "Soda": 40,
+    "Nachos": 100,
+    "Candy": 30,
+    "Hotdog": 70
+}
+
+# Empty cart
+cart = {}
+
+def show_menu():
+    print("\n🍔 Concession Stand Menu")
+    for idx, (item, price) in enumerate(menu.items(), start=1):
+        print(f"{idx}. {item} - ₹{price}")
+
+def add_to_cart(item_name, quantity):
+    if item_name in menu:
+        if item_name in cart:
+            cart[item_name] += quantity
+        else:
+            cart[item_name] = quantity
+        print(f"{quantity} x {item_name} added to cart.")
+    else:
+        print("❌ Item not found in menu.")
+
+def view_cart():
+    if not cart:
+        print("🛒 Your cart is empty.")
+        return
+    total = 0
+    print("\n🧾 Your Cart:")
+    for item, qty in cart.items():
+        price = menu[item]
+        subtotal = price * qty
+        total += subtotal
+        print(f"{item}: {qty} x ₹{price} = ₹{subtotal}")
+    print(f"Total: ₹{total}")
+
+def remove_from_cart(item_name):
+    if item_name in cart:
+        del cart[item_name]
+        print(f"{item_name} removed from cart.")
+    else:
+        print("❌ Item not found in cart.")
+
+while True:
+    print("\n🎟️ Welcome to the Concession Stand")
+    print("1. View Menu")
+    print("2. Add Item to Cart")
+    print("3. View Cart")
+    print("4. Remove Item from Cart")
+    print("5. Checkout & Exit")
+
+    choice = input("Enter your choice (1-5): ")
+
+    if choice == '1':
+        show_menu()
+
+    elif choice == '2':
+        show_menu()
+        item = input("Enter item name to add: ").title()
+        qty = int(input("Enter quantity: "))
+        add_to_cart(item, qty)
+
+    elif choice == '3':
+        view_cart()
+
+    elif choice == '4':
+        item = input("Enter item name to remove: ").title()
+        remove_from_cart(item)
+
+    elif choice == '5':
+        view_cart()
+        print("🧾 Thank you for your order. Enjoy your food!")
+        break
+
+    else:
+        print("❌ Invalid choice. Try again.")
+</code></pre>
+
+<h3>🧾 Sample Output:</h3>
+<pre><code>🎟️ Welcome to the Concession Stand
+1. View Menu
+2. Add Item to Cart
+3. View Cart
+...
+
+Enter your choice: 2
+
+🍔 Concession Stand Menu
+1. Popcorn - ₹80
+2. Soda - ₹40
+...
+
+Enter item name to add: Popcorn
+Enter quantity: 2
+2 x Popcorn added to cart.
+
+🧾 Your Cart:
+</code></pre>
+
+<h3>🧠 Concepts Used:</h3>
+<ul>
+  <li><strong>Dictionary</strong> for menu and cart</li>
+  <li><strong>Functions</strong> for modularity (<code>add_to_cart</code>, <code>view_cart</code>, etc.)</li>
+  <li><strong>User input handling</strong> with <code>.title()</code> to match case</li>
+  <li><strong>Loop-based menu system</strong></li>
+</ul>
+<br>
+<br>
+<br>
+
+<h2>🔢 Project Name: Number Guessing Game</h2>
+
+<h3>✅ Project Overview:</h3>
+<p>This game will:</p>
+<ul>
+  <li>Let the computer randomly choose a number</li>
+  <li>Ask the user to guess it</li>
+  <li>Give hints: “Too high” / “Too low”</li>
+  <li>Track how many attempts it took</li>
+  <li>Provide the option to play again</li>
+</ul>
+
+<h3>🧠 Python Concepts Used:</h3>
+<ul>
+  <li><code>random.randint()</code> to generate a random number</li>
+  <li><code>input()</code> to take guesses</li>
+  <li>Loop and conditional logic</li>
+  <li>Score/attempt tracking</li>
+</ul>
+
+<h3>🧩 Step-by-Step Python Code:</h3>
+<pre><code>import random
+
+def play_game():
+    secret_number = random.randint(1, 100)
+    attempts = 0
+
+    print("\n🎯 I'm thinking of a number between 1 and 100.")
+
+    while True:
+        try:
+            guess = int(input("🤔 Take a guess: "))
+            attempts += 1
+
+            if guess < secret_number:
+                print("📉 Too low. Try again!")
+            elif guess > secret_number:
+                print("📈 Too high. Try again!")
+            else:
+                print(f"🎉 Correct! You guessed it in {attempts} attempts.")
+                break
+        except ValueError:
+            print("❌ Please enter a valid number!")
+
+while True:
+    print("\n🎮 Welcome to the Number Guessing Game!")
+    play_game()
+
+    play_again = input("🔁 Do you want to play again? (yes/no): ").strip().lower()
+    if play_again != 'yes':
+        print("👋 Thanks for playing. Goodbye!")
+        break
+</code></pre>
+
+<h3>🧠 Explanation:</h3>
+<ul>
+  <li><code>random.randint(1, 100)</code> picks a secret number.</li>
+  <li><code>try-except</code> ensures input is numeric.</li>
+  <li>Each guess is counted in <code>attempts</code>.</li>
+  <li>Hints are shown: “Too low” or “Too high”.</li>
+  <li>User is prompted to play again after each game.</li>
+</ul>
+<br>
+<br>
+<br>
+
+<h2>✊✋✌️ Project Name: Rock, Paper, Scissors Game</h2>
+
+<h3>✅ Project Overview:</h3>
+<p>In this game:</p>
+<ul>
+  <li>The player chooses Rock, Paper, or Scissors.</li>
+  <li>The computer randomly chooses one too.</li>
+  <li>The winner is decided based on the classic rules:</li>
+  <ul>
+    <li>Rock beats Scissors</li>
+    <li>Scissors beats Paper</li>
+    <li>Paper beats Rock</li>
+  </ul>
+  <li>It keeps track of the score and allows multiple rounds.</li>
+</ul>
+
+<h3>🧠 Python Concepts Used:</h3>
+<ul>
+  <li><code>random.choice()</code> for computer move</li>
+  <li><code>input()</code> for user move</li>
+  <li><code>if/elif/else</code> for game logic</li>
+  <li>Score tracking with variables</li>
+</ul>
+
+<h3>🎮 Full Python Code:</h3>
+<pre><code>import random
+
+choices = ["rock", "paper", "scissors"]
+
+def get_winner(player, computer):
+    if player == computer:
+        return "draw"
+    elif (player == "rock" and computer == "scissors") or \
+         (player == "paper" and computer == "rock") or \
+         (player == "scissors" and computer == "paper"):
+        return "player"
+    else:
+        return "computer"
+
+player_score = 0
+computer_score = 0
+
+while True:
+    print("\n🎮 Rock, Paper, Scissors Game")
+    print("Choose one: rock, paper, scissors")
+    player_choice = input("Your choice: ").strip().lower()
+
+    if player_choice not in choices:
+        print("❌ Invalid choice. Try again.")
+        continue
+
+    computer_choice = random.choice(choices)
+    print(f"🤖 Computer chose: {computer_choice}")
+
+    result = get_winner(player_choice, computer_choice)
+
+    if result == "draw":
+        print("🔁 It's a draw!")
+    elif result == "player":
+        print("✅ You win this round!")
+        player_score += 1
+    else:
+        print("❌ You lose this round.")
+        computer_score += 1
+
+    print(f"Score → You: {player_score} | Computer: {computer_score}")
+
+    play_again = input("🔁 Play again? (yes/no): ").strip().lower()
+    if play_again != "yes":
+        print("👋 Thanks for playing!")
+        break
+</code></pre>
+<br>
+<br>
+<br>
+
+<h2>🎲 Project Name: Dice Roller Simulator</h2>
+
+<h3>✅ Project Overview:</h3>
+<p>This program will:</p>
+<ul>
+  <li>Simulate the rolling of a 6-sided die (or more)</li>
+  <li>Randomly generate a number between 1 and 6</li>
+  <li>Optionally simulate rolling 2 dice</li>
+  <li>Let the user roll again or exit</li>
+</ul>
+
+<h3>🧠 Concepts Used:</h3>
+<ul>
+  <li><code>random.randint()</code> to simulate dice</li>
+  <li><code>input()</code> for interaction</li>
+  <li><code>while</code> loop to repeat</li>
+</ul>
+
+<h3>🛠 Step-by-Step Python Code:</h3>
+<pre><code>import random
+
+def roll_dice():
+    return random.randint(1, 6)
+
+while True:
+    print("\n🎲 Dice Roller")
+    input("Press Enter to roll the dice...")
+
+    die1 = roll_dice()
+    die2 = roll_dice()
+    
+    print(f"🎲 You rolled: {die1} and {die2}")
+    print(f"✨ Total: {die1 + die2}")
+
+    again = input("Roll again? (yes/no): ").strip().lower()
+    if again != "yes":
+        print("👋 Thanks for playing! Goodbye!")
+        break
+</code></pre>
+
+<br>
+<br>
+<br>
+
+<h2>🏦 Project Name: Python Banking System</h2>
+
+<h3>✅ Project Overview:</h3>
+<p>This program will:</p>
+<ul>
+  <li>Simulate basic bank operations for a user:</li>
+  <ul>
+    <li>Create an account</li>
+    <li>Deposit money</li>
+    <li>Withdraw money</li>
+    <li>Check balance</li>
+  </ul>
+  <li>Be menu-driven and console-based</li>
+</ul>
+
+<h3>🧠 Concepts Used:</h3>
+<ul>
+  <li>Functions</li>
+  <li>Variables for account balance</li>
+  <li>Input validation</li>
+  <li>Loop and menu system</li>
+</ul>
+
+<h3>🛠 Step-by-Step Python Code:</h3>
+<pre><code># Start with an empty account
+user_account = {
+    "name": "",
+    "balance": 0
+}
+
+def create_account():
+    name = input("Enter your name: ").strip().title()
+    user_account["name"] = name
+    user_account["balance"] = 0
+    print(f"✅ Account created for {name} with ₹0 balance.")
+
+def deposit():
+    amount = float(input("Enter amount to deposit: ₹"))
+    if amount > 0:
+        user_account["balance"] += amount
+        print(f"✅ ₹{amount:.2f} deposited. Current balance: ₹{user_account['balance']:.2f}")
+    else:
+        print("❌ Invalid amount.")
+
+def withdraw():
+    amount = float(input("Enter amount to withdraw: ₹"))
+    if amount <= 0:
+        print("❌ Invalid amount.")
+    elif amount > user_account["balance"]:
+        print("❌ Insufficient balance.")
+    else:
+        user_account["balance"] -= amount
+        print(f"✅ ₹{amount:.2f} withdrawn. Remaining balance: ₹{user_account['balance']:.2f}")
+
+def check_balance():
+    print(f"💰 Current Balance: ₹{user_account['balance']:.2f}")
+
+while True:
+    print("\n🏦 Welcome to Python Bank")
+    print("1. Create Account")
+    print("2. Deposit Money")
+    print("3. Withdraw Money")
+    print("4. Check Balance")
+    print("5. Exit")
+
+    choice = input("Enter your choice (1-5): ")
+
+    if choice == '1':
+        create_account()
+    elif choice == '2':
+        if user_account["name"]:
+            deposit()
+        else:
+            print("⚠️ Please create an account first.")
+    elif choice == '3':
+        if user_account["name"]:
+            withdraw()
+        else:
+            print("⚠️ Please create an account first.")
+    elif choice == '4':
+        if user_account["name"]:
+            check_balance()
+        else:
+            print("⚠️ Please create an account first.")
+    elif choice == '5':
+        print("👋 Thank you for banking with us. Goodbye!")
+        break
+    else:
+        print("❌ Invalid choice. Try again.")
+</code></pre>
+
+<br>
+<br>
+<br>
+
+<h2>🏦 SQLite in Banking Program</h2>
+
+<h3>🧱 1. Import & Connect to SQLite</h3>
+<pre><code>import sqlite3
+
+# Connect to database (creates it if not exists)
+conn = sqlite3.connect("bank.db")
+cur = conn.cursor()
+</code></pre>
+
+<h3>🏗️ 2. Create Accounts Table (if not exists)</h3>
+<pre><code>cur.execute('''
+CREATE TABLE IF NOT EXISTS accounts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    pin TEXT NOT NULL,
+    balance REAL DEFAULT 0
+)
+''')
+conn.commit()
+</code></pre>
+
+<h3>👤 3. Create a New Account</h3>
+<pre><code>def create_account():
+    name = input("Enter your name: ").strip().title()
+    pin = input("Set a 4-digit PIN: ")
+    cur.execute("INSERT INTO accounts (name, pin, balance) VALUES (?, ?, ?)", (name, pin, 0))
+    conn.commit()
+    print(f"✅ Account created for {name}!")
+</code></pre>
+
+<h3>🔐 4. Login to an Account</h3>
+<pre><code>def login():
+    name = input("Enter your name: ").strip().title()
+    pin = input("Enter your PIN: ")
+    cur.execute("SELECT * FROM accounts WHERE name=? AND pin=?", (name, pin))
+    account = cur.fetchone()
+    if account:
+        print(f"✅ Welcome back, {name}!")
+        return account  # (id, name, pin, balance)
+    else:
+        print("❌ Invalid credentials.")
+        return None
+</code></pre>
+
+<h3>💰 5. Deposit / Withdraw / Check Balance</h3>
+<pre><code>def deposit(user_id):
+    amount = float(input("Enter deposit amount: "))
+    cur.execute("UPDATE accounts SET balance = balance + ? WHERE id = ?", (amount, user_id))
+    conn.commit()
+    print("✅ Deposit successful!")
+
+def withdraw(user_id):
+    amount = float(input("Enter withdrawal amount: "))
+    cur.execute("SELECT balance FROM accounts WHERE id=?", (user_id,))
+    balance = cur.fetchone()[0]
+    if amount > balance:
+        print("❌ Insufficient funds.")
+    else:
+        cur.execute("UPDATE accounts SET balance = balance - ? WHERE id = ?", (amount, user_id))
+        conn.commit()
+        print("✅ Withdrawal successful!")
+
+def check_balance(user_id):
+    cur.execute("SELECT balance FROM accounts WHERE id=?", (user_id,))
+    balance = cur.fetchone()[0]
+    print(f"💰 Your balance is ₹{balance:.2f}")
+</code></pre>
+
+<h3>🌀 6. Full Example Flow</h3>
+<pre><code>while True:
+    print("\n🏦 Python Bank with SQLite")
+    print("1. Create Account")
+    print("2. Login")
+    print("3. Exit")
+
+    choice = input("Enter your choice: ")
+
+    if choice == '1':
+        create_account()
+    elif choice == '2':
+        user = login()
+        if user:
+            user_id = user[0]
+            while True:
+                print("\n1. Deposit\n2. Withdraw\n3. Check Balance\n4. Logout")
+                sub_choice = input("Enter choice: ")
+                if sub_choice == '1':
+                    deposit(user_id)
+                elif sub_choice == '2':
+                    withdraw(user_id)
+                elif sub_choice == '3':
+                    check_balance(user_id)
+                elif sub_choice == '4':
+                    break
+    elif choice == '3':
+        print("👋 Goodbye!")
+        break
+</code></pre>
+
+<h3>✅ Benefits of Using <code>sqlite3</code>:</h3>
+<ul>
+  <li>Data is saved permanently (even after program exits)</li>
+  <li>Supports multiple users</li>
+  <li>Can add transaction history</li>
+  <li>Expandable to web or GUI apps</li>
+</ul>
+<br>
+<br>
+<br>
+<h1>🏦 Python Banking System with SQLite</h1>
+  <p>This program simulates a basic banking system using Python and SQLite for persistent data storage.</p>
+
+  <h3>📄 Full Python Code</h3>
+  <pre><code>import sqlite3
+
+# Connect to SQLite database (creates file if not exists)
+conn = sqlite3.connect("bank.db")
+cur = conn.cursor()
+
+# Create the accounts table if it doesn't exist
+cur.execute('''
+CREATE TABLE IF NOT EXISTS accounts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    pin TEXT NOT NULL,
+    balance REAL DEFAULT 0
+)
+''')
+conn.commit()
+
+# Function to create a new account
+def create_account():
+    name = input("Enter your name: ").strip().title()
+    pin = input("Set a 4-digit PIN: ")
+    cur.execute("INSERT INTO accounts (name, pin, balance) VALUES (?, ?, ?)", (name, pin, 0))
+    conn.commit()
+    print(f"✅ Account created for {name}!")
+
+# Function to login
+def login():
+    name = input("Enter your name: ").strip().title()
+    pin = input("Enter your PIN: ")
+    cur.execute("SELECT * FROM accounts WHERE name=? AND pin=?", (name, pin))
+    account = cur.fetchone()
+    if account:
+        print(f"✅ Welcome back, {name}!")
+        return account
+    else:
+        print("❌ Invalid name or PIN.")
+        return None
+
+# Function to deposit money
+def deposit(user_id):
+    amount = float(input("Enter amount to deposit: ₹"))
+    if amount <= 0:
+        print("❌ Invalid amount.")
+        return
+    cur.execute("UPDATE accounts SET balance = balance + ? WHERE id = ?", (amount, user_id))
+    conn.commit()
+    print(f"✅ ₹{amount:.2f} deposited.")
+
+# Function to withdraw money
+def withdraw(user_id):
+    amount = float(input("Enter amount to withdraw: ₹"))
+    cur.execute("SELECT balance FROM accounts WHERE id=?", (user_id,))
+    balance = cur.fetchone()[0]
+    if amount <= 0:
+        print("❌ Invalid amount.")
+    elif amount > balance:
+        print("❌ Insufficient funds.")
+    else:
+        cur.execute("UPDATE accounts SET balance = balance - ? WHERE id = ?", (amount, user_id))
+        conn.commit()
+        print(f"✅ ₹{amount:.2f} withdrawn.")
+
+# Function to check balance
+def check_balance(user_id):
+    cur.execute("SELECT balance FROM accounts WHERE id=?", (user_id,))
+    balance = cur.fetchone()[0]
+    print(f"💰 Your current balance is ₹{balance:.2f}")
+
+# Main menu loop
+def main():
+    while True:
+        print("\n🏦 Welcome to Python Bank")
+        print("1. Create Account")
+        print("2. Login")
+        print("3. Exit")
+
+        choice = input("Enter your choice (1-3): ")
+
+        if choice == '1':
+            create_account()
+
+        elif choice == '2':
+            user = login()
+            if user:
+                user_id = user[0]
+                while True:
+                    print("\n🔐 Logged In Menu")
+                    print("1. Deposit")
+                    print("2. Withdraw")
+                    print("3. Check Balance")
+                    print("4. Logout")
+
+                    option = input("Choose an option (1-4): ")
+
+                    if option == '1':
+                        deposit(user_id)
+                    elif option == '2':
+                        withdraw(user_id)
+                    elif option == '3':
+                        check_balance(user_id)
+                    elif option == '4':
+                        print("🔓 Logged out.")
+                        break
+                    else:
+                        print("❌ Invalid option. Try again.")
+
+        elif choice == '3':
+            print("👋 Thank you for using Python Bank. Goodbye!")
+            break
+
+        else:
+            print("❌ Invalid input. Please choose 1-3.")
+
+# Run the program
+main()
+
+# Close the DB connection when done
+conn.close()</code></pre>
+
+  <h3>✅ Highlights</h3>
+  <ul>
+    <li>SQLite is used for permanent data storage</li>
+    <li>Supports multiple accounts with name, PIN, and balance</li>
+    <li>Functions for create, login, deposit, withdraw, check balance</li>
+    <li>Menu-driven interface</li>
+    <li>Safe from invalid inputs (basic checks included)</li>
+  </ul>
+
+  <p>🎯 You can expand this system with features like transaction history, password encryption, or GUI using Tkinter or Flask.</p>
+
+  <br>
+  <br>
+  <br>
+
+  <h2>🎯 Project Name: Python Slot Machine Game</h2>
+  <p>This game simulates a slot machine where users place a bet, the machine spins symbols, and payouts are based on matches.</p>
+
+  <h3>✅ Project Overview:</h3>
+  <ul>
+    <li>Symbols: 🍒, 🍋, 🍊, 💎, 7️⃣, 🍉</li>
+    <li>User places a bet</li>
+    <li>Machine spins 3 symbols</li>
+    <li>Match symbols to win</li>
+    <li>Tracks and updates balance</li>
+  </ul>
+
+  <h2>🧠 Concepts Used:</h2>
+  <ul>
+    <li><code>random.choice()</code> to simulate spinning</li>
+    <li>Functions and game loop</li>
+    <li>Balance management</li>
+    <li>Symbols and payouts logic</li>
+  </ul>
+
+  <h2>🛠️ Full Python Code:</h2>
+  <pre><code>import random
+
+# Available symbols
+symbols = ["🍒", "🍋", "🍊", "💎", "7️⃣", "🍉"]
+
+# Function to simulate spinning the slot
+def spin():
+    return [random.choice(symbols) for _ in range(3)]
+
+# Function to calculate payout
+def calculate_payout(result, bet):
+    if result[0] == result[1] == result[2]:
+        print("🎉 Jackpot! All 3 symbols match!")
+        return bet * 10
+    elif result[0] == result[1] or result[1] == result[2] or result[0] == result[2]:
+        print("✨ Two symbols match! Small win!")
+        return bet * 2
+    else:
+        print("😞 No match. You lose.")
+        return -bet
+
+# Main game loop
+def play_slot_machine():
+    balance = 1000  # Starting balance
+
+    print("🎰 Welcome to the Python Slot Machine!")
+    print(f"💰 You start with ₹{balance}")
+
+    while balance > 0:
+        print(f"\nYour current balance: ₹{balance}")
+        try:
+            bet = int(input("Place your bet (or 0 to quit): ₹"))
+        except ValueError:
+            print("❌ Invalid input. Enter a number.")
+            continue
+
+        if bet == 0:
+            print("👋 Thanks for playing!")
+            break
+        elif bet < 0:
+            print("❌ Bet can't be negative.")
+            continue
+        elif bet > balance:
+            print("❌ You can't bet more than your balance.")
+            continue
+
+        result = spin()
+        print("Spinning...")
+        print(" | ".join(result))
+
+        winnings = calculate_payout(result, bet)
+        balance += winnings
+
+    if balance <= 0:
+        print("💸 You're out of money! Game over.")
+
+# Start the game
+play_slot_machine()</code></pre>
+
+  <h2>🧠 How Winning Works:</h2>
+  <table border="1" cellpadding="8">
+    <tr>
+      <th>Match Type</th>
+      <th>Reward</th>
+    </tr>
+    <tr>
+      <td>3 of a kind</td>
+      <td>bet × 10</td>
+    </tr>
+    <tr>
+      <td>2 of a kind</td>
+      <td>bet × 2</td>
+    </tr>
+    <tr>
+      <td>No match</td>
+      <td>Lose your bet</td>
+    </tr>
+  </table>
+
+  <p>🎮 You can extend this game with sound effects, GUI using Tkinter or Pygame, and even high-score tracking using a database!</p>
+<br>
+<br>
+<br>
+
+<h3>✅ Project Overview:</h3>
+    <p>
+      This project uses the OpenWeatherMap API to fetch real-time weather data based on user input (city name).
+      It displays temperature, weather conditions, humidity, etc.
+    </p>
+
+    <h3>🧠 Features:</h3>
+    <ul>
+      <li>User enters a city name</li>
+      <li>API fetches current weather data</li>
+      <li>Shows temperature, weather condition, humidity, etc.</li>
+      <li>Error message if city not found</li>
+      <li>Clean and user-friendly interface</li>
+    </ul>
+
+    <h3>🔗 API Used:</h3>
+    <p>
+      <strong>API:</strong> <a href="https://openweathermap.org/api" target="_blank">OpenWeatherMap</a><br>
+      <strong>Endpoint:</strong> <code>https://api.openweathermap.org/data/2.5/weather</code><br>
+      <strong>Method:</strong> GET
+    </p>
+
+    <h3>💻 Sample Python Code (Backend):</h3>
+    <pre><code>import requests
+
+city = input("Enter city name: ")
+API_KEY = "your_api_key_here"
+url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}&units=metric"
+
+response = requests.get(url)
+
+if response.status_code == 200:
+    data = response.json()
+    print(f"🌡️ Temperature: {data['main']['temp']} °C")
+    print(f"☁️ Weather: {data['weather'][0]['description']}")
+    print(f"💧 Humidity: {data['main']['humidity']}%")
+else:
+    print("❌ City not found!")</code></pre>
+
+    <h3>🔍 Code Explanation:</h3>
+    <ul>
+      <li><code>requests.get(url)</code>: Fetches weather data for the city</li>
+      <li><code>data['main']['temp']</code>: Extracts temperature</li>
+      <li><code>units=metric</code>: Gets temperature in Celsius</li>
+      <li>Error handling: If city is not found, user is notified</li>
+    </ul>
+  </div>
+</div>
