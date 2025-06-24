@@ -32,87 +32,561 @@
       </tbody>
     </table>
 
-    <h2>🧃 1. List – A Basket of Items 🧺</h2>
-    <p>A <strong>List</strong> is a mutable, ordered collection of items.</p>
-    <pre><code>fruits = ["apple", "banana", "mango"]
-print(fruits[1])  # Output: banana</code></pre>
+    <h2>🧃 1. Python List – A Basket of Items 🧺</h2>
 
-    <h3>🎯 Useful List Methods:</h3>
-    <pre><code>fruits.append("orange")  # Add item
-fruits.remove("apple")   # Remove item
-fruits.sort()            # Sort list
-len(fruits)              # Count items</code></pre>
+<h3>🔍 What is a List?</h3>
+<p>
+  A list in Python is an ordered, mutable (changeable) collection of items, enclosed in square brackets <strong>[]</strong>.
+</p>
+<p><strong>✅ A list can hold:</strong></p>
+<ul>
+  <li>Strings: <code>["apple", "banana"]</code></li>
+  <li>Numbers: <code>[1, 2, 3]</code></li>
+  <li>Mixed types: <code>["Aman", 25, True]</code></li>
+  <li>Even other lists: <code>[[1, 2], ["x", "y"]]</code></li>
+</ul>
 
-    <blockquote>😄 <strong>Funny Analogy:</strong><br/>
-    A list is like your shopping bag 🛍️—you can add more stuff, remove old stuff, and even sort it!</blockquote>
+<h3>🛍️ Funny Analogy</h3>
+<p>A list is like a shopping basket – you can:</p>
+<ul>
+  <li>Add items 🍎</li>
+  <li>Remove items 🥭</li>
+  <li>Sort them 📦</li>
+  <li>Count how many are inside 🧮</li>
+</ul>
 
-    <h4>🎯 Quiz Time:</h4>
-    <p>What does <code>fruits.append("grape")</code> do?</p>
-    <ul>
-      <li>a) Deletes “grape”</li>
-      <li><strong>b) Adds grape at the end ✅</strong></li>
-      <li>c) Inserts at the beginning</li>
-    </ul>
+<pre><code>fruits = ["apple", "banana", "mango"]
+print(fruits[1])  # Output: banana (Lists are 0-indexed!)
+</code></pre>
 
-    <h2>🪑 2. Tuple – The Unchangeable Chair Set</h2>
-    <p>A <strong>Tuple</strong> is a fixed (immutable), ordered collection.</p>
-    <pre><code>colors = ("red", "green", "blue")
-print(colors[0])  # Output: red</code></pre>
-    <p>You can’t change a tuple once it's created — no <code>.append()</code> or <code>.remove()</code>.</p>
+<h3>⚙️ Useful List Methods</h3>
+<table>
+  <thead>
+    <tr><th>Method</th><th>What it does</th><th>Example</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>append(item)</td><td>Adds item to end</td><td>fruits.append("orange")</td></tr>
+    <tr><td>insert(index, item)</td><td>Inserts at position</td><td>fruits.insert(1, "grape")</td></tr>
+    <tr><td>remove(item)</td><td>Removes first match</td><td>fruits.remove("apple")</td></tr>
+    <tr><td>pop(index)</td><td>Removes & returns item</td><td>fruits.pop(2)</td></tr>
+    <tr><td>sort()</td><td>Sorts list ascending</td><td>fruits.sort()</td></tr>
+    <tr><td>reverse()</td><td>Reverses the list</td><td>fruits.reverse()</td></tr>
+    <tr><td>len(list)</td><td>Counts items</td><td>len(fruits)</td></tr>
+    <tr><td>index(item)</td><td>Returns index of item</td><td>fruits.index("banana")</td></tr>
+    <tr><td>count(item)</td><td>Counts item occurrences</td><td>fruits.count("apple")</td></tr>
+    <tr><td>clear()</td><td>Removes all items</td><td>fruits.clear()</td></tr>
+  </tbody>
+</table>
 
-    <h4>✅ Use When:</h4>
-    <ul>
-      <li>You want a constant set of values</li>
-      <li>Data should not be changed</li>
-    </ul>
+<h3>🧠 Accessing List Items</h3>
+<pre><code>fruits = ["apple", "banana", "cherry"]
+print(fruits[0])    # apple
+print(fruits[-1])   # cherry
+</code></pre>
 
-    <p><strong>🤓 Real Example:</strong></p>
-    <pre><code>days = ("Monday", "Tuesday", "Wednesday")</code></pre>
+<h3>🔄 Slicing a List</h3>
+<pre><code>fruits = ["apple", "banana", "mango", "grape", "orange"]
+print(fruits[1:4])    # ['banana', 'mango', 'grape']
+print(fruits[:3])     # ['apple', 'banana', 'mango']
+print(fruits[-3:])    # ['mango', 'grape', 'orange']
+</code></pre>
 
-    <blockquote>🧠 <strong>Joke:</strong><br/>
-    A tuple is like your school time-table 📅—you can't change it once it's printed!</blockquote>
+<h3>💣 Common Mistakes</h3>
+<table>
+  <thead>
+    <tr><th>Mistake</th><th>What happens?</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><code>fruits[5]</code> (if only 3 items)</td><td>❌ IndexError: list index out of range</td></tr>
+    <tr><td><code>fruits.remove("papaya")</code></td><td>❌ ValueError: item not in list</td></tr>
+    <tr><td><code>fruits.sort()</code> with mixed types</td><td>❌ TypeError: can’t compare types</td></tr>
+  </tbody>
+</table>
 
-    <h2>🔁 3. Set – A Unique Collection 🌟</h2>
-    <p>A <strong>Set</strong> is an unordered collection of unique items.</p>
-    <pre><code>numbers = {1, 2, 2, 3, 4}
-print(numbers)  # Output: {1, 2, 3, 4}</code></pre>
+<h3>🧪 Example Code</h3>
+<pre><code>shopping = ["milk", "bread", "eggs"]
+shopping.append("butter")
+shopping.remove("bread")
+shopping.sort()
+print(shopping)  # Output: ['butter', 'eggs', 'milk']
+</code></pre>
 
-    <h4>📌 Key Points:</h4>
-    <ul>
-      <li>No duplicates allowed</li>
-      <li>Order is not guaranteed</li>
-      <li>Very fast for searching</li>
-    </ul>
+<h2>🎯 Quiz Time</h2>
 
-    <p><strong>🎮 Example:</strong></p>
-    <pre><code>set1 = {1, 2, 3}
+<div class="quiz-question">
+  <p>1. What does <code>fruits.append("grape")</code> do?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">A) Deletes "grape"</li>
+    <li onclick="checkAnswer(this, 'correct')">B) Adds grape at the end</li>
+    <li onclick="checkAnswer(this, 'wrong')">C) Inserts at the beginning</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>2. What will this print?</p>
+  <pre><code>items = ["pen", "book", "eraser"]
+print(items[2])</code></pre>
+  <ul>
+    <li onclick="checkAnswer(this, 'correct')">✅ Answer: eraser</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>3. Which method removes everything from a list?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">A) pop()</li>
+    <li onclick="checkAnswer(this, 'wrong')">B) remove()</li>
+    <li onclick="checkAnswer(this, 'correct')">C) clear()</li>
+    <li onclick="checkAnswer(this, 'wrong')">D) del</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>4. What is the output?</p>
+  <pre><code>x = [10, 20, 30, 40]
+x.pop(2)
+print(x)</code></pre>
+  <ul>
+    <li onclick="checkAnswer(this, 'correct')">✅ Answer: [10, 20, 40]</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>5. What is the output of:</p>
+  <pre><code>x = ["a", "b", "c"]
+x.insert(1, "z")
+print(x)</code></pre>
+  <ul>
+    <li onclick="checkAnswer(this, 'correct')">✅ Answer: ['a', 'z', 'b', 'c']</li>
+  </ul>
+</div>
+
+
+<h2>🪑 2. Tuple – The Unchangeable Chair Set</h2>
+
+<h3>🔍 What is a Tuple?</h3>
+<p>
+  A tuple is an <strong>ordered</strong>, <strong>immutable</strong> (unchangeable) collection of items, enclosed in parentheses <strong>()</strong>.
+</p>
+
+<h3>🧠 Funny Analogy</h3>
+<p>
+  A tuple is like your school timetable 📅 or a chair set 🪑:
+  <br>Once made, you can’t change or remove any item.
+  You can sit on it, count it, and admire it — but you can't modify it!
+</p>
+
+<pre><code>colors = ("red", "green", "blue")
+print(colors[0])  # Output: red
+</code></pre>
+
+<h3>✅ Why Use Tuples?</h3>
+<table>
+  <thead>
+    <tr><th>Reason</th><th>Explanation</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>✅ Faster than lists</td><td>Tuples take less memory and are faster</td></tr>
+    <tr><td>✅ Immutable</td><td>Protect data from being changed</td></tr>
+    <tr><td>✅ Used as dictionary keys</td><td>Only immutable types can be keys</td></tr>
+    <tr><td>✅ Safer data representation</td><td>Good for read-only or fixed data</td></tr>
+  </tbody>
+</table>
+
+<h3>🎯 Tuple Syntax:</h3>
+<pre><code># Normal tuple
+days = ("Mon", "Tue", "Wed")
+
+# Single-element tuple (must include comma!)
+one = ("hello",)
+print(type(one))  # Output: &lt;class 'tuple'&gt;
+</code></pre>
+
+<h3>⚠️ Can't Do With Tuples (Unlike Lists)</h3>
+<table>
+  <thead>
+    <tr><th>Operation</th><th>List ✅</th><th>Tuple ❌</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>append()</td><td>✅</td><td>❌</td></tr>
+    <tr><td>remove()</td><td>✅</td><td>❌</td></tr>
+    <tr><td>pop()</td><td>✅</td><td>❌</td></tr>
+    <tr><td>sort()</td><td>✅</td><td>❌</td></tr>
+    <tr><td>insert()</td><td>✅</td><td>❌</td></tr>
+  </tbody>
+</table>
+
+<p>Tuples are read-only – just like sealed boxes 📦.</p>
+
+<h3>✅ What You Can Do With Tuples</h3>
+<table>
+  <thead>
+    <tr><th>Operation</th><th>Example</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Indexing</td><td>colors[1] → "green"</td></tr>
+    <tr><td>Slicing</td><td>colors[:2] → ("red", "green")</td></tr>
+    <tr><td>len()</td><td>len(colors) → 3</td></tr>
+    <tr><td>count()</td><td>colors.count("red") → 1</td></tr>
+    <tr><td>index()</td><td>colors.index("blue") → 2</td></tr>
+    <tr><td>Looping</td><td>for c in colors:</td></tr>
+  </tbody>
+</table>
+
+<h3>🧪 Code Example</h3>
+<pre><code>languages = ("Python", "Java", "C++", "Python")
+print(len(languages))              # 4
+print(languages.count("Python"))   # 2
+print(languages.index("Java"))     # 1
+</code></pre>
+
+<h3>⚖️ Tuple vs List</h3>
+<table>
+  <thead>
+    <tr><th>Feature</th><th>List ([])</th><th>Tuple (())</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Mutable</td><td>✅ Yes</td><td>❌ No</td></tr>
+    <tr><td>Faster</td><td>❌ Slightly slower</td><td>✅ Faster</td></tr>
+    <tr><td>Syntax</td><td>[] brackets</td><td>() parentheses</td></tr>
+    <tr><td>Methods</td><td>More methods</td><td>Fewer methods</td></tr>
+  </tbody>
+</table>
+
+<h3>⚠️ Common Mistakes</h3>
+<table>
+  <thead>
+    <tr><th>Mistake</th><th>Problem</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><code>t = ("hi")</code></td><td>It's a string, not a tuple! ❌</td></tr>
+    <tr><td><code>t = ("hi",)</code></td><td>Now it's a tuple ✔️</td></tr>
+    <tr><td><code>t.append("x")</code></td><td>❌ AttributeError: 'tuple' object has no attribute 'append'</td></tr>
+  </tbody>
+</table>
+
+<h3>🧠 Joke Reminder:</h3>
+<p>
+  A tuple is like your school timetable 📅
+  <br>If it's Tuesday and you have Math, you can’t swap it with Games 😭
+</p>
+
+<h2>🎯 Quiz Time</h2>
+
+<div class="quiz-question">
+  <p>1. What will this print?</p>
+  <pre><code>nums = (1, 2, 3, 4)
+print(nums[2])</code></pre>
+  <ul><li>✅ Answer: 3</li></ul>
+</div>
+
+<div class="quiz-question">
+  <p>2. What’s the correct way to create a 1-element tuple?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">A) t = ("apple")</li>
+    <li onclick="checkAnswer(this, 'wrong')">B) t = ["apple"]</li>
+    <li onclick="checkAnswer(this, 'correct')">C) t = ("apple",)</li>
+    <li onclick="checkAnswer(this, 'wrong')">D) t = tuple("apple")</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>3. Which method works on tuples?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">A) append()</li>
+    <li onclick="checkAnswer(this, 'wrong')">B) insert()</li>
+    <li onclick="checkAnswer(this, 'wrong')">C) remove()</li>
+    <li onclick="checkAnswer(this, 'correct')">D) count()</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>4. Fill in the blank:</p>
+  <pre><code>colors = ("red", "green", "blue")
+print(____(colors))  # To get total items</code></pre>
+  <ul><li>✅ Answer: len</li></ul>
+</div>
+
+
+<h2>🔁 3. Set – A Unique Collection 🌟</h2>
+
+<h3>🔍 What is a Set in Python?</h3>
+<p>A <strong>Set</strong> is an <strong>unordered</strong>, <strong>mutable</strong>, and <strong>unindexed</strong> collection that stores only <strong>unique</strong> elements.</p>
+<p>✅ Duplicate values are automatically removed.</p>
+
+<h3>🧠 Funny Analogy:</h3>
+<p>A set is like a VIP list at a party 🎉 — each guest (element) can appear only once. No duplicates allowed!</p>
+
+<h3>🧪 Example:</h3>
+<pre><code>numbers = {1, 2, 2, 3, 4}
+print(numbers)  # Output: {1, 2, 3, 4}
+</code></pre>
+
+<h3>📌 Key Characteristics of Sets</h3>
+<table>
+  <thead><tr><th>Property</th><th>Description</th></tr></thead>
+  <tbody>
+    <tr><td>✅ No duplicates</td><td>All elements are unique</td></tr>
+    <tr><td>🔄 Unordered</td><td>No indexing or order guaranteed</td></tr>
+    <tr><td>🚀 Fast lookup</td><td>Faster than lists for checking existence</td></tr>
+    <tr><td>🛠️ Mutable</td><td>You can add/remove items</td></tr>
+  </tbody>
+</table>
+
+<h3>🧠 Real Example:</h3>
+<pre><code>emails = {"a@example.com", "b@example.com", "a@example.com"}
+print(emails)  # Output: {'a@example.com', 'b@example.com'}
+</code></pre>
+
+<h3>✅ Common Set Methods</h3>
+<table>
+  <thead><tr><th>Method</th><th>Description</th><th>Example</th></tr></thead>
+  <tbody>
+    <tr><td>add(x)</td><td>Adds item</td><td>s.add(5)</td></tr>
+    <tr><td>remove(x)</td><td>Removes item; error if not found</td><td>s.remove(3)</td></tr>
+    <tr><td>discard(x)</td><td>Removes item; no error if not found</td><td>s.discard(3)</td></tr>
+    <tr><td>clear()</td><td>Removes all items</td><td>s.clear()</td></tr>
+    <tr><td>pop()</td><td>Removes random item</td><td>s.pop()</td></tr>
+    <tr><td>union(set2)</td><td>Combines sets (no duplicates)</td><td>s1.union(s2)</td></tr>
+    <tr><td>intersection(set2)</td><td>Returns common elements</td><td>s1.intersection(s2)</td></tr>
+    <tr><td>difference(set2)</td><td>Items only in first set</td><td>s1.difference(s2)</td></tr>
+    <tr><td>issubset(set2)</td><td>Checks if set1 ⊆ set2</td><td>s1.issubset(s2)</td></tr>
+    <tr><td>issuperset(set2)</td><td>Checks if set1 ⊇ set2</td><td>s1.issuperset(s2)</td></tr>
+  </tbody>
+</table>
+
+<h3>🧪 Code Example</h3>
+<pre><code>set1 = {1, 2, 3}
 set2 = {3, 4, 5}
-print(set1.union(set2))        # {1, 2, 3, 4, 5}
-print(set1.intersection(set2)) # {3}</code></pre>
 
-    <h2>🤖 4. Dictionary – Your Phone Contacts 📱</h2>
-    <p>A <strong>Dictionary</strong> is an unordered collection of key-value pairs.</p>
-    <pre><code>student = {
-    "name": "Aman",
-    "age": 21,
-    "marks": 88
+print(set1.union(set2))         # {1, 2, 3, 4, 5}
+print(set1.intersection(set2))  # {3}
+print(set1.difference(set2))    # {1, 2}
+</code></pre>
+
+<h3>⚠️ Set vs List vs Tuple</h3>
+<table>
+  <thead>
+    <tr><th>Feature</th><th>List []</th><th>Tuple ()</th><th>Set {}</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Ordered</td><td>✅</td><td>✅</td><td>❌</td></tr>
+    <tr><td>Duplicates</td><td>✅</td><td>✅</td><td>❌ Only unique</td></tr>
+    <tr><td>Mutable</td><td>✅</td><td>❌</td><td>✅</td></tr>
+    <tr><td>Indexed</td><td>✅</td><td>✅</td><td>❌</td></tr>
+    <tr><td>Performance</td><td>🔁 Slower</td><td>🔁 Medium</td><td>🚀 Fast</td></tr>
+  </tbody>
+</table>
+
+<h3>⚠️ Common Mistakes</h3>
+<table>
+  <thead><tr><th>Mistake</th><th>Result/Error</th></tr></thead>
+  <tbody>
+    <tr><td><code>myset = {}</code></td><td>❌ Creates an empty dict, not a set! <br>✅ Correct: <code>myset = set()</code></td></tr>
+    <tr><td><code>myset[0]</code></td><td>❌ TypeError – no indexing in sets</td></tr>
+    <tr><td>Using duplicate values</td><td>✅ They get automatically removed</td></tr>
+  </tbody>
+</table>
+
+<div class="quiz">
+  <h2>🎯 Quiz Time</h2>
+
+  <div class="quiz-question">
+    <p>1. What does this print?</p>
+    <pre><code>nums = {10, 20, 20, 30}
+print(nums)</code></pre>
+    <ul>
+      <li onclick="checkAnswer(this, 'correct')">A) {10, 20, 30}</li>
+      <li onclick="checkAnswer(this, 'wrong')">B) {10, 20, 20, 30}</li>
+      <li onclick="checkAnswer(this, 'wrong')">C) [10, 20, 30]</li>
+      <li onclick="checkAnswer(this, 'wrong')">D) Error</li>
+    </ul>
+  </div>
+
+  <div class="quiz-question">
+    <p>2. Which operation gives common elements?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">A) union()</li>
+      <li onclick="checkAnswer(this, 'correct')">B) intersection()</li>
+      <li onclick="checkAnswer(this, 'wrong')">C) difference()</li>
+      <li onclick="checkAnswer(this, 'wrong')">D) combine()</li>
+    </ul>
+  </div>
+
+  <div class="quiz-question">
+    <p>3. What is the output?</p>
+    <pre><code>a = {1, 2, 3}
+b = {3, 4, 5}
+print(a.difference(b))</code></pre>
+    <ul>
+      <li onclick="checkAnswer(this, 'correct')">A) {1, 2}</li>
+      <li onclick="checkAnswer(this, 'wrong')">B) {3}</li>
+      <li onclick="checkAnswer(this, 'wrong')">C) {1, 2, 3, 4, 5}</li>
+      <li onclick="checkAnswer(this, 'wrong')">D) Error</li>
+    </ul>
+  </div>
+
+  <div class="quiz-question">
+    <p>4. Fill in the blank:</p>
+    <pre><code>colors = {"red", "blue"}
+colors._____("green")</code></pre>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">A) insert</li>
+      <li onclick="checkAnswer(this, 'correct')">B) add</li>
+      <li onclick="checkAnswer(this, 'wrong')">C) append</li>
+      <li onclick="checkAnswer(this, 'wrong')">D) extend</li>
+    </ul>
+  </div>
+
+  <div class="quiz-question">
+    <p>5. True or False: A set can have duplicates.</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">A) ✅ True</li>
+      <li onclick="checkAnswer(this, 'correct')">B) ❌ False</li>
+    </ul>
+  </div>
+
+</div>
+
+
+
+<h2>🤖 4. Dictionary – Your Phone Contacts 📱</h2>
+
+<p><strong>🔍 What is a Dictionary in Python?</strong><br>
+A dictionary is an unordered, mutable collection of key-value pairs, where each key is unique and used to access its corresponding value.</p>
+
+<p><strong>🧠 Funny Analogy:</strong><br>
+A dictionary is like your phonebook 📱: You search a name (key) and get the number or info (value). No duplicate names allowed!</p>
+
+<h3>✅ Example:</h3>
+<pre><code>student = {
+  "name": "Aman",
+  "age": 21,
+  "marks": 88
 }
+
 print(student["name"])  # Output: Aman</code></pre>
 
-    <h4>🎯 Useful Dictionary Methods:</h4>
-    <pre><code>student["course"] = "Python"     # Add new key
-student.pop("age")               # Remove key
-print(student.keys())            # Get all keys
-print(student.values())          # Get all values</code></pre>
+<h3>🧠 Real-World Example – Nested Dictionary</h3>
+<pre><code>students = {
+  "Aman": {"age": 21, "course": "Python"},
+  "Ayush": {"age": 20, "course": "Java"}
+}
 
-    <blockquote>😆 <strong>Funny Analogy:</strong><br/>
-    Dictionary is like your contact list — Name = Key, Phone Number = Value</blockquote>
+print(students["Ayush"]["course"])  # Output: Java</code></pre>
 
-    <h4>💡 Real Example: Store Student Info</h4>
-    <pre><code>students = {
-    "Aman": {"age": 21, "course": "Python"},
-    "Riya": {"age": 20, "course": "Java"}
-}</code></pre>
+<h3>📌 Key Characteristics</h3>
+<ul>
+  <li><strong>🔑 Keys are unique</strong> – No duplicate keys allowed</li>
+  <li><strong>🔁 Mutable</strong> – You can change, add, delete items</li>
+  <li><strong>❌ No index</strong> – You access values using keys, not positions</li>
+  <li><strong>🧠 Powerful</strong> – Supports nested structures (dict in dict)</li>
+</ul>
+
+<h3>🎯 Useful Dictionary Methods</h3>
+<table>
+  <thead>
+    <tr><th>Method</th><th>Description</th><th>Example</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>dict[key]</td><td>Access value by key</td><td>student["name"]</td></tr>
+    <tr><td>dict[key] = value</td><td>Add or update value</td><td>student["course"] = "Python"</td></tr>
+    <tr><td>pop(key)</td><td>Remove key-value pair</td><td>student.pop("age")</td></tr>
+    <tr><td>keys()</td><td>Returns list of keys</td><td>student.keys()</td></tr>
+    <tr><td>values()</td><td>Returns list of values</td><td>student.values()</td></tr>
+    <tr><td>items()</td><td>Returns key-value pairs</td><td>student.items()</td></tr>
+    <tr><td>get(key, default)</td><td>Safer way to get value</td><td>student.get("marks", 0)</td></tr>
+    <tr><td>clear()</td><td>Remove everything</td><td>student.clear()</td></tr>
+    <tr><td>update(dict2)</td><td>Add items from another dictionary</td><td>student.update({"age": 22})</td></tr>
+  </tbody>
+</table>
+
+<h3>🧪 Example Code</h3>
+<pre><code>student = {
+  "name": "Aman",
+  "age": 21,
+  "course": "Python"
+}
+
+print(student["name"])               # Aman
+student["marks"] = 95                # Add new item
+student.pop("age")                   # Remove item
+print(student.keys())                # dict_keys(['name', 'course', 'marks'])
+print(student.values())              # dict_values(['Aman', 'Python', 95])</code></pre>
+
+<h3>💡 Bonus Tip: Dictionary Comprehension</h3>
+<pre><code>squares = {x: x**2 for x in range(1, 4)}
+print(squares)  # {1: 1, 2: 4, 3: 9}</code></pre>
+
+<h3>⚠️ Common Mistakes</h3>
+<ul>
+  <li><strong>Using unhashable types as keys:</strong> ❌ TypeError (e.g., lists as keys)</li>
+  <li><strong>Accessing a missing key without get():</strong> ❌ KeyError</li>
+  <li><strong>Forgetting quotes on string keys:</strong> ❌ NameError</li>
+</ul>
+
+<p><strong>✅ Best Practice:</strong></p>
+<pre><code>print(student.get("grade", "Not Available"))</code></pre>
+
+<h3>🎯 Quiz Time:</h3>
+
+<div class="quiz-question">
+  <p>1. What is the output?</p>
+  <pre><code>info = {"name": "Aman", "course": "Python"}
+print(info["course"])</code></pre>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">A) Aman</li>
+    <li onclick="checkAnswer(this, 'correct')">B) Python</li>
+    <li onclick="checkAnswer(this, 'wrong')">C) Error</li>
+    <li onclick="checkAnswer(this, 'wrong')">D) course</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>2. What does student.pop("age") do?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">A) Adds age</li>
+    <li onclick="checkAnswer(this, 'correct')">B) Removes the 'age' key</li>
+    <li onclick="checkAnswer(this, 'wrong')">C) Prints age</li>
+    <li onclick="checkAnswer(this, 'wrong')">D) Clears dictionary</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>3. Which method is safest for accessing a key?</p>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">A) dict.key()</li>
+    <li onclick="checkAnswer(this, 'correct')">B) dict.get()</li>
+    <li onclick="checkAnswer(this, 'wrong')">C) dict["key"]</li>
+    <li onclick="checkAnswer(this, 'wrong')">D) dict.find()</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>4. What is the output?</p>
+  <pre><code>d = {"a": 1, "b": 2}
+d.update({"c": 3})
+print(d)</code></pre>
+  <ul>
+    <li onclick="checkAnswer(this, 'correct')">A) {'a': 1, 'b': 2, 'c': 3}</li>
+    <li onclick="checkAnswer(this, 'wrong')">B) {'a': 1, 'b': 2}</li>
+    <li onclick="checkAnswer(this, 'wrong')">C) {'c': 3}</li>
+    <li onclick="checkAnswer(this, 'wrong')">D) Error</li>
+  </ul>
+</div>
+
+<div class="quiz-question">
+  <p>5. Fill in the blank:</p>
+  <pre><code>student = {"name": "Aman"}
+student["marks"] = 90
+print(student["____"])</code></pre>
+  <ul>
+    <li onclick="checkAnswer(this, 'wrong')">A) grade</li>
+    <li onclick="checkAnswer(this, 'correct')">B) marks</li>
+    <li onclick="checkAnswer(this, 'wrong')">C) name</li>
+    <li onclick="checkAnswer(this, 'wrong')">D) 90</li>
+  </ul>
+</div>
 <div class="quiz">
     <h2>✅ Quiz Time!</h2>
     <div class="quiz-question">
@@ -159,18 +633,132 @@ print(student.values())          # Get all values</code></pre>
       <li>Access one student’s mark and print it.</li>
     </ul>
 
-    <h2>🧾 Summary Table:</h2>
-    <table>
-      <thead>
-        <tr><th>Type</th><th>Ordered</th><th>Mutable</th><th>Allows Duplicate</th><th>Ideal For</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>List</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td><td>Dynamic collections</td></tr>
-        <tr><td>Tuple</td><td>✅ Yes</td><td>❌ No</td><td>✅ Yes</td><td>Fixed groups (coordinates, etc.)</td></tr>
-        <tr><td>Set</td><td>❌ No</td><td>✅ Yes</td><td>❌ No</td><td>Unique items, fast search</td></tr>
-        <tr><td>Dictionary</td><td>❌ No</td><td>✅ Yes</td><td>❌ No (keys)</td><td>Key-value pairs like real-world data</td></tr>
-      </tbody>
-    </table>
+    <div class="section">
+      <h2>🔥 Summary: List vs Tuple vs Set vs Dictionary</h2>
+    
+      <p>This chart will help you quickly revise and compare:</p>
+    
+      <table border="1" cellpadding="8" cellspacing="0">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>List 🛍️</th>
+            <th>Tuple 🪑</th>
+            <th>Set 🔁</th>
+            <th>Dictionary 📱</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Syntax</strong></td>
+            <td>[1, 2, 3]</td>
+            <td>(1, 2, 3)</td>
+            <td>{1, 2, 3}</td>
+            <td>{"key": "value"}</td>
+          </tr>
+          <tr>
+            <td><strong>Ordered?</strong></td>
+            <td>✅ Yes</td>
+            <td>✅ Yes</td>
+            <td>❌ No</td>
+            <td>❌ No <small>(Python 3.6+ keeps order)</small></td>
+          </tr>
+          <tr>
+            <td><strong>Mutable?</strong></td>
+            <td>✅ Yes</td>
+            <td>❌ No</td>
+            <td>✅ Yes</td>
+            <td>✅ Yes</td>
+          </tr>
+          <tr>
+            <td><strong>Duplicates allowed?</strong></td>
+            <td>✅ Yes</td>
+            <td>✅ Yes</td>
+            <td>❌ No</td>
+            <td>❌ Keys no, values yes</td>
+          </tr>
+          <tr>
+            <td><strong>Indexing?</strong></td>
+            <td>✅ Yes</td>
+            <td>✅ Yes</td>
+            <td>❌ No</td>
+            <td>✅ With keys</td>
+          </tr>
+          <tr>
+            <td><strong>Usage</strong></td>
+            <td>Collections with order</td>
+            <td>Fixed data, fast lookup</td>
+            <td>Unique elements, math ops</td>
+            <td>Mapping keys to values</td>
+          </tr>
+          <tr>
+            <td><strong>Common Methods</strong></td>
+            <td>append(), remove()</td>
+            <td>count(), index()</td>
+            <td>add(), union()</td>
+            <td>get(), keys(), pop()</td>
+          </tr>
+          <tr>
+            <td><strong>When to Use?</strong></td>
+            <td>Dynamic, editable data</td>
+            <td>Constant values</td>
+            <td>Unique filters, fast lookups</td>
+            <td>Structured data with labels</td>
+          </tr>
+        </tbody>
+      </table>
+    
+      <h3>🧠 Visual Memory Tip:</h3>
+      <ul>
+        <li><strong>List →</strong> Shopping Bag 🛍️</li>
+        <li><strong>Tuple →</strong> School Time Table 🪑</li>
+        <li><strong>Set →</strong> Unique Guest List 🔁</li>
+        <li><strong>Dict →</strong> Phonebook / Contact List 📱</li>
+      </ul>
+    
+      <h3>✅ Real-World Use Cases:</h3>
+      <table border="1" cellpadding="8" cellspacing="0">
+        <thead>
+          <tr>
+            <th>Real-Life Scenario</th>
+            <th>Ideal Data Structure</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Student names with marks</td><td>Dictionary</td></tr>
+          <tr><td>Days of the week</td><td>Tuple</td></tr>
+          <tr><td>List of books to read</td><td>List</td></tr>
+          <tr><td>Unique cities visited</td><td>Set</td></tr>
+        </tbody>
+      </table>
+    
+      <h3>🧪 Final Challenge: Match the Structure!</h3>
+      <ol>
+        <li>("January", "February", "March")</li>
+        <li>{"apple", "banana", "apple"}</li>
+        <li>["Aman", "Riya", "Kabir"]</li>
+        <li>{"Aman": 95, "Riya": 88}</li>
+      </ol>
+    
+      <p><strong>🔸 Options:</strong></p>
+      <ul>
+        <li>A. Set</li>
+        <li>B. Dictionary</li>
+        <li>C. Tuple</li>
+        <li>D. List</li>
+      </ul>
+    
+      <div class="quiz-question">
+        <p><strong>Match Answers:</strong></p>
+        <ul>
+          <li>1 → <strong>C) Tuple</strong></li>
+          <li>2 → <strong>A) Set</strong></li>
+          <li>3 → <strong>D) List</strong></li>
+          <li>4 → <strong>B) Dictionary</strong></li>
+        </ul>
+      </div>
+    </div>
+    
 
     <h3>🧠 Bonus Tip:</h3>
     <p>Want to convert between structures?<br/>
@@ -179,6 +767,417 @@ print(student.values())          # Get all values</code></pre>
 set1 = set(list1)          # Remove duplicates
 tuple1 = tuple(list1)      # Make immutable</code></pre>
   </div>
+    <h2>🎓 Mini Project: Student Management System</h2>
+  
+    <p><strong>✅ Objective:</strong> Create a program to manage students’ info using:</p>
+    <ul>
+      <li>🛍️ <strong>List</strong> to store multiple students</li>
+      <li>🪑 <strong>Tuple</strong> to store fixed data like available courses</li>
+      <li>🔁 <strong>Set</strong> to store unique clubs or hobbies</li>
+      <li>📱 <strong>Dictionary</strong> to store student details</li>
+    </ul>
+  
+    <p><strong>✅ Project Features:</strong></p>
+    <ul>
+      <li>Add new student</li>
+      <li>Show all students</li>
+      <li>Search student by name</li>
+      <li>List all enrolled courses</li>
+      <li>List all unique clubs</li>
+    </ul>
+  
+    <h3>💻 Full Python Code:</h3>
+    <pre><code class="language-python">
+  # Fixed list of available courses (Tuple)
+  available_courses = ("Python", "Java", "C++", "HTML", "DSA")
+  
+  # Student records (List of dictionaries)
+  students = []
+  
+  # Set to store unique clubs
+  all_clubs = set()
+  
+  # Main loop
+  while True:
+      print("\n🎓 Student Management System")
+      print("1. Add Student")
+      print("2. Show All Students")
+      print("3. Search by Name")
+      print("4. Show All Courses")
+      print("5. Show All Unique Clubs")
+      print("6. Exit")
+  
+      choice = input("Enter your choice: ")
+  
+      if choice == '1':
+          name = input("Enter student name: ")
+          age = int(input("Enter age: "))
+          course = input(f"Enter course ({', '.join(available_courses)}): ")
+  
+          if course not in available_courses:
+              print("❌ Course not available.")
+              continue
+  
+          club = input("Enter club name: ")
+  
+          student = {
+              "name": name,
+              "age": age,
+              "course": course,
+              "club": club
+          }
+  
+          students.append(student)
+          all_clubs.add(club)
+          print("✅ Student added successfully!")
+  
+      elif choice == '2':
+          if not students:
+              print("No students added yet.")
+          else:
+              for s in students:
+                  print(f"👤 {s['name']}, Age: {s['age']}, Course: {s['course']}, Club: {s['club']}")
+  
+      elif choice == '3':
+          search = input("Enter name to search: ")
+          found = False
+          for s in students:
+              if s['name'].lower() == search.lower():
+                  print(f"✅ Found: {s}")
+                  found = True
+          if not found:
+              print("❌ Student not found.")
+  
+      elif choice == '4':
+          print("🎓 Courses Offered:")
+          for c in available_courses:
+              print(f"- {c}")
+  
+      elif choice == '5':
+          print("🏆 Unique Clubs:")
+          for club in all_clubs:
+              print(f"- {club}")
+  
+      elif choice == '6':
+          print("👋 Exiting program. Goodbye!")
+          break
+  
+      else:
+          print("❌ Invalid choice. Please try again.")
+    </code></pre>
+  
+    <h3>✅ Concepts Used:</h3>
+    <table border="1" cellpadding="8" cellspacing="0">
+      <thead>
+        <tr>
+          <th>Concept</th>
+          <th>Where it's Used</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>List</td><td>To store multiple students (<strong>students</strong>)</td></tr>
+        <tr><td>Tuple</td><td>To store fixed list of courses (<strong>available_courses</strong>)</td></tr>
+        <tr><td>Set</td><td>To store unique clubs (<strong>all_clubs</strong>)</td></tr>
+        <tr><td>Dict</td><td>Each student's data is stored as a dictionary</td></tr>
+      </tbody>
+    </table>
+  
+    <h3>🧪 Sample Run:</h3>
+    <pre><code>
+  🎓 Student Management System
+  1. Add Student
+  2. Show All Students
+  ...
+  
+  Enter your choice: 1
+  Enter student name: Aman
+  Enter age: 21
+  Enter course: Python
+  Enter club name: Coding Club
+  ✅ Student added successfully!
+    </code></pre>
 
+    <br>
+    <br>
+
+      <h2>💾 Mini Project (with File Saving): Student Management System + File Storage</h2>
+    
+      <p><strong>✅ New Features:</strong></p>
+      <ul>
+        <li>Save students to a file (<code>students.json</code>)</li>
+        <li>Load data from the file when the program starts</li>
+        <li>Automatically update file when new student is added</li>
+      </ul>
+    
+      <p><strong>💡 Technologies Used:</strong></p>
+      <ul>
+        <li><code>json</code> module</li>
+        <li><code>with open(...) as file:</code> for safe file handling</li>
+        <li>Same usage of <strong>list, tuple, set, dict</strong></li>
+      </ul>
+    
+      <h3>💻 Full Python Code:</h3>
+      <pre><code class="language-python">
+    import json
+    import os
+    
+    # Fixed courses (Tuple)
+    available_courses = ("Python", "Java", "C++", "HTML", "DSA")
+    
+    # Load students from file
+    filename = "students.json"
+    students = []
+    all_clubs = set()
+    
+    # Load data if file exists
+    if os.path.exists(filename):
+        with open(filename, "r") as file:
+            students = json.load(file)
+            all_clubs = set([s["club"] for s in students])
+    
+    # Main loop
+    while True:
+        print("\n🎓 Student Management System")
+        print("1. Add Student")
+        print("2. Show All Students")
+        print("3. Search by Name")
+        print("4. Show All Courses")
+        print("5. Show All Unique Clubs")
+        print("6. Exit")
+    
+        choice = input("Enter your choice: ")
+    
+        if choice == '1':
+            name = input("Enter student name: ")
+            age = int(input("Enter age: "))
+            course = input(f"Enter course ({', '.join(available_courses)}): ")
+    
+            if course not in available_courses:
+                print("❌ Course not available.")
+                continue
+    
+            club = input("Enter club name: ")
+    
+            student = {
+                "name": name,
+                "age": age,
+                "course": course,
+                "club": club
+            }
+    
+            students.append(student)
+            all_clubs.add(club)
+    
+            # Save to file
+            with open(filename, "w") as file:
+                json.dump(students, file, indent=4)
+    
+            print("✅ Student added and saved!")
+    
+        elif choice == '2':
+            if not students:
+                print("No students yet.")
+            else:
+                for s in students:
+                    print(f"👤 {s['name']}, Age: {s['age']}, Course: {s['course']}, Club: {s['club']}")
+    
+        elif choice == '3':
+            search = input("Enter name to search: ")
+            found = False
+            for s in students:
+                if s['name'].lower() == search.lower():
+                    print(f"✅ Found: {s}")
+                    found = True
+            if not found:
+                print("❌ Student not found.")
+    
+        elif choice == '4':
+            print("📚 Available Courses:")
+            for c in available_courses:
+                print(f"- {c}")
+    
+        elif choice == '5':
+            print("🏆 Unique Clubs:")
+            for club in all_clubs:
+                print(f"- {club}")
+    
+        elif choice == '6':
+            print("👋 Exiting. Data saved.")
+            break
+    
+        else:
+            print("❌ Invalid choice.")
+      </code></pre>
+    
+      <h3>📝 Notes:</h3>
+      <table border="1" cellpadding="8" cellspacing="0">
+        <thead>
+          <tr><th>Feature</th><th>Details</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>File Name</td><td><code>students.json</code></td></tr>
+          <tr><td>Data Format</td><td>JSON (human-readable)</td></tr>
+          <tr><td>Persistent Storage</td><td>Data survives program restarts</td></tr>
+          <tr><td>Safety</td><td>Auto-creates file if it doesn’t exist</td></tr>
+        </tbody>
+      </table>
+    
+      <h3>✅ Example: students.json (after saving)</h3>
+      <pre><code class="language-json">
+    [
+      {
+        "name": "Aman",
+        "age": 21,
+        "course": "Python",
+        "club": "Coding Club"
+      }
+    ]
+      </code></pre>
+    
+
+        <h2>🛒 Mini Project: Shopping Cart System</h2>
+      
+        <p><strong>💡 Objective:</strong></p>
+        <ul>
+          <li>📦 Products are stored using a <strong>dictionary</strong></li>
+          <li>🛍️ Cart is a <strong>list</strong> of product entries</li>
+          <li>✅ Categories are fixed using a <strong>tuple</strong></li>
+          <li>🔁 <strong>Set</strong> is used to store unique brands added</li>
+          <li>💾 Cart data is saved to a file (<code>cart.json</code>)</li>
+        </ul>
+      
+        <p><strong>✅ Features:</strong></p>
+        <ul>
+          <li>View available products</li>
+          <li>Add to cart</li>
+          <li>View cart</li>
+          <li>Remove item</li>
+          <li>View unique brands</li>
+          <li>Save and exit</li>
+        </ul>
+      
+        <h3>🖥️ Full Python Code:</h3>
+        <pre><code class="language-python">
+      import json
+      import os
+      
+      # Fixed product categories (Tuple)
+      categories = ("Electronics", "Groceries", "Clothing")
+      
+      # Available products (Dict)
+      products = {
+          101: {"name": "Laptop", "price": 45000, "brand": "Dell", "category": "Electronics"},
+          102: {"name": "Rice", "price": 500, "brand": "India Gate", "category": "Groceries"},
+          103: {"name": "T-Shirt", "price": 799, "brand": "Puma", "category": "Clothing"},
+          104: {"name": "Headphones", "price": 1999, "brand": "Sony", "category": "Electronics"},
+      }
+      
+      # Cart (List of product IDs)
+      cart = []
+      
+      # Unique brands (Set)
+      brands = set()
+      
+      # Load cart if exists
+      filename = "cart.json"
+      if os.path.exists(filename):
+          with open(filename, "r") as file:
+              cart = json.load(file)
+              brands = {products[int(pid)]['brand'] for pid in cart}
+      
+      # Main loop
+      while True:
+          print("\n🛒 Shopping Cart Menu")
+          print("1. View Products")
+          print("2. Add to Cart")
+          print("3. View Cart")
+          print("4. Remove Item")
+          print("5. View Unique Brands in Cart")
+          print("6. Save and Exit")
+      
+          choice = input("Enter your choice: ")
+      
+          if choice == '1':
+              print("\n📦 Available Products:")
+              for pid, p in products.items():
+                  print(f"{pid} - {p['name']} | ₹{p['price']} | Brand: {p['brand']} | Category: {p['category']}")
+      
+          elif choice == '2':
+              pid = int(input("Enter Product ID to add: "))
+              if pid in products:
+                  cart.append(str(pid))
+                  brands.add(products[pid]["brand"])
+                  print(f"✅ {products[pid]['name']} added to cart.")
+              else:
+                  print("❌ Invalid Product ID.")
+      
+          elif choice == '3':
+              if not cart:
+                  print("🛒 Your cart is empty.")
+              else:
+                  print("\n🧾 Cart Items:")
+                  total = 0
+                  for pid in cart:
+                      p = products[int(pid)]
+                      print(f"- {p['name']} | ₹{p['price']} | Brand: {p['brand']}")
+                      total += p['price']
+                  print(f"💰 Total: ₹{total}")
+      
+          elif choice == '4':
+              pid = input("Enter Product ID to remove: ")
+              if pid in cart:
+                  cart.remove(pid)
+                  brands = {products[int(pid)]['brand'] for pid in cart}
+                  print("❎ Item removed from cart.")
+              else:
+                  print("❌ Item not in cart.")
+      
+          elif choice == '5':
+              print("\n🔁 Unique Brands in Cart:")
+              for brand in brands:
+                  print(f"- {brand}")
+      
+          elif choice == '6':
+              with open(filename, "w") as file:
+                  json.dump(cart, file)
+              print("💾 Cart saved. Exiting. Goodbye! 👋")
+              break
+      
+          else:
+              print("❌ Invalid choice.")
+        </code></pre>
+      
+        <h3>🧠 Concepts Covered:</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+          <thead>
+            <tr><th>Concept</th><th>Where It's Used</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Tuple</td><td>Fixed product categories</td></tr>
+            <tr><td>Dictionary</td><td>Product database</td></tr>
+            <tr><td>List</td><td>Cart that holds products</td></tr>
+            <tr><td>Set</td><td>Track unique brands</td></tr>
+            <tr><td>JSON/File</td><td>Save/load cart from file</td></tr>
+          </tbody>
+        </table>
+      
+        <h3>✅ Sample Run:</h3>
+        <pre><code>
+      🛒 Shopping Cart Menu
+      1. View Products
+      2. Add to Cart
+      3. View Cart
+      ...
+      
+      Enter choice: 1
+      
+      📦 Available Products:
+      101 - Laptop | ₹45000 | Brand: Dell | Category: Electronics
+      102 - Rice | ₹500 | Brand: India Gate | Category: Groceries
+      ...
+        </code></pre>
+
+      
+  
 </body>
 </html>
