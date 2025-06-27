@@ -1,0 +1,316 @@
+<h1>🎓 Project: Student Management System using Flask + SQLite</h1>
+
+<h2>🚀 Goal:</h2>
+<p>
+  Build a web application to <strong>Add</strong>, <strong>View</strong>, <strong>Edit</strong>, and
+  <strong>Delete</strong> student records using:
+</p>
+<ul>
+  <li>Python Flask</li>
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JavaScript</li>
+  <li>SQLite (via <strong>sqlite3</strong>)</li>
+</ul>
+
+<h2>🏗️ Project Structure (Folder Layout):</h2>
+<pre><code>student_flask_app/
+│
+├── app.py                      # Main Flask application
+├── students.db                 # SQLite3 database (auto-created)
+├── static/                     # Static files (CSS/JS/images)
+│   ├── style.css               # Custom CSS styling
+│   └── script.js               # JavaScript for alerts
+├── templates/                  # HTML templates
+│   ├── index.html              # List all students
+│   ├── add.html                # Form to add student
+│   └── edit.html               # Form to edit student
+</code></pre>
+<br>
+<br>
+<h2>🧠 Features:</h2>
+<ul>
+  <li>📝 Add student details (name, roll, class, etc.)</li>
+  <li>📋 View a list of all student records</li>
+  <li>✏️ Edit student information</li>
+  <li>❌ Delete student record with confirmation</li>
+  <li>📦 Data stored in SQLite database</li>
+  <li>🌐 Responsive UI using HTML + CSS</li>
+  <li>⚡ Real-time alerts using JavaScript</li>
+</ul>
+<br>
+<br>
+<h3>🔍 Explanation of Key Files:</h3>
+<ul>
+  <li><strong>app.py:</strong> The core backend with Flask routes for CRUD operations.</li>
+  <li><strong>students.db:</strong> SQLite database file to store student data persistently.</li>
+  <li><strong>templates/index.html:</strong> Displays a table of all students.</li>
+  <li><strong>templates/add.html:</strong> Form to add a new student record.</li>
+  <li><strong>templates/edit.html:</strong> Form to update an existing student.</li>
+  <li><strong>static/style.css:</strong> Custom styling for a clean and modern UI.</li>
+  <li><strong>static/script.js:</strong> JavaScript for alert messages and confirmation prompts.</li>
+</ul>
+<br>
+<br>
+<h3>📌 Technologies Used:</h3>
+<ul>
+  <li>Flask (Backend Framework)</li>
+  <li>SQLite3 (Database)</li>
+  <li>HTML5, CSS3 (Frontend Design)</li>
+  <li>JavaScript (Client-side interactivity)</li>
+</ul>
+
+<h2>🔧 STEP 1: Install Flask</h2>
+<pre><code>pip install flask</code></pre>
+<br>
+<br>
+<h3>🐍 STEP 1:  <strong>app.py</strong> – The Brain of the App (Flask Logic):</h3>
+<pre><code>from flask import Flask, render_template, request, redirect
+import sqlite3
+
+app = Flask(__name__)
+
+# Connect to SQLite and Create Table
+def init_db():
+    conn = sqlite3.connect("students.db")
+    cursor = conn.cursor()
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS students (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            name TEXT NOT NULL,
+            age INTEGER,
+            grade TEXT
+        )
+    ''')
+    conn.commit()
+    conn.close()
+
+init_db()
+
+# 📋 Homepage – List All Students
+@app.route('/')
+def index():
+    conn = sqlite3.connect("students.db")
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM students")
+    students = cursor.fetchall()
+    conn.close()
+    return render_template("index.html", students=students)
+
+# ➕ Add Student
+@app.route('/add', methods=['GET', 'POST'])
+def add_student():
+    if request.method == 'POST':
+        name = request.form['name']
+        age = request.form['age']
+        grade = request.form['grade']
+        conn = sqlite3.connect("students.db")
+        cursor = conn.cursor()
+        cursor.execute("INSERT INTO students (name, age, grade) VALUES (?, ?, ?)", (name, age, grade))
+        conn.commit()
+        conn.close()
+        return redirect('/')
+    return render_template('add.html')
+
+# ✏️ Edit Student
+@app.route('/edit/&lt;int:id&gt;', methods=['GET', 'POST'])
+def edit_student(id):
+    conn = sqlite3.connect("students.db")
+    cursor = conn.cursor()
+    if request.method == 'POST':
+        name = request.form['name']
+        age = request.form['age']
+        grade = request.form['grade']
+        cursor.execute("UPDATE students SET name=?, age=?, grade=? WHERE id=?", (name, age, grade, id))
+        conn.commit()
+        conn.close()
+        return redirect('/')
+    cursor.execute("SELECT * FROM students WHERE id=?", (id,))
+    student = cursor.fetchone()
+    conn.close()
+    return render_template('edit.html', student=student)
+
+# 🗑️ Delete Student
+@app.route('/delete/&lt;int:id&gt;')
+def delete_student(id):
+    conn = sqlite3.connect("students.db")
+    cursor = conn.cursor()
+    cursor.execute("DELETE FROM students WHERE id=?", (id,))
+    conn.commit()
+    conn.close()
+    return redirect('/')
+
+# ▶️ Run App
+if __name__ == '__main__':
+    app.run(debug=True)
+</code></pre>
+<br>
+<br>
+<h3>🖼️ 3. <strong>templates/index.html</strong> – View All Students</h3>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Student Management&lt;/title&gt;
+    &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"&gt;
+    &lt;link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"&gt;
+&lt;/head&gt;
+&lt;body class="container mt-5"&gt;
+
+    &lt;h2&gt;📋 Student List&lt;/h2&gt;
+    &lt;a href="/add" class="btn btn-primary mb-3"&gt;➕ Add Student&lt;/a&gt;
+
+    &lt;table class="table table-bordered table-striped shadow-sm"&gt;
+        &lt;thead class="table-dark"&gt;
+            &lt;tr&gt;&lt;th&gt;ID&lt;/th&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Age&lt;/th&gt;&lt;th&gt;Grade&lt;/th&gt;&lt;th&gt;Actions&lt;/th&gt;&lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            {% for student in students %}
+            &lt;tr&gt;
+                &lt;td&gt;{{ student[0] }}&lt;/td&gt;
+                &lt;td&gt;{{ student[1] }}&lt;/td&gt;
+                &lt;td&gt;{{ student[2] }}&lt;/td&gt;
+                &lt;td&gt;{{ student[3] }}&lt;/td&gt;
+                &lt;td&gt;
+                    &lt;a href="/edit/{{ student[0] }}" class="btn btn-sm btn-warning"&gt;✏️ Edit&lt;/a&gt;
+                    &lt;a href="/delete/{{ student[0] }}" class="btn btn-sm btn-danger" onclick="return confirmDelete('{{ student[1] }}')"&gt;🗑️ Delete&lt;/a&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            {% endfor %}
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+
+    &lt;footer&gt;
+        &copy; 2025 Student Management App | Made with ❤️
+    &lt;/footer&gt;
+
+    &lt;script src="{{ url_for('static', filename='script.js') }}"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<br>
+<br>
+<h3>📝 4. <strong>templates/add.html</strong> – Add New Student Form</h3>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Add Student&lt;/title&gt;
+    &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"&gt;
+    &lt;link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"&gt;
+&lt;/head&gt;
+&lt;body class="container mt-5"&gt;
+    &lt;h2&gt;➕ Add New Student&lt;/h2&gt;
+    &lt;form method="POST"&gt;
+        &lt;input type="text" name="name" class="form-control mb-2" placeholder="Name" required&gt;
+        &lt;input type="number" name="age" class="form-control mb-2" placeholder="Age" required&gt;
+        &lt;input type="text" name="grade" class="form-control mb-2" placeholder="Grade" required&gt;
+        &lt;button type="submit" class="btn btn-success"&gt;Add&lt;/button&gt;
+        &lt;a href="/" class="btn btn-secondary"&gt;Cancel&lt;/a&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<br>
+<br>
+<h3>✏️ 5. <code>templates/edit.html</code> – Edit Student Details</h3>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Edit Student&lt;/title&gt;
+    &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"&gt;
+    &lt;link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"&gt;
+&lt;/head&gt;
+&lt;body class="container mt-5"&gt;
+    &lt;h2&gt;✏️ Edit Student&lt;/h2&gt;
+    &lt;form method="POST"&gt;
+        &lt;input type="text" name="name" class="form-control mb-2" value="{{ student[1] }}" required&gt;
+        &lt;input type="number" name="age" class="form-control mb-2" value="{{ student[2] }}" required&gt;
+        &lt;input type="text" name="grade" class="form-control mb-2" value="{{ student[3] }}" required&gt;
+        &lt;button type="submit" class="btn btn-primary"&gt;Update&lt;/button&gt;
+        &lt;a href="/" class="btn btn-secondary"&gt;Cancel&lt;/a&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<br>
+<br>
+<h3>🎨 6. <strong>static/style.css</strong> – Custom CSS</h3>
+<pre><code>body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #343a40;
+}
+
+.table th, .table td {
+    vertical-align: middle;
+}
+
+.btn {
+    margin-right: 5px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 10px;
+    color: #6c757d;
+}
+</code></pre>
+<br>
+<br>
+<h3>⚙️ 7. <strong>static/script.js</strong> – JS for Confirmation Popup</h3>
+<pre><code>function confirmDelete(name) {
+    return confirm("Are you sure you want to delete student: " + name + "?");
+}
+</code></pre>
+<br>
+<br>
+<h3>▶️ How to Run the Project</h3>
+<p>Open terminal in your project folder and run the Flask app:</p>
+<pre><code>python app.py</code></pre>
+<p>Then open your browser and go to:</p>
+<pre><code>👉 http://localhost:5000</code></pre>
+
+<br>
+<br>
+<h3>🧠 Summary for Students</h3>
+<table class="table table-bordered table-striped">
+  <thead class="table-dark">
+    <tr>
+      <th>Feature</th>
+      <th>Route / Code</th>
+      <th>Template</th>
+      <th>SQLite Operation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>View Students</td>
+      <td><strong>/</strong> route</td>
+      <td><strong>index.html</strong></td>
+      <td><strong>SELECT</strong></td>
+    </tr>
+    <tr>
+      <td>Add Student</td>
+      <td><strong>/add</strong></td>
+      <td><strong>add.html</strong></td>
+      <td><strong>INSERT</strong></td>
+    </tr>
+    <tr>
+      <td>Edit Student</td>
+      <td><strong>/edit/&lt;id&gt;</strong></td>
+      <td><strong>edit.html</strong></td>
+      <td><strong>UPDATE</strong></td>
+    </tr>
+    <tr>
+      <td>Delete Student</td>
+      <td><strong>/delete/&lt;id&gt;</strong></td>
+      <td>Button in <strong>index.html</strong></td>
+      <td><strong>DELETE</strong></td>
+    </tr>
+  </tbody>
+</table>
+
