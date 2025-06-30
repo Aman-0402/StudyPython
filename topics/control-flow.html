@@ -163,6 +163,30 @@ else:
     </ol>
     <p><strong>Hint:</strong> Use <code>while</code> and <code>break</code></p>
 
+      <h2>🔐 Mini Login System using Python</h2>
+
+  <pre><code>
+# Predefined password
+correct_password = "python123"
+
+# Attempt counter
+attempts = 0
+max_attempts = 3
+
+while attempts &lt; max_attempts:
+    entered_password = input("Enter your password: ")
+    
+    if entered_password == correct_password:
+        print("Welcome!")
+        break  # Exit loop if password is correct
+    else:
+        attempts += 1
+        print("Incorrect password. Try again.")
+
+if attempts == max_attempts:
+    print("Access Denied")
+  </code></pre>
+
     <blockquote>😄 <strong>Bonus Joke:</strong><br/>
     Why did the Python loop apply for a job?<br/>
     Because it wanted a break! 😆</blockquote>
