@@ -16,10 +16,10 @@
     return result</code></pre>
 
 <h3>✅ Example 1:</h3>
-<pre><code>def greet():
-    print("Hello, Aman!")
+<pre><code>def copy():
+    print("Don't Copy Me Idiot Try ur own example")
 
-greet()  # Calling the function</code></pre>
+copy()  # Calling the function</code></pre>
 
 <h3>✅ Example 2: Function with Parameters</h3>
 <pre><code>def add(a, b):
@@ -36,14 +36,20 @@ print("Sum is:", result)</code></pre>
     return "Hi!"
 
 print(say_hello())</code></pre>
+<button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
   <p><strong>✅ Answer:</strong> Hi!</p>
+    </div>
 </div>
 
 <div class="quiz-question">
   <p>2. Fill in the blank:</p>
   <pre><code>def _____():
     print("Python is fun!")</code></pre>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
   <p><strong>✅ Answer:</strong> <code>my_function</code> (Any valid function name is acceptable.)</p>
+    </div>
 </div>
 
 <div class="quiz-question">
@@ -83,11 +89,11 @@ print(say_hello())</code></pre>
 print(add(2, 3))  # Output: 5</code></pre>
 
 <h3>✅ Example 2: Default Arguments</h3>
-<pre><code>def greet(name="Guest"):
-    print("Hello,", name)
+<pre><code>def AOT(name="Eren"):
+    print("I'm the main characters of Attack on Titan :", name)
 
-greet()          # Output: Hello, Guest
-greet("Aman")    # Output: Hello, Aman</code></pre>
+AOT()          # Output: I'm the main characters of Attack on Titan Guest
+AOT("Aman")    # Output: I'm the main characters of Attack on Titan : Eren</code></pre>
 
 <h3>✅ Example 3: Keyword Arguments</h3>
 <pre><code>def student_info(name, age):
@@ -103,7 +109,10 @@ student_info(age=20, name="Aman")</code></pre>
     print(name, "is from", country)
 
 show_info("Aman")</code></pre>
+<button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
   <p><strong>✅ Answer:</strong> Aman is from India</p>
+    </div>
 </div>
 
 <div class="quiz-question">
@@ -169,14 +178,20 @@ print("y:", y)  # Output: y: Hello</code></pre>
     return a * b
 
 print(multiply(3, 4))</code></pre>
+<button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
   <p><strong>✅ Answer:</strong> 12</p>
+    </div>
 </div>
 
 <div class="quiz-question">
   <p>2. Fill in the blank:</p>
   <pre><code>def welcome():
     _____ "Welcome Back!"</code></pre>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
   <p><strong>✅ Answer:</strong> <code>return</code></p>
+    </div>
 </div>
 
 <div class="quiz-question">
@@ -248,7 +263,10 @@ print(greet("Aman"))</code></pre>
 
 <div class="quiz-question">
   <p>3. Can we create our own functions in Python?</p>
+  <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
   <p><strong>✅ Answer:</strong> Yes, using def</p>
+    </div>
 </div>
 <h2>✅ 5. Lambda (Anonymous) Functions</h2>
 
@@ -297,7 +315,10 @@ print(even)  # Output: [8, 12]</code></pre>
   <p>1. What will this print?</p>
   <pre><code>x = lambda a: a * 10
 print(x(3))</code></pre>
+<button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
   <p><strong>✅ Answer:</strong> 30</p>
+    </div>
 </div>
 
 <div class="quiz-question">
@@ -313,7 +334,10 @@ print(x(3))</code></pre>
 <div class="quiz-question">
   <p>3. Fill in the blank:</p>
   <pre><code>multiply = _____ a, b: a * b</code></pre>
+  <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
   <p><strong>✅ Answer:</strong> <code>lambda</code></p>
+    </div>
 </div>
 
 <h2>✅ 6. Modules in Python</h2>
@@ -386,7 +410,10 @@ print(arr)</code></pre>
   <p>2. Fill in the blank:</p>
   <pre><code>_____ math
 print(math.pi)</code></pre>
+<button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
   <p><strong>✅ Answer:</strong> <code>import</code></p>
+    </div>
 </div>
 
 <div class="quiz-question">
@@ -467,7 +494,10 @@ print(pi)        # 3.141592...</code></pre>
   <p>2. Fill in the blank:</p>
   <pre><code>import _____
 print(math.sqrt(16))</code></pre>
+<button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
   <p><strong>✅ Answer:</strong> <code>math</code></p>
+    </div>
 </div>
 
 <div class="quiz-question">
@@ -554,7 +584,10 @@ print(pi)</code></pre>
 
 <div class="quiz-question">
   <p>3. True or False: You can reuse your own <strong>.py</strong> file as a module.</p>
+  <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
   <p><strong>✅ Answer:</strong> ✅ True</p>
+    </div>
 </div>
 
 <h2>🧠 Built-in Functions You Should Know</h2>
@@ -646,37 +679,6 @@ Because they like to reuse their charm, not retype it! 😎
 print(calculator(10, 5, 'add'))  # Output: 15
 </code></pre>
 
-<h2>✅ Quick Quiz</h2>
-
-<div class="quiz-question">
-  <p>1. What keyword is used to define a function in Python?</p>
-  <ul>
-    <li onclick="checkAnswer(this, 'wrong')">a) define</li>
-    <li onclick="checkAnswer(this, 'wrong')">b) function</li>
-    <li onclick="checkAnswer(this, 'correct')">c) def</li>
-    <li onclick="checkAnswer(this, 'wrong')">d) fun</li>
-  </ul>
-</div>
-
-<div class="quiz-question">
-  <p>2. Which of these is a built-in module?</p>
-  <ul>
-    <li onclick="checkAnswer(this, 'wrong')">a) superpower</li>
-    <li onclick="checkAnswer(this, 'correct')">b) random</li>
-    <li onclick="checkAnswer(this, 'wrong')">c) magic</li>
-    <li onclick="checkAnswer(this, 'wrong')">d) matrix</li>
-  </ul>
-</div>
-
-<div class="quiz-question">
-  <p>3. What does a <code>return</code> statement do?</p>
-  <ul>
-    <li onclick="checkAnswer(this, 'wrong')">a) Prints a result</li>
-    <li onclick="checkAnswer(this, 'wrong')">b) Loops a value</li>
-    <li onclick="checkAnswer(this, 'wrong')">c) Exits the program</li>
-    <li onclick="checkAnswer(this, 'correct')">d) Sends a value back</li>
-  </ul>
-</div>
 
 <h2>🎯 Challenge Task</h2>
 <p>Create a program with 3 functions:</p>
