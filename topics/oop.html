@@ -100,29 +100,30 @@ Object is an instance of a class.
 
 <h4>🧪 Practical Example:</h4>
 <pre><code># Define a Superhero class
-class Superhero:
-    # Method to introduce the superhero
-    def introduce(self):
-        print(f"I am {self.name}, and my power is {self.power}!")
-
-# Create first superhero object
-hero1 = Superhero()
-hero1.name = "Spider-Man"
-hero1.power = "Wall-Crawling"
-
-# Create second superhero object
-hero2 = Superhero()
-hero2.name = "Iron Man"
-hero2.power = "Advanced Armor Suit"
-
-# Call the introduce() method
-hero1.introduce()  # Output: I am Spider-Man, and my power is Wall-Crawling!
-hero2.introduce()  # Output: I am Iron Man, and my power is Advanced Armor Suit!
+  class Superhero:
+      # Method to introduce the superhero
+      def introduce(self):
+          print(f"I am {self.name}, and my power is {self.power}!")
+  
+  # Create first superhero object
+  hero1 = Superhero()
+  hero1.name = "Spider-Man"
+  hero1.power = "Wall-Crawling"
+  
+  # Create second superhero object
+  hero2 = Superhero()
+  hero2.name = "Iron Man"
+  hero2.power = "Advanced Armor Suit"
+  
+  # Call the introduce() method
+  hero1.introduce()  
+  hero2.introduce()  
+  
 </code></pre>
 
 <h4>🖨️ Output:</h4>
-<pre><code>The Red Toyota is driving.
-The Blue Honda is driving.</code></pre>
+<pre><code>I am Spider-Man, and my power is Wall-Crawling!
+  I am Iron Man, and my power is Advanced Armor Suit!</code></pre>
 
 <h4>💡 Real-Life Analogy:</h4>
 <p><strong>Class</strong> = Blueprint of a House</p>
@@ -136,21 +137,23 @@ The Blue Honda is driving.</code></pre>
     <h3>🔸 Q1. Create a class Student with attributes name and roll_number, and a method to display the student's info.</h3>
     <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
     <div class="answer" style="display: none;">
-    <pre><code>class Student:
-    # Method to display student information
-    def display_info(self):
-        print(f"Name: {self.name}")
-        print(f"Roll Number: {self.roll_number}")
-
-# Create a student object
-student1 = Student()
-
-# Manually set the attributes
-student1.name = "Aman"
-student1.roll_number = 101
-
-# Call the method to display student info
-student1.display_info()</code></pre>
+    <pre><code># Define a Student class without using __init__
+      class Student:
+          # Method to display student information
+          def display_info(self):
+              print(f"Name: {self.name}")
+              print(f"Roll Number: {self.roll_number}")
+      
+      # Create a student object
+      student1 = Student()
+      
+      # Manually set the attributes
+      student1.name = "Aman"
+      student1.roll_number = 101
+      
+      # Call the method to display student info
+      student1.display_info()
+      </code></pre>
 
       <h4>✅ Output:</h4>
       <pre>Name: Aman
@@ -351,23 +354,27 @@ Insufficient balance.</pre>
 </ul>
 
 <h3>🧪 Practical Example:</h3>
-<pre><code>class Student:
-    def __init__(self, name, roll):
-        self.name = name
-        self.roll = roll
-
-    def display(self):
-        print(f"Name: {self.name}, Roll: {self.roll}")
-
-s1 = Student("Aman", 101)
-s2 = Student("Ram", 102)
-
-s1.display()
-s2.display()</code></pre>
+<pre><code># Define the Student class
+  class Student:
+      def __init__(self, name, roll):
+          self.name = name
+          self.roll = roll
+  
+      def display(self):
+          print(f"Name: {self.name}, Roll: {self.roll}")
+  
+  # Funny student objects
+  s1 = Student("SpongeBob", 420)
+  s2 = Student("Doraemon", 007)
+  
+  # Display their info
+  s1.display()
+  s2.display() 
+  </code></pre>
 
 <h4>🖨️ Output:</h4>
-<pre><code>Name: Aman, Roll: 101
-Name: Ram, Roll: 102</code></pre>
+<pre><code>Name: SpongeBob, Roll: 420
+ Output: Name: Doraemon, Roll: 007</code></pre>
 
 <h3>🧍 Real-Life Analogy:</h3>
 <p>Think of filling a registration form.</p>
@@ -627,29 +634,44 @@ This is encapsulation — exposing only safe methods, and hiding sensitive data.
 </table>
 
 <h3>🔧 Practical Example:</h3>
-<pre><code>class Account:
-    def __init__(self, balance):
-        self.__balance = balance  # private variable
+<pre><code># Welcome to Krusty Krab Bank, managed by Mr. Krabs 🦀
 
-    def deposit(self, amount):
-        if amount &gt; 0:
-            self.__balance += amount
-
-    def withdraw(self, amount):
-        if 0 &lt; amount &lt;= self.__balance:
-            self.__balance -= amount
-        else:
-            print("Insufficient balance!")
-
-    def get_balance(self):
-        return self.__balance
-
-acc = Account(1000)
-acc.deposit(500)
-acc.withdraw(300)
-print("Balance:", acc.get_balance())  # Correct way to access
-
-# print(acc.__balance)  ❌ Error: private attribute</code></pre>
+  class Account:
+      def __init__(self, balance):
+          self.__balance = balance  # Secret stash, don't tell Plankton!
+  
+      def deposit(self, amount):
+          if amount > 0:
+              self.__balance += amount
+              print(f"💸 Deposited {amount} coins. Mr. Krabs is pleased!")
+          else:
+              print("❌ You can't deposit negative gold!")
+  
+      def withdraw(self, amount):
+          if 0 < amount <= self.__balance:
+              self.__balance -= amount
+              print(f"💰 Withdrew {amount} coins. Mr. Krabs is suspicious...")
+          else:
+              print("🚨 Insufficient balance! Mr. Krabs says: 'No free lunch!'")
+  
+      def get_balance(self):
+          return self.__balance
+  
+  # Mr. Krabs opens a secret bank account
+  acc = Account(1000)
+  
+  # SpongeBob deposits some money
+  acc.deposit(500)
+  
+  # Patrick tries to withdraw for jellyfish net upgrade
+  acc.withdraw(300)
+  
+  # Checking the treasure chest
+  print("🏦 Current Balance:", acc.get_balance())  # ✅ Correct way to check
+  
+  # Trying to sneak into Mr. Krabs' vault 👀
+  # print(acc.__balance)  ❌ ERROR: Private stash! Not accessible directly
+  </code></pre>
 
 <h3>👨‍💻 Output:</h3>
 <pre><code>Balance: 1200</code></pre>
@@ -1475,7 +1497,7 @@ for obj in [A(), B()]:
     </div>
   </div>
 </div>
-
+<h1> Extra </h1>
 <h1>🧱 Abstraction in Python</h1>
 
 <h3>🎯 What is Abstraction?</h3>
