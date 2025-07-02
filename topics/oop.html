@@ -99,22 +99,25 @@ Object is an instance of a class.
 </p>
 
 <h4>🧪 Practical Example:</h4>
-<pre><code># Define a class
-class Car:
-    def __init__(self, brand, color):
-        self.brand = brand
-        self.color = color
+<pre><code># Define a Superhero class
+class Superhero:
+    # Method to introduce the superhero
+    def introduce(self):
+        print(f"I am {self.name}, and my power is {self.power}!")
 
-    def drive(self):
-        print(f"The {self.color} {self.brand} is driving.")
+# Create first superhero object
+hero1 = Superhero()
+hero1.name = "Spider-Man"
+hero1.power = "Wall-Crawling"
 
-# Create objects
-car1 = Car("Toyota", "Red")
-car2 = Car("Honda", "Blue")
+# Create second superhero object
+hero2 = Superhero()
+hero2.name = "Iron Man"
+hero2.power = "Advanced Armor Suit"
 
-# Call methods
-car1.drive()
-car2.drive()
+# Call the introduce() method
+hero1.introduce()  # Output: I am Spider-Man, and my power is Wall-Crawling!
+hero2.introduce()  # Output: I am Iron Man, and my power is Advanced Armor Suit!
 </code></pre>
 
 <h4>🖨️ Output:</h4>
