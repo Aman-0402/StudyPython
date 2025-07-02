@@ -137,16 +137,19 @@ The Blue Honda is driving.</code></pre>
     <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
     <div class="answer" style="display: none;">
     <pre><code>class Student:
-    def __init__(self, name, roll_number):
-        self.name = name
-        self.roll_number = roll_number
-
+    # Method to display student information
     def display_info(self):
         print(f"Name: {self.name}")
         print(f"Roll Number: {self.roll_number}")
 
-# Example usage:
-student1 = Student("Aman", 101)
+# Create a student object
+student1 = Student()
+
+# Manually set the attributes
+student1.name = "Aman"
+student1.roll_number = 101
+
+# Call the method to display student info
 student1.display_info()</code></pre>
 
       <h4>✅ Output:</h4>
