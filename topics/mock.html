@@ -13,3 +13,948 @@ print_triangle()</pre>
       <li onclick="checkAnswer(this, 'wrong')">D) for row in range(1, 5):<br>    for col in range(6):</li>
     </ul>
 </div>
+
+<div class="quiz-question">
+    <p>2. You need to complete a function that prints the sum of all even numbers between 1 and 20. How should you complete the missing code?</p>
+    <pre>def sum_even():
+        total = 0
+        1 ----------
+            if num % 2 == 0:
+                total += num
+        print(total)
+    sum_even()</pre>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">A) for num in range(1, 21):</li>
+      <li onclick="checkAnswer(this, 'correct')">B) for num in range(2, 21, 2):</li>
+      <li onclick="checkAnswer(this, 'wrong')">C) for num in range(1, 20):</li>
+      <li onclick="checkAnswer(this, 'wrong')">D) for num in range(0, 20, 2):</li>
+    </ul>
+</div>
+
+<div class="quiz-question">
+    <p>3. You are analyzing lab test results stored in a list called results with 1000 entries. You want to get the first 10 results in reverse order. Which of the following slice expressions should you use?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'wrong')">A) results[10:0:-1]</li>
+      <li onclick="checkAnswer(this, 'correct')">B) results[9::-1]</li>
+      <li onclick="checkAnswer(this, 'wrong')">C) results[:10:-1]</li>
+      <li onclick="checkAnswer(this, 'wrong')">D) results[::-1][:10]</li>
+    </ul>
+</div>
+
+<div class="quiz-question">
+    <p>4. You have a list days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]. You want to get only the weekend days, which are at the end of the list. Which slice expression will give you ["Sat", "Sun"]?</p>
+    <ul>
+      <li onclick="checkAnswer(this, 'correct')">A) days[-2:]</li>
+      <li onclick="checkAnswer(this, 'correct')">B) days[5:]</li>
+      <li onclick="checkAnswer(this, 'wrong')">C) days[6:]</li>
+      <li onclick="checkAnswer(this, 'correct')">D) Both A and B</li>
+    </ul>
+</div>
+
+<!-- Question 5 -->
+<div class="quiz-question">
+    <p>5. Linear Search with Return. You are creating a function to search for a number in a list and return True if found, otherwise return False.</p>
+    <p>Code Segments:</p>
+    <ul>
+        <li>A - for i in range(len(numbers)):</li>
+        <li>B - if numbers[i] == target:</li>
+        <li>C - return True</li>
+        <li>D - def find_number(numbers, target):</li>
+        <li>E - return False</li>
+    </ul>
+    <p>In which order should you arrange them?</p>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) A, B, C, D, E</li>
+        <li onclick="checkAnswer(this, 'correct')">B) D, A, B, C, E</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) D, B, A, C, E</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) A, D, B, C, E</li>
+    </ul>
+</div>
+
+<!-- Question 6 -->
+<div class="quiz-question">
+    <p>6. Which of the following data types in Python can store floating-point (decimal) values?</p>
+    <ul>
+        <li onclick="checkAnswer(this, 'correct')">A) float</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) int</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) bool</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) str</li>
+    </ul>
+</div>
+
+<!-- Question 7 -->
+<div class="quiz-question">
+    <p>7. Which of the following data types can be used in arithmetic operations like addition or multiplication?</p>
+    <ul>
+        <li onclick="checkAnswer(this, 'correct')">A) int and float</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) str and bool</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) list and str</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) dict and tuple</li>
+    </ul>
+</div>
+
+<!-- Question 8 -->
+<div class="quiz-question">
+    <p>8. How many stars (*) will the following snippet print?</p>
+    <pre>count = 0
+while count < 5:
+    if count % 2 == 0:
+        print("*")
+    count += 1</pre>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) 2</li>
+        <li onclick="checkAnswer(this, 'correct')">B) 3</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) 4</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) 5</li>
+    </ul>
+</div>
+
+<!-- Question 9 -->
+<div class="quiz-question">
+    <p>9. How many times will "Hello" be printed?</p>
+    <pre>i = 3
+while i > 0:
+    print("Hello")
+    i -= 1
+else:
+    print("Done")</pre>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) 1</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) 2</li>
+        <li onclick="checkAnswer(this, 'correct')">C) 3</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) 4</li>
+    </ul>
+</div>
+
+<!-- Question 10 -->
+<div class="quiz-question">
+    <p>10. Which of the following symbols is used to compare two values for equality in Python?</p>
+    <ul>
+        <li onclick="checkAnswer(this, 'correct')">A) ==</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) =</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) !=</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) :=</li>
+    </ul>
+</div>
+
+<!-- Question 11 -->
+<div class="quiz-question">
+    <p>11. Which of the following is NOT a valid assignment statement in Python?</p>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) x = 10</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) total = a + b</li>
+        <li onclick="checkAnswer(this, 'correct')">C) 5 = x</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) name = "Aman"</li>
+    </ul>
+</div>
+
+<!-- Question 12 -->
+<div class="quiz-question">
+    <p>12. Instance variables are shared among all objects of a class.</p>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) True</li>
+        <li onclick="checkAnswer(this, 'correct')">B) False</li>
+    </ul>
+</div>
+
+<!-- Question 13 -->
+<div class="quiz-question">
+    <p>13. What will the following code output?</p>
+    <pre>class Car:
+    wheels = 4  # class variable
+    def __init__(self, brand):
+        self.brand = brand  # instance variable
+
+c1 = Car("BMW")
+c2 = Car("Tesla")
+c2.wheels = 6
+
+print(c1.wheels)
+print(c2.wheels)</pre>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) 4 and 4</li>
+        <li onclick="checkAnswer(this, 'correct')">B) 4 and 6</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) 6 and 6</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) Error</li>
+    </ul>
+</div>
+
+<!-- Question 14 -->
+<div class="quiz-question">
+    <p>14. What is the output of the following code?</p>
+    <pre>x = [1, 2, 3, 4]
+print(len(x))</pre>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) 3</li>
+        <li onclick="checkAnswer(this, 'correct')">B) 4</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) Error</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) None</li>
+    </ul>
+</div>
+
+<!-- Question 15 -->
+<div class="quiz-question">
+    <p>15. What will be the result of this code?</p>
+    <pre>name = "Python"
+print(len(name[3]))</pre>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) 6</li>
+        <li onclick="checkAnswer(this, 'correct')">B) 1</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) 3</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) Error</li>
+    </ul>
+</div>
+
+<!-- Question 16 -->
+<div class="quiz-question">
+    <p>16. What will the following code output?</p>
+    <pre>i = 1
+while i <= 3:
+    print(i, end="*")
+    i += 1</pre>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) 1 2 3*</li>
+        <li onclick="checkAnswer(this, 'correct')">B) 1*2*3*</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) 1*2*3</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) 1 2 3</li>
+    </ul>
+</div>
+
+<!-- Question 17 -->
+<div class="quiz-question">
+    <p>17. Which snippet should replace the comment to produce this output?</p>
+    <pre>letters = ["A", "B", "C", "D"]
+for ch in letters:
+    # insert your code here
+
+Output:
+A-B-C-D-</pre>
+    <ul>
+        <li onclick="checkAnswer(this, 'correct')">A) print(ch, end="-")</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) print(ch, "-")</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) print(ch + "-")</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) print(ch, sep="-")</li>
+    </ul>
+</div>
+
+<!-- Question 18 -->
+<div class="quiz-question">
+    <p>18. You want to print the result of a division with 2 decimal places using f-string formatting. What line of code correctly prints:</p>
+    <pre>The result is = 3.33
+If result = 10/3</pre>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) print("The result is =", result)</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) print("The result is = %.2f" % result)</li>
+        <li onclick="checkAnswer(this, 'correct')">C) print(f"The result is = {result:.2f}")</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) print("The result is = {:2f}".format(result))</li>
+    </ul>
+</div>
+
+<!-- Question 19 -->
+<div class="quiz-question">
+    <p>19. You want to print the area of a rectangle, formatted to 2 decimal places, using the format() method.</p>
+    <pre>Given:
+length = 5.678
+width = 3.456
+area = length * width
+
+Which line correctly prints:
+Area = 19.64</pre>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) print("Area = ", area)</li>
+        <li onclick="checkAnswer(this, 'correct')">B) print("Area = {:.2f}".format(area))</li>
+        <li onclick="checkAnswer(this, 'correct')">C) print("Area = %.2f" % area)</li>
+        <li onclick="checkAnswer(this, 'correct')">D) Both B and C</li>
+    </ul>
+</div>
+
+<!-- Question 20 -->
+<div class="quiz-question">
+    <p>20. What will be the output of the following code?</p>
+    <pre>x = "Python"
+def greet():
+    return x + " is awesome!"
+print(greet())</pre>
+    <ul>
+        <li onclick="checkAnswer(this, 'correct')">A) Python is awesome!</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) is awesome!</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) x is awesome!</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) Error – x is not defined</li>
+    </ul>
+</div>
+
+<!-- Question 21 -->
+<div class="quiz-question">
+    <p>21. What will be printed by the following code?</p>
+    <pre>msg = "Hello"
+def change_msg():
+    msg = "Hi"
+    return msg
+print(change_msg())
+print(msg)</pre>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) Hi and Hi</li>
+        <li onclick="checkAnswer(this, 'correct')">B) Hi and Hello</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) Hello and Hi</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) Error – msg is used before assignment</li>
+    </ul>
+</div>
+
+<!-- Question 22 -->
+<div class="quiz-question">
+    <p>22. In Python, which of the following data types can hold references to other objects?</p>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) list</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) dictionary</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) class object</li>
+        <li onclick="checkAnswer(this, 'correct')">D) All of the above</li>
+    </ul>
+</div>
+
+<!-- Question 23 -->
+<div class="quiz-question">
+    <p>23. What will be the output of the following code?</p>
+    <pre>x = [1, 2, 3]
+y = x
+y.append(4)
+print(x)</pre>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) [1, 2, 3]</li>
+        <li onclick="checkAnswer(this, 'correct')">B) [1, 2, 3, 4]</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) [4]</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) Error</li>
+    </ul>
+</div>
+
+<!-- Question 24 -->
+<div class="quiz-question">
+    <p>24. What will be the output of the following code?</p>
+    <pre>msg = "Python Programming"
+print(msg[7:18])</pre>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) Programming</li>
+        <li onclick="checkAnswer(this, 'correct')">B) rogramming</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) Python Progra</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) ython Programm</li>
+    </ul>
+</div>
+
+<!-- Question 25 -->
+<div class="quiz-question">
+    <p>25. What will be printed by this code?</p>
+    <pre>text = "Data Science with Python"
+print(text[:12])</pre>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) Data Science </li>
+        <li onclick="checkAnswer(this, 'correct')">B) Data Science</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) Data Science w</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) Data Scienc</li>
+    </ul>
+</div>
+
+<!-- Question 26 -->
+<div class="quiz-question">
+    <p>26. What is the output of the following code?</p>
+    <pre>fruits = ["apple", "banana"]
+print(fruits * 2)</pre>
+    <ul>
+        <li onclick="checkAnswer(this, 'correct')">A) ["apple", "banana", "apple", "banana"]</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) ["applebanana", "applebanana"]</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) ["apple", "banana"]</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) [['apple', 'banana'], ['apple', 'banana']]</li>
+    </ul>
+</div>
+
+<!-- Question 27 -->
+<div class="quiz-question">
+    <p>27. What will the following code output?</p>
+    <pre>nums = [1, 2]
+nums = nums * 3
+print(len(nums))</pre>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) 3</li>
+        <li onclick="checkAnswer(this, 'correct')">B) 6</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) 2</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) Error</li>
+    </ul>
+</div>
+
+<!-- Question 28 -->
+<div class="quiz-question">
+    <p>28. Which of the following correctly defines a class in Python?</p>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) def Student:</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) define Student():</li>
+        <li onclick="checkAnswer(this, 'correct')">C) class Student:</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) Student class():</li>
+    </ul>
+</div>
+
+<!-- Question 29 -->
+<div class="quiz-question">
+    <p>29. In Python, which method is automatically called when a new object of a class is created?</p>
+    <ul>
+        <li onclick="checkAnswer(this, 'correct')">A) __init__()</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) __start__()</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) __create__()</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) __main__()</li>
+    </ul>
+</div>
+
+<!-- Question 30 -->
+<div class="quiz-question">
+    <p>30. What is the purpose of the __init__() method in a Python class?</p>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) To destroy an object</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) To define static variables</li>
+        <li onclick="checkAnswer(this, 'correct')">C) To initialize an object's state when it's created</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) To call another function automatically</li>
+    </ul>
+</div>
+
+<!-- Question 31 -->
+<div class="quiz-question">
+    <p>31. Which line of code correctly creates an object of a class named Person?</p>
+    <pre>class Person:
+    def __init__(self, name):
+        self.name = name</pre>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) Person.create("Aman")</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) Person = ("Aman")</li>
+        <li onclick="checkAnswer(this, 'correct')">C) p = Person("Aman")</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) p = new Person("Aman")</li>
+    </ul>
+</div>
+
+<!-- Question 31 -->
+<div class="quiz-question">
+    <p>31. Which of the following statements is true about classes and objects in Python?</p>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) A class is an object created from an instance.</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) An object is a blueprint used to create classes.</li>
+        <li onclick="checkAnswer(this, 'correct')">C) A class defines the structure and behavior of its objects.</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) Classes and objects are the same thing in Python.</li>
+    </ul>
+</div>
+
+<!-- Question 32 -->
+<div class="quiz-question">
+    <p>32. What does the following line of code do?</p>
+    <pre>car1 = Car("Tesla")
+Assuming Car is a class with an __init__() method.</pre>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) It declares a class.</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) It defines a method inside a class.</li>
+        <li onclick="checkAnswer(this, 'correct')">C) It creates an object of the Car class.</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) It creates a function called car1.</li>
+    </ul>
+</div>
+
+<!-- Question 33 -->
+<div class="quiz-question">
+    <p>33. You want to ask a user for two numbers and display their sum.</p>
+    <p>Which line correctly prints:</p>
+    <pre>The total is: 15
+If user enters 7 and 8?</pre>
+    <pre>num1 = input("Enter first number: ")
+num2 = input("Enter second number: ")
+# missing line</pre>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) print("The total is: " + num1 + num2)</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) print("The total is: " + str(num1 + num2))</li>
+        <li onclick="checkAnswer(this, 'correct')">C) print("The total is: " + str(int(num1) + int(num2)))</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) print("The total is: " + int(num1 + num2))</li>
+    </ul>
+</div>
+
+<!-- Question 34 -->
+<div class="quiz-question">
+    <p>34. You want to display a message like:</p>
+    <pre>You were born in 2000!</pre>
+    <p>Which line correctly completes this code?</p>
+    <pre>current_year = 2024
+age = input("Enter your age: ")
+# missing line</pre>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) print("You were born in " + current_year - int(age) + "!")</li>
+        <li onclick="checkAnswer(this, 'correct')">B) print("You were born in " + str(current_year - int(age)) + "!")</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) print("You were born in " + int(current_year - age) + "!")</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) print("You were born in", current_year - age + "!")</li>
+    </ul>
+</div>
+
+<!-- Question 35 -->
+<div class="quiz-question">
+    <p>35. What is the output of the following code?</p>
+    <pre>x = [1, 2, 3]
+print(type(x))</pre>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) &lt;class 'tuple'&gt;</li>
+        <li onclick="checkAnswer(this, 'correct')">B) &lt;class 'list'&gt;</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) &lt;class 'array'&gt;</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) &lt;class 'set'&gt;</li>
+    </ul>
+</div>
+
+<!-- Question 36 -->
+<div class="quiz-question">
+    <p>36. What is the output of the following code?</p>
+    <pre>a = {'name': 'Aman', 'age': 22}
+print(type(a))</pre>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) &lt;class 'set'&gt;</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) &lt;class 'list'&gt;</li>
+        <li onclick="checkAnswer(this, 'correct')">C) &lt;class 'dict'&gt;</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) &lt;class 'tuple'&gt;</li>
+    </ul>
+</div>
+
+<!-- Question 37 -->
+<div class="quiz-question">
+    <p>37. Which of the following code snippets will store an integer value in the variable result without any decimal points?</p>
+    <p>Assume:</p>
+    <pre>a = 50  
+b = 6</pre>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) result = a / b</li>
+        <li onclick="checkAnswer(this, 'correct')">B) result = int(a / b)</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) result = float(a // b)</li>
+        <li onclick="checkAnswer(this, 'correct')">D) result = a // b</li>
+    </ul>
+</div>
+
+<!-- Question 38 -->
+<div class="quiz-question">
+    <p>38. What is the result of the following code?</p>
+    <pre>x = 49
+y = 5
+print(int(x / y))</pre>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) 9.8</li>
+        <li onclick="checkAnswer(this, 'correct')">B) 9</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) 10</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) Error</li>
+    </ul>
+</div>
+
+<!-- Question 39 -->
+<div class="quiz-question">
+    <p>39. You are checking if two lists are exactly the same. Which of the following code snippets correctly prints whether the lists are equal or not?</p>
+    <pre>list1 = [10, 20, 30]
+list2 = [10, 20, 30]</pre>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) if list1 == list2: 
+    print("Lists are not equal")
+else:
+    print("Lists are equal")</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) if list1 != list2:
+    print("Lists are not equal")
+else:
+    print("Lists are equal")</li>
+        <li onclick="checkAnswer(this, 'correct')">C) if list1 == list2:
+    print("Lists are equal")
+else:
+    print("Lists are not equal")</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) if list1 = list2:
+    print("Lists are equal")</li>
+    </ul>
+</div>
+
+<!-- Question 40 -->
+<div class="quiz-question">
+    <p>40. What will the following code print?</p>
+    <pre>colors1 = ["red", "green", "blue"]
+colors2 = ["red", "green", "yellow"]
+
+if colors1 == colors2:
+    print("Color lists match")
+else:
+    print("Color lists differ")</pre>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) Color lists match</li>
+        <li onclick="checkAnswer(this, 'correct')">B) Color lists differ</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) True</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) Error</li>
+    </ul>
+</div>
+
+<!-- Question 41 -->
+<div class="quiz-question">
+    <p>41. Which of the following is a valid single-line comment in Python?</p>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) // This is a comment</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) &lt;!-- This is a comment --&gt;</li>
+        <li onclick="checkAnswer(this, 'correct')">C) # This is a comment</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) /* This is a comment */</li>
+    </ul>
+</div>
+
+<!-- Question 42 -->
+<div class="quiz-question">
+    <p>42. Which of the following statements about comments in Python is true?</p>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) Python does not support multi-line comments</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) Python uses triple quotes (''' ''' or """ """) for official multi-line comments</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) All Python comments must start with double slashes (//)</li>
+        <li onclick="checkAnswer(this, 'correct')">D) Comments are ignored by the Python interpreter during execution</li>
+    </ul>
+</div>
+
+<!-- Question 43 -->
+<div class="quiz-question">
+    <p>43. Which of the following creates a tuple in Python?</p>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) my_data = [10, 20, 30]</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) my_data = {10, 20, 30}</li>
+        <li onclick="checkAnswer(this, 'correct')">C) my_data = (10, 20, 30)</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) my_data = "10, 20, 30"</li>
+    </ul>
+</div>
+
+<!-- Question 44 -->
+<div class="quiz-question">
+    <p>44. Which of the following is a mutable data structure in Python?</p>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) tuple</li>
+        <li onclick="checkAnswer(this, 'correct')">B) list</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) str</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) int</li>
+    </ul>
+</div>
+
+<!-- Question 45 -->
+<div class="quiz-question">
+    <p>45. What is the output of the following code?</p>
+    <pre>type(1334E452)
+type(145)
+type(17.235)
+type("True")
+type("Alpha")</pre>
+    <ul>
+        <li onclick="checkAnswer(this, 'correct')">A) &lt;class 'float'&gt;, &lt;class 'int'&gt;, &lt;class 'float'&gt;, &lt;class 'str'&gt;, &lt;class 'str'&gt;</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) &lt;class 'int'&gt;, &lt;class 'int'&gt;, &lt;class 'float'&gt;, &lt;class 'bool'&gt;, &lt;class 'str'&gt;</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) &lt;class 'float'&gt;, &lt;class 'float'&gt;, &lt;class 'float'&gt;, &lt;class 'str'&gt;, &lt;class 'str'&gt;</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) Error</li>
+    </ul>
+</div>
+
+<!-- Question 46 -->
+<div class="quiz-question">
+    <p>46. Which of the following expressions evaluates to &lt;class 'bool'&gt;?</p>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) type("False")</li>
+        <li onclick="checkAnswer(this, 'correct')">B) type(False)</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) type("True")</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) type("0")</li>
+    </ul>
+</div>
+
+<!-- Question 47 -->
+<div class="quiz-question">
+    <p>47. What is the output of the following code?</p>
+    <pre>x = 5
+y = x // 2
+
+if y > 2:
+    z = 10
+elif y == 2:
+    z = 20
+else:
+    z = 30
+
+print(x + y + z)</pre>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) 37</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) 35</li>
+        <li onclick="checkAnswer(this, 'correct')">C) 38</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) 36</li>
+    </ul>
+</div>
+
+<!-- Question 48 -->
+<div class="quiz-question">
+    <p>48. What will the following Python code output?</p>
+    <pre>a = 2
+b = 3
+
+if a * b == 6:
+    c = 1
+elif a + b == 6:
+    c = 2
+else:
+    c = 3
+
+print(a + b + c)</pre>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) 5</li>
+        <li onclick="checkAnswer(this, 'correct')">B) 6</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) 7</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) 8</li>
+    </ul>
+</div>
+
+<!-- Question 49 -->
+<div class="quiz-question">
+    <p>49. What happens when the following code is executed, assuming data.txt does not exist?</p>
+    <pre>f = open("data.txt", "r")
+f.close()</pre>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) It creates the file data.txt</li>
+        <li onclick="checkAnswer(this, 'correct')">B) It raises a FileNotFoundError</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) It opens the file in read mode</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) It clears the contents of data.txt</li>
+    </ul>
+</div>
+
+<!-- Question 50 -->
+<div class="quiz-question">
+    <p>50. What does the following code do?</p>
+    <pre>f = open("log.txt", "a")
+f.write("New log entry\n")
+f.close()</pre>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) Overwrites the content of log.txt</li>
+        <li onclick="checkAnswer(this, 'correct')">B) Appends the text if the file exists</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) Raises an error if the file doesn't exist</li>
+        <li onclick="checkAnswer(this, 'correct')">D) Creates the file if it doesn't exist and appends the text</li>
+    </ul>
+</div>
+
+<!-- Question 51 -->
+<div class="quiz-question">
+    <p>51. What is the result of the following Python expression?</p>
+    <pre>result = 3 + 2 * 4
+print(result)</pre>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) 20</li>
+        <li onclick="checkAnswer(this, 'correct')">B) 11</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) 13</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) 24</li>
+    </ul>
+</div>
+
+<!-- Question 52 -->
+<div class="quiz-question">
+    <p>52. What is the output of the following expression?</p>
+    <pre>value = -2 ** 3
+print(value)</pre>
+    <ul>
+        <li onclick="checkAnswer(this, 'correct')">A) -8</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) 8</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) -6</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) Syntax Error</li>
+    </ul>
+</div>
+
+<!-- Question 53 -->
+<div class="quiz-question">
+    <p>53. You are writing a Python function that greets users.</p>
+    <p>If no name is provided, it should greet with "Guest".</p>
+    <pre>def greet(name):
+    print("Hello", name)
+
+greet()</pre>
+    <p>What should you change in the function definition to meet this requirement?</p>
+    <ul>
+        <li onclick="checkAnswer(this, 'correct')">A) def greet(name = "Guest"):</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) def greet("Guest"):</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) def greet(name):</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) def greet(name = Guest):</li>
+    </ul>
+</div>
+
+<!-- Question 54 -->
+<div class="quiz-question">
+    <p>54. What will be the output of the following code?</p>
+    <pre>def add(a, b=5):
+    return a + b
+
+print(add(3))
+print(add(3, 2))</pre>
+    <ul>
+        <li onclick="checkAnswer(this, 'correct')">A) 8 and 5</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) 3 and 2</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) 8 and 5</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) 8 and 5</li>
+    </ul>
+</div>
+
+<!-- Question 55 -->
+<div class="quiz-question">
+    <p>55. What will be the output of the following code?</p>
+    <pre>text = "Python is Fun!"
+print(text[7:9])</pre>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) is </li>
+        <li onclick="checkAnswer(this, 'correct')">B) is</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) i</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) s</li>
+    </ul>
+</div>
+
+<!-- Question 56 -->
+<div class="quiz-question">
+    <p>56. What is the result of this string slice?</p>
+    <pre>msg = " Data Science with Python"
+print(msg[5:12])</pre>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) Science</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) cience</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) Science</li>
+        <li onclick="checkAnswer(this, 'correct')">D) a Scien</li>
+    </ul>
+</div>
+
+<!-- Question 57 -->
+<div class="quiz-question">
+    <p>57. You are working with a file named data.txt. You want to print each line of the file without loading the entire file into memory at once.</p>
+    <p>Which of the following is the most memory-efficient method?</p>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) file = open("data.txt"); print(file.readlines())</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) file = open("data.txt"); print(file.read())</li>
+        <li onclick="checkAnswer(this, 'correct')">C) file = open("data.txt")
+for line in file:
+    print(line)
+file.close()</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) file = open("data.txt"); print(file.line())</li>
+    </ul>
+</div>
+
+<!-- Question 58 -->
+<div class="quiz-question">
+    <p>58. You want to get all lines from sample.txt into a list of strings, where each element represents one line.</p>
+    <p>Which of the following will do that correctly?</p>
+    <ul>
+        <li onclick="checkAnswer(this, 'correct')">A) lines = file.readlines()</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) lines = file.read()</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) lines = readlines(file)</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) lines = file.line()</li>
+    </ul>
+</div>
+
+<!-- Question 59 -->
+<div class="quiz-question">
+    <p>59. How many lines does the following code output?</p>
+    <pre>for i in range(0, 5, 2):
+    print("*", end="-")
+print("#")</pre>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) 1</li>
+        <li onclick="checkAnswer(this, 'correct')">B) 2</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) 3</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) 5</li>
+    </ul>
+</div>
+
+<!-- Question 60 -->
+<div class="quiz-question">
+    <p>60. What is the output and how many lines are printed?</p>
+    <pre>for i in range(2):
+    print("Hi", end="*")
+    print("Bye")</pre>
+    <ul>
+        <li onclick="checkAnswer(this, 'correct')">A) 2 lines: Hi*Bye repeated</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) 4 lines</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) 2 lines: HiBye</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) 1 line: Hi*ByeHi*Bye</li>
+    </ul>
+</div>
+
+<!-- Question 61 -->
+<div class="quiz-question">
+    <p>61. What will be the output of the following code?</p>
+    <pre>text = "Programming"
+print(text[-11:6])</pre>
+    <ul>
+        <li onclick="checkAnswer(this, 'correct')">A) "Program"</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) "Progra"</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) "Progr"</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) "Pro"</li>
+    </ul>
+</div>
+
+<!-- Question 62 -->
+<div class="quiz-question">
+    <p>62. What happens when you run this code?</p>
+    <pre>greeting = "Good Morning"
+print(Greeting[0:4])</pre>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) "Good"</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) "Goo"</li>
+        <li onclick="checkAnswer(this, 'correct')">C) NameError</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) "g"</li>
+    </ul>
+</div>
+
+<!-- Question 63 -->
+<div class="quiz-question">
+    <p>63. Arrange the code segments to check if a number is even or odd:</p>
+    <pre>A: else:
+B: num = int(input("Enter a number: "))
+C: if num % 2 == 0:
+D: print("Even")
+E: print("Odd")</pre>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) B, C, A, E, D</li>
+        <li onclick="checkAnswer(this, 'correct')">B) B, C, D, A, E</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) C, D, A, E, B</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) B, A, C, D, E</li>
+    </ul>
+</div>
+
+<!-- Question 64 -->
+<div class="quiz-question">
+    <p>64. Arrange the code segments to calculate and print factorial of a number using a while loop:</p>
+    <pre>A: result = 1
+B: while n > 1:
+C: n = n - 1
+D: result = result * n
+E: n = int(input("Enter a number: "))
+F: print("Factorial is", result)</pre>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) E, A, B, C, D, F</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) A, E, B, D, C, F</li>
+        <li onclick="checkAnswer(this, 'correct')">C) E, A, B, D, C, F</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) E, A, B, D, C, F</li>
+    </ul>
+</div>
+
+<!-- Question 65 -->
+<div class="quiz-question">
+    <p>65. What will be the output of the following code?</p>
+    <pre>x = 5
+while x > 2:
+    if x % 2 == 0:
+        print("Even")
+    elif x == 3:
+        print("Three")
+    else:
+        print("Odd")
+    x -= 1</pre>
+    <ul>
+        <li onclick="checkAnswer(this, 'correct')">A) Odd<br>Even<br>Three</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) Even<br>Odd<br>Three</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) Odd<br>Odd<br>Three</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) Odd<br>Even<br>Odd</li>
+    </ul>
+</div>
+
+<!-- Question 66 -->
+<div class="quiz-question">
+    <p>66. Predict the output of this code:</p>
+    <pre>count = 0
+while count < 3:
+    if count == 0:
+        print("Start")
+    elif count == 1:
+        print("Middle")
+    else:
+        print("End")
+    count += 1</pre>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) Start</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) Start → Middle</li>
+        <li onclick="checkAnswer(this, 'correct')">C) Start → Middle → End</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) Start → End → Middle</li>
+    </ul>
+</div>
