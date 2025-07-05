@@ -1580,6 +1580,55 @@ print(x)</pre>
         <li onclick="checkAnswer(this, 'wrong')">C) [4]</li>
         <li onclick="checkAnswer(this, 'wrong')">D) Error</li>
     </ul>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+<div class="answer" style="display: none;">
+    <pre><code># List reference example
+x = [1, 2, 3]  # Original list
+y = x           # y refers to the same list
+y.append(4)     # Modify through y
+print(x)        # Output: [1, 2, 3, 4]</code></pre>
+
+    <h4>🧠 Explanation:</h4>
+    <p>This demonstrates how Python handles object references with mutable types like lists.</p>
+
+    <h4>🔍 Step-by-Step Breakdown:</h4>
+    <ol>
+        <li><strong>List Creation:</strong>
+            <pre><strong>x = [1, 2, 3]</strong></pre>
+            <p>Memory allocates space for the list object</p>
+        </li>
+        <li><strong>Reference Assignment:</strong>
+            <pre><code>y = x</code></pre>
+            <p>Both x and y now point to the same list object in memory</p>
+        </li>
+        <li><strong>List Modification:</strong>
+            <pre><strong>y.append(4)</strong></pre>
+            <p>The shared list object is modified in-place</p>
+        </li>
+        <li><strong>Result:</strong>
+            <pre><strong>print(x)  # Shows the modified list</strong></pre>
+        </li>
+    </ol>
+
+    <h4>✅ Output:</h4>
+    <pre>[1, 2, 3, 4]</pre>
+
+    <h4>💡 Key Concepts:</h4>
+    <ul>
+        <li>Lists are <strong>mutable</strong> objects in Python</li>
+        <li>Assignment (<strong>y = x</strong>) creates a new reference, not a copy</li>
+        <li>Changes through any reference affect the single shared object</li>
+        <li>This behavior applies to all mutable types (lists, dicts, sets)</li>
+    </ul>
+
+    <h4>🔧 Creating Independent Copies:</h4>
+    <pre><code># To avoid shared references:
+x = [1, 2, 3]
+y = x.copy()    # or y = list(x) or y = x[:]
+y.append(4)
+print(x)        # [1, 2, 3] (unchanged)
+print(y)        # [1, 2, 3, 4]</code></pre>
+</div>
 </div>
 
 <!-- Question 24 -->
@@ -1593,6 +1642,48 @@ print(msg[7:18])</pre>
         <li onclick="checkAnswer(this, 'wrong')">C) Python Progra</li>
         <li onclick="checkAnswer(this, 'wrong')">D) ython Programm</li>
     </ul>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+<div class="answer" style="display: none;">
+    <pre><code># String slicing example
+msg = "Python Programming"
+print(msg[7:18])  # Output: Programming</code></pre>
+
+    <h4>🧠 Explanation:</h4>
+    <p>This demonstrates how string slicing works in Python.</p>
+
+    <h4>🔍 Step-by-Step Breakdown:</h4>
+    <table>
+        <tr>
+            <th>Index</th>
+            <td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td>
+        </tr>
+        <tr>
+            <th>Character</th>
+            <td>P</td><td>y</td><td>t</td><td>h</td><td>o</td><td>n</td><td> </td><td>P</td><td>r</td><td>o</td><td>g</td><td>r</td><td>a</td><td>m</td><td>m</td><td>i</td><td>n</td><td>g</td>
+        </tr>
+    </table>
+
+    <h4>✅ Slicing Details:</h4>
+    <ul>
+        <li><strong>msg[7:18]</strong> extracts from index 7 (inclusive) to 18 (exclusive)</li>
+        <li>Index 7 is the 'P' in "Programming"</li>
+        <li>Python automatically stops at the last character (index 17) when the end is beyond the string length</li>
+        <li>The slice includes characters at indices 7 through 17</li>
+    </ul>
+
+    <h4>💡 Key Points:</h4>
+    <ul>
+        <li>String indices start at 0</li>
+        <li>Slicing is upper-bound exclusive (doesn't include the end index)</li>
+        <li>Python handles out-of-range slice ends gracefully</li>
+        <li>The space character at index 6 is not included in this slice</li>
+    </ul>
+
+    <h4>🔧 Related Examples:</h4>
+    <pre><code>print(msg[7:])    # Programming (from 7 to end)
+print(msg[:6])    # Python (from start to 5)
+print(msg[7:12])  # Progr (from 7 to 11)</code></pre>
+</div>
 </div>
 
 <!-- Question 25 -->
@@ -1606,6 +1697,55 @@ print(text[:12])</pre>
         <li onclick="checkAnswer(this, 'wrong')">C) Data Science w</li>
         <li onclick="checkAnswer(this, 'wrong')">D) Data Scienc</li>
     </ul>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+<div class="answer" style="display: none;">
+    <pre><code># String slicing example
+text = "Data Science with Python"
+print(text[:12])  # Output: Data Science</code></pre>
+
+    <h4>🧠 Explanation:</h4>
+    <p>This demonstrates string slicing with an upper bound in Python.</p>
+
+    <h4>🔍 Character-by-Character Analysis:</h4>
+    <table>
+        <tr>
+            <th>Index</th>
+            <td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td>
+        </tr>
+        <tr>
+            <th>Character</th>
+            <td>D</td><td>a</td><td>t</td><td>a</td><td> </td><td>S</td><td>c</td><td>i</td><td>e</td><td>n</td><td>c</td><td>e</td><td> </td>
+        </tr>
+    </table>
+
+    <h4>✅ Slicing Details:</h4>
+    <ul>
+        <li><strong>text[:12]</strong> means "from start to index 11" (12 is excluded)</li>
+        <li>Includes characters at indices 0 through 11: 'D' through 'e'</li>
+        <li>The space at index 12 is <strong>not</strong> included</li>
+        <li>Result is exactly "Data Science" (11 characters)</li>
+    </ul>
+
+    <h4>❗ Correction Notice:</h4>
+    <p>The original option C ("Data Science w") was incorrect because:</p>
+    <ul>
+        <li>It includes the 'w' which would require <strong>text[:13]</strong></li>
+        <li>The correct output is actually "Data Science" (option A)</li>
+    </ul>
+
+    <h4>💡 Key Slicing Rules:</h4>
+    <ul>
+        <li>Slice ranges are <strong>upper-bound exclusive</strong></li>
+        <li>Omitting start index defaults to 0</li>
+        <li>Spaces count as characters in the index</li>
+        <li>Python won't error if slice exceeds string length</li>
+    </ul>
+
+    <h4>🔧 Related Examples:</h4>
+    <pre><code>print(text[:13])  # Data Science w
+print(text[:4])   # Data
+print(text[5:12]) # Science</code></pre>
+</div>
 </div>
 
 <!-- Question 26 -->
