@@ -2122,6 +2122,73 @@ def __init__(self):
         <li onclick="checkAnswer(this, 'correct')">C) p = Person("Aman")</li>
         <li onclick="checkAnswer(this, 'wrong')">D) p = new Person("Aman")</li>
     </ul>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+<div class="answer" style="display: none;">
+    <pre><code># Correct object instantiation
+class Person:
+    def __init__(self, name):
+        self.name = name
+
+p = Person("Aman")  # Proper way to create an instance
+print(p.name)       # Output: Aman</code></pre>
+
+    <h4>🧠 Explanation:</h4>
+    <p>This demonstrates the correct way to create an instance of a class in Python.</p>
+
+    <h4>✅ Proper Instantiation:</h4>
+    <ul>
+        <li>Class name is called like a function <strong>Person()</strong></li>
+        <li>Arguments match the <strong>__init__</strong> parameters (excluding <strong>self</strong>)</li>
+        <li>Returns a new instance which can be assigned to a variable</li>
+    </ul>
+
+    <h4>🔍 What Happens When Creating an Instance:</h4>
+    <ol>
+        <li>Python first calls <strong>__new__()</strong> to create the object</li>
+        <li>Then calls <strong>__init__()</strong> to initialize it</li>
+        <li>Finally returns the initialized object</li>
+    </ol>
+
+    <h4>❌ Why Other Options Are Incorrect:</h4>
+    <table>
+        <tr>
+            <th>Option</th>
+            <th>Issue</th>
+            <th>In Language</th>
+        </tr>
+        <tr>
+            <td>Person.create("Aman")</td>
+            <td>No such method exists unless defined</td>
+            <td>❌ Python</td>
+        </tr>
+        <tr>
+            <td>Person = ("Aman")</td>
+            <td>Just creates a string variable</td>
+            <td>❌ Python</td>
+        </tr>
+        <tr>
+            <td>new Person("Aman")</td>
+            <td><strong>new</strong> keyword not used</td>
+            <td>✅ Java/C++<br>❌ Python</td>
+        </tr>
+    </table>
+
+    <h4>💡 Key Differences from Other Languages:</h4>
+    <ul>
+        <li>No <strong>new</strong> keyword needed (unlike Java/C#/C++)</li>
+        <li>Constructor call looks like a regular function call</li>
+        <li>Initialization is separate from object creation (<strong>__new__</strong> vs <strong>__init__</strong>)</li>
+    </ul>
+
+    <h4>🔧 Alternative Creation Patterns:</h4>
+    <pre><code># Using a class method as alternative constructor
+class Person:
+    @classmethod
+    def from_dict(cls, data):
+        return cls(data['name'])
+
+p = Person.from_dict({"name": "Aman"})</code></pre>
+</div>
 </div>
 
 <!-- Question 31 -->
@@ -2133,6 +2200,82 @@ def __init__(self):
         <li onclick="checkAnswer(this, 'correct')">C) A class defines the structure and behavior of its objects.</li>
         <li onclick="checkAnswer(this, 'wrong')">D) Classes and objects are the same thing in Python.</li>
     </ul>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+<div class="answer" style="display: none;">
+    <pre><code># Class and object example
+class Car:
+    def __init__(self, make, model):
+        self.make = make    # Attribute
+        self.model = model  # Attribute
+    
+    def display(self):      # Method
+        print(f"{self.make} {self.model}")
+
+my_car = Car("Toyota", "Camry")  # Object instance
+my_car.display()  # Output: Toyota Camry</code></pre>
+
+    <h4>🧠 Explanation:</h4>
+    <p>This demonstrates the relationship between classes and objects in Python.</p>
+
+    <h4>✅ Correct Understanding:</h4>
+    <ul>
+        <li><strong>Class</strong> is the blueprint/template (defines structure and behavior)</li>
+        <li><strong>Object</strong> is an instance created from the class (has actual data)</li>
+        <li>One class can create many objects (instances)</li>
+    </ul>
+
+    <h4>🔍 Class vs Object:</h4>
+    <table>
+        <tr>
+            <th></th>
+            <th>Class</th>
+            <th>Object</th>
+        </tr>
+        <tr>
+            <td><strong>Nature</strong></td>
+            <td>Blueprint/Template</td>
+            <td>Concrete Instance</td>
+        </tr>
+        <tr>
+            <td><strong>Memory</strong></td>
+            <td>Exists once</td>
+            <td>New memory per instance</td>
+        </tr>
+        <tr>
+            <td><strong>Example</strong></td>
+            <td><strong>Car</strong> class</td>
+            <td><strong>my_car</strong> instance</td>
+        </tr>
+    </table>
+
+    <h4>❌ Why Other Options Are Incorrect:</h4>
+    <table>
+        <tr>
+            <th>Option</th>
+            <th>Correction</th>
+        </tr>
+        <tr>
+            <td>A) Class from object</td>
+            <td>Object from class</td>
+        </tr>
+        <tr>
+            <td>B) Object as blueprint</td>
+            <td>Class is blueprint</td>
+        </tr>
+        <tr>
+            <td>D) Same thing</td>
+            <td>Related but distinct</td>
+        </tr>
+    </table>
+
+    <h4>💡 Real-world Analogy:</h4>
+    <ul>
+        <li><strong>Class</strong> = Cookie cutter</li>
+        <li><strong>Object</strong> = Actual cookies</li>
+        <li>One cutter (class) can make many cookies (objects)</li>
+        <li>All cookies share the same shape (attributes/methods) but can have different decorations (data)</li>
+    </ul>
+</div>
 </div>
 
 <!-- Question 32 -->
@@ -2146,6 +2289,81 @@ Assuming Car is a class with an __init__() method.</pre>
         <li onclick="checkAnswer(this, 'correct')">C) It creates an object of the Car class.</li>
         <li onclick="checkAnswer(this, 'wrong')">D) It creates a function called car1.</li>
     </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+<div class="answer" style="display: none;">
+    <pre><code># Object creation example
+class Car:
+    def __init__(self, brand):
+        self.brand = brand
+
+car1 = Car("Tesla")  # Creates a Car object
+print(type(car1))    # Output: &lt;class '__main__.Car'&gt;
+print(car1.brand)    # Output: Tesla</code></pre>
+
+    <h4>🧠 Explanation:</h4>
+    <p>This demonstrates object instantiation in Python - creating a concrete instance from a class blueprint.</p>
+
+    <h4>🔍 What <strong>car1 = Car("Tesla")</strong> Does:</h4>
+    <ol>
+        <li>Python calls <strong>Car.__new__()</strong> to create a new object</li>
+        <li>Then calls <strong>Car.__init__("Tesla")</strong> to initialize it</li>
+        <li>Assigns the new object to variable <strong>car1</strong></li>
+        <li>The object now exists with its own attributes and methods</li>
+    </ol>
+
+    <h4>✅ Key Characteristics:</h4>
+    <ul>
+        <li><strong>car1</strong> is now an <strong>instance</strong> of the <strong>Car</strong> class</li>
+        <li>It has its own namespace containing attributes</li>
+        <li>It can access all methods defined in the class</li>
+        <li>Multiple instances can be created from one class</li>
+    </ul>
+
+    <h4>❌ Why Other Options Are Incorrect:</h4>
+    <table>
+        <tr>
+            <th>Option</th>
+            <th>Actual Meaning</th>
+            <th>Evidence</th>
+        </tr>
+        <tr>
+            <td>A) Declares class</td>
+            <td>Class declaration uses <strong>class</strong> keyword</td>
+            <td><strong>class Car:</strong> is the declaration</td>
+        </tr>
+        <tr>
+            <td>B) Defines method</td>
+            <td>Methods are defined with <strong>def</strong> inside class</td>
+            <td>This line is outside any class</td>
+        </tr>
+        <tr>
+            <td>D) Creates function</td>
+            <td>Functions are created with <strong>def</strong></td>
+            <td><strong>type(car1)</strong> shows it's an object</td>
+        </tr>
+    </table>
+
+    <h4>💡 Memory Diagram:</h4>
+    <pre>
+    Car Class
+    +------------+
+    | __init__() |
+    | methods    |
+    +------------+
+            ↑
+            | Instance
+    +------------+
+    | brand: Tesla|
+    +------------+
+      (car1 object)
+    </pre>
+
+    <h4>🔧 Creating Multiple Objects:</h4>
+    <pre><code>car2 = Car("Ford")   # Another instance
+car3 = Car("BMW")   # Yet another instance
+# All are separate objects with their own brand</code></pre>
+</div>
 </div>
 
 <!-- Question 33 -->
@@ -2163,6 +2381,68 @@ num2 = input("Enter second number: ")
         <li onclick="checkAnswer(this, 'correct')">C) print("The total is: " + str(int(num1) + int(num2)))</li>
         <li onclick="checkAnswer(this, 'wrong')">D) print("The total is: " + int(num1 + num2))</li>
     </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+<div class="answer" style="display: none;">
+    <pre><code># Correct number input and addition
+num1 = input("Enter first number: ")  # e.g., "7"
+num2 = input("Enter second number: ") # e.g., "8"
+
+# Proper conversion and concatenation
+print("The total is: " + str(int(num1) + int(num2)))  # Output: The total is: 15</code></pre>
+
+    <h4>🧠 Explanation:</h4>
+    <p>This demonstrates proper handling of numeric input and string concatenation in Python.</p>
+
+    <h4>✅ Correct Approach:</h4>
+    <ol>
+        <li><strong>Convert inputs to integers:</strong> <strong>int(num1)</strong> and <strong>int(num2)</strong></li>
+        <li><strong>Perform numeric addition:</strong> <strong>int(num1) + int(num2)</strong></li>
+        <li><strong>Convert back to string:</strong> <strong>str(15)</strong> becomes "15"</li>
+        <li><strong>Concatenate with message:</strong> <strong>"The total is: " + "15"</strong></li>
+    </ol>
+
+    <h4>❌ Why Other Options Fail:</h4>
+    <table>
+        <tr>
+            <th>Option</th>
+            <th>What Happens</th>
+            <th>Result</th>
+        </tr>
+        <tr>
+            <td>A) num1 + num2</td>
+            <td>String concatenation "7" + "8"</td>
+            <td>"78" (wrong)</td>
+        </tr>
+        <tr>
+            <td>B) str(num1 + num2)</td>
+            <td>Still does string addition first</td>
+            <td>"78" (wrong)</td>
+        </tr>
+        <tr>
+            <td>D) int(num1 + num2)</td>
+            <td>Makes "78" then converts to 78</td>
+            <td>TypeError (can't add str + int)</td>
+        </tr>
+    </table>
+
+    <h4>💡 Best Practices:</h4>
+    <ul>
+        <li>Always convert <strong>input()</strong> to numbers before math operations</li>
+        <li>Use <strong>try-except</strong> to handle invalid number inputs</li>
+        <li>f-strings often make concatenation cleaner:</li>
+    </ul>
+
+    <pre><code># Alternative using f-string (Python 3.6+)
+print(f"The total is: {int(num1) + int(num2)}")</code></pre>
+
+    <h4>🔧 Error Handling Example:</h4>
+    <pre><code>try:
+    total = int(num1) + int(num2)
+    print(f"The total is: {total}")
+except ValueError:
+    print("Please enter valid numbers!")</code></pre>
+</div>
 </div>
 
 <!-- Question 34 -->
@@ -2179,6 +2459,64 @@ age = input("Enter your age: ")
         <li onclick="checkAnswer(this, 'wrong')">C) print("You were born in " + int(current_year - age) + "!")</li>
         <li onclick="checkAnswer(this, 'wrong')">D) print("You were born in", current_year - age + "!")</li>
     </ul>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+<div class="answer" style="display: none;">
+    <pre><code># Age to birth year calculator
+current_year = 2024
+age = input("Enter your age: ")
+
+# Correct implementation
+print("You were born in " + str(current_year - int(age)) + "!")</code></pre>
+
+    <h4>🧠 Explanation:</h4>
+    <p>This demonstrates proper type conversion and string concatenation for calculating birth year from age.</p>
+
+    <h4>✅ Correct Approach:</h4>
+    <ol>
+        <li><strong>Convert age to integer:</strong> <code>int(age)</code></li>
+        <li><strong>Calculate birth year:</strong> <code>current_year - int(age)</code></li>
+        <li><strong>Convert result to string:</strong> <code>str(birth_year)</code></li>
+        <li><strong>Concatenate with message:</strong> <code>"You were born in " + "2000" + "!"</code></li>
+    </ol>
+
+    <h4>❌ Why Other Options Fail:</h4>
+    <table>
+        <tr>
+            <th>Option</th>
+            <th>What Happens</th>
+            <th>Error</th>
+        </tr>
+        <tr>
+            <td>A</td>
+            <td>"text" + current_year - int(age)</td>
+            <td>Can't subtract from string</td>
+        </tr>
+        <tr>
+            <td>C</td>
+            <td>int(current_year - age)</td>
+            <td>Can't subtract string from int</td>
+        </tr>
+        <tr>
+            <td>D</td>
+            <td>current_year - age + "!"</td>
+            <td>Mixed type operations</td>
+        </tr>
+    </table>
+
+    <h4>💡 Better Alternatives:</h4>
+    <pre><code># Using f-strings (Python 3.6+)
+print(f"You were born in {current_year - int(age)}!")
+
+# Using .format()
+print("You were born in {}!".format(current_year - int(age)))</code></pre>
+
+    <h4>🔧 Error Handling Version:</h4>
+    <pre><code>try:
+    birth_year = current_year - int(age)
+    print(f"You were born in {birth_year}!")
+except ValueError:
+    print("Please enter a valid number for age!")</code></pre>
+</div>
 </div>
 
 <!-- Question 35 -->
@@ -2192,6 +2530,74 @@ print(type(x))</pre>
         <li onclick="checkAnswer(this, 'wrong')">C) &lt;class 'array'&gt;</li>
         <li onclick="checkAnswer(this, 'wrong')">D) &lt;class 'set'&gt;</li>
     </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+<div class="answer" style="display: none;">
+    <pre><code># Checking list type
+x = [1, 2, 3]
+print(type(x))  # Output: &lt;class 'list'&gt;</code></pre>
+
+    <h4>🧠 Explanation:</h4>
+    <p>This demonstrates how to check an object's type in Python using the <strong>type()</strong> function.</p>
+
+    <h4>✅ Key Points:</h4>
+    <ul>
+        <li><strong>[1, 2, 3]</strong> creates a <strong>list</strong> object</li>
+        <li>Lists are ordered, mutable collections</li>
+        <li>Created with square brackets <strong>[]</strong></li>
+        <li><strong>type()</strong> returns the class of an object</li>
+    </ul>
+
+    <h4>🔍 Python Collection Types:</h4>
+    <table>
+        <tr>
+            <th>Type</th>
+            <th>Syntax</th>
+            <th>Example</th>
+            <th>Mutability</th>
+        </tr>
+        <tr>
+            <td>List</td>
+            <td><code>[]</code></td>
+            <td><code>[1, 2, 3]</code></td>
+            <td>Mutable</td>
+        </tr>
+        <tr>
+            <td>Tuple</td>
+            <td><strong>()</strong></td>
+            <td><strong>(1, 2, 3)</strong></td>
+            <td>Immutable</td>
+        </tr>
+        <tr>
+            <td>Set</td>
+            <td><strong>{}</strong></td>
+            <td><strong>{1, 2, 3}</strong></td>
+            <td>Mutable</td>
+        </tr>
+        <tr>
+            <td>Dictionary</td>
+            <td><strong>{}</strong></td>
+            <td><strong>{"a":1, "b":2}</strong></td>
+            <td>Mutable</td>
+        </tr>
+    </table>
+
+    <h4>❌ Why Other Options Are Incorrect:</h4>
+    <ul>
+        <li><strong>Tuple:</strong> Uses parentheses <strong>()</strong>, not square brackets</li>
+        <li><strong>Array:</strong> Not a built-in type (requires <strong>import array</strong>)</li>
+        <li><strong>Set:</strong> Uses curly braces <strong>{}</strong> and doesn't maintain order</li>
+    </ul>
+
+    <h4>💡 Practical Uses of type():</h4>
+    <pre><code># Type checking in code
+if type(x) == list:
+    print("It's a list!")
+
+# Alternative using isinstance()
+if isinstance(x, list):
+    print("x is a list")</code></pre>
+</div>
 </div>
 
 <!-- Question 36 -->
