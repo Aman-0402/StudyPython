@@ -1009,6 +1009,63 @@ while i <= 3:
         <li onclick="checkAnswer(this, 'wrong')">C) 1*2*3</li>
         <li onclick="checkAnswer(this, 'wrong')">D) 1 2 3</li>
     </ul>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+<div class="answer" style="display: none;">
+    <pre><code># While loop with custom end parameter
+i = 1
+while i <= 3:
+    print(i, end="*")
+    i += 1</code></pre>
+
+    <h4>✅ Output:</h4>
+    <pre>1*2*3*</pre>
+
+    <h4>🧠 Explanation:</h4>
+    <p>This code demonstrates a while loop with a custom separator using the <strong>end</strong> parameter in Python's <strong>print()</strong> function.</p>
+
+    <h4>🔍 Step-by-Step Execution:</h4>
+    <table>
+        <tr>
+            <th>Iteration</th>
+            <th>i value</th>
+            <th>Output</th>
+            <th>Notes</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1*</td>
+            <td>Prints 1 followed by * (no newline)</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>2</td>
+            <td>2*</td>
+            <td>Continues on same line</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>3</td>
+            <td>3*</td>
+            <td>Final iteration</td>
+        </tr>
+    </table>
+
+    <h4>💡 Key Features:</h4>
+    <ul>
+        <li><strong>end="*"</strong> replaces the default newline with an asterisk</li>
+        <li>All output appears on one continuous line</li>
+        <li>The loop runs exactly 3 times (for i=1, 2, 3)</li>
+        <li>No trailing space after the final asterisk</li>
+    </ul>
+
+    <h4>🔄 Alternative Versions:</h4>
+    <pre><code># With space separator
+print(i, end=" ")  # Output: 1 2 3 
+
+# With comma separator
+print(i, end=",")  # Output: 1,2,3,</code></pre>
+</div>
 </div>
 
 <!-- Question 17 -->
@@ -1026,6 +1083,66 @@ A-B-C-D-</pre>
         <li onclick="checkAnswer(this, 'wrong')">C) print(ch + "-")</li>
         <li onclick="checkAnswer(this, 'wrong')">D) print(ch, sep="-")</li>
     </ul>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+<div class="answer" style="display: none;">
+    <pre><code># Printing list elements with separator
+letters = ["A", "B", "C", "D"]
+for ch in letters:
+    print(ch, end="-")  # Correct option</code></pre>
+
+    <h4>✅ Output:</h4>
+    <pre>A-B-C-D-</pre>
+
+    <h4>🧠 Explanation:</h4>
+    <p>This code demonstrates how to print list elements with a custom separator using the <strong>end</strong> parameter in Python's <strong>print()</strong> function.</p>
+
+    <h4>🔍 Why Option A is Correct:</h4>
+    <ul>
+        <li><strong>end="-"</strong> replaces the default newline with a dash</li>
+        <li>Each character is printed followed by <strong>-</strong></li>
+        <li>All output appears on one line with dashes between letters</li>
+        <li>Exactly matches the desired output format</li>
+    </ul>
+
+    <h4>❌ Why Other Options Fail:</h4>
+    <table>
+        <tr>
+            <th>Option</th>
+            <th>Code</th>
+            <th>Output</th>
+            <th>Problem</th>
+        </tr>
+        <tr>
+            <td>B</td>
+            <td><strong>print(ch, "-")</strong></td>
+            <td>A -B -C -D</td>
+            <td>Adds unwanted spaces</td>
+        </tr>
+        <tr>
+            <td>C</td>
+            <td><strong>print(ch + "-")</strong></td>
+            <td>A-B-C-D-</td>
+            <td>Works but less flexible</td>
+        </tr>
+        <tr>
+            <td>D</td>
+            <td><strong>print(ch, sep="-")</strong></td>
+            <td>ABCD</td>
+            <td><strong>sep</strong> doesn't work with single items</td>
+        </tr>
+    </table>
+
+    <h4>💡 Key Differences:</h4>
+    <ul>
+        <li><strong><strong>end</strong></strong>: Controls what comes after the printed item</li>
+        <li><strong><strong>sep</strong></strong>: Controls spacing between multiple items</li>
+        <li><strong>Concatenation (+)</strong>: Works but requires string conversion for non-strings</li>
+    </ul>
+
+    <h4>🔧 Best Practice:</h4>
+    <pre><code># For joining strings, str.join() is often better:
+print("-".join(letters) + "-")  # Also gives A-B-C-D-</code></pre>
+</div>
 </div>
 
 <!-- Question 18 -->
@@ -1039,6 +1156,77 @@ If result = 10/3</pre>
         <li onclick="checkAnswer(this, 'correct')">C) print(f"The result is = {result:.2f}")</li>
         <li onclick="checkAnswer(this, 'wrong')">D) print("The result is = {:2f}".format(result))</li>
     </ul>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+<div class="answer" style="display: none;">
+    <pre><code># Floating-point number formatting examples
+result = 10 / 3  # 3.3333333333333335
+
+# Correct f-string formatting
+print(f"The result is = {result:.2f}")  # Output: The result is = 3.33</code></pre>
+
+    <h4>🧠 Explanation:</h4>
+    <p>This demonstrates how to properly format floating-point numbers to 2 decimal places in Python.</p>
+
+    <h4>🔍 Why Option C is Correct:</h4>
+    <ul>
+        <li>Uses modern f-string syntax (Python 3.6+)</li>
+        <li><strong>{result:.2f}</strong> means:
+            <ul>
+                <li><strong>result</strong>: The variable to format</li>
+                <li><strong>.2</strong>: Show 2 decimal places</li>
+                <li><strong>f</strong>: Format as floating-point number</li>
+            </ul>
+        </li>
+        <li>Clean, readable, and maintainable</li>
+        <li>Exactly matches the desired output format</li>
+    </ul>
+
+    <h4>❌ Why Other Options Are Incorrect:</h4>
+    <table>
+        <tr>
+            <th>Option</th>
+            <th>Code</th>
+            <th>Output</th>
+            <th>Problem</th>
+        </tr>
+        <tr>
+            <td>A</td>
+            <td><strong>print("The result is =", result)</strong></td>
+            <td>The result is = 3.3333333333333335</td>
+            <td>No decimal place control</td>
+        </tr>
+        <tr>
+            <td>B</td>
+            <td><strong>print("The result is = %.2f" % result)</strong></td>
+            <td>The result is = 3.33</td>
+            <td>Works but uses older %-formatting</td>
+        </tr>
+        <tr>
+            <td>D</td>
+            <td><strong>print("The result is = {:2f}".format(result))</strong></td>
+            <td>The result is = 3.333333</td>
+            <td>Wrong format specifier</td>
+        </tr>
+    </table>
+
+    <h4>💡 Formatting Options Comparison:</h4>
+    <pre><code># 1. f-strings (modern, preferred)
+print(f"Result: {result:.2f}")
+
+# 2. str.format() (Python 2.7+, 3.0+)
+print("Result: {:.2f}".format(result))
+
+# 3. %-formatting (older style)
+print("Result: %.2f" % result)</code></pre>
+
+    <h4>📝 Key Takeaways:</h4>
+    <ul>
+        <li>F-strings are the most readable and recommended approach</li>
+        <li><strong>.2f</strong> is the correct format for 2 decimal places</li>
+        <li>Be careful with format specifiers - small differences matter</li>
+        <li>All numeric formatting methods can achieve similar results</li>
+    </ul>
+</div>
 </div>
 
 <!-- Question 19 -->
@@ -1057,6 +1245,67 @@ Area = 19.64</pre>
         <li onclick="checkAnswer(this, 'correct')">C) print("Area = %.2f" % area)</li>
         <li onclick="checkAnswer(this, 'correct')">D) Both B and C</li>
     </ul>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+<div class="answer" style="display: none;">
+    <pre><code># Floating-point number formatting comparison
+length = 5.678
+width = 3.456
+area = length * width  # ≈ 19.637568
+
+# Option B (str.format)
+print("Area = {:.2f}".format(area))  # Output: Area = 19.64
+
+# Option C (% formatting)
+print("Area = %.2f" % area)  # Output: Area = 19.64
+
+# Option A (unformatted)
+print("Area = ", area)  # Output: Area = 19.637568</code></pre>
+
+    <h4>🧠 Explanation:</h4>
+    <p>This demonstrates two correct ways to format floating-point numbers to 2 decimal places in Python.</p>
+
+    <h4>🔍 Why Both B and C are Correct:</h4>
+    <div>
+        <div>
+            <h5>Option B: str.format()</h5>
+            <pre><strong>"Area = {:.2f}".format(area)</strong></pre>
+            <ul>
+                <li>Modern string formatting method (Python 2.6+)</li>
+                <li><strong>:.2f</strong> specifies 2 decimal places</li>
+                <li>More flexible for complex formatting</li>
+            </ul>
+        </div>
+        <div>
+            <h5>Option C: % formatting</h5>
+            <pre><strong>"Area = %.2f" % area</strong></pre>
+            <ul>
+                <li>Older printf-style formatting</li>
+                <li><strong>%.2f</strong> also specifies 2 decimal places</li>
+                <li>Still widely used and supported</li>
+            </ul>
+        </div>
+    </div>
+
+    <h4>❌ Why Option A is Incorrect:</h4>
+    <ul>
+        <li>Prints the full unformatted float value</li>
+        <li>No control over decimal places</li>
+        <li>Output doesn't match the required format</li>
+    </ul>
+
+    <h4>💡 Modern Best Practice:</h4>
+    <pre><code># F-strings (Python 3.6+ - most recommended)
+print(f"Area = {area:.2f}")  # Output: Area = 19.64</code></pre>
+
+    <h4>📝 Key Takeaways:</h4>
+    <ul>
+        <li>Both <strong>.format()</strong> and <strong>%</strong> formatting can achieve the same result</li>
+        <li>F-strings are now the preferred method (Python 3.6+)</li>
+        <li>The <strong>.2f</strong> format specifier is consistent across methods</li>
+        <li>Always specify the number of decimal places for financial/scientific output</li>
+    </ul>
+</div>
+    
 </div>
 
 <!-- Question 20 -->
@@ -1072,6 +1321,64 @@ print(greet())</pre>
         <li onclick="checkAnswer(this, 'wrong')">C) x is awesome!</li>
         <li onclick="checkAnswer(this, 'wrong')">D) Error – x is not defined</li>
     </ul>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+<div class="answer" style="display: none;">
+    <pre><code># Global variable example
+x = "Python"
+
+def greet():
+    return x + " is awesome!"
+
+print(greet())  # Output: Python is awesome!</code></pre>
+
+    <h4>🧠 Explanation:</h4>
+    <p>This code demonstrates how global variables work in Python functions.</p>
+
+    <h4>🔍 Step-by-Step Analysis:</h4>
+    <ol>
+        <li><strong>Global Variable Definition:</strong>
+            <pre><code>x = "Python"  # Global variable</code></pre>
+        </li>
+        <li><strong>Function Definition:</strong>
+            <pre><code>def greet():
+    return x + " is awesome!"  # Accesses global x</code></pre>
+        </li>
+        <li><strong>Function Call:</strong>
+            <pre><code>print(greet())  # Calls the function and prints result</code></pre>
+        </li>
+    </ol>
+
+    <h4>✅ Output:</h4>
+    <pre>Python is awesome!</pre>
+
+    <h4>❌ Why Other Options Are Incorrect:</h4>
+    <table>
+        <tr>
+            <th>Option</th>
+            <th>Explanation</th>
+        </tr>
+        <tr>
+            <td>B) "is awesome!"</td>
+            <td>Missing the value of x (would need to remove x from the function)</td>
+        </tr>
+        <tr>
+            <td>C) "x is awesome!"</td>
+            <td>Would print the letter 'x' literally (not the variable's value)</td>
+        </tr>
+        <tr>
+            <td>D) No error</td>
+            <td>While technically correct that there's no error, it doesn't answer the output question</td>
+        </tr>
+    </table>
+
+    <h4>💡 Key Concepts:</h4>
+    <ul>
+        <li>Global variables are accessible inside functions</li>
+        <li>String concatenation with + combines values</li>
+        <li>Functions can access variables from their containing scope</li>
+        <li>print() displays the function's return value</li>
+    </ul>
+</div>
 </div>
 
 <!-- Question 21 -->
