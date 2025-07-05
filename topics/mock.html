@@ -45,7 +45,32 @@ print_triangle()</pre>
         </ul>
     </div>
 </div>
+<div class="quiz-question">
+    <p>You need to complete a function that computes and displays all multiplication table combinations from 2 to 12. How should you complete the code?</p>
+    <pre>
+def times_tables():
+    # 1 -------
+    # 2 ---------
+        print(row * col, end=" ")
+    print()
 
+times_tables()
+    </pre>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">
+            A) for col in range(2, 13):<br>&nbsp;&nbsp;&nbsp;&nbsp;for row in range(2, 13):
+        </li>
+        <li onclick="checkAnswer(this, 'wrong')">
+            B) for col in range(2, 13):<br>&nbsp;&nbsp;&nbsp;&nbsp;for row in range(2, 13):
+        </li>
+        <li onclick="checkAnswer(this, 'correct')">
+            C) for row in range(2, 13):<br>&nbsp;&nbsp;&nbsp;&nbsp;for col in range(2, 13):
+        </li>
+        <li onclick="checkAnswer(this, 'wrong')">
+            D) for row in range(2, 13):<br>&nbsp;&nbsp;&nbsp;&nbsp;for col in range(2, 13):
+        </li>
+    </ul>
+</div>
 <div class="quiz-question">
     <p>2. You need to complete a function that prints the sum of all even numbers between 1 and 20. How should you complete the missing code?</p>
     <pre>def sum_even():
@@ -219,7 +244,15 @@ option_b = days[5:]   # B) Using positive indexing</code></pre>
     Only includes <code>["Sun"]</code> → missing "Sat" ❌</p>
 </div>
 </div>
-
+<div class="quiz-question">
+    <p>You develop a Python application for your school. A list named <code>colors</code> contains 500 colors. You need to slice the list to display every other color starting with the second color.</p>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) colors[1:500:2]</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) colors[1:2]</li>
+        <li onclick="checkAnswer(this, 'correct')">C) colors[1::2]</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) colors[2:2]</li>
+    </ul>
+</div>
 <!-- Question 5 -->
 <div class="quiz-question">
     <p>5. Linear Search with Return. You are creating a function to search for a number in a list and return True if found, otherwise return False.</p>
@@ -300,7 +333,15 @@ def find_number(numbers, target):  # D) Function definition
     </ol>
 </div>
 </div>
-
+<div class="quiz-question">
+    <p>Which data types store numeric values and are created when you assign a value to them?</p>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) long</li>
+        <li onclick="checkAnswer(this, 'correct')">B) int</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) str</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) bool</li>
+    </ul>
+</div>
 <!-- Question 6 -->
 <div class="quiz-question">
     <p>6. Which of the following data types in Python can store floating-point (decimal) values?</p>
@@ -450,7 +491,25 @@ print({"a":1} + {"b":2})  # ❌ TypeError</code></pre>
     </ul>
 </div>
 </div>
-
+<div class="quiz-question">
+    <p>How many stars (*) does the following snippet print?</p>
+    <pre>
+i = 10
+while i > 0:
+    i -= 3
+    print("*")
+    if i <= 3:
+        break
+else:
+    print("*")
+    </pre>
+    <ul>
+        <li onclick="checkAnswer(this, 'correct')">A) Three</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) The code is erroneous</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) Two</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) One</li>
+    </ul>
+</div>
 <!-- Question 8 -->
 <div class="quiz-question">
     <p>8. How many stars (*) will the following snippet print?</p>
@@ -529,7 +588,13 @@ while count < 5:
     </ul>
 </div>
 </div>
-
+<div class="quiz-question">
+    <p>An object variable is a variable that is stored separately in every object.</p>
+    <ul>
+        <li onclick="checkAnswer(this, 'correct')">A) True</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) False</li>
+    </ul>
+</div>
 <!-- Question 9 -->
 <div class="quiz-question">
     <p>9. How many times will "Hello" be printed?</p>
@@ -745,7 +810,19 @@ name = "Aman"      # ✅ Valid
     </ul>
 </div>
 </div>
-
+<div class="quiz-question">
+    <p>8. What is the output of the following print statement?</p>
+    <pre>
+S1 = 'Indian Army is our Pride'
+print(len(S1))
+    </pre>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) 25</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) 21</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) 23</li>
+        <li onclick="checkAnswer(this, 'correct')">D) 24</li>
+    </ul>
+</div>
 <!-- Question 12 -->
 <div class="quiz-question">
     <p>12. Instance variables are shared among all objects of a class.</p>
@@ -819,7 +896,23 @@ print(p2.name)  # Output: Rahul (unchanged)</code></pre>
     </table>
 </div>
 </div>
-
+<div class="quiz-question">
+    <p>You are writing a Python program to calculate the average of marks scored in 3 subjects. Printed output should show decimals truncated to 2 places. Find the missing code line.</p>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">
+            A) print("Your average score of 3 subjects is =" float(Sum/3))
+        </li>
+        <li onclick="checkAnswer(this, 'wrong')">
+            B) print("Your average score of 3 subjects is = %f" % Avg)
+        </li>
+        <li onclick="checkAnswer(this, 'correct')">
+            C) print("Your average score of 3 subjects is = %0.2f" % Avg)
+        </li>
+        <li onclick="checkAnswer(this, 'wrong')">
+            D) print("Your average score of 3 subjects is =" Avg)
+        </li>
+    </ul>
+</div>
 <!-- Question 13 -->
 <div class="quiz-question">
     <p>13. What will the following code output?</p>
@@ -972,7 +1065,13 @@ print(len((1,2,3)))  # 3 (tuple length)
 print(len({"a":1, "b":2}))  # 2 (dictionary key count)</code></pre>
 </div>
 </div>
-
+<div class="quiz-question">
+    <p>An object cannot contain any references to other objects.</p>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) True</li>
+        <li onclick="checkAnswer(this, 'correct')">B) False</li>
+    </ul>
+</div>
 <!-- Question 15 -->
 <div class="quiz-question">
     <p>15. What will be the result of this code?</p>
@@ -1103,7 +1202,19 @@ print(i, end=" ")  # Output: 1 2 3
 print(i, end=",")  # Output: 1,2,3,</code></pre>
 </div>
 </div>
-
+<div class="quiz-question">
+    <p>What is the output of the following print statement?</p>
+    <pre>
+S1 = 'Indian Army is our Pride'
+print(S1[:19])
+    </pre>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) ""</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) r</li>
+        <li onclick="checkAnswer(this, 'correct')">C) Indian Army is our P</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) Indian Army is our</li>
+    </ul>
+</div>
 <!-- Question 17 -->
 <div class="quiz-question">
     <p>17. Which snippet should replace the comment to produce this output?</p>
@@ -1264,7 +1375,19 @@ print("Result: %.2f" % result)</code></pre>
     </ul>
 </div>
 </div>
-
+<div class="quiz-question">
+    <p>What is the output of the following Python code?</p>
+    <pre>
+Sweet = ["Jaleebi", "darwadpeda", "champakali"]
+print(Sweet * 3)
+    </pre>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) SweetSweetSweet</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) ['Jaleebi', 'darwadpeda', 'champakali']</li>
+        <li onclick="checkAnswer(this, 'correct')">C) ['Jaleebi', 'darwadpeda', 'champakali', 'Jaleebi', 'darwadpeda', 'champakali', 'Jaleebi', 'darwadpeda', 'champakali']</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) [['Jaleebi', 'darwadpeda', 'champakali'], ['Jaleebi', 'darwadpeda', 'champakali'], ['Jaleebi', 'darwadpeda', 'champakali']]</li>
+    </ul>
+</div>
 <!-- Question 19 -->
 <div class="quiz-question">
     <p>19. You want to print the area of a rectangle, formatted to 2 decimal places, using the format() method.</p>
@@ -1416,7 +1539,13 @@ print(greet())  # Output: Python is awesome!</code></pre>
     </ul>
 </div>
 </div>
-
+<div class="quiz-question">
+    <p>The <code>class</code> keyword marks the beginning of the class definition.</p>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) False</li>
+        <li onclick="checkAnswer(this, 'correct')">B) True</li>
+    </ul>
+</div>
 <!-- Question 21 -->
 <div class="quiz-question">
     <p>21. What will be printed by the following code?</p>
@@ -1566,7 +1695,13 @@ b[0] = 99
 print(a)  # [99, 2, 3] - changes affect both references</code></pre>
 </div>
 </div>
-
+<div class="quiz-question">
+    <p>A constructor is used to instantiate an object.</p>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) False</li>
+        <li onclick="checkAnswer(this, 'correct')">B) True</li>
+    </ul>
+</div>
 <!-- Question 23 -->
 <div class="quiz-question">
     <p>23. What will be the output of the following code?</p>
@@ -1685,7 +1820,13 @@ print(msg[:6])    # Python (from start to 5)
 print(msg[7:12])  # Progr (from 7 to 11)</code></pre>
 </div>
 </div>
-
+<div class="quiz-question">
+    <p>A class may define an object.</p>
+    <ul>
+        <li onclick="checkAnswer(this, 'correct')">A) False</li>
+        <li onclick="checkAnswer(this, 'wrong')">B) True</li>
+    </ul>
+</div>
 <!-- Question 25 -->
 <div class="quiz-question">
     <p>25. What will be printed by this code?</p>
@@ -1885,6 +2026,20 @@ print(new)      # [1, 2, 1, 2, 1, 2]</code></pre>
 </div>
 </div>
 
+<div class="quiz-question">
+    <p>For the given code, finish the missing line:</p>
+    <pre>
+start = input("How old were you on your start date? ")
+end = input("How old are you today?")
+# Missing line here
+    </pre>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) print("congratulation on" + str(end - int(start)) + "years of service!")</li>
+        <li onclick="checkAnswer(this, 'correct')">B) print("congratulation on" + str(int(end) - int(start)) + "years of service!")</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) print("congratulation on" + int(end - start) + "years of service!")</li>
+        <li onclick="checkAnswer(this, 'wrong')">D) print("congratulation on " + (int(end) - int(start)) + "years of service!")</li>
+    </ul>
+</div>
 <!-- Question 28 -->
 <div class="quiz-question">
     <p>28. Which of the following correctly defines a class in Python?</p>
@@ -2027,7 +2182,58 @@ __del__()  # Destructor
 __str__()  # String representation</code></pre>
 </div>
 </div>
+<div class="quiz-question">
+    <p>What is the output of the <code>print(type(...))</code> statements in the following Python code?</p>
+    <pre>
+Name = "Boss Baby"
+Age = 2.4
+Male = True
+Female = False
+weight = 15
+UID = 'EBC1233'
 
+print(type(Name))
+print(type(Age))
+print(type(Male))
+print(type(Female))
+print(type(weight))
+print(type(UID))
+    </pre>
+    <ul>
+        <li onclick="checkAnswer(this, 'correct')">
+            A) &lt;class 'str'&gt;<br>
+            &lt;class 'float'&gt;<br>
+            &lt;class 'bool'&gt;<br>
+            &lt;class 'bool'&gt;<br>
+            &lt;class 'int'&gt;<br>
+            &lt;class 'str'&gt;
+        </li>
+        <li onclick="checkAnswer(this, 'wrong')">
+            B) &lt;class 'str'&gt;<br>
+            &lt;class 'int'&gt;<br>
+            &lt;class 'bool'&gt;<br>
+            &lt;class 'int'&gt;<br>
+            &lt;class 'float'&gt;<br>
+            &lt;class 'str'&gt;
+        </li>
+        <li onclick="checkAnswer(this, 'wrong')">
+            C) &lt;class 'int'&gt;<br>
+            &lt;class 'str'&gt;<br>
+            &lt;class 'bool'&gt;<br>
+            &lt;class 'bool'&gt;<br>
+            &lt;class 'str'&gt;<br>
+            &lt;class 'float'&gt;
+        </li>
+        <li onclick="checkAnswer(this, 'wrong')">
+            D) &lt;class 'str'&gt;<br>
+            &lt;class 'float'&gt;<br>
+            &lt;class 'int'&gt;<br>
+            &lt;class 'int'&gt;<br>
+            &lt;class 'int'&gt;<br>
+            &lt;class 'str'&gt;
+        </li>
+    </ul>
+</div>
 <!-- Question 30 -->
 <div class="quiz-question">
     <p>30. What is the purpose of the __init__() method in a Python class?</p>
@@ -2663,7 +2869,15 @@ else:
     print("Lists are equal")</li>
     </ul>
 </div>
-
+<div class="quiz-question">
+    <p>Select the code segment(s) that print the output without decimal points.</p>
+    <ul>
+        <li onclick="checkAnswer(this, 'wrong')">A) average_speed = float(total_distance // time)</li>
+        <li onclick="checkAnswer(this, 'correct')">B) average_speed = total_distance // time</li>
+        <li onclick="checkAnswer(this, 'wrong')">C) average_speed = total_distance / time</li>
+        <li onclick="checkAnswer(this, 'correct')">D) average_speed = int(total_distance / time)</li>
+    </ul>
+</div>
 <!-- Question 40 -->
 <div class="quiz-question">
     <p>40. What will the following code print?</p>
