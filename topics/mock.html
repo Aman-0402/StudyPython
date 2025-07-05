@@ -1759,6 +1759,66 @@ print(fruits * 2)</pre>
         <li onclick="checkAnswer(this, 'wrong')">C) ["apple", "banana"]</li>
         <li onclick="checkAnswer(this, 'wrong')">D) [['apple', 'banana'], ['apple', 'banana']]</li>
     </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+<div class="answer" style="display: none;">
+    <pre><code># List multiplication example
+fruits = ["apple", "banana"]
+print(fruits * 2)  # Output: ['apple', 'banana', 'apple', 'banana']</code></pre>
+
+    <h4>🧠 Explanation:</h4>
+    <p>This demonstrates how the multiplication operator works with lists in Python.</p>
+
+    <h4>🔍 How List Multiplication Works:</h4>
+    <ul>
+        <li>The <strong>*</strong> operator with lists performs repetition, not mathematical multiplication</li>
+        <li><strong>list * n</strong> creates a new list by concatenating the original list <strong>n</strong> times</li>
+        <li>The elements themselves are not modified - they're just repeated</li>
+    </ul>
+
+    <h4>✅ Step-by-Step Transformation:</h4>
+    <ol>
+        <li>Original list: <strong>["apple", "banana"]</strong></li>
+        <li>After <strong>* 2</strong>: <strong>["apple", "banana"] + ["apple", "banana"]</strong></li>
+        <li>Result: <strong>["apple", "banana", "apple", "banana"]</strong></li>
+    </ol>
+
+    <h4>❌ Why Other Options Are Incorrect:</h4>
+    <table>
+        <tr>
+            <th>Option</th>
+            <th>What It Would Imply</th>
+            <th>Why It's Wrong</th>
+        </tr>
+        <tr>
+            <td>B</td>
+            <td>["applebanana", "applebanana"]</td>
+            <td>String concatenation doesn't happen with list multiplication</td>
+        </tr>
+        <tr>
+            <td>C</td>
+            <td>["apple", "banana"]</td>
+            <td>This would be the original list without repetition</td>
+        </tr>
+        <tr>
+            <td>D</td>
+            <td>[["apple", "banana"], ["apple", "banana"]]</td>
+            <td>This would create nested lists, not a flat repeated list</td>
+        </tr>
+    </table>
+
+    <h4>💡 Important Notes:</h4>
+    <ul>
+        <li>The multiplication creates a <strong>shallow copy</strong> - repeated elements reference the same objects</li>
+        <li>Works with any positive integer (0 creates empty list, 1 creates copy)</li>
+        <li>Different from NumPy array multiplication which does element-wise operations</li>
+    </ul>
+
+    <h4>🔧 Related Examples:</h4>
+    <pre><code>print([0] * 5)      # [0, 0, 0, 0, 0]
+print([1, 2] * 3)   # [1, 2, 1, 2, 1, 2]
+print([] * 4)       # [] (empty list)</code></pre>
+</div>
 </div>
 
 <!-- Question 27 -->
@@ -1773,6 +1833,56 @@ print(len(nums))</pre>
         <li onclick="checkAnswer(this, 'wrong')">C) 2</li>
         <li onclick="checkAnswer(this, 'wrong')">D) Error</li>
     </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+<div class="answer" style="display: none;">
+    <pre><code># List multiplication and length example
+nums = [1, 2]
+nums = nums * 3
+print(len(nums))  # Output: 6</code></pre>
+
+    <h4>🧠 Explanation:</h4>
+    <p>This demonstrates how list multiplication affects the length of a list in Python.</p>
+
+    <h4>🔍 Step-by-Step Execution:</h4>
+    <ol>
+        <li><strong>Initial List:</strong>
+            <pre><code>nums = [1, 2]  # Length = 2</code></pre>
+        </li>
+        <li><strong>List Multiplication:</strong>
+            <pre><code>nums = nums * 3  # Repeats the list 3 times</code></pre>
+            <p>This performs: <code>[1, 2] + [1, 2] + [1, 2]</code></p>
+        </li>
+        <li><strong>Resulting List:</strong>
+            <pre><code>[1, 2, 1, 2, 1, 2]  # Length = 6</code></pre>
+        </li>
+        <li><strong>Length Calculation:</strong>
+            <pre><code>print(len(nums))  # Counts all 6 elements</code></pre>
+        </li>
+    </ol>
+
+    <h4>✅ Output:</h4>
+    <pre>6</pre>
+
+    <h4>💡 Key Points:</h4>
+    <ul>
+        <li>List multiplication (<strong>*</strong>) concatenates copies of the list</li>
+        <li>The length of the resulting list is <strong>original_length * multiplier</strong></li>
+        <li>Elements are repeated in order</li>
+        <li>Original list remains unchanged until reassignment</li>
+    </ul>
+
+    <h4>🔧 Memory Considerations:</h4>
+    <pre><code># The multiplication creates a new list
+original = [1, 2]
+new = original * 3
+print(original)  # [1, 2] (unchanged)
+print(new)      # [1, 2, 1, 2, 1, 2]</code></pre>
+
+    <h4>📝 Formula:</h4>
+    <p>Final length = Original length × Multiplier</p>
+    <p>In this case: 2 × 3 = 6</p>
+</div>
 </div>
 
 <!-- Question 28 -->
@@ -1784,6 +1894,64 @@ print(len(nums))</pre>
         <li onclick="checkAnswer(this, 'correct')">C) class Student:</li>
         <li onclick="checkAnswer(this, 'wrong')">D) Student class():</li>
     </ul>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+<div class="answer" style="display: none;">
+    <pre><code># Correct class definition syntax
+class Student:
+    pass  # Class body goes here</code></pre>
+
+    <h4>🧠 Explanation:</h4>
+    <p>This demonstrates the proper way to define a class in Python.</p>
+
+    <h4>🔍 Class Definition Components:</h4>
+    <ul>
+        <li><strong>class</strong> - The keyword that starts a class definition</li>
+        <li><strong>Student</strong> - The class name (PascalCase by convention)</li>
+        <li><strong>:</strong> - Colon that ends the declaration and starts the class body</li>
+        <li><strong>pass</strong> - Placeholder for the class body (can be replaced with methods and attributes)</li>
+    </ul>
+
+    <h4>✅ Valid Class Example:</h4>
+    <pre><code>class Student:
+    def __init__(self, name):
+        self.name = name
+    
+    def greet(self):
+        print(f"Hello, my name is {self.name}")</code></pre>
+
+    <h4>❌ Why Other Options Are Incorrect:</h4>
+    <table>
+        <tr>
+            <th>Option</th>
+            <th>Issue</th>
+        </tr>
+        <tr>
+            <td>A) def Student:</td>
+            <td><strong>def</strong> is for functions, not classes</td>
+        </tr>
+        <tr>
+            <td>B) define Student():</td>
+            <td><strong>define</strong> is not a Python keyword</td>
+        </tr>
+        <tr>
+            <td>D) Student class():</td>
+            <td>Invalid syntax order in Python</td>
+        </tr>
+    </table>
+
+    <h4>💡 Class Definition Rules:</h4>
+    <ul>
+        <li>Class names should use <strong>PascalCase</strong> (capitalize each word)</li>
+        <li>The class body must be indented</li>
+        <li>Class definitions can contain methods and attributes</li>
+        <li><strong>__init__()</strong> is the special method for initialization</li>
+    </ul>
+
+    <h4>🔧 Class Instantiation Example:</h4>
+    <pre><code># Creating an instance of the Student class
+student1 = Student("Alice")
+student1.greet()  # Output: Hello, my name is Alice</code></pre>
+</div>
 </div>
 
 <!-- Question 29 -->
@@ -1795,6 +1963,69 @@ print(len(nums))</pre>
         <li onclick="checkAnswer(this, 'wrong')">C) __create__()</li>
         <li onclick="checkAnswer(this, 'wrong')">D) __main__()</li>
     </ul>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+<div class="answer" style="display: none;">
+    <pre><code># __init__ method example
+class Student:
+    def __init__(self, name):
+        self.name = name  # Initialize instance attribute
+
+s = Student("Aman")  # __init__ is automatically called
+print(s.name)  # Output: Aman</code></pre>
+
+    <h4>🧠 Explanation:</h4>
+    <p>The <strong>__init__()</strong> method is Python's constructor that initializes new objects.</p>
+
+    <h4>🔍 Key Characteristics:</h4>
+    <ul>
+        <li>Automatically called when creating new instances</li>
+        <li>First parameter is always <strong>self</strong> (reference to the new instance)</li>
+        <li>Typically used to set initial attribute values</li>
+        <li>Not required in every class, but extremely common</li>
+    </ul>
+
+    <h4>✅ Proper __init__ Usage:</h4>
+    <pre><code>class Car:
+    def __init__(self, make, model):
+        self.make = make
+        self.model = model
+        self.mileage = 0  # Default value
+        
+my_car = Car("Toyota", "Camry")</code></pre>
+
+    <h4>❌ Why Other Options Are Incorrect:</h4>
+    <table>
+        <tr>
+            <th>Option</th>
+            <th>Issue</th>
+        </tr>
+        <tr>
+            <td>__start__()</td>
+            <td>Not part of Python's method naming conventions</td>
+        </tr>
+        <tr>
+            <td>__create__()</td>
+            <td>No such special method exists</td>
+        </tr>
+        <tr>
+            <td>__main__()</td>
+            <td>Used for script execution, not object initialization</td>
+        </tr>
+    </table>
+
+    <h4>💡 Important Notes:</h4>
+    <ul>
+        <li><strong>__init__</strong> is <strong>not</strong> the actual constructor (that's <costrongde>__new__</costrongde>)</li>
+        <li>It's an initializer that receives the constructed instance</li>
+        <li>Must not return any value (other than None)</li>
+        <li>Called after the instance is created but before it's returned</li>
+    </ul>
+
+    <h4>🔧 Related Special Methods:</h4>
+    <pre><code>__new__()  # Actual constructor
+__del__()  # Destructor
+__str__()  # String representation</code></pre>
+</div>
 </div>
 
 <!-- Question 30 -->
@@ -1806,6 +2037,77 @@ print(len(nums))</pre>
         <li onclick="checkAnswer(this, 'correct')">C) To initialize an object's state when it's created</li>
         <li onclick="checkAnswer(this, 'wrong')">D) To call another function automatically</li>
     </ul>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+<div class="answer" style="display: none;">
+    <pre><code># __init__ method example
+class Student:
+    def __init__(self, name, age):
+        self.name = name  # Initialize instance attributes
+        self.age = age
+
+s = Student("Aman", 21)  # __init__ is called automatically
+print(s.name)  # Output: Aman
+print(s.age)   # Output: 21</code></pre>
+
+    <h4>🧠 Explanation:</h4>
+    <p>The <strong>__init__()</strong> method is Python's initializer that sets up new objects with their starting values.</p>
+
+    <h4>✅ Primary Purpose:</h4>
+    <ul>
+        <li>Initialize instance attributes (object state)</li>
+        <li>Set default values for the object</li>
+        <li>Prepare the object for use</li>
+        <li>Called automatically when creating new instances</li>
+    </ul>
+
+    <h4>🔍 Key Characteristics:</h4>
+    <ul>
+        <li>First parameter must be <strong>self</strong> (instance reference)</li>
+        <li>Can accept additional parameters for initialization</li>
+        <li>Typically contains attribute assignments</li>
+        <li>Should not return anything (except None)</li>
+    </ul>
+
+    <h4>❌ Why Other Options Are Incorrect:</h4>
+    <table>
+        <tr>
+            <th>Option</th>
+            <th>Correct Alternative</th>
+            <th>Explanation</th>
+        </tr>
+        <tr>
+            <td>A) Destroy object</td>
+            <td><strong>__del__()</strong></td>
+            <td>Destructor method, not initializer</td>
+        </tr>
+        <tr>
+            <td>B) Static variables</td>
+            <td>Class-level definitions</td>
+            <td>Static vars are defined outside methods</td>
+        </tr>
+        <tr>
+            <td>D) Call functions</td>
+            <td>Regular methods</td>
+            <td>While possible, not the main purpose</td>
+        </tr>
+    </table>
+
+    <h4>💡 Important Distinctions:</h4>
+    <ul>
+        <li><strong>__init__</strong> initializes objects, <strong>__new__</strong> creates them</li>
+        <li>Different from constructors in some other languages</li>
+        <li>Not required in every class, but used in most</li>
+    </ul>
+
+    <h4>🔧 Common Initialization Patterns:</h4>
+    <pre><code># With default values
+def __init__(self, name="Anonymous"):
+    self.name = name
+
+# Calling other initialization methods
+def __init__(self):
+    self.setup_defaults()</code></pre>
+</div>
 </div>
 
 <!-- Question 31 -->
