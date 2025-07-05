@@ -12,6 +12,38 @@ print_triangle()</pre>
       <li onclick="checkAnswer(this, 'wrong')">C) for col in range(5):<br>    for row in range(6):</li>
       <li onclick="checkAnswer(this, 'wrong')">D) for row in range(1, 5):<br>    for col in range(6):</li>
     </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+    <div class="answer" style="display: none;">
+        <pre><code># Pattern printing using nested loops
+    for row in range(1, 6):
+        for col in range(row):
+            print("*", end="")
+        print()</code></pre>
+    
+        <h4>✅ Output:</h4>
+        <pre>*
+        **
+        ***
+        ****
+        *****</pre>
+    
+        <h4>🧠 Explanation:</h4>
+        <ul>
+            <li>The outer loop <code>for row in range(1, 6)</code> runs from 1 to 5, creating 5 rows.</li>
+            <li>The inner loop <code>for col in range(row)</code> prints stars (<strong>*</strong>) equal to the row number.</li>
+            <li><strong>Breakdown:</strong>
+                <ul>
+                    <li>Row 1 → 1 star (<strong>*</strong>)</li>
+                    <li>Row 2 → 2 stars (<strong>**</strong>)</li>
+                    <li>Row 3 → 3 stars (<strong>***</strong>)</li>
+                    <li>Row 4 → 4 stars (<strong>****</strong>)</li>
+                    <li>Row 5 → 5 stars (<strong>*****</strong>)</li>
+                </ul>
+            </li>
+            <li><strong>print("*", end="")</strong> keeps stars on the same line, while <strong>print()</strong> moves to the next line after each row.</li>
+        </ul>
+    </div>
 </div>
 
 <div class="quiz-question">
@@ -29,6 +61,29 @@ print_triangle()</pre>
       <li onclick="checkAnswer(this, 'wrong')">C) for num in range(1, 20):</li>
       <li onclick="checkAnswer(this, 'wrong')">D) for num in range(0, 20, 2):</li>
     </ul>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>  
+<div class="answer" style="display: none;">  
+    <pre><code># Sum of even numbers between 1 and 20  
+total = 0  
+
+for num in range(1, 21):  
+    if num % 2 == 0:  # Check if number is even  
+        total += num   # Add even number to total  
+
+print(total)  # Print the final sum</code></pre>  
+
+    <h4>✅ Output:</h4>  
+    <pre>110</pre>  
+
+    <h4>🧠 Explanation:</h4>  
+    <p>We want to print the sum of all even numbers between 1 and 20, inclusive.</p>  
+    <p>Let’s go step by step:</p>  
+    <p><strong>🔁 Loop:</strong></p>  
+    <p><code>for num in range(1, 21):</code> → This loop checks every number from 1 to 20.</p>  
+    <p><strong>✅ Even Number Check:</strong></p>  
+    <p><code>if num % 2 == 0:</code> → Checks if the number is even (divisible by 2).</p>  
+    <p>If even, it's added to the total: <code>total += num</code></p>  
+</div>  
 </div>
 
 <div class="quiz-question">
@@ -39,6 +94,46 @@ print_triangle()</pre>
       <li onclick="checkAnswer(this, 'wrong')">C) results[:10:-1]</li>
       <li onclick="checkAnswer(this, 'wrong')">D) results[::-1][:10]</li>
     </ul>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+<div class="answer" style="display: none;">
+    <pre><code># Get first 10 results in reverse order
+reversed_first_10 = results[9::-1]</code></pre>
+
+    <h4>✅ Output:</h4>
+    <pre>[results[9], results[8], ..., results[0]]</pre>
+
+    <h4>🧠 Explanation:</h4>
+    <p>We need to get the first 10 results from the list results in reverse order.</p>
+    
+    <p><strong>✅ Step-by-step:</strong></p>
+    <p>The first 10 results are: <code>results[0] to results[9]</code></p>
+    <p>To reverse them, we must start from <code>results[9]</code> and go backward to <code>results[0]</code>.</p>
+    
+    <p><strong>🔍 Understanding the Slice:</strong></p>
+    <p><code>results[9::-1]</code></p>
+    <ul>
+        <li><strong>9</strong> = start index (10th item)</li>
+        <li><strong>::-1</strong> = step of -1 (reverse)</li>
+        <li>No explicit stop index → it stops at the beginning (index 0)</li>
+    </ul>
+    <p>So this gives: <code>[results[9], results[8], ..., results[0]]</code></p>
+    <p>✔️ Exactly first 10 elements in reverse order.</p>
+    
+    <p><strong>❌ Why Other Options Are Incorrect:</strong></p>
+    <ul>
+        <li><strong>A) results[10:0:-1]</strong><br>
+        Starts at index 10, ends at index 1 (not 0), so it excludes results[0].<br>
+        Gives only 9 items.</li>
+        
+        <li><strong>C) results[:10:-1]</strong><br>
+        Starts from end (default) and tries to stop at index 10.<br>
+        ❌ Returns an empty list because slicing in reverse needs start > stop.</li>
+        
+        <li><strong>D) results[::-1][:10]</strong><br>
+        Reverses the entire list first (all 1000 items), then takes the first 10 of that reversed list.<br>
+        ❌ This gives the last 10 elements of the original list, not the first 10.</li>
+    </ul>
+</div>
 </div>
 
 <div class="quiz-question">
@@ -49,6 +144,44 @@ print_triangle()</pre>
       <li onclick="checkAnswer(this, 'wrong')">C) days[6:]</li>
       <li onclick="checkAnswer(this, 'correct')">D) Both A and B</li>
     </ul>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+<div class="answer" style="display: none;">
+    <pre><code># Given list
+days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+
+# Correct ways to get ["Sat", "Sun"]
+option_a = days[-2:]  # A) Using negative indexing
+option_b = days[5:]   # B) Using positive indexing</code></pre>
+
+    <h4>✅ Output:</h4>
+    <pre>["Sat", "Sun"]</pre>
+
+    <h4>🧠 Explanation:</h4>
+    <p>You are given:</p>
+    <pre><code>days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]</code></pre>
+    <p>And you want to extract: <code>["Sat", "Sun"]</code></p>
+    <p>These are the last two elements of the list.</p>
+
+    <p><strong>🔍 Let's understand both correct options:</strong></p>
+    <p><strong>✅ A) days[-2:]</strong></p>
+    <ul>
+        <li><code>-2</code> refers to the second last element, which is "Sat"</li>
+        <li>So <code>days[-2:]</code> means: <code>["Sat", "Sun"]</code></li>
+    </ul>
+
+    <p><strong>✅ B) days[5:]</strong></p>
+    <ul>
+        <li>Index 5 = "Sat"</li>
+        <li>Index 6 = "Sun"</li>
+        <li>So <code>days[5:]</code> also means: <code>["Sat", "Sun"]</code></li>
+    </ul>
+
+    <p>Both expressions give the same result, just written differently (one uses negative index, the other uses positive).</p>
+
+    <p><strong>❌ Why Other Options Are Wrong:</strong></p>
+    <p><strong>C) days[6:]</strong><br>
+    Only includes <code>["Sun"]</code> → missing "Sat" ❌</p>
+</div>
 </div>
 
 <!-- Question 5 -->
@@ -69,6 +202,67 @@ print_triangle()</pre>
         <li onclick="checkAnswer(this, 'wrong')">C) D, B, A, C, E</li>
         <li onclick="checkAnswer(this, 'wrong')">D) A, D, B, C, E</li>
     </ul>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+<div class="answer" style="display: none;">
+    <pre><code># Correct linear search implementation
+def find_number(numbers, target):  # D) Function definition
+    for i in range(len(numbers)):  # A) Loop through list
+        if numbers[i] == target:   # B) Check if element matches target
+            return True            # C) Return True if found
+    return False                   # E) Return False if not found</code></pre>
+
+    <h4>🧠 Explanation:</h4>
+    <p>We are building a linear search function that:</p>
+    <ul>
+        <li>Takes a list <code>numbers</code> and a <code>target</code> number</li>
+        <li>Loops through the list</li>
+        <li>Returns <code>True</code> if the target is found</li>
+        <li>Returns <code>False</code> if not found</li>
+    </ul>
+
+    <p><strong>Code Blocks Analysis:</strong></p>
+    <table>
+        <tr>
+            <th>Label</th>
+            <th>Code</th>
+            <th>Purpose</th>
+        </tr>
+        <tr>
+            <td>D</td>
+            <td><code>def find_number(numbers, target):</code></td>
+            <td>✅ Function definition</td>
+        </tr>
+        <tr>
+            <td>A</td>
+            <td><code>for i in range(len(numbers)):</code></td>
+            <td>✅ Loop through list</td>
+        </tr>
+        <tr>
+            <td>B</td>
+            <td><code>if numbers[i] == target:</code></td>
+            <td>✅ Check if element matches target</td>
+        </tr>
+        <tr>
+            <td>C</td>
+            <td><code>return True</code></td>
+            <td>✅ If found, return True</td>
+        </tr>
+        <tr>
+            <td>E</td>
+            <td><code>return False</code></td>
+            <td>✅ If loop ends without finding, return False</td>
+        </tr>
+    </table>
+
+    <p><strong>🔧 Correct Sequence:</strong></p>
+    <ol>
+        <li>D - Function definition</li>
+        <li>A - Loop through list</li>
+        <li>B - Check current value</li>
+        <li>C - Return True if found</li>
+        <li>E - Return False if not found</li>
+    </ol>
+</div>
 </div>
 
 <!-- Question 6 -->
