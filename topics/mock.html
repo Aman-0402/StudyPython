@@ -274,6 +274,60 @@ def find_number(numbers, target):  # D) Function definition
         <li onclick="checkAnswer(this, 'wrong')">C) bool</li>
         <li onclick="checkAnswer(this, 'wrong')">D) str</li>
     </ul>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+<div class="answer" style="display: none;">
+    <pre><code># Examples of float numbers in Python
+num1 = 3.14
+num2 = 0.5
+num3 = -7.89
+num4 = 100.0
+
+print(type(num1))  # &lt;class 'float'&gt;
+print(type(num2))  # &lt;class 'float'&gt;
+print(type(num3))  # &lt;class 'float'&gt;
+print(type(num4))  # &lt;class 'float'&gt;</code></pre>
+
+    <h4>🧠 Explanation:</h4>
+    <p>In Python, floating-point numbers (also called decimals) are numbers that have a decimal point. Examples:</p>
+    <pre><code>3.14, 0.5, -7.89, 100.0</code></pre>
+    <p>These types of numbers are stored using the <code>float</code> data type.</p>
+
+    <h4>🔍 Breakdown of Options:</h4>
+    <table>
+        <tr>
+            <th>Option</th>
+            <th>Explanation</th>
+            <th>Example</th>
+        </tr>
+        <tr>
+            <td><strong>✅ A) float</strong></td>
+            <td>✔️ Correct<br>Stores decimal numbers (floating-point values)</td>
+            <td><code>x = 3.14<br>print(type(x))  # &lt;class 'float'&gt;</code></td>
+        </tr>
+        <tr>
+            <td><strong>❌ B) int</strong></td>
+            <td>Stores whole numbers only (no decimals)</td>
+            <td><code>1, 99, -7<br>Cannot store 3.14</code></td>
+        </tr>
+        <tr>
+            <td><strong>❌ C) bool</strong></td>
+            <td>Boolean values: True or False<br>Not used for numeric storage</td>
+            <td><code>True (1), False (0)</code></td>
+        </tr>
+        <tr>
+            <td><strong>❌ D) str</strong></td>
+            <td>String data type → stores text, not numbers</td>
+            <td><code>"3.14" is a string</code></td>
+        </tr>
+    </table>
+
+    <h4>Key Points:</h4>
+    <ul>
+        <li>Use <code>float</code> for any number with a decimal point</li>
+        <li>Even whole numbers with decimal point (like 100.0) are floats</li>
+        <li>Python automatically converts numbers with decimals to float type</li>
+    </ul>
+</div>
 </div>
 
 <!-- Question 7 -->
@@ -285,6 +339,80 @@ def find_number(numbers, target):  # D) Function definition
         <li onclick="checkAnswer(this, 'wrong')">C) list and str</li>
         <li onclick="checkAnswer(this, 'wrong')">D) dict and tuple</li>
     </ul>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+<div class="answer" style="display: none;">
+    <pre><code># Examples of arithmetic operations with int and float
+a = 10       # int
+b = 3.5      # float
+
+print(a + b)  # Output: 13.5 (float)
+print(a * 2)  # Output: 20 (int)
+print(b / 2)  # Output: 1.75 (float)</code></pre>
+
+    <h4>🧠 Explanation:</h4>
+    <p>In Python, arithmetic operations like addition (+), subtraction (-), multiplication (*), and division (/) are typically performed on numeric data types.</p>
+
+    <h4>🔢 int and float:</h4>
+    <ul>
+        <li><strong>int</strong>: whole numbers like 5, -10, 100</li>
+        <li><strong>float</strong>: decimal numbers like 3.14, 0.5, -2.7</li>
+    </ul>
+    <p>Both can be used in math expressions and will work together seamlessly, with the result typically being a float if either operand is a float.</p>
+
+    <h4>❌ Why the Others Are Incorrect:</h4>
+    <table>
+        <tr>
+            <th>Option</th>
+            <th>Explanation</th>
+            <th>Example</th>
+        </tr>
+        <tr>
+            <td><strong>B) str and bool</strong></td>
+            <td>
+                <ul>
+                    <li>str: Supports concatenation but not real arithmetic</li>
+                    <li>bool: True/False behave like 1/0 but not meant for arithmetic</li>
+                </ul>
+            </td>
+            <td>
+                <pre><code>print("a" + "b")  # "ab"
+print(True + 5)  # 6</code></pre>
+            </td>
+        </tr>
+        <tr>
+            <td><strong>C) list and str</strong></td>
+            <td>
+                <ul>
+                    <li>Support repetition/concatenation but not numeric operations</li>
+                </ul>
+            </td>
+            <td>
+                <pre><code>print([1,2] + [3,4])  # [1,2,3,4]
+print("Hi" * 3)     # "HiHiHi"</code></pre>
+            </td>
+        </tr>
+        <tr>
+            <td><strong>D) dict and tuple</strong></td>
+            <td>
+                <ul>
+                    <li>Don't support arithmetic operations</li>
+                    <li>Tuple only supports repetition</li>
+                </ul>
+            </td>
+            <td>
+                <pre><code>print((1,2) * 2)        # (1,2,1,2)
+print({"a":1} + {"b":2})  # ❌ TypeError</code></pre>
+            </td>
+        </tr>
+    </table>
+
+    <h4>Key Takeaways:</h4>
+    <ul>
+        <li>For mathematical operations, use <strong>int</strong> and <strong>float</strong></li>
+        <li>Other types may support some operations but aren't designed for arithmetic</li>
+        <li>Python will automatically convert int to float when mixed in operations</li>
+    </ul>
+</div>
 </div>
 
 <!-- Question 8 -->
@@ -301,6 +429,69 @@ while count < 5:
         <li onclick="checkAnswer(this, 'wrong')">C) 4</li>
         <li onclick="checkAnswer(this, 'wrong')">D) 5</li>
     </ul>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+<div class="answer" style="display: none;">
+    <pre><code># Code to analyze
+count = 0
+while count < 5:
+    if count % 2 == 0:
+        print("*")
+    count += 1</code></pre>
+
+    <h4>✅ Output:</h4>
+    <pre>*
+*
+*</pre>
+
+    <h4>🧠 Explanation:</h4>
+    <p>Let's analyze the code step by step:</p>
+
+    <h4>🔍 Step-by-Step Execution:</h4>
+    <p>Tracking <strong>count</strong> and printing behavior:</p>
+    
+    <table>
+        <tr>
+            <th>count</th>
+            <th>count % 2 == 0?</th>
+            <th>Print *?</th>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>0 % 2 == 0 → ✅ True</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1 % 2 == 0 → ❌ False</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>2 % 2 == 0 → ✅ True</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>3 % 2 == 0 → ❌ False</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>4 % 2 == 0 → ✅ True</td>
+            <td>Yes</td>
+        </tr>
+    </table>
+
+    <h4>🔢 Final Count:</h4>
+    <p>The code prints <strong>*</strong> <strong>3 times</strong> - when count equals 0, 2, and 4.</p>
+
+    <h4>💡 Key Observations:</h4>
+    <ul>
+        <li>The loop runs 5 times (count values 0 through 4)</li>
+        <li>Prints only on even numbers (when count % 2 equals 0)</li>
+        <li>There are 3 even numbers in 0-4: 0, 2, and 4</li>
+    </ul>
+</div>
 </div>
 
 <!-- Question 9 -->
@@ -318,6 +509,80 @@ else:
         <li onclick="checkAnswer(this, 'correct')">C) 3</li>
         <li onclick="checkAnswer(this, 'wrong')">D) 4</li>
     </ul>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+<div class="answer" style="display: none;">
+    <pre><code># While-else loop example
+i = 3
+while i > 0:
+    print("Hello")
+    i -= 1
+else:
+    print("Done")</code></pre>
+
+    <h4>✅ Output:</h4>
+    <pre>Hello
+Hello
+Hello
+Done</pre>
+
+    <h4>🧠 Explanation:</h4>
+    <p>Let's analyze the code execution:</p>
+
+    <h4>🔁 Loop Behavior:</h4>
+    <ul>
+        <li>Initial value: <strong>i = 3</strong></li>
+        <li>Loop condition: <strong>while i > 0</strong></li>
+        <li>Loop body: Prints "Hello" and decrements <strong>i</strong></li>
+        <li>Else clause: Executes after normal loop completion</li>
+    </ul>
+
+    <h4>🔍 Step-by-Step Execution:</h4>
+    <table>
+        <tr>
+            <th>Iteration</th>
+            <th>i before</th>
+            <th>Condition (i > 0)</th>
+            <th>Output</th>
+            <th>i after</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>3</td>
+            <td>✅ True</td>
+            <td>Hello</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>2</td>
+            <td>✅ True</td>
+            <td>Hello</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>1</td>
+            <td>✅ True</td>
+            <td>Hello</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>0</td>
+            <td>❌ False</td>
+            <td>Loop exits</td>
+            <td>-</td>
+        </tr>
+    </table>
+
+    <h4>💡 Key Points:</h4>
+    <ul>
+        <li>The loop runs exactly <strong>3 times</strong> (for i=3,2,1)</li>
+        <li>The <strong>else</strong> block executes <strong>once</strong> after the loop completes normally</li>
+        <li>This produces 3 "Hello" prints and 1 "Done" print</li>
+        <li>The <strong>else</strong> clause is unique to Python's while loops</li>
+    </ul>
+</div>
 </div>
 
 <!-- Question 10 -->
@@ -329,6 +594,61 @@ else:
         <li onclick="checkAnswer(this, 'wrong')">C) !=</li>
         <li onclick="checkAnswer(this, 'wrong')">D) :=</li>
     </ul>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+<div class="answer" style="display: none;">
+    <pre><code># Equality comparison examples
+x = 5
+y = 5
+
+# Correct equality check
+print(x == y)  # Output: True</code></pre>
+
+    <h4>🧠 Explanation:</h4>
+    <p>In Python, the <code>==</code> operator is used for equality comparison between two values.</p>
+
+    <h4>🔍 Key Characteristics:</h4>
+    <ul>
+        <li><strong>Returns True</strong> if both values are equal</li>
+        <li><strong>Returns False</strong> if values are different</li>
+        <li>Works with all data types (numbers, strings, lists, etc.)</li>
+        <li>Different from assignment (<code>=</code>)</li>
+    </ul>
+
+    <h4>❌ Why Other Options Are Incorrect:</h4>
+    <table>
+        <tr>
+            <th>Operator</th>
+            <th>Name</th>
+            <th>Purpose</th>
+            <th>Example</th>
+        </tr>
+        <tr>
+            <td><code>=</code></td>
+            <td>Assignment</td>
+            <td>Stores a value in a variable</td>
+            <td><code>x = 10</code></td>
+        </tr>
+        <tr>
+            <td><code>!=</code></td>
+            <td>Not equal</td>
+            <td>Checks if values are different</td>
+            <td><code>5 != 3 → True</code></td>
+        </tr>
+        <tr>
+            <td><code>:=</code></td>
+            <td>Walrus operator</td>
+            <td>Assignment within expressions</td>
+            <td><code>if (n := 10) > 5: ...</code></td>
+        </tr>
+    </table>
+
+    <h4>💡 Important Notes:</h4>
+    <ul>
+        <li><code>==</code> compares <strong>values</strong>, not memory locations (use <code>is</code> for identity comparison)</li>
+        <li>For strings, comparison is case-sensitive (<code>"Hello" == "hello" → False</code>)</li>
+        <li>With floating-point numbers, be cautious of precision issues</li>
+    </ul>
+</div>
 </div>
 
 <!-- Question 11 -->
@@ -340,6 +660,54 @@ else:
         <li onclick="checkAnswer(this, 'correct')">C) 5 = x</li>
         <li onclick="checkAnswer(this, 'wrong')">D) name = "Aman"</li>
     </ul>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+<div class="answer" style="display: none;">
+    <pre><code># Valid and invalid assignments in Python
+x = 10            # ✅ Valid
+total = a + b      # ✅ Valid (if a and b exist)
+name = "Aman"      # ✅ Valid
+5 = x              # ❌ SyntaxError</code></pre>
+
+    <h4>🧠 Explanation:</h4>
+    <p>In Python, assignment statements must follow this pattern:</p>
+    <pre><code>&lt;variable_name&gt; = &lt;value or expression&gt;</code></pre>
+
+    <h4>❌ Why Option C is Invalid:</h4>
+    <ul>
+        <li><code>5 = x</code> tries to assign to a literal number</li>
+        <li>The left side must be a variable name, not a constant</li>
+        <li>This will raise a <code>SyntaxError</code></li>
+        <li>Error message would be: <code>"can't assign to literal"</code></li>
+    </ul>
+
+    <h4>✅ Why Other Options Are Valid:</h4>
+    <table>
+        <tr>
+            <th>Option</th>
+            <th>Explanation</th>
+        </tr>
+        <tr>
+            <td><code>x = 10</code></td>
+            <td>✅ Valid - assigns integer to variable</td>
+        </tr>
+        <tr>
+            <td><code>total = a + b</code></td>
+            <td>✅ Valid - assigns expression result (if variables exist)</td>
+        </tr>
+        <tr>
+            <td><code>name = "Aman"</code></td>
+            <td>✅ Valid - assigns string to variable</td>
+        </tr>
+    </table>
+
+    <h4>💡 Key Rules for Assignments:</h4>
+    <ul>
+        <li>Left side must be a valid variable name (identifier)</li>
+        <li>Right side can be any expression that produces a value</li>
+        <li>You cannot assign to literals (numbers, strings) or expressions</li>
+        <li>Variable names must follow Python naming conventions</li>
+    </ul>
+</div>
 </div>
 
 <!-- Question 12 -->
@@ -349,6 +717,71 @@ else:
         <li onclick="checkAnswer(this, 'wrong')">A) True</li>
         <li onclick="checkAnswer(this, 'correct')">B) False</li>
     </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+<div class="answer" style="display: none;">
+    <pre><code># Example of instance variables
+class Person:
+    def __init__(self, name):
+        self.name = name  # instance variable
+
+p1 = Person("Aman")
+p2 = Person("Rahul")
+
+print(p1.name)  # Output: Aman
+print(p2.name)  # Output: Rahul
+
+# Changing one doesn't affect the other
+p1.name = "Ankit"
+print(p1.name)  # Output: Ankit
+print(p2.name)  # Output: Rahul (unchanged)</code></pre>
+
+    <h4>🧠 Explanation:</h4>
+    <h4>🔹 What are instance variables?</h4>
+    <ul>
+        <li>Variables defined inside methods (typically <code>__init__</code>)</li>
+        <li>Belong to individual objects (instances) of the class</li>
+        <li>Each object maintains its own separate copy</li>
+    </ul>
+
+    <h4>❌ Why "True" is incorrect:</h4>
+    <ul>
+        <li>If instance variables were shared, modifying one would affect all instances</li>
+        <li>As shown in the example, changing <code>p1.name</code> doesn't affect <code>p2.name</code></li>
+        <li>This demonstrates they are <strong>not</strong> shared between instances</li>
+    </ul>
+
+    <h4>🔍 What <em>is</em> shared between objects?</h4>
+    <ul>
+        <li><strong>Class variables</strong> (defined outside methods)</li>
+        <li>Methods (functions defined in the class)</li>
+        <li>Class-level attributes</li>
+    </ul>
+
+    <h4>💡 Key Differences:</h4>
+    <table>
+        <tr>
+            <th></th>
+            <th>Instance Variables</th>
+            <th>Class Variables</th>
+        </tr>
+        <tr>
+            <td><strong>Scope</strong></td>
+            <td>Per object</td>
+            <td>Shared across all objects</td>
+        </tr>
+        <tr>
+            <td><strong>Declaration</strong></td>
+            <td>Inside methods (usually <code>__init__</code>)</td>
+            <td>Directly in class body</td>
+        </tr>
+        <tr>
+            <td><strong>Modification</strong></td>
+            <td>Affects only one instance</td>
+            <td>Affects all instances</td>
+        </tr>
+    </table>
+</div>
 </div>
 
 <!-- Question 13 -->
@@ -371,6 +804,77 @@ print(c2.wheels)</pre>
         <li onclick="checkAnswer(this, 'wrong')">C) 6 and 6</li>
         <li onclick="checkAnswer(this, 'wrong')">D) Error</li>
     </ul>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+<div class="answer" style="display: none;">
+    <pre><code># Class vs Instance Variable Example
+class Car:
+    wheels = 4  # class variable (shared)
+
+    def __init__(self, brand):
+        self.brand = brand  # instance variable
+
+c1 = Car("BMW")
+c2 = Car("Tesla")
+c2.wheels = 6  # creates instance variable for c2
+
+print(c1.wheels)  # Output: 4
+print(c2.wheels)  # Output: 6</code></pre>
+
+    <h4>🧠 Explanation:</h4>
+    <h4>🔍 Step-by-Step Breakdown:</h4>
+    <ol>
+        <li>Class <code>Car</code> is defined with:
+            <ul>
+                <li>Class variable <code>wheels = 4</code> (shared by all instances)</li>
+                <li>Instance variable <code>brand</code> (unique to each car)</li>
+            </ul>
+        </li>
+        <li>Two instances are created:
+            <ul>
+                <li><code>c1 = Car("BMW")</code></li>
+                <li><code>c2 = Car("Tesla")</code></li>
+            </ul>
+        </li>
+        <li>The critical line: <code>c2.wheels = 6</code>
+            <ul>
+                <li>Creates a new <strong>instance variable</strong> <code>wheels</code> just for <code>c2</code></li>
+                <li>Does <strong>not</strong> modify the class variable</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h4>🧪 Output Analysis:</h4>
+    <table>
+        <tr>
+            <th>Object</th>
+            <th>wheels Value</th>
+            <th>Explanation</th>
+        </tr>
+        <tr>
+            <td><code>c1</code></td>
+            <td>4</td>
+            <td>Uses class variable since no instance variable exists</td>
+        </tr>
+        <tr>
+            <td><code>c2</code></td>
+            <td>6</td>
+            <td>Uses its own instance variable that shadows the class variable</td>
+        </tr>
+    </table>
+
+    <h4>💡 Key Concepts:</h4>
+    <ul>
+        <li><strong>Class variables</strong> are shared across all instances</li>
+        <li><strong>Instance variables</strong> are specific to each object</li>
+        <li>Assignment to an instance creates a new variable that shadows the class variable</li>
+        <li>Original class variable remains unchanged and accessible through other instances</li>
+    </ul>
+
+    <h4>🔧 Checking Variable Status:</h4>
+    <pre><code>print(Car.wheels)  # 4 (class variable unchanged)
+print(c1.__class__.wheels)  # 4 (accessing class variable)
+print(c2.__dict__)  # {'brand': 'Tesla', 'wheels': 6} (instance variables)</code></pre>
+</div>
 </div>
 
 <!-- Question 14 -->
@@ -384,6 +888,53 @@ print(len(x))</pre>
         <li onclick="checkAnswer(this, 'wrong')">C) Error</li>
         <li onclick="checkAnswer(this, 'wrong')">D) None</li>
     </ul>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+<div class="answer" style="display: none;">
+    <pre><code># List length example
+x = [1, 2, 3, 4]
+print(len(x))  # Output: 4</code></pre>
+
+    <h4>🧠 Explanation:</h4>
+    <p>The code demonstrates how to determine the number of elements in a list using Python's <strong>len()</strong> function.</p>
+
+    <h4>🔍 List Analysis:</h4>
+    <p>The list <strong>x</strong> contains 4 elements:</p>
+    <table>
+        <tr>
+            <th>Element</th>
+            <th>Index</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>3</td>
+        </tr>
+    </table>
+
+    <h4>✅ Key Points:</h4>
+    <ul>
+        <li><strong>len()</strong> returns the number of items in an iterable</li>
+        <li>For lists, it counts all elements regardless of their type</li>
+        <li>Indexing starts at 0, but length counts start at 1</li>
+        <li>Works with other sequences: strings, tuples, dictionaries</li>
+    </ul>
+
+    <h4>💡 Related Examples:</h4>
+    <pre><code>print(len("hello"))  # 5 (string length)
+print(len((1,2,3)))  # 3 (tuple length)
+print(len({"a":1, "b":2}))  # 2 (dictionary key count)</code></pre>
+</div>
 </div>
 
 <!-- Question 15 -->
@@ -397,6 +948,52 @@ print(len(name[3]))</pre>
         <li onclick="checkAnswer(this, 'wrong')">C) 3</li>
         <li onclick="checkAnswer(this, 'wrong')">D) Error</li>
     </ul>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+<div class="answer" style="display: none;">
+    <pre><code># String indexing and length example
+name = "Python"
+print(len(name[3]))  # Output: 1</code></pre>
+
+    <h4>🧠 Explanation:</h4>
+    <p>This code demonstrates string indexing and the <code>len()</code> function in Python.</p>
+
+    <h4>🔍 Step-by-Step Breakdown:</h4>
+    <ol>
+        <li><strong>String Assignment:</strong>
+            <pre><strong>name = "Python"</strong></pre>
+            <p>A 6-character string with these indices:</p>
+            <table>
+                <tr>
+                    <th>Character</th><td>P</td><td>y</td><td>t</td><td>h</td><td>o</td><td>n</td>
+                </tr>
+                <tr>
+                    <th>Index</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td>
+                </tr>
+            </table>
+        </li>
+        <li><strong>Indexing Operation:</strong>
+            <pre><strong>name[3]</strong></pre>
+            <p>Accesses the character at index 3: <strong>"h"</strong></p>
+        </li>
+        <li><strong>Length Calculation:</strong>
+            <pre><strong>len("h")</strong></pre>
+            <p>Returns the length of this single-character string: <strong>1</strong></p>
+        </li>
+    </ol>
+
+    <h4>✅ Key Points:</h4>
+    <ul>
+        <li>String indices start at 0 in Python</li>
+        <li><strong>len()</strong> returns the length of any sequence</li>
+        <li>When applied to a single character, it returns 1</li>
+        <li>This behavior is consistent for all single-character strings</li>
+    </ul>
+
+    <h4>💡 Related Example:</h4>
+    <pre><code>print(len("A"))    # Output: 1
+print(len(" "))   # Output: 1 (space counts as a character)
+print(len(""))    # Output: 0 (empty string)</code></pre>
+</div>
 </div>
 
 <!-- Question 16 -->
