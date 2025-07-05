@@ -56,34 +56,70 @@ print_triangle()</pre>
         print(total)
     sum_even()</pre>
     <ul>
-      <li onclick="checkAnswer(this, 'wrong')">A) for num in range(1, 21):</li>
-      <li onclick="checkAnswer(this, 'correct')">B) for num in range(2, 21, 2):</li>
+      <li onclick="checkAnswer(this, 'correct')">A) for num in range(1, 21):</li>
+      <li onclick="checkAnswer(this, 'wrong')">B) for num in range(2, 21, 2):</li>
       <li onclick="checkAnswer(this, 'wrong')">C) for num in range(1, 20):</li>
       <li onclick="checkAnswer(this, 'wrong')">D) for num in range(0, 20, 2):</li>
     </ul>
-    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>  
-<div class="answer" style="display: none;">  
-    <pre><code># Sum of even numbers between 1 and 20  
-total = 0  
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+<div class="answer" style="display: none;">
+    <pre><code># Complete even number summation function
+def sum_even():
+    total = 0
+    for num in range(1, 21):  # Correct loop range
+        if num % 2 == 0:      # Check if number is even
+            total += num      # Add to total if even
+    print(total)              # Print final sum
 
-for num in range(1, 21):  
-    if num % 2 == 0:  # Check if number is even  
-        total += num   # Add even number to total  
+sum_even()  # Output: 110</code></pre>
 
-print(total)  # Print the final sum</code></pre>  
+    <h4>🧠 Explanation:</h4>
+    <p>This function sums all even numbers between 1 and 20 (inclusive).</p>
 
-    <h4>✅ Output:</h4>  
-    <pre>110</pre>  
+    <h4>🔍 Why Option A is Correct:</h4>
+    <ul>
+        <li><strong>range(1, 21)</strong> generates numbers 1 through 20</li>
+        <li>The <strong>if num % 2 == 0</strong> condition properly checks for even numbers</li>
+        <li>Matches the existing code structure that expects to filter even numbers</li>
+        <li>Correctly sums all even numbers in the specified range</li>
+    </ul>
 
-    <h4>🧠 Explanation:</h4>  
-    <p>We want to print the sum of all even numbers between 1 and 20, inclusive.</p>  
-    <p>Let’s go step by step:</p>  
-    <p><strong>🔁 Loop:</strong></p>  
-    <p><code>for num in range(1, 21):</code> → This loop checks every number from 1 to 20.</p>  
-    <p><strong>✅ Even Number Check:</strong></p>  
-    <p><code>if num % 2 == 0:</code> → Checks if the number is even (divisible by 2).</p>  
-    <p>If even, it's added to the total: <code>total += num</code></p>  
-</div>  
+    <h4>✅ Numbers Processed:</h4>
+    <p>Even numbers between 1-20: 2, 4, 6, 8, 10, 12, 14, 16, 18, 20</p>
+    <p>Sum = 2 + 4 + 6 + 8 + 10 + 12 + 14 + 16 + 18 + 20 = 110</p>
+
+    <h4>❌ Why Other Options Are Incorrect:</h4>
+    <table>
+        <tr>
+            <th>Option</th>
+            <th>Code</th>
+            <th>Issue</th>
+        </tr>
+        <tr>
+            <td>B</td>
+            <td><strong>for num in range(2, 21, 2)</strong></td>
+            <td>Only generates evens (2,4,6...20) making the if check redundant</td>
+        </tr>
+        <tr>
+            <td>C</td>
+            <td><strong>for num in range(1, 20)</strong></td>
+            <td>Misses the last even number (20)</td>
+        </tr>
+        <tr>
+            <td>D</td>
+            <td><strong>for num in range(0, 20, 2)</strong></td>
+            <td>Includes 0 (not in 1-20) and misses 20</td>
+        </tr>
+    </table>
+
+    <h4>💡 Alternative Implementations:</h4>
+    <pre><code># Version using step parameter (no if check needed)
+def sum_even_v2():
+    print(sum(range(2, 21, 2)))  # Output: 110
+
+# One-line version
+sum_even_v3 = lambda: print(sum(n for n in range(1,21) if n%2==0))</code></pre>
+</div>
 </div>
 
 <div class="quiz-question">
@@ -1396,6 +1432,64 @@ print(msg)</pre>
         <li onclick="checkAnswer(this, 'wrong')">C) Hello and Hi</li>
         <li onclick="checkAnswer(this, 'wrong')">D) Error – msg is used before assignment</li>
     </ul>
+
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+<div class="answer" style="display: none;">
+    <pre><code># Variable scope example
+msg = "Hello"  # Global variable
+
+def change_msg():
+    msg = "Hi"  # Local variable
+    return msg
+
+print(change_msg())  # Output: Hi
+print(msg)           # Output: Hello</code></pre>
+
+    <h4>🧠 Explanation:</h4>
+    <p>This code demonstrates the difference between global and local variables in Python.</p>
+
+    <h4>🔍 Step-by-Step Analysis:</h4>
+    <ol>
+        <li><strong>Global Variable Setup:</strong>
+            <pre><code>msg = "Hello"  # Global variable</code></pre>
+        </li>
+        <li><strong>Function Definition:</strong>
+            <pre><code>def change_msg():
+    msg = "Hi"  # This creates a new local variable
+    return msg</code></pre>
+            <p>The local <strong>msg</strong> shadows but doesn't modify the global one</p>
+        </li>
+        <li><strong>Function Call:</strong>
+            <pre><code>print(change_msg())  # Prints the local "Hi"</code></pre>
+        </li>
+        <li><strong>Global Variable Access:</strong>
+            <pre><code>print(msg)  # Still accesses the original global "Hello"</code></pre>
+        </li>
+    </ol>
+
+    <h4>✅ Output:</h4>
+    <pre>Hi
+Hello</pre>
+
+    <h4>💡 Key Concepts:</h4>
+    <ul>
+        <li><strong>Global variables</strong> are accessible throughout the module</li>
+        <li><strong>Local variables</strong> exist only within their function</li>
+        <li>Assignment inside a function creates a local variable by default</li>
+        <li>To modify a global variable, you need the <strong>global</strong> keyword</li>
+    </ul>
+
+    <h4>🔧 Modifying Global Variables:</h4>
+    <pre><code>msg = "Hello"
+
+def change_global_msg():
+    global msg  # Explicit declaration
+    msg = "Hi"
+    return msg
+
+print(change_global_msg())  # Hi
+print(msg)                 # Hi (global changed)</code></pre>
+</div>
 </div>
 
 <!-- Question 22 -->
@@ -1407,6 +1501,70 @@ print(msg)</pre>
         <li onclick="checkAnswer(this, 'wrong')">C) class object</li>
         <li onclick="checkAnswer(this, 'correct')">D) All of the above</li>
     </ul>
+    <button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
+<div class="answer" style="display: none;">
+    <pre><code># Examples of objects holding references in Python
+
+# 1. List example
+lst = [1, "hello", [2, 3], print]  # Contains int, str, list, and function
+
+# 2. Dictionary example
+d = {"name": "Aman", "info": [1, 2, 3], "func": len}  # Contains str, list, and function
+
+# 3. Class object example
+class Student:
+    def __init__(self, name, subjects):
+        self.name = name          # string
+        self.subjects = subjects  # list
+        self.info = {"grade": "A"}  # dictionary
+
+s = Student("Aman", ["Math", "Science"])  # Contains str, list, and dict</code></pre>
+
+    <h4>🧠 Explanation:</h4>
+    <p>In Python, many data types can hold references to other objects, demonstrating that "All of the above" is correct.</p>
+
+    <h4>🔍 Detailed Analysis:</h4>
+    <table>
+        <tr>
+            <th>Option</th>
+            <th>Type</th>
+            <th>Can Hold References To</th>
+            <th>Example</th>
+        </tr>
+        <tr>
+            <td>A</td>
+            <td>list</td>
+            <td>Any Python objects</td>
+            <td><strong>[1, "a", [2,3], print]</strong></td>
+        </tr>
+        <tr>
+            <td>B</td>
+            <td>dict</td>
+            <td>Any Python objects (as values)</td>
+            <td><strong>{"x": 1, "y": [2,3]}</strong></td>
+        </tr>
+        <tr>
+            <td>C</td>
+            <td>class object</td>
+            <td>Any Python objects (as attributes)</td>
+            <td><strong>obj.attr = "value"</strong></td>
+        </tr>
+    </table>
+
+    <h4>✅ Key Points:</h4>
+    <ul>
+        <li>Python uses <strong>object references</strong> extensively</li>
+        <li>Containers (lists, dicts) store references to other objects</li>
+        <li>Class attributes are just references to objects</li>
+        <li>This is why Python is called a <strong>reference-based language</strong></li>
+    </ul>
+
+    <h4>💡 Memory Implications:</h4>
+    <pre><code>a = [1, 2, 3]
+b = a  # Both variables reference the same list object
+b[0] = 99
+print(a)  # [99, 2, 3] - changes affect both references</code></pre>
+</div>
 </div>
 
 <!-- Question 23 -->
