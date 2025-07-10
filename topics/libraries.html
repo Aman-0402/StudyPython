@@ -169,14 +169,40 @@
   </div>
 
   <div class="section">
-    <h2>🐼 What is pandas?</h2>
-    <p>pandas (short for "Panel Data") is a fast, powerful, flexible tool for:</p>
-    <ul>
-      <li>✅ Data cleaning</li>
-      <li>✅ Data analysis</li>
-      <li>✅ Reading/writing data (CSV, Excel, SQL, JSON, etc.)</li>
-    </ul>
-  </div>
+  <h2>🐼 What is pandas?</h2>
+  <p><strong>pandas</strong> (short for "Panel Data") is a fast, powerful, flexible tool for:</p>
+  <ul>
+    <li>✅ Data cleaning</li>
+    <li>✅ Data analysis</li>
+    <li>✅ Reading/writing data (CSV, Excel, SQL, JSON, etc.)</li>
+  </ul>
+
+  <h3>🧪 Hands-On Practice with pandas</h3>
+  <p>
+    ➤ <strong>Step 1:</strong> Open <a href="https://colab.research.google.com/" target="_blank" style="color:blue;">Google Colab</a> in a new tab.
+  </p>
+  <p>
+    ➤ <strong>Step 2:</strong> Download the sample CSV file for practice:<br>
+    <a href="https://drive.google.com/uc?export=download&id=1_TgvwrnhAQY0defp4zjOlaomfFBKJihV" target="_blank" style="color:green;">📥 Download CSV File</a>
+  </p>
+  <p>
+    ➤ <strong>Step 3:</strong> In Colab, click on the folder icon 📁 on the left panel → Click the upload icon ⬆ and upload the downloaded CSV file.
+  </p>
+
+  <h4>💡 Tip:</h4>
+  <p>
+    After uploading, you can use the following code to load the CSV file using pandas:
+  </p>
+  <pre><code>import pandas as pd
+
+# Replace 'your_file.csv' with the actual filename you uploaded
+df = pd.read_csv('your_file.csv')
+df.head()  # Display the first 5 rows
+</code></pre>
+
+  <p><strong>👉 Recommended:</strong> Try modifying, filtering, or visualizing the data using pandas functions!</p>
+</div>
+
   
   <div class="section">
     <h2>📥 1. Importing pandas & Creating DataFrames</h2>
